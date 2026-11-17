@@ -54,11 +54,21 @@ function ProofStrip({ inst, tone }: { inst: Institution; tone: "light" | "dark" 
   );
 }
 
-function Headline({ lines, className, accentLast = true }: { lines: string[]; className: string; accentLast?: boolean }) {
+function Headline({
+  lines,
+  className,
+  accentLast = true,
+  lineClassName = "",
+}: {
+  lines: string[];
+  className: string;
+  accentLast?: boolean;
+  lineClassName?: string;
+}) {
   return (
     <h1 className={className}>
       {lines.map((l, i) => (
-        <span key={l} className={`block ${accentLast && i === lines.length - 1 ? "text-accent-ink" : ""}`}>
+        <span key={l} className={`block ${lineClassName} ${accentLast && i === lines.length - 1 ? "text-accent-ink" : ""}`}>
           {l}
         </span>
       ))}
@@ -136,24 +146,26 @@ export function HeroGeometric({ inst }: { inst: Institution }) {
       <div aria-hidden="true" className="absolute -right-40 top-10 -z-10 hidden h-[38rem] w-[38rem] rotate-45 border-[3rem] border-accent/90 lg:block" />
       <div aria-hidden="true" className="absolute -bottom-32 left-[38%] -z-10 hidden h-72 w-72 rotate-45 bg-brand-ink lg:block" />
 
-      <div className="container-x grid items-center gap-10 pb-0 pt-12 lg:grid-cols-12 lg:pt-20">
-        <div className="pb-12 lg:col-span-7 lg:pb-28">
-          <p className="eyebrow mb-6 inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-on-accent">
+      <div className="container-x grid items-center gap-10 pb-0 pt-12 lg:grid-cols-12 lg:gap-6 lg:pt-12">
+        <div className="pb-12 lg:col-span-8 lg:pb-14">
+          <p className="eyebrow mb-5 inline-flex items-center gap-2 rounded-full bg-accent px-4 py-2 text-on-accent">
             {inst.hero.eyebrow}
           </p>
+          {/* Two authored lines, each kept on one line from 640px up; size scales with the viewport so both fit. */}
           <Headline
             lines={inst.hero.headline}
-            className="font-display text-[2.6rem] font-bold leading-[1.02] tracking-[-0.03em] sm:text-6xl lg:text-7xl"
+            lineClassName="sm:whitespace-nowrap"
+            className="font-display text-[2.6rem] font-bold leading-[1.04] tracking-[-0.03em] sm:text-[min(7.2vw,4rem)] lg:text-[min(4.7vw,4.25rem)]"
           />
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">{inst.hero.body}</p>
-          <div className="mt-9">
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/80">{inst.hero.body}</p>
+          <div className="mt-7">
             <HeroCtas inst={inst} tone="dark" />
           </div>
-          <div className="mt-12 max-w-xl rounded-[var(--radius-card)] border border-white/15 bg-white/5 p-5 backdrop-blur">
+          <div className="mt-8 max-w-xl rounded-[var(--radius-card)] border border-white/15 bg-white/5 px-5 py-4 backdrop-blur">
             <ProofStrip inst={inst} tone="dark" />
           </div>
         </div>
-        <div className="relative self-end lg:col-span-5">
+        <div className="relative self-end lg:col-span-4">
           <div className="relative mx-auto aspect-square max-w-lg">
             <div aria-hidden="true" className="absolute inset-[2%] rotate-45 border-[1.25rem] border-accent/90 lg:hidden" />
             <div aria-hidden="true" className="absolute inset-[12%] rotate-45 rounded-[2rem] bg-white/95" />
