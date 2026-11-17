@@ -2,7 +2,7 @@
 
 Four independent, student-focused admission landing pages:
 
-| Route | Institution |
+| Route | Institution | 
 |---|---|
 | `/srmist-ramapuram` | SRM Institute of Science and Technology, Ramapuram |
 | `/srmist-tiruchirappalli` | SRM Institute of Science and Technology, Tiruchirappalli |
