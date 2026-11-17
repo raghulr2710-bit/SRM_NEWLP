@@ -111,3 +111,33 @@ Legend: ✅ in use from the official site · ⏳ placeholder shown · ➖ not ap
 | Open Graph image | ✅ generated | ✅ generated | ✅ generated | ✅ generated |
 
 Images not used because they are generic stock (not campus-specific): Trichy `gallery3` and `gallery7`.
+
+## AI-generated illustrative images (replace with approved photography)
+
+Every visual slot now shows an image. Where no official photograph was available, an AI-generated
+illustrative image was produced (cinematic, natural-light campus photography direction; no text,
+logos or branding in the image). These are **not** photographs of the institutions, their students
+or facilities:
+
+- Each one is flagged `illustrative: true` in the data files (`aiImage(...)` in `src/data/institutions/*.ts`).
+- They render with an "Illustrative" tag, a note in the lightbox, and a disclaimer in every footer.
+- Files: `public/img/<rmp|trichy|eec|trp>/ai/*.webp` (hero 2000 px, others 1400 px, WebP).
+
+| Slot | RMP | Trichy | Easwari | TRP |
+|---|---|---|---|---|
+| Hero (landscape) | `hero` | `hero` | `hero` | `hero` |
+| Why choose us | `classroom` | `clubs` | official photo | `core-lab` |
+| Placements visual | `cs-lab` | `core-lab` | `cs-lab` | `cs-lab` |
+| Industry connect | `industry` | `industry` | `industry` | `industry` |
+| Infrastructure | labs, library, classroom, hostel, sports, innovation | cs-lab, research, library, sports | library, hostel | hostel, sports |
+| Academic excellence | `research` | – | – | – |
+| Campus life | cultural, symposium, sports, clubs, hackathon | cultural, clubs, sports, symposium | symposium, sports | symposium, sports |
+| Final CTA | `hackathon` | official campus photo | official photo | official photo |
+
+**Client action:** supply approved photographs for these slots (landscape ≥ 2000 px for heroes,
+≥ 1400 px elsewhere). Replace the `aiImage(...)` call with the photo's `{ src, alt, width, height }`
+and the tag disappears automatically.
+
+Still not shown until approved (no image or text is invented): recruiter logos (RMP, EEC, TRP),
+named placement records, and student testimonials for RMP and Trichy, which show an honest
+"stories will be published here" panel.

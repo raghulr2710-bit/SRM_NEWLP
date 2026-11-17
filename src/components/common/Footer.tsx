@@ -86,7 +86,10 @@ export function Footer({ inst }: { inst: Institution }) {
       </div>
 
       <div className="container-x mt-14 flex flex-col gap-4 border-t border-white/10 pt-6 text-xs text-white/55 md:flex-row md:items-center md:justify-between">
-        <p>© 2027 {inst.name}. All rights reserved.</p>
+        <div className="space-y-1">
+          <p>© 2027 {inst.name}. All rights reserved.</p>
+          <p>Images marked “Illustrative” are AI-generated visuals, not photographs of the campus, its students or facilities.</p>
+        </div>
         <ul className="flex flex-wrap gap-x-6 gap-y-2">
           <li>
             {inst.footer.privacyUrl ? (

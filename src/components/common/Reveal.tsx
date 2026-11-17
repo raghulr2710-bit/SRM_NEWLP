@@ -37,12 +37,15 @@ export function Reveal({
   y = 24,
   className,
   as = "div",
+  mask = false,
 }: {
   children: ReactNode;
   delay?: number;
   y?: number;
   className?: string;
-  as?: "div" | "li" | "article";
+  as?: "div" | "li" | "article" | "figure";
+  /** Image mask reveal (clip-path wipe + settle) instead of fade + rise. */
+  mask?: boolean;
 }) {
   const ref = useRef<HTMLElement>(null);
   useEffect(() => {
@@ -56,7 +59,7 @@ export function Reveal({
   const Comp = as as ElementType;
   const style = { "--reveal-delay": `${delay}s`, "--reveal-y": `${y}px` } as CSSProperties;
   return (
-    <Comp ref={ref} data-reveal="" className={className} style={style}>
+    <Comp ref={ref} data-reveal={mask ? "mask" : ""} className={className} style={style}>
       {children}
     </Comp>
   );

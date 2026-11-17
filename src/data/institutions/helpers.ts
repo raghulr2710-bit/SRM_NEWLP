@@ -1,4 +1,21 @@
-import type { Level, Programme } from "@/types/institution";
+import type { ImageAsset, InstitutionKey, Level, Programme } from "@/types/institution";
+
+/** Pixel sizes of the generated assets in public/img/<key>/ai/. */
+const AI_SIZE: Record<string, [number, number]> = {
+  hero: [2000, 1131],
+  industry: [1400, 792],
+  cultural: [1400, 1738],
+};
+
+/**
+ * AI-generated illustrative image (public/img/<key>/ai/<name>.webp).
+ * Not a photograph of the institution: rendered with an "Illustrative" tag
+ * and tracked for replacement in docs/CONTENT-AUDIT-AND-CONFIRMATIONS.md.
+ */
+export function aiImage(key: InstitutionKey, name: string, alt: string, objectPosition?: string): ImageAsset {
+  const [width, height] = AI_SIZE[name] ?? [1400, 1050];
+  return { src: `/img/${key}/ai/${name}.webp`, alt, width, height, illustrative: true, objectPosition };
+}
 
 interface Defaults {
   degree: string;

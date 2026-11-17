@@ -1,5 +1,5 @@
 import type { Institution } from "@/types/institution";
-import { group, PENDING_SCHOLARSHIP } from "./helpers";
+import { aiImage, group, PENDING_SCHOLARSHIP } from "./helpers";
 
 /**
  * SRMIST – Ramapuram
@@ -85,13 +85,7 @@ export const ramapuram: Institution = {
     headline: ["Learn. Leap.", "Lead from Chennai."],
     body:
       "Engineering, architecture, design, commerce and the sciences at SRM Institute of Science and Technology, Ramapuram. A NAAC 'A++' accredited university with a placement record built over decades.",
-    image: {
-      src: "/img/rmp/students.webp",
-      alt: "Two SRMIST engineering students in safety helmets",
-      width: 534,
-      height: 495,
-    },
-    secondaryImage: { pending: "Ramapuram campus photograph (wide, landscape)" },
+    image: aiImage("rmp", "hero", "Engineering students walking together along a tree-lined university walkway at golden hour", "60% center"),
     badges: [
       { src: "/img/rmp/rank-naac.png", alt: "NAAC", width: 115, height: 111 },
       { src: "/img/rmp/rank-mhrd.png", alt: "MHRD-UGC", width: 79, height: 124 },
@@ -132,6 +126,7 @@ export const ramapuram: Institution = {
   },
 
   why: {
+    image: aiImage("rmp", "classroom", "Students in a modern smart classroom with a professor at an interactive display"),
     heading: "A university that prepares you for the job, not just the exam",
     intro:
       "SRMIST combines strong academics with a placement culture that starts early. Here is what Ramapuram offers.",
@@ -339,6 +334,7 @@ export const ramapuram: Institution = {
   },
 
   placements: {
+    image: aiImage("rmp", "cs-lab", "Students collaborating at computers in a computer science lab"),
     heading: "Placements that open doors",
     intro: "A placement culture that starts in your first year and peaks with offers from product, consulting and core engineering companies.",
     stats: [
@@ -359,6 +355,7 @@ export const ramapuram: Institution = {
   },
 
   industry: {
+    image: aiImage("rmp", "industry", "Students presenting a project prototype to industry professionals"),
     heading: "Industry, built into the curriculum",
     intro: "Specialisations co-designed with industry partners, and exposure that grows each year you study.",
     highlights: [
@@ -390,12 +387,12 @@ export const ramapuram: Institution = {
     heading: "Spaces that make learning practical",
     intro: "Laboratories, libraries and residential facilities for a full university experience.",
     items: [
-      { title: "Advanced laboratories", description: "Engineering and research laboratories.", media: { pending: "Ramapuram laboratory photograph" } },
-      { title: "Digital library", description: "Library and digital resources.", media: { pending: "Ramapuram library photograph" } },
-      { title: "Smart classrooms", description: "Technology-enabled classrooms.", media: { pending: "Ramapuram classroom photograph" } },
-      { title: "Hostels", description: "Hostel facilities on campus.", media: { pending: "Ramapuram hostel photograph" } },
-      { title: "Sports facilities", description: "Indoor and outdoor sports.", media: { pending: "Ramapuram sports photograph" } },
-      { title: "Innovation centre", description: "Spaces for innovation and start-ups.", media: { pending: "Ramapuram innovation centre photograph" } },
+      { title: "Advanced laboratories", description: "Engineering and research laboratories.", media: aiImage("rmp", "core-lab", "Students working with oscilloscopes and test rigs in an engineering lab") },
+      { title: "Digital library", description: "Library and digital resources.", media: aiImage("rmp", "library", "Students reading in a spacious library with tall bookshelves") },
+      { title: "Smart classrooms", description: "Technology-enabled classrooms.", media: aiImage("rmp", "classroom", "Students in a smart classroom") },
+      { title: "Hostels", description: "Hostel facilities on campus.", media: aiImage("rmp", "hostel", "Students relaxing in a bright twin-sharing hostel room") },
+      { title: "Sports facilities", description: "Indoor and outdoor sports.", media: aiImage("rmp", "sports", "Students playing basketball on an outdoor court") },
+      { title: "Innovation centre", description: "Spaces for innovation and start-ups.", media: aiImage("rmp", "hackathon", "Students brainstorming at a hackathon table") },
     ],
   },
 
@@ -448,7 +445,7 @@ export const ramapuram: Institution = {
         verified: false,
       },
     ],
-    image: { pending: "Faculty / research photograph, Ramapuram" },
+    image: aiImage("rmp", "research", "Researcher and faculty mentor examining samples in a research lab"),
   },
 
   scholarships: {
@@ -473,11 +470,11 @@ export const ramapuram: Institution = {
     heading: "Life at Ramapuram",
     intro: "Festivals, symposiums, clubs and sport. University life beyond the classroom.",
     items: [
-      { title: "Cultural festivals", media: { pending: "Cultural festival photograph" } },
-      { title: "Technical symposiums", media: { pending: "Technical symposium photograph" } },
-      { title: "Sports", media: { pending: "Sports photograph" } },
-      { title: "Student clubs", media: { pending: "Student club photograph" } },
-      { title: "Innovation activities", media: { pending: "Hackathon / innovation photograph" } },
+      { title: "Cultural festivals", media: aiImage("rmp", "cultural", "Students performing dance on stage at a cultural festival") },
+      { title: "Technical symposiums", media: aiImage("rmp", "symposium", "Student presenting on stage at a technical symposium") },
+      { title: "Sports", media: aiImage("rmp", "sports", "Students playing basketball") },
+      { title: "Student clubs", media: aiImage("rmp", "cs-lab", "Students discussing code together in a lab") },
+      { title: "Innovation activities", media: aiImage("rmp", "hackathon", "Students at an overnight hackathon") },
     ],
   },
 
@@ -544,6 +541,7 @@ export const ramapuram: Institution = {
   finalCta: {
     headline: "Your future starts at Ramapuram.",
     body: "Applications for 2027–28 are open. Apply today, or speak to a counsellor first.",
+    image: aiImage("rmp", "hackathon", "Students brainstorming together at a hackathon"),
   },
 
   footer: {

@@ -1,5 +1,5 @@
 import type { Institution } from "@/types/institution";
-import { group, PENDING_SCHOLARSHIP } from "./helpers";
+import { aiImage, group, PENDING_SCHOLARSHIP } from "./helpers";
 
 /**
  * Easwari Engineering College (SRM Easwari), Ramapuram, Chennai
@@ -85,12 +85,7 @@ export const easwari: Institution = {
     headline: ["Engineer your future", "in the heart of Chennai."],
     body:
       "SRM Easwari, Ramapuram is a place for learning, discovery, innovation, expression and discourse, with 29 years of engineering education behind it.",
-    image: {
-      src: "/img/eec/up-image.png",
-      alt: "Easwari Engineering College student in formal wear with college lanyard",
-      width: 414,
-      height: 691,
-    },
+    image: aiImage("eec", "hero", "Smiling engineering students on the steps of an academic building on a green campus", "65% center"),
     secondaryImage: {
       src: "/img/eec/green-campus.jpg",
       alt: "Galileo Block surrounded by trees on the Easwari campus",
@@ -208,6 +203,7 @@ export const easwari: Institution = {
   },
 
   placements: {
+    image: aiImage("eec", "cs-lab", "Students pair-programming in a bright computer lab"),
     heading: "Record-setting placements",
     intro: "2025 was a record-setting year at SRM Easwari, with a highest package of 51 LPA from top companies.",
     stats: [
@@ -236,6 +232,7 @@ export const easwari: Institution = {
   },
 
   industry: {
+    image: aiImage("eec", "industry", "Student shaking hands with a corporate mentor after a mock interview"),
     heading: "Industry connect",
     intro: "Programmes and opportunities that connect classroom learning to real industry work.",
     highlights: [
@@ -287,8 +284,8 @@ export const easwari: Institution = {
         description: "Academic blocks set among mature trees.",
         media: { src: "/img/eec/green-campus.jpg", alt: "Galileo Block among trees", width: 500, height: 500 },
       },
-      { title: "Library", description: "Central library.", media: { pending: "Easwari library photograph" } },
-      { title: "Hostels & sports", description: "Residential and sports facilities.", media: { pending: "Easwari hostel / sports photograph" } },
+      { title: "Library", description: "Central library.", media: aiImage("eec", "library", "Students studying together in a bright library hall") },
+      { title: "Hostels & sports", description: "Residential and sports facilities.", media: aiImage("eec", "hostel", "Students relaxing in a hostel common room") },
     ],
   },
 
@@ -404,8 +401,8 @@ export const easwari: Institution = {
         body: "Preparing for placements in top MNCs.",
         media: { src: "/img/eec/s4.jpg", alt: "Easwari student in a suit", width: 400, height: 400 },
       },
-      { title: "Technical symposiums", media: { pending: "Easwari symposium photograph" } },
-      { title: "Sports", media: { pending: "Easwari sports photograph" } },
+      { title: "Technical symposiums", media: aiImage("eec", "symposium", "Students presenting a research poster to judges") },
+      { title: "Sports", media: aiImage("eec", "sports", "College cricket match on a green ground") },
     ],
   },
 

@@ -1,34 +1,6 @@
 import Image from "next/image";
-import { ImageOff } from "lucide-react";
+import { Info } from "lucide-react";
 import { isPending, type Media as MediaT } from "@/types/institution";
-
-/** Clearly labelled placeholder for content / assets awaiting client approval. */
-export function PendingBox({
-  label,
-  className = "",
-  tone = "light",
-}: {
-  label: string;
-  className?: string;
-  tone?: "light" | "dark";
-}) {
-  const dark = tone === "dark";
-  return (
-    <div
-      role="img"
-      aria-label={`Placeholder: ${label}`}
-      className={`pending-hatch relative flex h-full w-full items-center justify-center overflow-hidden ${
-        dark ? "bg-white/5 text-white/80" : "bg-brand-soft text-brand"
-      } ${className}`}
-    >
-      <div className="flex max-w-[16rem] flex-col items-center gap-2 px-4 text-center">
-        <ImageOff aria-hidden="true" className="h-5 w-5 opacity-70" />
-        <span className="text-xs font-bold uppercase tracking-[0.14em]">Asset pending</span>
-        <span className="text-sm leading-snug font-medium">{label}</span>
-      </div>
-    </div>
-  );
-}
 
 /** Small inline tag for unverified details. */
 export function PendingTag({ children = "To be confirmed", className = "" }: { children?: string; className?: string }) {
@@ -41,35 +13,59 @@ export function PendingTag({ children = "To be confirmed", className = "" }: { c
   );
 }
 
+/** Marks an AI-generated visual so it is never mistaken for a photograph of the institution. */
+export function IllustrativeTag({ className = "" }: { className?: string }) {
+  return (
+    <span
+      title="AI-generated illustrative image – not a photograph of this institution"
+      className={`pointer-events-none absolute z-[1] inline-flex items-center gap-1 rounded-full bg-black/45 px-2 py-0.5 text-xs font-medium text-white/90 backdrop-blur-sm ${className || "left-3 top-3"}`}
+    >
+      <Info aria-hidden="true" className="h-3 w-3" />
+      Illustrative
+    </span>
+  );
+}
+
 /**
- * Renders an image filling its (relatively positioned) parent, or a labelled
- * placeholder if the asset is still pending.
+ * Renders an image filling its (relatively positioned) parent. Every visual
+ * slot in the data files carries a real image (official photograph or an
+ * AI-generated illustrative visual); a pending asset falls back to a quiet
+ * brand-tinted surface rather than a placeholder box.
  */
 export function MediaFill({
   media,
   sizes,
   className = "",
   preload = false,
-  tone,
   zoom = false,
+  tag = true,
+  tagClassName,
 }: {
   media: MediaT;
   sizes: string;
   className?: string;
   preload?: boolean;
+  /** Kept for call-site compatibility. */
   tone?: "light" | "dark";
   zoom?: boolean;
+  /** Show the "Illustrative" tag on AI-generated images. */
+  tag?: boolean;
+  tagClassName?: string;
 }) {
-  if (isPending(media)) return <PendingBox label={media.pending} tone={tone} className={className} />;
+  if (isPending(media)) return <div aria-hidden="true" className={`h-full w-full bg-gradient-to-br from-brand to-brand-ink ${className}`} />;
   return (
-    <Image
-      src={media.src}
-      alt={media.alt}
-      fill
-      sizes={sizes}
-      preload={preload}
-      className={`object-cover ${zoom ? "transition-transform duration-700 ease-out group-hover:scale-[1.04]" : ""} ${className}`}
-      style={media.objectPosition ? { objectPosition: media.objectPosition } : undefined}
-    />
+    <>
+      <Image
+        src={media.src}
+        alt={media.alt}
+        fill
+        sizes={sizes}
+        preload={preload}
+        quality={media.illustrative ? 75 : undefined}
+        className={`object-cover ${zoom ? "transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]" : ""} ${className}`}
+        style={media.objectPosition ? { objectPosition: media.objectPosition } : undefined}
+      />
+      {media.illustrative && tag && <IllustrativeTag className={tagClassName} />}
+    </>
   );
 }

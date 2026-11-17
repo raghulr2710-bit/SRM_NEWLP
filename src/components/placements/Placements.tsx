@@ -1,9 +1,10 @@
-import { Briefcase, Info } from "lucide-react";
+import type { CSSProperties } from "react";
+import { Briefcase, Building2, Info } from "lucide-react";
 import { isPending, type Institution } from "@/types/institution";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { Reveal } from "@/components/common/Reveal";
 import { Counter } from "@/components/common/Counter";
-import { PendingBox } from "@/components/common/Media";
+import { MediaFill } from "@/components/common/Media";
 import { ApplyButton } from "@/components/common/Cta";
 import { btn } from "@/components/common/buttons";
 
@@ -52,7 +53,7 @@ export function Placements({ inst, index }: { inst: Institution; index: string }
                 className={`flex min-w-0 flex-col-reverse border-b border-r p-4 [&:last-child:nth-child(odd)]:col-span-2 sm:p-8 lg:p-10 lg:[&:last-child:nth-child(odd)]:col-span-1 ${dark ? "border-white/15" : "border-line bg-white"}`}
               >
                 <dt className={`mt-3 text-sm font-medium uppercase tracking-wider ${dark ? "text-white/70" : "text-muted"}`}>{s.label}</dt>
-                <dd className={`font-display text-[1.8rem] font-semibold leading-none tracking-tight whitespace-nowrap min-[400px]:text-[2.1rem] sm:text-6xl lg:text-[3.4rem] xl:text-7xl ${dark ? "text-accent-ink" : "text-brand"}`}>
+                <dd className={`font-display text-[1.75rem] font-semibold leading-none tracking-tight whitespace-nowrap min-[400px]:text-[2.1rem] sm:text-5xl xl:text-[3.5rem] ${dark ? "text-accent-ink" : "text-brand"}`}>
                   <Counter stat={s} />
                 </dd>
               </Reveal>
@@ -65,8 +66,13 @@ export function Placements({ inst, index }: { inst: Institution; index: string }
         </div>
 
         {/* Individual / department-specific records */}
-        <div className="mt-16 grid gap-10 lg:grid-cols-12">
-          <div className="lg:col-span-7">
+        <div className="mt-14 grid gap-10 lg:grid-cols-12 lg:gap-12">
+          {p.image && (
+            <Reveal mask className="group relative aspect-[16/10] overflow-hidden rounded-[var(--radius-card)] lg:col-span-5 lg:row-span-2 lg:aspect-auto lg:min-h-[28rem]">
+              <MediaFill media={p.image} sizes="(min-width:1024px) 40vw, 100vw" zoom />
+            </Reveal>
+          )}
+          <div className={p.image ? "lg:col-span-7" : "lg:col-span-7"}>
             <h3 className={`eyebrow mb-4 ${dark ? "text-white/60" : "text-muted"}`}>Student achievements</h3>
             {p.records.length > 0 ? (
               <ul className={`divide-y ${dark ? "divide-white/10 border-y border-white/10" : "divide-line border-y border-line"}`}>
@@ -83,16 +89,17 @@ export function Placements({ inst, index }: { inst: Institution; index: string }
                 ))}
               </ul>
             ) : (
-              <div className="aspect-[16/7]">
-                <PendingBox label="Approved student placement highlights" tone={dark ? "dark" : "light"} />
-              </div>
+              <p className={`flex items-start gap-3 rounded-[var(--radius-card)] border p-5 text-sm leading-relaxed ${dark ? "border-white/15 text-white/75" : "border-line bg-white text-muted"}`}>
+                <Info aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-accent-ink" />
+                Named student placement highlights will appear here once approved by the placement cell.
+              </p>
             )}
             {p.recordsNote && <p className={`mt-3 text-xs ${dark ? "text-white/55" : "text-muted"}`}>{p.recordsNote}</p>}
           </div>
 
-          <div className="lg:col-span-5">
+          <div className={p.image ? "lg:col-span-7" : "lg:col-span-5"}>
             <h3 className={`eyebrow mb-4 ${dark ? "text-white/60" : "text-muted"}`}>Career development</h3>
-            <ul className="space-y-3">
+            <ul className="grid gap-3 sm:grid-cols-2">
               {p.careerDevelopment.map((c) => (
                 <li
                   key={c.title}
@@ -113,16 +120,19 @@ export function Placements({ inst, index }: { inst: Institution; index: string }
         <div className="mt-16">
           <h3 className={`eyebrow mb-5 ${dark ? "text-white/60" : "text-muted"}`}>Leading recruiters</h3>
           {isPending(p.recruiters) ? (
-            <div className="h-36">
-              <PendingBox label={p.recruiters.pending} tone={dark ? "dark" : "light"} />
-            </div>
+            <p className={`flex items-start gap-3 text-sm leading-relaxed ${dark ? "text-white/70" : "text-muted"}`}>
+              <Building2 aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-accent-ink" />
+              Recruiter logos will be shown once the approved list is received from the placement cell.
+            </p>
           ) : (
             <>
-              <ul className="flex flex-wrap gap-2">
-                {p.recruiters.names.map((n) => (
+              <div className="marquee relative overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_8%,black_92%,transparent)] motion-reduce:[mask-image:none]">
+              <ul className="marquee-track flex w-max gap-3 motion-reduce:w-auto motion-reduce:flex-wrap" style={{ "--marquee-duration": `${Math.max(p.recruiters.names.length * 3, 24)}s` } as CSSProperties}>
+                {[...p.recruiters.names, ...p.recruiters.names].map((n, i) => (
                   <li
-                    key={n}
-                    className={`rounded-full border px-4 py-2 font-display text-base font-semibold sm:text-lg ${
+                    key={`${n}-${i}`}
+                    aria-hidden={i >= (p.recruiters as { names: string[] }).names.length || undefined}
+                    className={`whitespace-nowrap rounded-full border px-4 py-2 font-display ${i >= (p.recruiters as { names: string[] }).names.length ? "motion-reduce:hidden" : ""} text-base font-semibold sm:text-lg ${
                       dark ? "border-white/15 text-white/90" : "border-line bg-white text-ink"
                     }`}
                   >
@@ -130,6 +140,7 @@ export function Placements({ inst, index }: { inst: Institution; index: string }
                   </li>
                 ))}
               </ul>
+              </div>
               <p className={`mt-3 text-xs ${dark ? "text-white/55" : "text-muted"}`}>{p.recruiters.note}</p>
             </>
           )}

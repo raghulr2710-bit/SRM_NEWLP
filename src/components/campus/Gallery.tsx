@@ -1,9 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
-import { ChevronLeft, ChevronRight, Expand, X } from "lucide-react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
+import { AnimatePresence, motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { ArrowRight, ChevronLeft, ChevronRight, Expand, X } from "lucide-react";
 import { isPending, type ImageAsset, type Media } from "@/types/institution";
 import { MediaFill } from "@/components/common/Media";
 import { Reveal } from "@/components/common/Reveal";
@@ -13,36 +13,44 @@ export interface GalleryItem {
   description?: string;
   media: Media;
 }
+type Viewable = GalleryItem & { media: ImageAsset };
 
-/**
- * Image-led gallery with an accessible lightbox (Esc to close, ←/→ to move,
- * focus returned to the opening tile). Pending assets render as labelled
- * placeholders and are not openable.
- */
-export function Gallery({
-  items,
-  variant,
-  tone = "light",
-}: {
-  items: GalleryItem[];
-  variant: "mosaic" | "strip";
-  tone?: "light" | "dark";
-}) {
-  const viewable = items.filter((i) => !isPending(i.media)) as (GalleryItem & { media: ImageAsset })[];
+/* ------------------------------------------------------------------------ */
+/* Lightbox (shared)                                                         */
+/* ------------------------------------------------------------------------ */
+
+function useLightbox(count: number) {
   const [openIdx, setOpenIdx] = useState<number | null>(null);
   const triggers = useRef<Map<number, HTMLButtonElement>>(new Map());
-  const closeBtn = useRef<HTMLButtonElement>(null);
   const lastOpened = useRef<number | null>(null);
-
+  const open = useCallback((i: number) => {
+    lastOpened.current = i;
+    setOpenIdx(i);
+  }, []);
   const close = useCallback(() => {
     setOpenIdx(null);
     const idx = lastOpened.current;
-    if (idx !== null) window.setTimeout(() => triggers.current.get(idx)?.focus(), 0);
+    if (idx !== null) window.setTimeout(() => triggers.current.get(idx)?.focus({ preventScroll: true }), 0);
   }, []);
-  const step = useCallback(
-    (d: number) => setOpenIdx((i) => (i === null ? i : (i + d + viewable.length) % viewable.length)),
-    [viewable.length],
-  );
+  const step = useCallback((d: number) => setOpenIdx((i) => (i === null ? i : (i + d + count) % count)), [count]);
+  const register = (i: number) => (el: HTMLButtonElement | null) => {
+    if (el) triggers.current.set(i, el);
+  };
+  return { openIdx, open, close, step, register };
+}
+
+function Lightbox({
+  items,
+  openIdx,
+  close,
+  step,
+}: {
+  items: Viewable[];
+  openIdx: number | null;
+  close: () => void;
+  step: (d: number) => void;
+}) {
+  const closeBtn = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     if (openIdx === null) return;
@@ -54,7 +62,6 @@ export function Gallery({
       if (e.key === "ArrowRight") step(1);
       if (e.key === "ArrowLeft") step(-1);
       if (e.key === "Tab") {
-        // keep focus inside the dialog
         const nodes = document.querySelectorAll<HTMLElement>("#gallery-lightbox button");
         if (!nodes.length) return;
         const first = nodes[0];
@@ -75,131 +82,241 @@ export function Gallery({
     };
   }, [openIdx, close, step]);
 
-  const dark = tone === "dark";
-  const layouts =
-    variant === "mosaic"
-      ? ["md:col-span-2 md:row-span-2", "", "", "md:col-span-2", "", "md:col-span-3"]
-      : ["", "", "", "", "", ""];
+  const current = openIdx !== null ? items[openIdx] : null;
+  return (
+    <AnimatePresence>
+      {current && openIdx !== null && (
+        <motion.div
+          id="gallery-lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={current.title}
+          className="fixed inset-0 z-[80] flex flex-col bg-black/95 text-white"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={(e) => {
+            if (e.target === e.currentTarget) close();
+          }}
+        >
+          <div className="flex items-center justify-between p-4">
+            <p className="text-sm text-white/70" aria-live="polite">
+              {openIdx + 1} / {items.length}
+            </p>
+            <button ref={closeBtn} type="button" onClick={close} className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 hover:bg-white/20">
+              <X aria-hidden="true" className="h-5 w-5" />
+              <span className="sr-only">Close</span>
+            </button>
+          </div>
+          <div className="relative flex-1" onClick={(e) => e.target === e.currentTarget && close()}>
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={current.media.src}
+                className="absolute inset-4 md:inset-x-20"
+                initial={{ opacity: 0, scale: 0.98 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.25 }}
+              >
+                <Image src={current.media.src} alt={current.media.alt} fill sizes="100vw" className="object-contain" />
+              </motion.div>
+            </AnimatePresence>
+            {items.length > 1 && (
+              <>
+                <button type="button" onClick={() => step(-1)} className="absolute left-3 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 hover:bg-white/25">
+                  <ChevronLeft aria-hidden="true" className="h-6 w-6" />
+                  <span className="sr-only">Previous image</span>
+                </button>
+                <button type="button" onClick={() => step(1)} className="absolute right-3 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 hover:bg-white/25">
+                  <ChevronRight aria-hidden="true" className="h-6 w-6" />
+                  <span className="sr-only">Next image</span>
+                </button>
+              </>
+            )}
+          </div>
+          <div className="p-5 text-center">
+            <p className="font-display text-xl">{current.title}</p>
+            {current.description && <p className="mt-1 text-sm text-white/70">{current.description}</p>}
+            {current.media.illustrative && (
+              <p className="mt-2 text-xs text-white/60">Illustrative AI-generated image – not a photograph of this campus.</p>
+            )}
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
 
+function Tile({ item, sizes, onOpen, register, className = "" }: { item: GalleryItem; sizes: string; onOpen?: () => void; register?: (el: HTMLButtonElement | null) => void; className?: string }) {
+  const inner = (
+    <>
+      <MediaFill media={item.media} sizes={sizes} zoom />
+      <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/5 to-transparent" />
+      {onOpen && (
+        <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-ink opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
+          <Expand aria-hidden="true" className="h-4 w-4" />
+        </span>
+      )}
+      <span className="absolute inset-x-0 bottom-0 p-4 text-left sm:p-5">
+        <span className="block translate-y-1 font-display text-base leading-tight text-white transition-transform duration-500 group-hover:translate-y-0 [overflow-wrap:anywhere] sm:text-lg">
+          {item.title}
+        </span>
+        {item.description && (
+          <span className="mt-1 hidden max-h-0 overflow-hidden text-sm text-white/85 opacity-0 transition-[max-height,opacity] duration-500 group-hover:max-h-16 group-hover:opacity-100 group-focus-visible:max-h-16 group-focus-visible:opacity-100 sm:block">
+            {item.description}
+          </span>
+        )}
+      </span>
+    </>
+  );
+  if (!onOpen) return <div className={`group relative block h-full w-full overflow-hidden rounded-[var(--radius-card)] ${className}`}>{inner}</div>;
+  return (
+    <button
+      type="button"
+      ref={register}
+      onClick={onOpen}
+      aria-label={`View larger: ${item.title}`}
+      className={`group relative block h-full w-full overflow-hidden rounded-[var(--radius-card)] ${className}`}
+    >
+      {inner}
+    </button>
+  );
+}
+
+/* ------------------------------------------------------------------------ */
+/* Mosaic – asymmetric photo grid (campus life)                              */
+/* ------------------------------------------------------------------------ */
+
+/** Gap-free asymmetric layouts on a 6-column grid (2 columns on mobile), chosen by photo count. */
+const MOSAIC_MD: Record<number, string[]> = {
+  3: ["md:col-span-4 md:row-span-2", "md:col-span-2", "md:col-span-2"],
+  4: ["md:col-span-3 md:row-span-2", "md:col-span-3", "md:col-span-3", "md:col-span-6"],
+  5: ["md:col-span-4 md:row-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-3", "md:col-span-3"],
+  6: ["md:col-span-4 md:row-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-2"],
+  7: ["md:col-span-4 md:row-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-2", "md:col-span-6"],
+};
+function mosaic(i: number, n: number) {
+  const md = MOSAIC_MD[n]?.[i] ?? "md:col-span-2";
+  const mobile = i === 0 ? "col-span-2 row-span-2" : (n - 1) % 2 === 1 && i === n - 1 ? "col-span-2" : "";
+  return `${mobile} ${md}`;
+}
+
+export function Gallery({ items }: { items: GalleryItem[] }) {
+  const viewable = items.filter((i) => !isPending(i.media)) as Viewable[];
+  const lb = useLightbox(viewable.length);
   return (
     <>
-      <ul
-        className={
-          variant === "mosaic"
-            ? "grid auto-rows-[14rem] grid-cols-2 gap-3 md:auto-rows-[15rem] md:grid-cols-4"
-            : "no-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0 lg:grid-cols-5"
-        }
-      >
+      <ul className="grid grid-flow-dense auto-rows-[10rem] grid-cols-2 gap-3 sm:auto-rows-[12rem] md:auto-rows-[13rem] md:grid-cols-6 lg:gap-4">
         {items.map((item, i) => {
           const vIdx = viewable.findIndex((v) => v === item);
-          const pending = isPending(item.media);
-          const tile = (
-            <>
-              <MediaFill media={item.media} sizes={variant === "mosaic" ? "(min-width:768px) 50vw, 50vw" : "(min-width:1024px) 20vw, 75vw"} tone={tone} zoom />
-              {!pending && (
-                <>
-                  <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
-                  <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-ink opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
-                    <Expand aria-hidden="true" className="h-4 w-4" />
-                  </span>
-                </>
-              )}
-              <span className={`absolute inset-x-0 bottom-0 p-4 text-left ${pending ? "hidden" : ""}`}>
-                <span className="block font-display text-base leading-tight text-white hyphens-auto [overflow-wrap:anywhere] sm:text-lg">{item.title}</span>
-                {item.description && <span className="mt-1 hidden text-sm text-white/85 sm:block">{item.description}</span>}
-              </span>
-            </>
-          );
           return (
-            <Reveal
-              as="li"
-              key={`${item.title}-${i}`}
-              delay={0.04 * (i % 6)}
-              className={`${layouts[i % layouts.length]} ${variant === "strip" ? "w-[75vw] shrink-0 snap-start sm:w-[45vw] md:w-auto" : ""}`}
-            >
-              {pending ? (
-                <div className={`relative overflow-hidden rounded-[var(--radius-card)] ${variant === "strip" ? "aspect-[3/4]" : "h-full"}`}>
-                  {tile}
-                  <span className={`absolute inset-x-0 top-0 p-3 text-xs font-semibold ${dark ? "text-white/80" : "text-brand"}`}>{item.title}</span>
-                </div>
-              ) : (
-                <button
-                  type="button"
-                  ref={(el) => {
-                    if (el) triggers.current.set(vIdx, el);
-                  }}
-                  onClick={() => {
-                    lastOpened.current = vIdx;
-                    setOpenIdx(vIdx);
-                  }}
-                  className={`group relative block w-full overflow-hidden rounded-[var(--radius-card)] ${variant === "strip" ? "aspect-[3/4]" : "h-full"}`}
-                  aria-label={`View larger: ${item.title}`}
-                >
-                  {tile}
-                </button>
-              )}
+            <Reveal as="li" mask key={`${item.title}-${i}`} delay={0.05 * (i % 6)} className={`${mosaic(i, items.length)} overflow-hidden rounded-[var(--radius-card)]`}>
+              <Tile
+                item={item}
+                sizes="(min-width:768px) 50vw, 100vw"
+                onOpen={vIdx >= 0 ? () => lb.open(vIdx) : undefined}
+                register={vIdx >= 0 ? lb.register(vIdx) : undefined}
+              />
             </Reveal>
           );
         })}
       </ul>
+      <Lightbox items={viewable} openIdx={lb.openIdx} close={lb.close} step={lb.step} />
+    </>
+  );
+}
 
-      <AnimatePresence>
-        {openIdx !== null && viewable[openIdx] && (
-          <motion.div
-            id="gallery-lightbox"
-            role="dialog"
-            aria-modal="true"
-            aria-label={viewable[openIdx].title}
-            className="fixed inset-0 z-[80] flex flex-col bg-black/95 text-white"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={(e) => {
-              if (e.target === e.currentTarget) close();
-            }}
-          >
-            <div className="flex items-center justify-between p-4">
-              <p className="text-sm text-white/70" aria-live="polite">
-                {openIdx + 1} / {viewable.length}
-              </p>
-              <button ref={closeBtn} type="button" onClick={close} className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 hover:bg-white/20">
-                <X aria-hidden="true" className="h-5 w-5" />
-                <span className="sr-only">Close</span>
-              </button>
+/* ------------------------------------------------------------------------ */
+/* Immersive – scroll-linked horizontal gallery (infrastructure)             */
+/* ------------------------------------------------------------------------ */
+
+const subscribeDesktop = (cb: () => void) => {
+  const mq = window.matchMedia("(min-width: 1024px)");
+  mq.addEventListener("change", cb);
+  return () => mq.removeEventListener("change", cb);
+};
+const isDesktop = () => window.matchMedia("(min-width: 1024px)").matches;
+
+/**
+ * Desktop: the section pins while vertical scrolling moves a row of large
+ * photographs sideways (sticky + scroll-linked translateX). Touch, small
+ * screens and reduced-motion: a native swipeable snap row. Every tile opens
+ * the shared lightbox.
+ */
+export function ImmersiveGallery({ items, heading }: { items: GalleryItem[]; heading: ReactNode }) {
+  const viewable = items.filter((i) => !isPending(i.media)) as Viewable[];
+  const lb = useLightbox(viewable.length);
+  const reduce = useReducedMotion();
+  const desktop = useSyncExternalStore(subscribeDesktop, isDesktop, () => false);
+  const pinned = desktop && !reduce && items.length > 2;
+
+  const outer = useRef<HTMLDivElement>(null);
+  const track = useRef<HTMLUListElement>(null);
+  const [distance, setDistance] = useState(0);
+
+  useEffect(() => {
+    if (!pinned) return;
+    const el = track.current;
+    if (!el) return;
+    const measure = () => setDistance(Math.max(el.scrollWidth - window.innerWidth + 80, 0));
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    window.addEventListener("resize", measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", measure);
+    };
+  }, [pinned]);
+
+  const { scrollYProgress } = useScroll({ target: outer, offset: ["start start", "end end"] });
+  const x = useTransform(scrollYProgress, [0, 1], [0, -distance]);
+  const progress = useTransform(scrollYProgress, [0, 1], [0, 1]);
+
+  const tiles = items.map((item, i) => {
+    const vIdx = viewable.findIndex((v) => v === item);
+    return { item, vIdx, wide: i % 3 === 0 };
+  });
+
+  if (!pinned) {
+    return (
+      <div ref={outer} className="relative">
+        <div className="container-x">{heading}</div>
+        <ul className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 md:px-8">
+          {tiles.map(({ item, vIdx, wide }, i) => (
+            <Reveal as="li" key={`${item.title}-${i}`} delay={0.05 * (i % 4)} className={`h-[22rem] shrink-0 snap-start sm:h-[26rem] ${wide ? "w-[86vw] sm:w-[34rem]" : "w-[72vw] sm:w-[24rem]"}`}>
+              <Tile item={item} sizes="(min-width:640px) 34rem, 86vw" onOpen={vIdx >= 0 ? () => lb.open(vIdx) : undefined} register={vIdx >= 0 ? lb.register(vIdx) : undefined} />
+            </Reveal>
+          ))}
+        </ul>
+        <Lightbox items={viewable} openIdx={lb.openIdx} close={lb.close} step={lb.step} />
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <div ref={outer} style={{ height: `calc(100vh + ${distance}px)` }} className="relative">
+        <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden pt-16">
+          <div className="container-x">{heading}</div>
+          <motion.ul ref={track} style={{ x }} className="flex w-max gap-5 pl-[max(2.5rem,calc((100vw-1320px)/2+2.5rem))] pr-10 will-change-transform">
+            {tiles.map(({ item, vIdx, wide }, i) => (
+              <li key={`${item.title}-${i}`} className={`h-[min(50vh,30rem)] shrink-0 ${wide ? "w-[min(52vw,46rem)]" : "w-[min(32vw,28rem)]"}`}>
+                <Tile item={item} sizes="50vw" onOpen={vIdx >= 0 ? () => lb.open(vIdx) : undefined} register={vIdx >= 0 ? lb.register(vIdx) : undefined} />
+              </li>
+            ))}
+          </motion.ul>
+          <div className="container-x mt-6 flex items-center gap-4">
+            <div className="h-0.5 flex-1 overflow-hidden rounded bg-line">
+              <motion.div style={{ scaleX: progress }} className="h-full origin-left bg-accent" />
             </div>
-            <div className="relative flex-1" onClick={(e) => e.target === e.currentTarget && close()}>
-              <AnimatePresence mode="wait" initial={false}>
-                <motion.div
-                  key={viewable[openIdx].media.src}
-                  className="absolute inset-4 md:inset-x-20"
-                  initial={{ opacity: 0, scale: 0.98 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <Image src={viewable[openIdx].media.src} alt={viewable[openIdx].media.alt} fill sizes="100vw" className="object-contain" />
-                </motion.div>
-              </AnimatePresence>
-              {viewable.length > 1 && (
-                <>
-                  <button type="button" onClick={() => step(-1)} className="absolute left-3 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 hover:bg-white/25">
-                    <ChevronLeft aria-hidden="true" className="h-6 w-6" />
-                    <span className="sr-only">Previous image</span>
-                  </button>
-                  <button type="button" onClick={() => step(1)} className="absolute right-3 top-1/2 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 hover:bg-white/25">
-                    <ChevronRight aria-hidden="true" className="h-6 w-6" />
-                    <span className="sr-only">Next image</span>
-                  </button>
-                </>
-              )}
-            </div>
-            <div className="p-5 text-center">
-              <p className="font-display text-xl">{viewable[openIdx].title}</p>
-              {viewable[openIdx].description && <p className="mt-1 text-sm text-white/70">{viewable[openIdx].description}</p>}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+            <p className="flex items-center gap-1.5 text-sm text-muted">
+              Keep scrolling <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </p>
+          </div>
+        </div>
+      </div>
+      <Lightbox items={viewable} openIdx={lb.openIdx} close={lb.close} step={lb.step} />
     </>
   );
 }

@@ -1,5 +1,5 @@
 import type { Institution } from "@/types/institution";
-import { group, PENDING_SCHOLARSHIP } from "./helpers";
+import { aiImage, group, PENDING_SCHOLARSHIP } from "./helpers";
 
 /**
  * SRM TRP Engineering College, Tiruchirappalli
@@ -85,12 +85,7 @@ export const trp: Institution = {
     headline: ["Skills that", "get you hired."],
     body:
       "Start your journey at SRM TRP Engineering College, a place for learning, discovery, innovation and expression. Join an institute that will upskill your talent and back it with a 99% placement record.",
-    image: {
-      src: "/img/trp/hero.webp",
-      alt: "Smiling SRM TRP student holding a notebook",
-      width: 1022,
-      height: 1367,
-    },
+    image: aiImage("trp", "hero", "Energetic group of engineering students high-fiving outside a colourful college building", "70% center"),
     secondaryImage: {
       src: "/img/trp/sl-1.jpg",
       alt: "SRM TRP Engineering College main building and lawn",
@@ -124,6 +119,7 @@ export const trp: Institution = {
   },
 
   why: {
+    image: aiImage("trp", "core-lab", "Students working on a go-kart chassis in the college workshop"),
     heading: "Why TRP",
     intro: "A student-focused engineering college that continues the legacy of the SRM Group of Institutions.",
     source: "apply.trp.srmtrichy.edu.in",
@@ -178,6 +174,7 @@ export const trp: Institution = {
   },
 
   placements: {
+    image: aiImage("trp", "cs-lab", "Students building an IoT project with microcontroller boards"),
     heading: "99% placements. Real offers.",
     intro: "Strong placement support with 90+ interview avenues for students.",
     stats: [
@@ -204,6 +201,7 @@ export const trp: Institution = {
   },
 
   industry: {
+    image: aiImage("trp", "industry", "Students in safety helmets on an industrial visit to a manufacturing plant"),
     heading: "Learning by doing",
     intro: "Practical, lab-first learning that prepares you for real engineering work.",
     highlights: [
@@ -255,8 +253,8 @@ export const trp: Institution = {
         description: "Palm-lined avenues and green open spaces.",
         media: { src: "/img/trp/sl-4.jpg", alt: "Aerial view of the palm-lined campus entrance", width: 750, height: 330 },
       },
-      { title: "Hostels", description: "Residential facilities.", media: { pending: "SRM TRP hostel photograph" } },
-      { title: "Sports", description: "Sports facilities.", media: { pending: "SRM TRP sports photograph" } },
+      { title: "Hostels", description: "Residential facilities.", media: aiImage("trp", "hostel", "Hostel block with balconies around a green courtyard") },
+      { title: "Sports", description: "Sports facilities.", media: aiImage("trp", "sports", "Students playing volleyball on an outdoor court") },
     ],
   },
 
@@ -343,8 +341,8 @@ export const trp: Institution = {
         body: "Space to think and breathe.",
         media: { src: "/img/trp/sl-4.jpg", alt: "Aerial view of campus entrance", width: 750, height: 330 },
       },
-      { title: "Technical symposiums", media: { pending: "SRM TRP symposium photograph" } },
-      { title: "Sports", media: { pending: "SRM TRP sports photograph" } },
+      { title: "Technical symposiums", media: aiImage("trp", "symposium", "Students cheering at a robotics competition") },
+      { title: "Sports", media: aiImage("trp", "sports", "Students playing volleyball") },
     ],
   },
 

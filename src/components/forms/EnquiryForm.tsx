@@ -36,7 +36,8 @@ export interface EnquiryFormProps {
   consent: string;
   helpline?: { display: string; tel: string };
   tone?: "light" | "dark";
-  compact?: boolean;
+  /** "hero": condensed two-column layout for the hero card; "full": standalone section form. */
+  variant?: "hero" | "full";
 }
 
 const FORM_INTENTS: Intent[] = ["enquiry", "programme", "counselling", "campus_visit", "whatsapp_callback", "brochure", "scholarship"];
@@ -53,8 +54,11 @@ type Status =
 const TURNSTILE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
 export function EnquiryForm(props: EnquiryFormProps) {
-  const { institution, programmes, levels, faculties, consent, tone = "light", compact = false } = props;
+  const { institution, programmes, levels, faculties, consent, tone = "light", variant = "full" } = props;
   const dark = tone === "dark";
+  const hero = variant === "hero";
+  /** Fields that sit side by side in the hero card but span the row in the full form. */
+  const pair = hero ? "" : "sm:col-span-2";
   const uid = useId();
   const { prefill } = useEnquiry();
   const formRef = useRef<HTMLFormElement>(null);
@@ -190,12 +194,12 @@ export function EnquiryForm(props: EnquiryFormProps) {
   }
 
   // ----- styles -----
-  const label = `mb-1.5 block text-sm font-semibold ${dark ? "text-white" : "text-ink"}`;
+  const label = `${hero ? "mb-1 text-[0.8125rem]" : "mb-1.5 text-sm"} block font-semibold ${dark ? "text-white" : "text-ink"}`;
   const field = (invalid: boolean) =>
-    `block w-full min-h-12 rounded-[var(--radius-card)] border px-3.5 text-base transition-colors outline-none focus-visible:outline-none focus:ring-2 ${
+    `block w-full ${hero ? "min-h-11" : "min-h-12"} rounded-[var(--radius-card)] border px-3.5 text-base transition-[border-color,box-shadow,background-color] duration-200 outline-none focus-visible:outline-none focus:ring-4 ${
       dark
         ? "bg-white/[0.07] text-white placeholder:text-white/50 focus:ring-accent [&>option]:text-ink [&>optgroup]:text-ink"
-        : "bg-white text-ink placeholder:text-muted/70 focus:ring-brand/40"
+        : `${hero ? "bg-surface-alt/60 focus:bg-white" : "bg-white"} text-ink placeholder:text-muted/70 focus:ring-brand/15`
     } ${invalid ? "border-red-500 focus:ring-red-400/50" : dark ? "border-white/25 focus:border-accent" : "border-line focus:border-brand"}`;
   const errText = `mt-1.5 flex items-start gap-1.5 text-sm font-medium ${dark ? "text-red-200" : "text-red-700"}`;
 
@@ -267,8 +271,8 @@ export function EnquiryForm(props: EnquiryFormProps) {
   return (
     <form ref={formRef} noValidate className={dark ? "on-dark" : undefined} onSubmit={onSubmit} onFocus={onFirstInteraction} aria-describedby={`${uid}-privacy`}>
       {TURNSTILE_KEY && <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="lazyOnload" />}
-      <div className={`grid gap-4 ${compact ? "" : "sm:grid-cols-2"}`}>
-        <div className={compact ? "" : "sm:col-span-2"}>
+      <div className={`grid sm:grid-cols-2 ${hero ? "gap-x-3 gap-y-3.5" : "gap-4"}`}>
+        <div className="sm:col-span-2">
           <label htmlFor="enq-name" className={label}>
             Student name <span aria-hidden="true" className="text-accent-ink">*</span>
           </label>
@@ -289,7 +293,7 @@ export function EnquiryForm(props: EnquiryFormProps) {
           {errorMsg("name")}
         </div>
 
-        <div className={compact ? "" : "sm:col-span-2"}>
+        <div className="sm:col-span-2">
           <label htmlFor="enq-mobile" className={label}>
             Mobile number <span aria-hidden="true" className="text-accent-ink">*</span>
           </label>
@@ -303,11 +307,11 @@ export function EnquiryForm(props: EnquiryFormProps) {
               autoComplete="tel-country-code"
               value={values.countryCode}
               onChange={(e) => set("countryCode", e.target.value)}
-              className={`${field(false).replace("w-full", "")} w-[7.5rem] shrink-0 pr-2`}
+              className={`${field(false).replace("w-full", "")} ${hero ? "w-[5.25rem] px-2.5" : "w-[7.5rem] pr-2"} shrink-0`}
             >
               {COUNTRY_CODES.map((c) => (
                 <option key={c.code} value={c.code}>
-                  {c.code === "other" ? "Other" : c.code} {c.code !== "other" && `· ${c.label.split(" (")[0]}`}
+                  {c.code === "other" ? "Other" : c.code} {!hero && c.code !== "other" && `· ${c.label.split(" (")[0]}`}
                 </option>
               ))}
             </select>
@@ -328,7 +332,7 @@ export function EnquiryForm(props: EnquiryFormProps) {
               placeholder={values.countryCode === "+91" ? "10-digit mobile" : "Mobile number"}
             />
           </div>
-          <p id={`${uid}-mobile-hint`} className={`mt-1.5 text-xs ${dark ? "text-white/60" : "text-muted"}`}>
+          <p id={`${uid}-mobile-hint`} className={`mt-1.5 text-xs ${hero ? "sr-only" : ""} ${dark ? "text-white/60" : "text-muted"}`}>
             {values.countryCode === "+91" && !validateMobile("+91", values.mobile)
               ? "Looks good."
               : "We'll call or WhatsApp you on this number."}
@@ -336,7 +340,7 @@ export function EnquiryForm(props: EnquiryFormProps) {
           {errorMsg("mobile")}
         </div>
 
-        <div className={compact ? "" : "sm:col-span-2"}>
+        <div className="sm:col-span-2">
           <label htmlFor="enq-email" className={label}>
             Email address <span aria-hidden="true" className="text-accent-ink">*</span>
           </label>
@@ -360,7 +364,7 @@ export function EnquiryForm(props: EnquiryFormProps) {
         </div>
 
         {faculties && (
-          <div className={compact ? "" : "sm:col-span-2"}>
+          <div className="sm:col-span-2">
             <label htmlFor="enq-faculty" className={label}>
               {faculties.label} <span aria-hidden="true" className="text-accent-ink">*</span>
             </label>
@@ -426,6 +430,16 @@ export function EnquiryForm(props: EnquiryFormProps) {
           {errorMsg("level")}
         </fieldset>
 
+        {hero ? (
+          values.intent !== "enquiry" && (
+            <p className="order-first flex flex-wrap items-center gap-2 text-sm sm:col-span-2">
+              <span className="rounded-full bg-accent-soft px-3 py-1 font-semibold text-accent-ink">{INTENT_LABELS[values.intent]}</span>
+              <button type="button" onClick={() => set("intent", "enquiry")} className="min-h-8 text-muted underline underline-offset-2 hover:text-ink">
+                Change
+              </button>
+            </p>
+          )
+        ) : (
         <div>
           <label htmlFor="enq-intent" className={label}>
             How can we help?
@@ -444,8 +458,9 @@ export function EnquiryForm(props: EnquiryFormProps) {
             ))}
           </select>
         </div>
+        )}
 
-        <div className={compact ? "" : "sm:col-span-2"}>
+        <div className={pair}>
           <label htmlFor="enq-programme" className={label}>
             Preferred programme <span aria-hidden="true" className="text-accent-ink">*</span>
           </label>
@@ -460,7 +475,7 @@ export function EnquiryForm(props: EnquiryFormProps) {
             aria-describedby={describe("programme")}
             className={field(!!show("programme"))}
           >
-            <option value="">{values.level ? "Select a programme" : "Choose UG or PG first"}</option>
+            <option value="">{values.level ? "Select a programme" : hero ? "Pick UG / PG first" : "Choose UG or PG first"}</option>
             <option value="Not sure yet">Not sure yet – help me choose</option>
             {options.map(([dept, list]) => (
               <optgroup key={dept} label={dept}>
@@ -488,8 +503,8 @@ export function EnquiryForm(props: EnquiryFormProps) {
           />
         </div>
 
-        <div className={compact ? "" : "sm:col-span-2"}>
-          <label className={`flex cursor-pointer items-start gap-3 text-sm leading-relaxed ${dark ? "text-white/80" : "text-muted"}`}>
+        <div className="sm:col-span-2">
+          <label className={`flex cursor-pointer items-start gap-3 ${hero ? "text-xs leading-snug" : "text-sm leading-relaxed"} ${dark ? "text-white/80" : "text-muted"}`}>
             <input
               id="enq-consent"
               type="checkbox"
@@ -511,7 +526,7 @@ export function EnquiryForm(props: EnquiryFormProps) {
         </div>
 
         {TURNSTILE_KEY && (
-          <div className={compact ? "" : "sm:col-span-2"}>
+          <div className="sm:col-span-2">
             <div className="cf-turnstile" data-sitekey={TURNSTILE_KEY} data-theme={dark ? "dark" : "light"} />
           </div>
         )}
@@ -546,7 +561,7 @@ export function EnquiryForm(props: EnquiryFormProps) {
         )}
       </AnimatePresence>
 
-      <button type="submit" disabled={status.kind === "submitting"} className={`${btn.accent} mt-6 w-full !min-h-14 text-base`}>
+      <button type="submit" disabled={status.kind === "submitting"} className={`${btn.accent} ${hero ? "mt-4 !min-h-12" : "mt-6 !min-h-14"} w-full text-base`}>
         {status.kind === "submitting" ? (
           <>
             <Loader2 aria-hidden="true" className="h-5 w-5 animate-spin" />
@@ -556,7 +571,7 @@ export function EnquiryForm(props: EnquiryFormProps) {
           "Submit Enquiry"
         )}
       </button>
-      <p id={`${uid}-privacy`} className={`mt-4 flex items-start gap-2 text-xs leading-relaxed ${dark ? "text-white/60" : "text-muted"}`}>
+      <p id={`${uid}-privacy`} className={`${hero ? "mt-3" : "mt-4"} flex items-start gap-2 text-xs leading-relaxed ${dark ? "text-white/60" : "text-muted"}`}>
         <ShieldCheck aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0" />
         Your details are used only to respond to your admission enquiry and are shared only with the {props.institutionName} admissions
         team. We never share them with advertisers.

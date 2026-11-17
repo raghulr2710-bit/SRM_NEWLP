@@ -4,7 +4,7 @@ import type { EnquiryFormProps } from "@/components/forms/EnquiryForm";
 export const programmeValue = (p: { degree: string; name: string }) => `${p.degree} ${p.name}`;
 
 /** Serialisable slice of the institution config for the client-side form. */
-export function toFormProps(inst: Institution): Omit<EnquiryFormProps, "tone" | "compact"> {
+export function toFormProps(inst: Institution): Omit<EnquiryFormProps, "tone" | "variant"> {
   const phone = inst.contact.phones[0];
   return {
     institution: inst.key,

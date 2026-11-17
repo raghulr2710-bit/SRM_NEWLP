@@ -94,12 +94,15 @@ export function Header({ institution }: { institution: HeaderInstitution }) {
                   }`}
                 >
                   {item.label}
-                  <span
-                    aria-hidden="true"
-                    className={`absolute inset-x-3 bottom-1.5 h-0.5 origin-left bg-accent transition-transform duration-300 ${
-                      active === item.id ? "scale-x-100" : "scale-x-0"
-                    }`}
-                  />
+                  {/* Shared-layout indicator that glides between items as sections change. */}
+                  {active === item.id && (
+                    <motion.span
+                      layoutId="nav-active"
+                      aria-hidden="true"
+                      className="absolute inset-x-3 bottom-1.5 h-0.5 rounded-full bg-accent"
+                      transition={{ type: "spring", stiffness: 420, damping: 38 }}
+                    />
+                  )}
                 </a>
               </li>
             ))}

@@ -12,12 +12,12 @@ export function AcademicExcellence({ inst, index }: { inst: Institution; index: 
   return (
     <section id="academics" aria-labelledby="academics-title" className="section-y bg-surface-alt">
       <div className="container-x">
-        <div className="grid gap-12 lg:grid-cols-12">
+        <div className="mb-10 grid gap-8 lg:mb-12 lg:grid-cols-12 lg:items-end lg:gap-12">
           <div className="lg:col-span-7">
             <SectionHeading id="academics-title" index={index} eyebrow="Academic excellence" title={a.heading} intro={a.intro} />
           </div>
           {a.image && (
-            <Reveal className="group relative hidden aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] lg:col-span-5 lg:block">
+            <Reveal mask className="group relative aspect-[16/10] overflow-hidden rounded-[var(--radius-card)] lg:col-span-5 lg:aspect-[4/3]">
               <MediaFill media={a.image} sizes="40vw" zoom />
             </Reveal>
           )}
@@ -61,7 +61,7 @@ export function AcademicExcellence({ inst, index }: { inst: Institution; index: 
               {a.facts.map((f) => (
                 <div key={f.label} className="flex min-w-0 flex-col-reverse [&:last-child:nth-child(odd)]:col-span-2 sm:[&:last-child:nth-child(odd)]:col-span-1">
                   <dt className="mt-2 text-sm text-muted">{f.label}</dt>
-                  <dd className="font-display text-[2rem] whitespace-nowrap text-ink min-[400px]:text-4xl lg:text-5xl">
+                  <dd className="font-display text-[2rem] whitespace-nowrap text-ink min-[400px]:text-4xl lg:text-[2.75rem]">
                     <Counter stat={f} />
                   </dd>
                 </div>

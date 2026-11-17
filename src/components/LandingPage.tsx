@@ -1,5 +1,7 @@
-import { MessageCircleQuestion } from "lucide-react";
-import type { Institution, SectionKey } from "@/types/institution";
+import { MessageCircleQuestion, Quote } from "lucide-react";
+import { isPending, type Institution, type SectionKey } from "@/types/institution";
+import { Reveal } from "@/components/common/Reveal";
+import { MediaFill } from "@/components/common/Media";
 import { ThemeScope } from "@/components/common/ThemeScope";
 import { EnquiryProvider } from "@/components/common/EnquiryContext";
 import { Header } from "@/components/common/Header";
@@ -41,11 +43,31 @@ function ProgrammesSection({ inst, index }: SectionProps) {
 
 function TestimonialsSection({ inst, index }: SectionProps) {
   const t = inst.testimonials;
+  const visual = inst.campusLife.items.find((i) => !isPending(i.media))?.media ?? inst.hero.image;
   return (
     <section id="testimonials" aria-labelledby="testimonials-title" className="section-y overflow-hidden bg-surface-alt">
       <div className="container-x">
         <SectionHeading id="testimonials-title" index={index} eyebrow="Student stories" title={t.heading} intro={t.intro} />
-        <TestimonialCarousel items={t.items} pendingSlots={t.pendingSlots} note={t.note} />
+        {t.items.length > 0 ? (
+          <TestimonialCarousel items={t.items} note={t.note} />
+        ) : (
+          // No approved testimonials yet: an honest, designed panel instead of invented quotes.
+          <Reveal className="grid overflow-hidden rounded-[var(--radius-card)] bg-brand text-on-brand md:grid-cols-2">
+            <div className="group relative aspect-[16/10] md:aspect-auto md:min-h-[20rem]">
+              <MediaFill media={visual} sizes="(min-width:768px) 50vw, 100vw" zoom />
+            </div>
+            <div className="on-dark flex flex-col justify-center gap-4 p-7 sm:p-10">
+              <Quote aria-hidden="true" className="h-8 w-8 text-accent-ink" />
+              <p className="type-h3 font-display">Approved stories from {inst.shortName} students and alumni will be published here.</p>
+              <p className="text-sm leading-relaxed text-white/75">{t.note ?? "We only publish verbatim, approved testimonials."}</p>
+              <div className="pt-2">
+                <EnquireButton intent="counselling" location="testimonials" className={btn.white}>
+                  Ask a counsellor about student life
+                </EnquireButton>
+              </div>
+            </div>
+          </Reveal>
+        )}
       </div>
     </section>
   );

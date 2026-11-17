@@ -20,6 +20,12 @@ export interface ImageAsset {
   height: number;
   caption?: string;
   objectPosition?: string;
+  /**
+   * AI-generated illustrative visual – not a photograph of this institution,
+   * its students or facilities. Rendered with an "Illustrative" tag and listed
+   * in docs/CONTENT-AUDIT-AND-CONFIRMATIONS.md for replacement with approved photography.
+   */
+  illustrative?: boolean;
 }
 
 /** A clearly labelled gap where an approved asset is still required. */
@@ -136,6 +142,7 @@ export interface Institution {
     eyebrow: string;
     headline: string[];
     body: string;
+    /** Landscape photograph used across the split hero (desktop) / below the CTAs (mobile). */
     image: Media;
     secondaryImage?: Media;
     badges?: ImageAsset[];
@@ -177,11 +184,13 @@ export interface Institution {
     recordsNote?: string;
     recruiters: { names: string[]; note: string } | PendingAsset;
     careerDevelopment: { title: string; body: string }[];
+    image?: Media;
   };
 
   industry: {
     heading: string;
     intro: string;
+    image?: Media;
     highlights: { title: string; body: string; source: string }[];
     timeline: { phase: string; title: string; body: string; pending?: boolean }[];
   };

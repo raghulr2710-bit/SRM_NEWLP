@@ -1,5 +1,5 @@
 import type { Institution } from "@/types/institution";
-import { group, PENDING_SCHOLARSHIP } from "./helpers";
+import { aiImage, group, PENDING_SCHOLARSHIP } from "./helpers";
 
 /**
  * SRMIST – Tiruchirappalli
@@ -89,12 +89,7 @@ export const tiruchirappalli: Institution = {
     headline: ["Achieve career success", "before you graduate."],
     body:
       "Step into your future at SRM Institute of Science and Technology, Tiruchirappalli. Experience the best of placement and academic excellence on the Trichy–Chennai highway near Samayapuram.",
-    image: {
-      src: "/img/trichy/banner.webp",
-      alt: "Student holding a laptop, ready for campus",
-      width: 1000,
-      height: 1000,
-    },
+    image: aiImage("trichy", "hero", "Two engineering students building a robotic arm prototype in an innovation lab", "70% center"),
     proof: [
       { value: 5700, suffix: "+", label: "Job offers" },
       { value: 1100, suffix: "+", label: "Companies visited" },
@@ -128,6 +123,7 @@ export const tiruchirappalli: Institution = {
   },
 
   why: {
+    image: aiImage("trichy", "clubs", "Students in a coding club discussing a project on a large screen"),
     heading: "Why SRM IST Tiruchirappalli",
     intro: "What students value about the Trichy campus, as listed by the institution.",
     source: "registration.srmtrichy.edu.in",
@@ -329,6 +325,7 @@ export const tiruchirappalli: Institution = {
   },
 
   placements: {
+    image: aiImage("trichy", "core-lab", "Students assembling a drone in a mechatronics lab"),
     heading: "Outstanding placement record",
     intro: "Students placed in top companies in India and abroad, including Fortune 500 recruiters.",
     stats: [
@@ -363,6 +360,7 @@ export const tiruchirappalli: Institution = {
   },
 
   industry: {
+    image: aiImage("trichy", "industry", "Students touring a technology company office with an industry mentor"),
     heading: "Connected to industry and the world",
     intro: "Exposure that goes beyond the campus, from global semesters to industry-designed programmes.",
     highlights: [
@@ -402,16 +400,16 @@ export const tiruchirappalli: Institution = {
       {
         title: "Computer laboratories",
         description: "Computing labs for hands-on practice.",
-        media: { src: "/img/trichy/gallery-4.png", alt: "Students working in a computer laboratory", width: 252, height: 252 },
+        media: aiImage("trichy", "cs-lab", "Students discussing data visualisations in an AI and data science lab"),
       },
       {
         title: "Dining",
         description: "Spacious campus dining hall.",
         media: { src: "/img/trichy/gallery-1.png", alt: "Campus dining hall with high timber roof", width: 252, height: 252 },
       },
-      { title: "Research labs", description: "Research laboratories.", media: { pending: "Trichy research laboratory photograph" } },
-      { title: "Library", description: "Central library.", media: { pending: "Trichy library photograph" } },
-      { title: "Sports", description: "Sports facilities.", media: { pending: "Trichy sports facilities photograph" } },
+      { title: "Research labs", description: "Research laboratories.", media: aiImage("trichy", "research", "Research scholar aligning lasers on an optical table") },
+      { title: "Library", description: "Central library.", media: aiImage("trichy", "library", "Open-plan digital library with students using laptops") },
+      { title: "Sports", description: "Sports facilities.", media: aiImage("trichy", "sports", "Students playing football on a campus ground") },
     ],
   },
 
@@ -470,9 +468,10 @@ export const tiruchirappalli: Institution = {
         body: "Home to the iconic Rockfort.",
         media: { src: "/img/trichy/gallery-2.png", alt: "Rockfort temple, Tiruchirappalli", width: 252, height: 252 },
       },
-      { title: "Art & cultural events", media: { pending: "Trichy cultural event photograph" } },
-      { title: "Professional clubs", media: { pending: "Trichy club activity photograph" } },
-      { title: "Sports", media: { pending: "Trichy sports photograph" } },
+      { title: "Art & cultural events", media: aiImage("trichy", "cultural", "Student band performing at a campus cultural night") },
+      { title: "Professional clubs", media: aiImage("trichy", "clubs", "Coding club members gathered around a screen") },
+      { title: "Sports", media: aiImage("trichy", "sports", "Students playing football on a campus ground") },
+      { title: "Tech expos", media: aiImage("trichy", "symposium", "Students demonstrating an autonomous robot at a tech expo") },
     ],
   },
 
@@ -539,6 +538,7 @@ export const tiruchirappalli: Institution = {
   finalCta: {
     headline: "Start your career story in Trichy.",
     body: "Admissions for 2027–28 are open. Apply online, or talk to a counsellor first.",
+    image: { src: "/img/trichy/campus-13.webp", alt: "SRMIST Tiruchirappalli campus", width: 1354, height: 495 },
   },
 
   footer: {

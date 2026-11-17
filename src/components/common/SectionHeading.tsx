@@ -23,7 +23,7 @@ export function SectionHeading({
   const dark = tone === "dark";
   return (
     <Reveal
-      className={`mb-10 flex flex-col gap-6 lg:mb-14 ${
+      className={`mb-9 flex flex-col gap-6 lg:mb-12 ${
         align === "center" ? "items-center text-center" : "lg:flex-row lg:items-end lg:justify-between"
       }`}
     >
@@ -35,14 +35,14 @@ export function SectionHeading({
         </p>
         <h2
           id={id}
-          className={`font-display text-[2rem] leading-[1.08] tracking-tight text-balance md:text-5xl ${
+          className={`type-h2 font-display text-balance ${
             dark ? "text-white" : "text-ink"
           }`}
         >
           {title}
         </h2>
         {intro && (
-          <p className={`mt-5 max-w-2xl text-base leading-relaxed md:text-lg ${dark ? "text-white/75" : "text-muted"}`}>
+          <p className={`type-lead mt-4 max-w-2xl ${dark ? "text-white/75" : "text-muted"}`}>
             {intro}
           </p>
         )}

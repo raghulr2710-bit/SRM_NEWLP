@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en-IN">
       <head>
         <noscript>
-          <style>{"[data-reveal]{opacity:1!important;transform:none!important}"}</style>
+          <style>{"[data-reveal]{opacity:1!important;transform:none!important;clip-path:none!important}[data-reveal] img{transform:none!important}"}</style>
         </noscript>
       </head>
       <body>{children}</body>

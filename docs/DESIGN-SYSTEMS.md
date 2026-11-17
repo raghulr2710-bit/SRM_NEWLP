@@ -33,3 +33,24 @@ Hex codes were not published in any stylesheet, so please confirm them against t
 - **Motion:** 0.25–0.6 s ease-out reveals and count-ups. No autoplay. `prefers-reduced-motion` is respected (CSS and `MotionConfig reducedMotion="user"`).
 - **Focus:** visible 3px accent outline, skip link, focus-trapped lightbox and mobile menu (Esc closes).
 - **Placeholders:** hatched "Asset pending" boxes and dashed "To be confirmed" tags make every gap visible to reviewers.
+
+## 2027–28 redesign: hero, imagery and motion
+
+- **Split hero:** copy (60%) with an enquiry form card, "Start Your Admission Journey" (40%), visible in the first
+  desktop viewport. On mobile the order is announcement → headline → body → CTAs → highlights → photo → full-width form.
+  Identities: Ramapuram uses a light serif layout where the photo fades in from the right; Trichy uses dark navy with a grid
+  and a full-bleed photo; Easwari uses warm cream with the photo in a curved panel; TRP uses a dark, bold uppercase layout
+  with a diagonal photo cut.
+- **Type scale (clamp):** hero 30→50 px, section heading 24→36 px, sub-heading 19→22 px, body 15→17 px
+  (`.type-hero`, `.type-h2`, `.type-h3`, `.type-lead` in `globals.css`).
+- **Motion system** (patterns referenced from the Motion Studio catalogue and adapted, not copied):
+  - Hero: a single staggered rise for the copy and form, plus a one-time photo uncover.
+  - Section images: mask-wipe reveal with a slight zoom settle (`<Reveal mask>`).
+  - Header: a spring-animated shared-layout indicator for the active section (motion.dev "tab select").
+  - Infrastructure: a pinned, scroll-linked horizontal gallery on desktop (motion.dev "scroll horizontal gallery"),
+    and a swipeable snap row on touch screens and with reduced motion.
+  - Placements: count-up figures, plus a recruiter marquee that pauses on hover/focus and is static with reduced motion.
+  - Testimonials: snap carousel with mouse drag, arrows and position dots.
+  - Industry and admission timelines: the connecting rule draws in on scroll.
+  - FAQ: height-animated accordion.
+  - Everything respects `prefers-reduced-motion`. Animations use only transform, opacity and clip-path.
