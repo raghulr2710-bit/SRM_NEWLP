@@ -290,7 +290,7 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
           applyUrl={inst.applyUrl}
           whatsapp={inst.contact.whatsapp}
           institutionName={inst.name}
-          topClassName="fixed bottom-5 right-5 z-40 hidden h-11 w-11 items-center justify-center rounded-full bg-brand text-[var(--hl)] shadow-[0_10px_24px_-10px_color-mix(in_srgb,var(--brand)_80%,transparent)] ring-4 ring-white/70 transition-colors hover:bg-brand-ink md:flex"
+          topClassName="fixed bottom-[5.5rem] right-[1.5625rem] z-40 hidden h-11 w-11 items-center justify-center rounded-full bg-brand text-[var(--hl)] shadow-[0_10px_24px_-10px_color-mix(in_srgb,var(--brand)_80%,transparent)] ring-4 ring-white/70 transition-colors hover:bg-brand-ink md:flex"
         />
         <GoogleAnalytics institution={inst.key} />
       </EnquiryProvider>

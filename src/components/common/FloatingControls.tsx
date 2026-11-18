@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ArrowUp } from "lucide-react";
 import type { InstitutionKey } from "@/types/institution";
-import { ApplyButton, WhatsAppButton } from "./Cta";
+import { ApplyButton, WhatsAppButton, WhatsAppIcon } from "./Cta";
 
 /**
  * Sticky mobile admission bar (Apply / WhatsApp) + back-to-top control.
@@ -78,6 +78,26 @@ export function FloatingControls({
         )}
       </AnimatePresence>
 
+      {/* desktop: floating WhatsApp button (always available, bottom-right) */}
+      <div className="fixed bottom-5 right-5 z-40 hidden md:block">
+        <WhatsAppButton
+          number={whatsapp}
+          message={`Hi, I'd like to know about admissions 2027–28 at ${institutionName}.`}
+          location="desktop_floating"
+          showIcon={false}
+          className="group flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_14px_30px_-12px_rgba(37,211,102,0.8)] ring-4 ring-white/80 transition-transform hover:scale-105 focus-visible:outline-none focus-visible:ring-[#25D366]/40"
+          label={
+            <>
+              <WhatsAppIcon className="h-7 w-7" />
+              <span className="sr-only">WhatsApp</span>
+              <span aria-hidden="true" className="pointer-events-none absolute right-full mr-3 whitespace-nowrap rounded-full bg-ink px-3 py-1.5 text-xs font-semibold text-white opacity-0 shadow-lg transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+                Chat on WhatsApp
+              </span>
+            </>
+          }
+        />
+      </div>
+
       <AnimatePresence>
         {showTop && (
           <motion.button
@@ -90,7 +110,7 @@ export function FloatingControls({
               window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
               document.querySelector<HTMLElement>("header a[href='#top']")?.focus({ preventScroll: true });
             }}
-            className={topClassName ?? "fixed bottom-6 right-6 z-40 hidden h-12 w-12 items-center justify-center rounded-full bg-ink text-surface shadow-lg hover:bg-brand md:flex"}
+            className={topClassName ?? "fixed bottom-24 right-6 z-40 hidden h-12 w-12 items-center justify-center rounded-full bg-ink text-surface shadow-lg hover:bg-brand md:flex"}
           >
             <ArrowUp aria-hidden="true" className="h-5 w-5" />
             <span className="sr-only">Back to top</span>
