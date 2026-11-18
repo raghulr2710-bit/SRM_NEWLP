@@ -49,6 +49,8 @@ export interface LiveSiteConfig {
   /** Transparent cut-out; circle = disc behind the head, in % (cx/w of image width, top of image height). */
   heroImage: LiveImg & { circle: { cx: number; w: number; top: number } };
   globe?: { home: [number, number]; partners: boolean; base: Rgb; marker: Rgb; glow: Rgb };
+  /** Hero background: pattern + optional faint campus photo (right side, fades to the left). */
+  heroBg?: { pattern: "grid" | "dots" | "diagonal" | "plus" | "rings"; image?: string; position?: string; opacity?: number };
   /** Hide the looping accreditation logo strip in the hero. */
   hideHeroBadges?: boolean;
   /** Section tab bar colour (default: brand). */
@@ -62,6 +64,15 @@ export interface LiveSiteConfig {
  * Text and images come verbatim from each institution's live registration site via
  * src/data/live/<key>.json; sections with no content are left out.
  */
+/** Hero background patterns (all in the brand colour, very light). */
+const HERO_PATTERN = {
+  grid: "[background-image:linear-gradient(color-mix(in_srgb,var(--brand)_7%,transparent)_1px,transparent_1px),linear-gradient(90deg,color-mix(in_srgb,var(--brand)_7%,transparent)_1px,transparent_1px)] [background-size:24px_24px]",
+  dots: "[background-image:radial-gradient(color-mix(in_srgb,var(--brand)_11%,transparent)_1.1px,transparent_1.3px)] [background-size:20px_20px]",
+  diagonal: "[background-image:repeating-linear-gradient(135deg,color-mix(in_srgb,var(--brand)_8%,transparent)_0_1px,transparent_1px_14px)]",
+  plus: "[background-size:26px_26px]",
+  rings: "[background-image:repeating-radial-gradient(circle_at_88%_12%,transparent_0_26px,color-mix(in_srgb,var(--brand)_9%,transparent)_26px_27px)]",
+} as const;
+
 export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { className: string; display: string; body: string } }) {
   const { inst, data: live, palette: pal, heroImage: HERO_IMAGE } = site;
   const ug = live.programmes.ugEligibility as UgEligibility | undefined;
@@ -172,11 +183,13 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
 
         <main id="main">
           <section id="top" className="relative isolate overflow-hidden bg-white">
-            {/* Background: small box grid only (24px cells), fading softly at the edges */}
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 -z-10 [background-image:linear-gradient(color-mix(in_srgb,var(--brand)_7%,transparent)_1px,transparent_1px),linear-gradient(90deg,color-mix(in_srgb,var(--brand)_7%,transparent)_1px,transparent_1px)] [background-size:24px_24px] [background-position:center] [mask-image:radial-gradient(ellipse_90%_90%_at_50%_45%,black_40%,transparent_100%)]"
-            />
+            {/* Background: per-campus faint campus photo (optional) + pattern, fading softly at the edges */}
+            {site.heroBg?.image && (
+              <div aria-hidden="true" className="absolute inset-y-0 right-0 -z-20 w-full lg:w-[68%] [mask-image:linear-gradient(to_right,transparent,black_35%)]">
+                <Image src={site.heroBg.image} alt="" fill sizes="70vw" className="object-cover blur-[1px]" style={{ objectPosition: site.heroBg.position ?? "center", opacity: site.heroBg.opacity ?? 0.16 }} />
+              </div>
+            )}
+            <div aria-hidden="true" className={`absolute inset-0 -z-10 [background-position:center] [mask-image:radial-gradient(ellipse_90%_90%_at_50%_45%,black_40%,transparent_100%)] ${HERO_PATTERN[site.heroBg?.pattern ?? "grid"]}`} style={site.heroBg?.pattern === "plus" ? { backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26'><path d='M13 8v10M8 13h10' stroke='${pal.brand}' stroke-opacity='0.22' stroke-width='1.4' stroke-linecap='round'/></svg>`)}")` } : undefined} />
             <div className={`container-x grid items-center gap-8 pt-8 lg:h-[calc(100svh-4.5rem)] lg:max-h-[52rem] lg:min-h-[36rem] lg:gap-5 lg:pb-0 lg:pt-4 ${longHeadline ? "lg:grid-cols-[minmax(0,1.6fr)_minmax(0,0.7fr)_minmax(0,0.9fr)]" : "lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.85fr)_minmax(0,0.95fr)]"}`}>
               <div className="min-w-0">
                 <p className="hero-rise mb-4 inline-flex items-center gap-2 rounded-full bg-[var(--hl)] px-4 py-1.5 text-sm font-semibold text-brand-ink" style={d(0)}>

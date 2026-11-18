@@ -63,6 +63,7 @@ export const tiruchirappalliSite: LiveSiteConfig = {
     ink: "#0b1a2e",
     muted: "#4a5668",
   },
+  heroBg: { pattern: "dots", image: "/assets/tiruchirappalli/campus/campus-entrance.webp", position: "30% center", opacity: 0.17 },
   heroImage: {
     src: "/assets/tiruchirappalli/hero/ai-hero-science-cutout.webp",
     alt: "Science student in a lab coat holding a tablet, with microscope, DNA, satellite and computing imagery",
@@ -95,6 +96,7 @@ export const easwariSite: LiveSiteConfig = {
     ink: "#23161a",
     muted: "#5b4d50",
   },
+  heroBg: { pattern: "diagonal", image: "/img/eec/green-campus.jpg", position: "center 35%", opacity: 0.15 },
   heroImage: {
     src: "/assets/easwari/hero/ai-hero-cse-cutout.webp",
     alt: "Computer engineering student holding a laptop, with AI robot, microchip, drone and circuit imagery",
@@ -127,6 +129,7 @@ export const trpSite: LiveSiteConfig = {
     ink: "#14142b",
     muted: "#50506a",
   },
+  heroBg: { pattern: "rings", image: "/assets/trp/campus/state-of-the-art-infrastructure.jpg", position: "center 60%", opacity: 0.16 },
   heroImage: {
     src: "/assets/trp/hero/ai-hero-mech-cutout.webp",
     alt: "Engineering student holding a rolled blueprint, with wind turbine, electric car, gears and jet engine imagery",
