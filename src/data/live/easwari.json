@@ -1,0 +1,873 @@
+{
+ "sourceUrl": "https://registration.srmeaswari.ac.in/",
+ "meta": {
+  "shortName": "Easwari Engineering College",
+  "whyLabel": "Why SRM EEC",
+  "videoTitle": "SRM Easwari Engineering College"
+ },
+ "hero": {
+  "headline": [
+   "Inspiring you towards",
+   "excellence"
+  ],
+  "button": "Registration Open for 2027",
+  "formHeading": "Admissions Open 2027"
+ },
+ "logo": {
+  "src": "/assets/easwari/logo/eec-logo.png",
+  "alt": "Easwari Engineering College, Ramapuram, Chennai – An Autonomous Institution, Affiliated to Anna University",
+  "width": 301,
+  "height": 119
+ },
+ "rankings": {
+  "heading": "Accreditation & Ranking in 2025",
+  "items": [
+   {
+    "title": "NBA",
+    "text": "National Board of Accreditation",
+    "badge": {
+     "src": "/assets/easwari/accreditation/nba.png",
+     "alt": "NBA logo",
+     "width": 171,
+     "height": 170
+    },
+    "body": "NBA"
+   },
+   {
+    "title": "NAAC",
+    "text": "National Assessment and Accreditation Council",
+    "badge": {
+     "src": "/assets/easwari/accreditation/naac.png",
+     "alt": "NAAC logo",
+     "width": 185,
+     "height": 169
+    },
+    "body": "NAAC"
+   },
+   {
+    "title": "NIRF",
+    "text": "National Institutional Ranking Framework",
+    "badge": {
+     "src": "/assets/easwari/accreditation/nirf.webp",
+     "alt": "NIRF logo",
+     "width": 170,
+     "height": 170
+    },
+    "body": "NIRF"
+   },
+   {
+    "title": "Autonomous",
+    "text": "An Autonomous Institution, Affiliated to Anna University",
+    "badge": null,
+    "body": "Anna University"
+   }
+  ]
+ },
+ "promo": {
+  "heading": "Inspiring you towards excellence and a bright future.",
+  "text": "SRM Easwari, Ramapuram is a place for learning, discovery, innovation, expression, and discourse. Pursuing the philosophy of continuous learning, the Institution prepares the students to score creditably in the Academic sessions and also encourages them to develop their interpersonal skills and attitudes to approach life with confidence.",
+  "videoUrl": "https://www.youtube.com/embed/7iD44Vk4epQ?rel=0"
+ },
+ "stats1": [
+  {
+   "value": "1424+",
+   "label": "Students Placed"
+  },
+  {
+   "value": "432",
+   "label": "Companies Visited"
+  },
+  {
+   "value": "51 LPA",
+   "label": "Highest Package"
+  }
+ ],
+ "facts": [
+  {
+   "value": "29",
+   "label": "Years of Excellence",
+   "icon": "Hourglass"
+  },
+  {
+   "value": "16K+",
+   "label": "Alumni",
+   "icon": "Users"
+  },
+  {
+   "value": "1424+",
+   "label": "Students Placed",
+   "icon": "GraduationCap"
+  },
+  {
+   "value": "432",
+   "label": "Companies Visited",
+   "icon": "Building2"
+  },
+  {
+   "value": "51 LPA",
+   "label": "Highest Package",
+   "icon": "Trophy"
+  }
+ ],
+ "programmes": {
+  "heading": "Courses Offered",
+  "items": [
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.E. Automobile Engineering",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.E. Bio Medical Engineering",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.E. Civil Engineering",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.E. Computer Science and Design",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.E. Computer Science and Engineering",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.E. Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.E. Computer Science and Engineering (Cyber Security)",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.E. Electrical and Electronics Engineering",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.E. Electronics and Communication Engineering",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.E. Mechanical Engineering",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.E. Robotics and Automation",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.Tech. Artificial Intelligence and Data Science",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.Tech. Bio Technology",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.Tech. Computer Science and Business System (with TCS partnership)",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "UNDERGRADUATE",
+    "section": null,
+    "title": "B.Tech. Information Technology",
+    "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "POSTGRADUATE",
+    "section": null,
+    "title": "MBA – Master of Business Administration",
+    "eligibility": "As per AICTE and Anna University norms",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "POSTGRADUATE",
+    "section": null,
+    "title": "MCA – Master of Computer Application",
+    "eligibility": "As per AICTE and Anna University norms",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "POSTGRADUATE",
+    "section": null,
+    "title": "M.E. – Communication Systems",
+    "eligibility": "As per AICTE and Anna University norms",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "POSTGRADUATE",
+    "section": null,
+    "title": "M.E. – Computer Science and Engineering",
+    "eligibility": "As per AICTE and Anna University norms",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "POSTGRADUATE",
+    "section": null,
+    "title": "M.E. – Embedded System Technologies",
+    "eligibility": "As per AICTE and Anna University norms",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "POSTGRADUATE",
+    "section": null,
+    "title": "M.E. – Engineering Design",
+    "eligibility": "As per AICTE and Anna University norms",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "POSTGRADUATE",
+    "section": null,
+    "title": "M.E. – Structural Engineering",
+    "eligibility": "As per AICTE and Anna University norms",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "POSTGRADUATE",
+    "section": null,
+    "title": "Ph.D. - Available in all Disciplines",
+    "eligibility": "As per AICTE and Anna University norms",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PhD"
+   }
+  ]
+ },
+ "steps": {
+  "items": [
+   "Register Yourself",
+   "Verify Mobile No. & Email-ID",
+   "Fill Application Form",
+   "Upload Required Documents",
+   "Submit Application Form"
+  ]
+ },
+ "why": {
+  "heading": "Why SRM EEC?",
+  "items": [
+   {
+    "title": "Safely located within Chennai City",
+    "image": {
+     "src": "/assets/easwari/campus/chennai-city.jpg",
+     "alt": "Chennai Central railway station",
+     "width": 433,
+     "height": 433
+    }
+   },
+   {
+    "title": "State-of-the-Art Infrastructure",
+    "image": {
+     "src": "/assets/easwari/infrastructure/automobile-engineering-lab.jpg",
+     "alt": "Automobile Engineering laboratory",
+     "width": 500,
+     "height": 500
+    }
+   },
+   {
+    "title": "Semester Abroad Program",
+    "image": {
+     "src": "/assets/easwari/infrastructure/computer-lab.jpg",
+     "alt": "Student celebrating while working on a laptop in the computer lab",
+     "width": 500,
+     "height": 500
+    }
+   },
+   {
+    "title": "Vibrant campus life",
+    "image": {
+     "src": "/assets/easwari/students/vibrant-campus-life.jpg",
+     "alt": "Students performing live music on stage at a campus event",
+     "width": 400,
+     "height": 400
+    }
+   },
+   {
+    "title": "Green & Eco Friendly Campus",
+    "image": {
+     "src": "/assets/easwari/campus/city-green-campus.jpg",
+     "alt": "Galileo Block surrounded by trees on the Easwari campus",
+     "width": 500,
+     "height": 500
+    }
+   },
+   {
+    "title": "Placement in Top MNC’s",
+    "image": {
+     "src": "/assets/easwari/students/placement-top-mncs.jpg",
+     "alt": "Easwari student in a suit",
+     "width": 400,
+     "height": 400
+    }
+   },
+   {
+    "title": "Students Clubs",
+    "image": {
+     "src": "/assets/easwari/students/student-clubs.jpg",
+     "alt": "Large group of students celebrating in a lecture hall",
+     "width": 367,
+     "height": 367
+    }
+   },
+   {
+    "title": "Support for Innovation & Start - ups",
+    "image": {
+     "src": "/assets/easwari/infrastructure/control-and-instrumentation-lab.jpg",
+     "alt": "Control and Instrumentation laboratory",
+     "width": 500,
+     "height": 500
+    }
+   }
+  ]
+ },
+ "collaborations": {
+  "heading": "Global Academic Celebration",
+  "items": [
+   {
+    "name": "Harvard Medical School",
+    "logo": {
+     "src": "/assets/easwari/events/harvard-medical-school.png",
+     "alt": "Harvard Medical School",
+     "width": 449,
+     "height": 153
+    }
+   },
+   {
+    "name": "National Taipei University of Technology (Taipei Tech)",
+    "logo": {
+     "src": "/assets/easwari/events/taipei-tech.png",
+     "alt": "National Taipei University of Technology (Taipei Tech)",
+     "width": 449,
+     "height": 153
+    }
+   },
+   {
+    "name": "UC Davis",
+    "logo": {
+     "src": "/assets/easwari/events/uc-davis.png",
+     "alt": "UC Davis",
+     "width": 449,
+     "height": 153
+    }
+   },
+   {
+    "name": "La Trobe University",
+    "logo": {
+     "src": "/assets/easwari/events/la-trobe-university.png",
+     "alt": "La Trobe University",
+     "width": 449,
+     "height": 153
+    }
+   },
+   {
+    "name": "Illinois Tech",
+    "logo": {
+     "src": "/assets/easwari/events/illinois-tech.png",
+     "alt": "Illinois Tech",
+     "width": 449,
+     "height": 153
+    }
+   }
+  ]
+ },
+ "placements": {
+  "heading": "Our Star Achievers",
+  "profiles": [
+   {
+    "name": "Radhika Swaminathan",
+    "batch": "2025 Batch",
+    "ctc": "CTC: ₹ 30 LPA",
+    "photo": {
+     "src": "/assets/easwari/placements/radhika-swaminathan.png",
+     "alt": "Radhika Swaminathan",
+     "width": 154,
+     "height": 154
+    }
+   },
+   {
+    "name": "Mohammed Anees",
+    "batch": "2025 Batch",
+    "ctc": "CTC: ₹ 40 LPA",
+    "photo": {
+     "src": "/assets/easwari/placements/mohammed-anees.png",
+     "alt": "Mohammed Anees",
+     "width": 151,
+     "height": 151
+    }
+   },
+   {
+    "name": "NARAYANA BHARATHRAJ",
+    "batch": "2025 Batch",
+    "ctc": "CTC: ₹ 40 LPA",
+    "photo": {
+     "src": "/assets/easwari/placements/narayana-bharathraj.png",
+     "alt": "NARAYANA BHARATHRAJ",
+     "width": 163,
+     "height": 163
+    }
+   },
+   {
+    "name": "Bhaarat Krishnan",
+    "batch": "2025 Batch",
+    "ctc": "CTC: ₹ 40 LPA",
+    "photo": {
+     "src": "/assets/easwari/placements/bhaarat-krishnan.png",
+     "alt": "Bhaarat Krishnan",
+     "width": 159,
+     "height": 159
+    }
+   },
+   {
+    "name": "Pranev SS",
+    "batch": "2025 Batch",
+    "ctc": "CTC: ₹ 47 LPA",
+    "photo": {
+     "src": "/assets/easwari/placements/pranev-ss.png",
+     "alt": "Pranev SS",
+     "width": 161,
+     "height": 161
+    }
+   },
+   {
+    "name": "Shreenidhi Balaji",
+    "batch": "2025 Batch",
+    "ctc": "CTC: ₹ 47 LPA",
+    "photo": {
+     "src": "/assets/easwari/placements/shreenidhi-balaji.png",
+     "alt": "Shreenidhi Balaji",
+     "width": 151,
+     "height": 151
+    }
+   }
+  ]
+ },
+ "recruiters": {
+  "heading": "Major Recruiters 2024-2025",
+  "logos": [
+   {
+    "name": "Amazon",
+    "logo": {
+     "src": "/assets/easwari/recruiters/amazon.jpg",
+     "alt": "Amazon",
+     "width": 200,
+     "height": 72
+    }
+   },
+   {
+    "name": "Google",
+    "logo": {
+     "src": "/assets/easwari/recruiters/google.jpg",
+     "alt": "Google",
+     "width": 200,
+     "height": 72
+    }
+   },
+   {
+    "name": "Capgemini",
+    "logo": {
+     "src": "/assets/easwari/recruiters/capgemini.webp",
+     "alt": "Capgemini",
+     "width": 200,
+     "height": 72
+    }
+   },
+   {
+    "name": "Microsoft",
+    "logo": {
+     "src": "/assets/easwari/recruiters/microsoft.webp",
+     "alt": "Microsoft",
+     "width": 200,
+     "height": 72
+    }
+   },
+   {
+    "name": "Wipro",
+    "logo": {
+     "src": "/assets/easwari/recruiters/wipro.jpg",
+     "alt": "Wipro",
+     "width": 206,
+     "height": 75
+    }
+   },
+   {
+    "name": "Zoho",
+    "logo": {
+     "src": "/assets/easwari/recruiters/zoho.jpg",
+     "alt": "Zoho",
+     "width": 200,
+     "height": 72
+    }
+   },
+   {
+    "name": "IBM",
+    "logo": {
+     "src": "/assets/easwari/recruiters/ibm.jpg",
+     "alt": "IBM",
+     "width": 200,
+     "height": 72
+    }
+   },
+   {
+    "name": "Infosys",
+    "logo": {
+     "src": "/assets/easwari/recruiters/infosys.jpg",
+     "alt": "Infosys",
+     "width": 200,
+     "height": 72
+    }
+   },
+   {
+    "name": "Renault Nissan",
+    "logo": {
+     "src": "/assets/easwari/recruiters/renault-nissan.jpg",
+     "alt": "Renault Nissan",
+     "width": 927,
+     "height": 618
+    }
+   },
+   {
+    "name": "Tech Mahindra",
+    "logo": {
+     "src": "/assets/easwari/recruiters/tech-mahindra.png",
+     "alt": "Tech Mahindra",
+     "width": 1024,
+     "height": 290
+    }
+   },
+   {
+    "name": "L&T Infotech",
+    "logo": {
+     "src": "/assets/easwari/recruiters/lt-infotech.webp",
+     "alt": "L&T Infotech",
+     "width": 200,
+     "height": 72
+    }
+   },
+   {
+    "name": "Autodesk",
+    "logo": {
+     "src": "/assets/easwari/recruiters/autodesk.webp",
+     "alt": "Autodesk",
+     "width": 256,
+     "height": 256
+    }
+   },
+   {
+    "name": "Tata Consultancy Services",
+    "logo": {
+     "src": "/assets/easwari/recruiters/tcs.jpg",
+     "alt": "Tata Consultancy Services",
+     "width": 206,
+     "height": 75
+    }
+   },
+   {
+    "name": "PayPal",
+    "logo": {
+     "src": "/assets/easwari/recruiters/paypal.webp",
+     "alt": "PayPal",
+     "width": 200,
+     "height": 72
+    }
+   },
+   {
+    "name": "Cognizant",
+    "logo": {
+     "src": "/assets/easwari/recruiters/cognizant.webp",
+     "alt": "Cognizant",
+     "width": 200,
+     "height": 72
+    }
+   },
+   {
+    "name": "HCL",
+    "logo": {
+     "src": "/assets/easwari/recruiters/hcl.webp",
+     "alt": "HCL",
+     "width": 200,
+     "height": 72
+    }
+   }
+  ]
+ },
+ "ctaHeading": "2025 Record Setting Placements With Highest Package of 51 LPA from Top Companies",
+ "campus": {
+  "heading": "Life at SRM Easwari",
+  "items": [
+   {
+    "src": "/assets/easwari/hero/hero-bg.webp",
+    "alt": "Easwari student studying at a library desk",
+    "width": 1000,
+    "height": 521,
+    "title": "Library",
+    "tag": "Campus"
+   },
+   {
+    "src": "/assets/easwari/campus/city-green-campus.jpg",
+    "alt": "Galileo Block surrounded by trees on the Easwari campus",
+    "width": 500,
+    "height": 500,
+    "title": "Green Campus",
+    "tag": "Campus"
+   },
+   {
+    "src": "/assets/easwari/infrastructure/automobile-engineering-lab.jpg",
+    "alt": "Automobile Engineering laboratory",
+    "width": 500,
+    "height": 500,
+    "title": "Automobile Engineering Lab",
+    "tag": "Labs"
+   },
+   {
+    "src": "/assets/easwari/infrastructure/computer-lab.jpg",
+    "alt": "Student celebrating while working on a laptop in the computer lab",
+    "width": 500,
+    "height": 500,
+    "title": "Computer Lab",
+    "tag": "Labs"
+   },
+   {
+    "src": "/assets/easwari/infrastructure/control-and-instrumentation-lab.jpg",
+    "alt": "Control and Instrumentation laboratory",
+    "width": 500,
+    "height": 500,
+    "title": "Control & Instrumentation Lab",
+    "tag": "Labs"
+   },
+   {
+    "src": "/assets/easwari/students/vibrant-campus-life.jpg",
+    "alt": "Students performing live music on stage at a campus event",
+    "width": 400,
+    "height": 400,
+    "title": "Live Music on Campus",
+    "tag": "Student Life"
+   },
+   {
+    "src": "/assets/easwari/students/student-clubs.jpg",
+    "alt": "Large group of students celebrating in a lecture hall",
+    "width": 367,
+    "height": 367,
+    "title": "Student Clubs",
+    "tag": "Student Life"
+   }
+  ]
+ },
+ "testimonials": {
+  "heading": "Alumni Testimonials",
+  "items": [
+   {
+    "name": "Aswanth Ram A S",
+    "line2": "M.S. in Electrical & Computer Engg. Illinois Institute of Technology, Chicago",
+    "line3": "SRM Easwari Alumni",
+    "quote": "Easwari Engineering college, a place where I was able to connect and build my career, and the reason why I am here now with multiple PhD offers from ivy leagues in USA.",
+    "photo": {
+     "src": "/assets/easwari/testimonials/aswanth-ram-a-s.png",
+     "alt": "Aswanth Ram A S",
+     "width": 254,
+     "height": 203
+    }
+   },
+   {
+    "name": "Kishore V",
+    "line2": "Engineer, Sosaley Technologies",
+    "line3": "SRM Easwari Alumni",
+    "quote": "Easwari Engineering College is probably one of the best college in Chennai, I am a 2017 passed out student and I did my B.E, Electrical and Electronics Engineering (EEE) here, The EEE dept.",
+    "photo": {
+     "src": "/assets/easwari/testimonials/kishore-v.png",
+     "alt": "Kishore V",
+     "width": 216,
+     "height": 247
+    }
+   },
+   {
+    "name": "Kisshore Kumar S",
+    "line2": "EAS Niche HCM Team: Data Conversion Workday",
+    "line3": "SRM Easwari Alumni",
+    "quote": "Easwari Engineering College, has provided various opportunities to excel in academics through live projects, assignments and industry exposure through field work which has enhanced my managerial skill",
+    "photo": {
+     "src": "/assets/easwari/testimonials/kisshore-kumar-s.png",
+     "alt": "Kisshore Kumar S",
+     "width": 121,
+     "height": 122
+    }
+   },
+   {
+    "name": "Mr Sathish Thyagarajan",
+    "line2": "Principal Business Analyst (Banking Domain)",
+    "line3": "SRM Easwari Alumni",
+    "quote": "MBA programme in SRM Eeswari was taught in a way that encourages students to think critically.",
+    "photo": {
+     "src": "/assets/easwari/testimonials/sathish-thyagarajan.png",
+     "alt": "Sathish Thyagarajan",
+     "width": 163,
+     "height": 143
+    }
+   },
+   {
+    "name": "Mr. Venky",
+    "line2": "",
+    "line3": "SRM Easwari Alumni",
+    "quote": "Mechanical Engineering department had a vision to improve the competitiveness and knowledge of the students through conducting continuous knowledge transfer with industrial and academic experts.",
+    "photo": {
+     "src": "/assets/easwari/testimonials/venky.jpg",
+     "alt": "Venky",
+     "width": 427,
+     "height": 427
+    }
+   }
+  ]
+ },
+ "faqs": {
+  "heading": "Frequently Asked Questions",
+  "items": [
+   {
+    "q": "Which programmes does Easwari Engineering College offer?",
+    "a": "15 undergraduate programmes (B.E. and B.Tech.) and, at postgraduate level, MBA, MCA, M.E. in five specialisations and Ph.D. in all disciplines."
+   },
+   {
+    "q": "What is the eligibility for B.E. / B.Tech.?",
+    "a": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required."
+   },
+   {
+    "q": "What is the eligibility for postgraduate programmes?",
+    "a": "As per AICTE and Anna University norms."
+   },
+   {
+    "q": "Is the college autonomous?",
+    "a": "Yes. Easwari Engineering College is an autonomous institution affiliated to Anna University."
+   },
+   {
+    "q": "How do I apply?",
+    "a": "Register yourself, verify your mobile number and email ID, fill the application form, upload the required documents and submit the application form."
+   },
+   {
+    "q": "How can I contact admissions?",
+    "a": "Call +91 8939628204 or +91 18001032535, or email helpdesk@eec.srmrmp.edu.in."
+   }
+  ]
+ },
+ "contact": {
+  "address": "Bharathi Salai, Ramapuram, Chennai - 600089, Tamil Nadu.",
+  "phones": [
+   {
+    "display": "+91 8939628204",
+    "href": "tel:+918939628204"
+   },
+   {
+    "display": "+91 18001032535",
+    "href": "tel:18001032535"
+   }
+  ],
+  "emails": [
+   "helpdesk@eec.srmrmp.edu.in"
+  ],
+  "footer": "© 2026 SRM Easwari Engineering College."
+ },
+ "_notes": [
+  "hero.headline: the live headline 'Inspiring you towards excellence and a bright future.' (53 chars) cannot fit two ~22-char lines; trimmed to its opening words ['Inspiring you towards', 'excellence']. The full sentence is used verbatim as promo.heading.",
+  "hero.formHeading 'Admissions Open 2027': our wording (live hero says 'Registration Open for 2027', used verbatim as hero.button).",
+  "meta.shortName, meta.whyLabel ('Why SRM EEC', from the 'Why SRM EEC ?' heading) and meta.videoTitle ('SRM Easwari Engineering College', from src/data/institutions/easwari.ts) are ours.",
+  "why.heading: live text 'Why SRM EEC ?' with the stray space before '?' removed. The live section has no intro text, so why.intro is omitted.",
+  "rankings: the live 'Accreditation & Ranking in 2025' section shows NBA, NAAC and NIRF logos only (no grade/rank text). item.text is our acronym expansion (National Board of Accreditation / National Assessment and Accreditation Council / National Institutional Ranking Framework); no grade, rank or accredited-programme claim is made.",
+  "rankings item 'Autonomous' ('An Autonomous Institution, Affiliated to Anna University') is taken from the official logo artwork, not from page text.",
+  "promo.text joins the two live paragraphs under 'Inspiring you towards excellence and a bright future.'; videoUrl is the live YouTube embed with '?rel=0' appended.",
+  "stats1 / facts: values from the live stat row (1424+ Students Placed, 16K+ Alumni, 432 Companies Visited, 29 Years of Excellence). '51 LPA' is taken from the heading '2025 Record Setting Placements With Highest Package of 51 LPA from Top Companies'; the label 'Highest Package' is ours. stats2 omitted (only two academic/scale figures on the site). Fact icons chosen by us.",
+  "programmes: faculty groups 'UNDERGRADUATE' / 'POSTGRADUATE' are the live tab names; section is null (no sub-headings on the site). Ph.D. is listed under the live POSTGRADUATE tab; level set to 'PhD'. Lateral entry, part-time and duration are not published (set false / omitted).",
+  "steps.items: transcribed from the live 'Steps to Apply' graphic (no HTML text).",
+  "collaborations: names read from the logo artwork (logos have no alt/text on the live page). Heading 'Global Academic Celebration' is verbatim.",
+  "placements: heading 'Our Star Achievers' verbatim; no placement cards on the site (omitted). Profiles show no company or department on the live page, so those fields are omitted. Each card also shows 'intern - Software Development Engineer' and (for five of six) a monthly stipend, which have no field in the contract and are not included.",
+  "ctaHeading: verbatim heading of the live record-placements band ('2025 Record Setting Placements With Highest Package of 51 LPA from Top Companies').",
+  "campus: heading 'Life at SRM Easwari', item titles and tags are ours. Photos are official site images (also used in 'Why SRM EEC' and the hero background); image alt texts are ours (from easwari.ts).",
+  "testimonials: line3 'SRM Easwari Alumni' is ours (based on the live 'Alumni Testimonials' heading). Mr. Venky has no role/company on the live page (line2 empty). Aswanth Ram A S's line2: missing space added in 'Technology, Chicago'. Kishore V's quote ends mid-sentence ('The EEE dept.') as on the live page. 'Eeswari' spelling kept as published.",
+  "faqs: the live page has no FAQ section. Heading and questions are ours; answers restate live-site facts only (programme list, eligibility text, steps to apply, contact details, and 'autonomous / affiliated to Anna University' from the logo).",
+  "contact: phone displays are verbatim. The live toll-free link is 'tel:+9118001032535'; href changed to 'tel:18001032535' so it dials. No map image or landmarks on the live page (a Google Maps embed only), so map/landmarks are omitted.",
+  "Not used from the live page: 'Need Assistance ?' headings (no CTA/links) and its stock-style background image."
+ ]
+}

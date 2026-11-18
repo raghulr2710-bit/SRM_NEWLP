@@ -6,6 +6,9 @@ import {
   ArrowUpRight,
   BookOpen,
   Briefcase,
+  FlaskConical,
+  HeartPulse,
+  Layers,
   ChevronDown,
   Clock,
   Cpu,
@@ -32,19 +35,41 @@ export interface LiveCourse {
 export interface UgEligibility {
   heading: string;
   text: string[];
-  qualifyingExamination: string;
-  gceALevel: string;
-  internationalBaccalaureate: { text: string; table: Record<string, string>[] };
+  qualifyingExamination?: string;
+  gceALevel?: string;
+  internationalBaccalaureate?: { text: string; table: Record<string, string>[] };
   note?: string | string[];
+  /** faculty tab the panel belongs to (defaults to the first tab) */
+  faculty?: string;
 }
 
 const LATERAL = "LATERAL ENTRY PROGRAMME";
 const ICON = (f: string): LucideIcon =>
-  f === LATERAL ? ArrowUpRight : /ENGINEER/.test(f) ? Cpu : /ARCHITECT/.test(f) ? Ruler : /LIBERAL/.test(f) ? BookOpen : /MANAGEMENT/.test(f) ? Briefcase : UserCog;
+  f === LATERAL
+    ? ArrowUpRight
+    : /ENGINEER|TECHNOLOG|COMPUT/.test(f)
+      ? Cpu
+      : /ARCHITECT|DESIGN/.test(f)
+        ? Ruler
+        : /MEDIC|HEALTH|NURS|PHARM|ALLIED|PHYSIO/.test(f)
+          ? HeartPulse
+          : /SCIENCE|RESEARCH/.test(f)
+            ? FlaskConical
+            : /LIBERAL|ARTS|HUMANIT|LAW/.test(f)
+              ? BookOpen
+              : /MANAGEMENT|BUSINESS|COMMERCE|HOTEL/.test(f)
+                ? Briefcase
+                : /POST ?GRAD|\bPG\b|MASTER/.test(f)
+                  ? GraduationCap
+                  : /UNDER ?GRAD|\bUG\b|BACHELOR/.test(f)
+                    ? Layers
+                    : UserCog;
 const label = (f: string) =>
   f === LATERAL
     ? "Lateral Entry"
-    : f
+    : /^[A-Z]{2,6}\b\s*(\(|$)/.test(f)
+      ? f.match(/^[A-Z]{2,6}/)![0]
+      : f
         .replace(/\s*\(.*\)$/, "")
         .replace(/ PROGRAMME$/, "")
         .replace("WORKING PROFESSIONAL COURSES(WPC)", "Working Professional")
@@ -80,18 +105,18 @@ export function LiveCourses({
   lateral,
 }: {
   items: LiveCourse[];
-  ugEligibility: UgEligibility;
+  ugEligibility?: UgEligibility;
   flabsUgNote?: string;
-  lateral: { eligibility: string; programmes: string[] };
+  lateral?: { eligibility: string; programmes: string[] };
 }) {
   const { openEnquiry } = useEnquiry();
-  const faculties = useMemo(() => [...new Set(items.map((i) => i.faculty)), LATERAL], [items]);
+  const faculties = useMemo(() => [...new Set(items.map((i) => i.faculty)), ...(lateral?.programmes.length ? [LATERAL] : [])], [items, lateral]);
   const counts = useMemo(() => {
     const m = new Map<string, number>();
     items.forEach((i) => m.set(i.faculty, (m.get(i.faculty) ?? 0) + 1));
-    m.set(LATERAL, lateral.programmes.length);
+    if (lateral) m.set(LATERAL, lateral.programmes.length);
     return m;
-  }, [items, lateral.programmes.length]);
+  }, [items, lateral]);
 
   const [tab, setTab] = useState(faculties[0]);
   const [level, setLevel] = useState<string>("All");
@@ -100,7 +125,7 @@ export function LiveCourses({
   const query = q.trim().toLowerCase();
 
   const base: LiveCourse[] =
-    tab === LATERAL
+    tab === LATERAL && lateral
       ? lateral.programmes.map((t) => ({ faculty: LATERAL, section: "Lateral entry – direct 2nd year B.Tech", title: t, eligibility: lateral.eligibility, lateralEntry: true, partTime: false, level: "UG" }))
       : items.filter((i) => i.faculty === tab);
   const pool = query ? items : base;
@@ -125,14 +150,14 @@ export function LiveCourses({
     <div className="grid grid-cols-[minmax(0,1fr)] gap-6 lg:grid-cols-[17rem_minmax(0,1fr)] lg:gap-8">
       {/* ---------- faculty navigation ---------- */}
       <LayoutGroup>
-        <nav aria-label="Faculties" className="min-w-0 lg:sticky lg:top-36 lg:self-start lg:overflow-hidden lg:rounded-3xl lg:border lg:border-brand/10 lg:bg-gradient-to-b lg:from-brand-soft lg:to-[#fdf6e3] lg:p-3 lg:shadow-[0_24px_48px_-36px_rgba(10,20,50,0.45)]">
+        <nav aria-label="Faculties" className="min-w-0 lg:sticky lg:top-36 lg:self-start lg:overflow-hidden lg:rounded-3xl lg:border lg:border-brand/10 lg:bg-gradient-to-b lg:from-brand-soft lg:to-[var(--hl-soft)] lg:p-3 lg:shadow-[0_24px_48px_-36px_rgba(10,20,50,0.45)]">
           <div className="relative mb-3 hidden items-center justify-between overflow-hidden rounded-2xl bg-brand px-4 py-3.5 text-white lg:flex">
-            <span aria-hidden="true" className="absolute -right-6 -top-8 h-24 w-24 rounded-full border-[0.9rem] border-[#f2c14e]/40" />
+            <span aria-hidden="true" className="absolute -right-6 -top-8 h-24 w-24 rounded-full border-[0.9rem] border-[var(--hl)]/40" />
             <span className="relative">
               <span className="block text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-white/70">Choose a</span>
               <span className="block font-display text-base font-semibold">Faculty</span>
             </span>
-            <span className="relative rounded-full bg-[#f2c14e] px-2.5 py-0.5 text-xs font-bold text-brand-ink">{items.length} courses</span>
+            <span className="relative rounded-full bg-[var(--hl)] px-2.5 py-0.5 text-xs font-bold text-brand-ink">{items.length} courses</span>
           </div>
           <ul role="tablist" className="no-scrollbar -mx-5 flex gap-2 overflow-x-auto px-5 lg:mx-0 lg:flex-col lg:gap-1.5 lg:overflow-visible lg:px-0">
             {faculties.map((f) => {
@@ -145,11 +170,11 @@ export function LiveCourses({
                     aria-selected={active}
                     onClick={() => choose(f)}
                     className={`group relative isolate flex min-h-11 w-full items-center gap-3 rounded-xl px-3.5 py-2 text-left text-sm font-semibold transition-colors lg:py-2.5 ${
-                      active ? "text-on-brand" : "border border-line bg-white text-ink hover:border-[#f2c14e]/70 hover:text-brand lg:border-white lg:bg-white/80 lg:shadow-[0_1px_2px_rgba(10,20,50,0.05)] lg:hover:bg-white"
+                      active ? "text-on-brand" : "border border-line bg-white text-ink hover:border-[var(--hl)]/70 hover:text-brand lg:border-white lg:bg-white/80 lg:shadow-[0_1px_2px_rgba(10,20,50,0.05)] lg:hover:bg-white"
                     }`}
                   >
-                    {active && <motion.span layoutId="faculty-pill" className="absolute inset-0 -z-10 rounded-xl bg-brand shadow-[0_12px_24px_-14px_rgba(11,79,160,0.8)]" transition={{ type: "spring", stiffness: 420, damping: 36 }} />}
-                    <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors ${active ? "bg-[#f2c14e] text-brand-ink" : "bg-brand-soft text-brand group-hover:bg-[#f2c14e]/30"}`}>
+                    {active && <motion.span layoutId="faculty-pill" className="absolute inset-0 -z-10 rounded-xl bg-brand shadow-[0_12px_24px_-14px_color-mix(in_srgb,var(--brand)_80%,transparent)]" transition={{ type: "spring", stiffness: 420, damping: 36 }} />}
+                    <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors ${active ? "bg-[var(--hl)] text-brand-ink" : "bg-brand-soft text-brand group-hover:bg-[var(--hl)]/30"}`}>
                       <Icon aria-hidden="true" className="h-4 w-4" />
                     </span>
                     <span className="flex-1 whitespace-nowrap lg:whitespace-normal">{label(f)}</span>
@@ -215,7 +240,7 @@ export function LiveCourses({
         </p>
 
         {/* general UG eligibility – progressive disclosure */}
-        {!query && tab === items[0]?.faculty && (
+        {ugEligibility && !query && tab === (ugEligibility.faculty ?? items[0]?.faculty) && (
           <details className="group mt-4 overflow-hidden rounded-2xl border border-brand/15 bg-brand-soft/50">
             <summary className="flex min-h-14 cursor-pointer list-none items-center gap-3 px-5 py-3">
               <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brand text-on-brand">
@@ -223,7 +248,7 @@ export function LiveCourses({
               </span>
               <span className="flex-1">
                 <span className="block text-sm font-semibold text-ink">{ugEligibility.heading}</span>
-                <span className="block text-xs text-muted">Nationality, age, qualifying examination, GCE A-level and IB requirements</span>
+                <span className="block text-xs text-muted">{ugEligibility.gceALevel ? "Nationality, age, qualifying examination, GCE A-level and IB requirements" : "General eligibility for undergraduate admission"}</span>
               </span>
               <ChevronDown aria-hidden="true" className="h-5 w-5 shrink-0 text-brand transition-transform group-open:rotate-180" />
             </summary>
@@ -233,14 +258,19 @@ export function LiveCourses({
                   <li key={t}>{t}</li>
                 ))}
               </ul>
-              <div>
-                <p className="font-semibold text-ink">QUALIFYING EXAMINATION</p>
-                <p className="mt-1">{ugEligibility.qualifyingExamination}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-ink">GCE A-level</p>
-                <p className="mt-1">{ugEligibility.gceALevel}</p>
-              </div>
+              {ugEligibility.qualifyingExamination && (
+                <div>
+                  <p className="font-semibold text-ink">QUALIFYING EXAMINATION</p>
+                  <p className="mt-1">{ugEligibility.qualifyingExamination}</p>
+                </div>
+              )}
+              {ugEligibility.gceALevel && (
+                <div>
+                  <p className="font-semibold text-ink">GCE A-level</p>
+                  <p className="mt-1">{ugEligibility.gceALevel}</p>
+                </div>
+              )}
+              {ugEligibility.internationalBaccalaureate && (
               <div>
                 <p className="font-semibold text-ink">International Baccalaureate DIPLOMA/CERTIFICATE</p>
                 <p className="mt-1">{ugEligibility.internationalBaccalaureate.text}</p>
@@ -269,6 +299,7 @@ export function LiveCourses({
                   </table>
                 </div>
               </div>
+              )}
               {ugEligibility.note && (
                 <div>
                   <p className="font-semibold text-ink">NOTE</p>
@@ -289,7 +320,7 @@ export function LiveCourses({
                   <div className="mb-3 flex flex-wrap items-center gap-2">
                     <h3 className="font-display text-base font-semibold text-ink">{title}</h3>
                     {duration && (
-                      <span className="inline-flex items-center gap-1 rounded-full bg-[#f2c14e]/25 px-2.5 py-0.5 text-xs font-semibold text-brand-ink">
+                      <span className="inline-flex items-center gap-1 rounded-full bg-[var(--hl)]/25 px-2.5 py-0.5 text-xs font-semibold text-brand-ink">
                         <Clock aria-hidden="true" className="h-3 w-3" /> {duration}
                       </span>
                     )}
@@ -305,12 +336,12 @@ export function LiveCourses({
                           key={id}
                           className={`group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-white transition-[border-color,box-shadow,transform] duration-300 ${
                             isOpen
-                              ? "border-[#f2c14e] shadow-[0_24px_48px_-30px_rgba(10,20,50,0.45)] sm:col-span-2 xl:col-span-3"
-                              : "border-line hover:-translate-y-0.5 hover:border-[#f2c14e]/70"
+                              ? "border-[var(--hl)] shadow-[0_24px_48px_-30px_rgba(10,20,50,0.45)] sm:col-span-2 xl:col-span-3"
+                              : "border-line hover:-translate-y-0.5 hover:border-[var(--hl)]/70"
                           }`}
                         >
                           {/* yellow accent rule */}
-                          <span aria-hidden="true" className={`absolute inset-x-0 top-0 h-1 origin-left bg-[#f2c14e] transition-transform duration-500 ${isOpen ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`} />
+                          <span aria-hidden="true" className={`absolute inset-x-0 top-0 h-1 origin-left bg-[var(--hl)] transition-transform duration-500 ${isOpen ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`} />
                           <div className="flex flex-1 flex-col p-4 pb-3">
                             <div className="flex items-center justify-between gap-2">
                               <div className="flex min-w-0 flex-wrap items-center gap-1.5">
@@ -321,7 +352,7 @@ export function LiveCourses({
                                   </span>
                                 )}
                                 {c.lateralEntry && tab !== LATERAL && (
-                                  <span className="rounded-full bg-[#f2c14e]/25 px-2 py-0.5 text-xs font-semibold text-[#7a5a00]">Lateral entry</span>
+                                  <span className="rounded-full bg-[var(--hl)]/25 px-2 py-0.5 text-xs font-semibold text-[var(--hl-ink)]">Lateral entry</span>
                                 )}
                                 {c.partTime && <span className="rounded-full bg-surface-alt px-2 py-0.5 text-xs font-semibold text-muted">Part time</span>}
                               </div>
@@ -332,8 +363,8 @@ export function LiveCourses({
                             <AnimatePresence initial={false}>
                               {isOpen && (
                                 <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.25 }} className="overflow-hidden">
-                                  <div className="mt-3 rounded-xl border-l-4 border-[#f2c14e] bg-[#fdf8ea] p-3.5">
-                                    <p className="text-xs font-semibold uppercase tracking-wider text-[#7a5a00]">Eligibility</p>
+                                  <div className="mt-3 rounded-xl border-l-4 border-[var(--hl)] bg-[var(--hl-soft)] p-3.5">
+                                    <p className="text-xs font-semibold uppercase tracking-wider text-[var(--hl-ink)]">Eligibility</p>
                                     <p className="mt-1.5 whitespace-pre-line text-sm leading-relaxed text-ink/80">
                                       {c.eligibility ?? "Eligibility not published on the admissions page – ask a counsellor."}
                                     </p>
@@ -355,7 +386,7 @@ export function LiveCourses({
                             <button
                               type="button"
                               onClick={() => openEnquiry({ intent: "programme" })}
-                              className="inline-flex min-h-10 items-center gap-1 rounded-full bg-[#f2c14e] px-4 text-[0.8125rem] font-semibold text-brand-ink transition-[filter,transform] hover:brightness-105 active:translate-y-px"
+                              className="inline-flex min-h-10 items-center gap-1 rounded-full bg-[var(--hl)] px-4 text-[0.8125rem] font-semibold text-brand-ink transition-[filter,transform] hover:brightness-105 active:translate-y-px"
                             >
                               Enquire
                             </button>
@@ -372,7 +403,7 @@ export function LiveCourses({
                 No course matches “{q}”. Try a shorter word such as “CSE”, “MBA” or “Design”.
               </div>
             )}
-            {!query && tab.startsWith("LIBERAL") && flabsUgNote && <p className="text-sm text-muted">{flabsUgNote}</p>}
+            {!query && /^(LIBERAL|FLABS)/.test(tab) && flabsUgNote && <p className="text-sm text-muted">{flabsUgNote}</p>}
           </motion.div>
         </AnimatePresence>
       </div>

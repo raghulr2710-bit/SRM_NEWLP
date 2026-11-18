@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
-import { RamapuramLive } from "@/components/live/RamapuramLive";
+import { LiveLanding } from "@/components/live/LiveLanding";
+import { ramapuramSite } from "@/data/live/sites";
 import { ramapuram } from "@/data/institutions";
 import { institutionMetadata } from "@/lib/site";
 
@@ -23,7 +24,8 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <RamapuramLive
+    <LiveLanding
+      site={ramapuramSite}
       fonts={{
         className: `${display.variable} ${body.variable}`,
         display: "var(--font-rmp2-display), system-ui, sans-serif",

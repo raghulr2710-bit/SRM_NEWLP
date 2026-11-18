@@ -11,8 +11,7 @@
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 
-const MARKERS: { location: [number, number]; size: number }[] = [
-  { location: [13.03, 80.18], size: 0.08 }, // Chennai (SRMIST Ramapuram)
+const PARTNERS: { location: [number, number]; size: number }[] = [
   { location: [42.36, -71.09], size: 0.05 }, // MIT / Harvard Medical School, Boston
   { location: [1.3, 103.78], size: 0.05 }, // NUS, Singapore
   { location: [52.48, -1.9], size: 0.05 }, // Birmingham City University
@@ -23,7 +22,24 @@ const MARKERS: { location: [number, number]; size: number }[] = [
   { location: [-37.72, 145.05], size: 0.05 }, // La Trobe University, Melbourne
 ];
 
-export function HalfGlobe({ className = "" }: { className?: string }) {
+export type Rgb = [number, number, number];
+
+/** home = campus location (lat, lng); colours are 0–1 RGB triples. */
+export function HalfGlobe({
+  className = "",
+  home = [13.03, 80.18],
+  partners = true,
+  baseColor = [0.86, 0.91, 1],
+  markerColor = [242 / 255, 174 / 255, 30 / 255],
+  glowColor = [0.78, 0.86, 1],
+}: {
+  className?: string;
+  home?: [number, number];
+  partners?: boolean;
+  baseColor?: Rgb;
+  markerColor?: Rgb;
+  glowColor?: Rgb;
+}) {
   const canvas = useRef<HTMLCanvasElement>(null);
   const wrap = useRef<HTMLDivElement>(null);
 
@@ -58,10 +74,10 @@ export function HalfGlobe({ className = "" }: { className?: string }) {
           diffuse: 1.4,
           mapSamples: 22000,
           mapBrightness: 7,
-          baseColor: [0.86, 0.91, 1],
-          markerColor: [242 / 255, 174 / 255, 30 / 255],
-          glowColor: [0.78, 0.86, 1],
-          markers: MARKERS,
+          baseColor,
+          markerColor,
+          glowColor,
+          markers: [{ location: home, size: 0.08 }, ...(partners ? PARTNERS : [])],
           onRender: (state) => {
             if (!reduce && visible) phi += 0.0026;
             state.phi = phi;
@@ -89,12 +105,13 @@ export function HalfGlobe({ className = "" }: { className?: string }) {
       window.removeEventListener("resize", fit);
       globe?.destroy();
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- globe is created once per mount
   }, []);
 
   return (
     <div ref={wrap} aria-hidden="true" className={`pointer-events-none relative mx-auto aspect-[2/1] w-[min(44rem,92vw)] overflow-hidden ${className}`}>
       {/* soft halo, kept fully inside the box so no edge is ever clipped */}
-      <div className="absolute left-1/2 top-[10%] aspect-square w-[86%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(11,79,160,0.16)_0%,rgba(11,79,160,0.06)_42%,transparent_66%)]" />
+      <div className="absolute left-1/2 top-[10%] aspect-square w-[86%] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,color-mix(in_srgb,var(--brand)_16%,transparent)_0%,color-mix(in_srgb,var(--brand)_6%,transparent)_42%,transparent_66%)]" />
       <canvas ref={canvas} className="absolute left-0 top-0 aspect-square w-full opacity-0 transition-opacity duration-1000 [contain:layout_paint_size]" />
       {/* blend the globe's base into the section */}
       <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-surface-alt via-surface-alt/60 to-transparent" />

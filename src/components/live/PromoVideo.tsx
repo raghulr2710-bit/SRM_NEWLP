@@ -52,7 +52,7 @@ export function PromoVideo({ url, title }: { url: string; title: string }) {
         ref={trigger}
         type="button"
         onClick={() => setOpen(true)}
-        className="group relative block aspect-video w-full overflow-hidden rounded-[1.25rem] bg-brand-ink focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#f2c14e]"
+        className="group relative block aspect-video w-full overflow-hidden rounded-[1.25rem] bg-brand-ink focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--hl)]"
       >
         {/* eslint-disable-next-line @next/next/no-img-element -- remote YouTube thumbnail with fallback */}
         <img
@@ -70,12 +70,12 @@ export function PromoVideo({ url, title }: { url: string; title: string }) {
         <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-ink/70 via-brand-ink/10 to-transparent transition-opacity duration-500 group-hover:opacity-70" />
         <span className="absolute inset-0 flex items-center justify-center">
           <span aria-hidden="true" className="absolute h-24 w-24 rounded-full border border-white/50 transition-transform duration-500 group-hover:scale-110" />
-          <span className="relative flex h-[4.25rem] w-[4.25rem] items-center justify-center rounded-full bg-[#f2c14e] text-brand-ink transition-transform duration-300 group-hover:scale-105">
+          <span className="relative flex h-[4.25rem] w-[4.25rem] items-center justify-center rounded-full bg-[var(--hl)] text-brand-ink transition-transform duration-300 group-hover:scale-105">
             <Play aria-hidden="true" className="ml-1 h-7 w-7 fill-current" />
           </span>
         </span>
         <span className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-white/15 px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-white/30 backdrop-blur-md">
-          <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-[#f2c14e]" />
+          <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-[var(--hl)]" />
           {title}
         </span>
         <span className="sr-only">Play video: {title}</span>

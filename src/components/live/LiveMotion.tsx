@@ -16,10 +16,10 @@ import { Children, useCallback, useEffect, useRef, useState, type CSSProperties,
 import { AnimatePresence, LayoutGroup, motion, useReducedMotion, useScroll, useSpring } from "motion/react";
 import { Counter } from "@/components/common/Counter";
 import { VideoEmbed } from "@/components/common/VideoEmbed";
-import { ArrowLeft, ArrowRight, Award, BookOpen, Briefcase, Building2, Calendar, Camera, ClipboardList, Globe2, GraduationCap, Hourglass, MapPin, Medal, Trophy, Users, PlayCircle, Send, Smartphone, Sparkles, Upload, UserPlus, type LucideIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight, Award, BookOpen, Briefcase, Building2, Calendar, Camera, ClipboardList, FlaskConical, Globe2, GraduationCap, HelpCircle, Hourglass, MapPin, Medal, MessageSquareQuote, Quote, Star, Trophy, Users, PlayCircle, Send, Smartphone, Sparkles, Upload, UserPlus, type LucideIcon } from "lucide-react";
 
 const STEP_ICON_SET: Record<string, LucideIcon> = { UserPlus, Smartphone, ClipboardList, Upload, Send };
-const TAB_ICONS: Record<string, LucideIcon> = { Award, BookOpen, Briefcase, Building2, Camera, ClipboardList, Globe2, MapPin, PlayCircle, Sparkles };
+const TAB_ICONS: Record<string, LucideIcon> = { Award, BookOpen, Briefcase, Building2, Camera, ClipboardList, Globe2, HelpCircle, MapPin, PlayCircle, Sparkles };
 
 export function ScrollProgress() {
   const { scrollYProgress } = useScroll();
@@ -85,8 +85,8 @@ export function SectionTabs({ items }: { items: { id: string; label: string; ico
                 }}
                 className={`group relative isolate inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full px-4 text-sm font-semibold transition-colors ${on ? "text-brand-ink" : "text-white/90 hover:text-white"}`}
               >
-                {on && <motion.span layoutId="section-tab" className="absolute inset-0 -z-10 rounded-full bg-[#f2c14e]" transition={{ type: "spring", stiffness: 420, damping: 36 }} />}
-                <Icon aria-hidden="true" className={`h-4 w-4 transition-colors ${on ? "text-brand-ink" : "text-[#f2c14e]"}`} />
+                {on && <motion.span layoutId="section-tab" className="absolute inset-0 -z-10 rounded-full bg-[var(--hl)]" transition={{ type: "spring", stiffness: 420, damping: 36 }} />}
+                <Icon aria-hidden="true" className={`h-4 w-4 transition-colors ${on ? "text-brand-ink" : "text-[var(--hl)]"}`} />
                 {label}
               </a>
             );
@@ -328,7 +328,7 @@ export function AccordionGallery({ items, interval = 4200 }: { items: GalleryImg
                 </span>
                 {/* expanded: caption */}
                 <span className={`absolute inset-x-0 bottom-0 p-6 transition-[opacity,transform] duration-500 ${on ? "translate-y-0 opacity-100 delay-200" : "translate-y-3 opacity-0"}`}>
-                  {it.tag && <span className="mb-3 inline-block rounded-full bg-[#f2c14e] px-3 py-1 text-xs font-semibold text-brand-ink">{it.tag}</span>}
+                  {it.tag && <span className="mb-3 inline-block rounded-full bg-[var(--hl)] px-3 py-1 text-xs font-semibold text-brand-ink">{it.tag}</span>}
                   <span className="block font-display text-xl font-semibold text-white lg:text-2xl">{it.title}</span>
                 </span>
               </button>
@@ -344,7 +344,7 @@ export function AccordionGallery({ items, interval = 4200 }: { items: GalleryImg
             <Image src={it.src} alt={it.alt} fill sizes="80vw" className="object-cover" />
             <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-ink/85 via-transparent to-transparent" />
             <span className="absolute inset-x-0 bottom-0 p-5">
-              {it.tag && <span className="mb-2 inline-block rounded-full bg-[#f2c14e] px-2.5 py-0.5 text-xs font-semibold text-brand-ink">{it.tag}</span>}
+              {it.tag && <span className="mb-2 inline-block rounded-full bg-[var(--hl)] px-2.5 py-0.5 text-xs font-semibold text-brand-ink">{it.tag}</span>}
               <span className="block font-display text-lg font-semibold text-white">{it.title}</span>
             </span>
           </li>
@@ -390,12 +390,12 @@ export function StatBannerCarousel({ slides, interval = 5500 }: { slides: StatSl
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
           >
             {/* tinted card – the cut-out photo stands on its bottom edge and rises slightly above it */}
-            <div className="absolute inset-x-0 bottom-0 top-10 overflow-hidden rounded-3xl bg-gradient-to-br from-[#eaf2ff] to-[#d6e6ff] ring-1 ring-brand/10">
+            <div className="absolute inset-x-0 bottom-0 top-10 overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--brand-tint)] to-[var(--brand-tint-2)] ring-1 ring-brand/10">
               <div aria-hidden="true" className="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_60%_70%,rgba(255,255,255,0.75),transparent_65%)] sm:block" />
             </div>
             <div className="relative grid h-full grid-rows-[auto_1fr] sm:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] sm:grid-rows-1">
               <div className="flex flex-col justify-center px-7 pt-16 sm:py-8 sm:pl-12 sm:pr-4 sm:pt-[4.5rem]">
-                <span aria-hidden="true" className="mb-4 block h-1 w-10 rounded-full bg-[#f2c14e]" />
+                <span aria-hidden="true" className="mb-4 block h-1 w-10 rounded-full bg-[var(--hl)]" />
                 <p className="font-display leading-tight text-ink">
                   {s.parts.map((p, n) =>
                     p.big ? (
@@ -429,7 +429,7 @@ export function StatBannerCarousel({ slides, interval = 5500 }: { slides: StatSl
   );
 }
 
-type VideoStory = { name: string; line2: string; line3: string; videoUrl: string };
+type VideoStory = { name: string; line2: string; line3: string; videoUrl?: string; quote?: string; photo?: { src: string; alt: string; width: number; height: number } | null };
 
 /**
  * Video testimonials, adapted from Aceternity "Animated Testimonials" (via Motion Studio):
@@ -450,7 +450,7 @@ export function AnimatedTestimonials({ items }: { items: VideoStory[] }) {
       <div className="relative mx-auto aspect-video w-full max-w-xl">
         {items.map((t, i) => {
           const on = i === active;
-          const id = t.videoUrl.match(/(?:embed\/|v=|youtu\.be\/)([\w-]{11})/)?.[1];
+          const id = t.videoUrl?.match(/(?:embed\/|v=|youtu\.be\/)([\w-]{11})/)?.[1];
           return (
             <motion.div
               key={t.name}
@@ -466,9 +466,26 @@ export function AnimatedTestimonials({ items }: { items: VideoStory[] }) {
               }}
               transition={{ type: "spring", stiffness: 260, damping: 28 }}
             >
-              {on ? (
+              {on && t.videoUrl ? (
                 <div className="h-full overflow-hidden rounded-2xl shadow-[0_30px_60px_-30px_rgba(10,20,50,0.55)] ring-4 ring-white">
                   <VideoEmbed key={t.videoUrl} url={t.videoUrl} title={`${t.name} – ${t.line2}`} className="!rounded-none h-full" />
+                </div>
+              ) : !t.videoUrl ? (
+                /* written testimonial: quote card */
+                <div aria-hidden={!on || undefined} className="relative flex h-full flex-col justify-center overflow-hidden rounded-2xl bg-white p-6 shadow-[0_30px_60px_-30px_rgba(10,20,50,0.55)] ring-1 ring-line sm:p-8">
+                  <Quote aria-hidden="true" className="absolute right-5 top-5 h-12 w-12 text-[var(--hl)]/40" />
+                  <div className="flex items-center gap-4">
+                    {t.photo && (
+                      <span className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full bg-brand-soft ring-4 ring-[var(--hl)]/30">
+                        <Image src={t.photo.src} alt={on ? t.photo.alt : ""} fill sizes="64px" className="object-cover object-top" />
+                      </span>
+                    )}
+                    <span className="min-w-0">
+                      <span className="block font-display text-base font-semibold text-ink">{t.name}</span>
+                      <span className="block text-sm text-brand">{t.line2}</span>
+                    </span>
+                  </div>
+                  {t.quote && <p className="mt-4 line-clamp-5 text-[0.9375rem] leading-relaxed text-ink/80">“{t.quote}”</p>}
                 </div>
               ) : (
                 <div
@@ -486,8 +503,16 @@ export function AnimatedTestimonials({ items }: { items: VideoStory[] }) {
       <div>
         <AnimatePresence mode="wait">
           <motion.div key={cur.name} initial={{ opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} transition={{ duration: 0.3 }}>
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#f2c14e]/25 px-3 py-1 text-xs font-semibold text-[#7a5a00]">
-              <PlayCircle aria-hidden="true" className="h-3.5 w-3.5" /> Video story
+            <span className="inline-flex items-center gap-2 rounded-full bg-[var(--hl)]/25 px-3 py-1 text-xs font-semibold text-[var(--hl-ink)]">
+              {cur.videoUrl ? (
+                <>
+                  <PlayCircle aria-hidden="true" className="h-3.5 w-3.5" /> Video story
+                </>
+              ) : (
+                <>
+                  <MessageSquareQuote aria-hidden="true" className="h-3.5 w-3.5" /> Student voice
+                </>
+              )}
             </span>
             <h3 className="mt-4 font-display text-2xl font-semibold text-ink sm:text-3xl">{cur.name}</h3>
             <p className="mt-2 text-lg font-semibold text-brand">{cur.line2}</p>
@@ -551,7 +576,7 @@ export function ProcessStepper({ steps, icons }: { steps: string[]; icons: strin
         <div aria-hidden="true" className="absolute left-[10%] right-[10%] top-7 h-1 rounded-full bg-brand/10" />
         <motion.div
           aria-hidden="true"
-          className="absolute left-[10%] top-7 h-1 origin-left rounded-full bg-gradient-to-r from-brand to-[#f2c14e]"
+          className="absolute left-[10%] top-7 h-1 origin-left rounded-full bg-gradient-to-r from-brand to-[var(--hl)]"
           style={{ width: "80%" }}
           initial={false}
           animate={{ scaleX: pct }}
@@ -581,14 +606,14 @@ export function ProcessStepper({ steps, icons }: { steps: string[]; icons: strin
                   <span
                     className={`relative flex h-14 w-14 items-center justify-center rounded-full border-2 transition-[background-color,border-color,color,transform,box-shadow] duration-300 ${
                       on
-                        ? "scale-110 border-[#f2c14e] bg-brand text-white shadow-[0_0_0_6px_rgba(242,193,78,0.25)]"
+                        ? "scale-110 border-[var(--hl)] bg-brand text-white shadow-[0_0_0_6px_color-mix(in_srgb,var(--hl)_25%,transparent)]"
                         : done
                           ? "border-brand bg-brand text-white"
                           : "border-line bg-white text-brand group-hover:border-brand/40"
                     }`}
                   >
                     <Icon aria-hidden="true" className="h-5 w-5" />
-                    <span className={`absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full text-[0.65rem] font-bold ${done ? "bg-[#f2c14e] text-brand-ink" : "bg-surface-alt text-muted"}`}>
+                    <span className={`absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full text-[0.65rem] font-bold ${done ? "bg-[var(--hl)] text-brand-ink" : "bg-surface-alt text-muted"}`}>
                       {i + 1}
                     </span>
                   </span>
@@ -602,7 +627,7 @@ export function ProcessStepper({ steps, icons }: { steps: string[]; icons: strin
 
       {/* phones: vertical timeline */}
       <ol className="relative space-y-4 md:hidden">
-        <span aria-hidden="true" className="absolute bottom-6 left-6 top-6 w-0.5 bg-gradient-to-b from-brand to-[#f2c14e]" />
+        <span aria-hidden="true" className="absolute bottom-6 left-6 top-6 w-0.5 bg-gradient-to-b from-brand to-[var(--hl)]" />
         {steps.map((s, i) => {
           const Icon = STEP_ICON_SET[icons[i]] ?? Sparkles;
           return (
@@ -611,7 +636,7 @@ export function ProcessStepper({ steps, icons }: { steps: string[]; icons: strin
                 <Icon aria-hidden="true" className="h-5 w-5" />
               </span>
               <span className="rounded-xl bg-white px-4 py-3 text-sm font-semibold text-ink shadow-sm">
-                <span className="mr-2 text-[#7a5a00]">{String(i + 1).padStart(2, "0")}</span>
+                <span className="mr-2 text-[var(--hl-ink)]">{String(i + 1).padStart(2, "0")}</span>
                 {s}
               </span>
             </li>
@@ -622,7 +647,7 @@ export function ProcessStepper({ steps, icons }: { steps: string[]; icons: strin
   );
 }
 
-const MILESTONE_ICONS: Record<string, LucideIcon> = { Calendar, Users, Trophy, Building2, Hourglass, Award, Medal, GraduationCap };
+const MILESTONE_ICONS: Record<string, LucideIcon> = { Calendar, Users, Trophy, Building2, Hourglass, Award, Medal, GraduationCap, Globe2, BookOpen, Briefcase, FlaskConical, Star, MapPin, Sparkles };
 
 /** Institute milestones as one auto-looping row (pauses on hover / focus; static wrap for reduced motion). */
 /**
@@ -657,9 +682,9 @@ export function MilestoneMarquee({ items, duration = 36 }: { items: { value: str
       <li
         key={`${f.label}-${i}`}
         aria-hidden={dup || undefined}
-        className={`group flex w-72 shrink-0 items-center gap-4 rounded-2xl border border-line bg-white px-5 py-4 transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-0.5 hover:border-[#f2c14e]/70 ${dup ? "motion-reduce:hidden" : ""}`}
+        className={`group flex w-72 shrink-0 items-center gap-4 rounded-2xl border border-line bg-white px-5 py-4 transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-0.5 hover:border-[var(--hl)]/70 ${dup ? "motion-reduce:hidden" : ""}`}
       >
-        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#f2c14e]/25 text-[#7a5a00] transition-colors group-hover:bg-[#f2c14e] group-hover:text-brand-ink">
+        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--hl)]/25 text-[var(--hl-ink)] transition-colors group-hover:bg-[var(--hl)] group-hover:text-brand-ink">
           <Icon aria-hidden="true" className="h-5 w-5" />
         </span>
         <span className="min-w-0">

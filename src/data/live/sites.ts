@@ -1,0 +1,132 @@
+import type { LiveSiteConfig } from "@/components/live/LiveLanding";
+import type { LiveData } from "@/components/live/types";
+import { easwari, ramapuram, tiruchirappalli, trp } from "@/data/institutions";
+import ramapuramData from "./ramapuram.json";
+import tiruchirappalliData from "./tiruchirappalli.json";
+import easwariData from "./easwari.json";
+import trpData from "./trp.json";
+
+/**
+ * Per-institution identity for the live landing pages. Content: ./<key>.json (verbatim from each
+ * live registration site). Hero visuals are AI-generated illustrations (transparent cut-outs);
+ * circle = position of the disc behind the student's head, measured from the image alpha.
+ */
+
+/** SRMIST Ramapuram – SRM blue + gold. */
+export const ramapuramSite: LiveSiteConfig = {
+  inst: ramapuram,
+  data: ramapuramData as unknown as LiveData,
+  palette: {
+    brand: "#0b4fa0",
+    brandInk: "#0a1b3d",
+    brandSoft: "#eaf1fb",
+    brandDeep: "#0a3f82",
+    brandTint: "#eaf2ff",
+    brandTint2: "#d6e6ff",
+    hl: "#f2c14e",
+    hlDeep: "#d9a520",
+    hlSoft: "#fdf6e3",
+    hlInk: "#7a5a00",
+    accentOnDark: "#9cc3ff",
+  },
+  heroImage: {
+    src: "/assets/ramapuram/hero/ai-hero-btech-cutout.webp",
+    alt: "Engineering student in a hard hat, with construction, robotics and computing imagery",
+    width: 1200,
+    height: 1887,
+    circle: { cx: 50, w: 80, top: -2 },
+  },
+};
+
+/** SRMIST Tiruchirappalli – deep ocean blue (live site #0c477f) + amber. */
+export const tiruchirappalliSite: LiveSiteConfig = {
+  inst: tiruchirappalli,
+  data: tiruchirappalliData as unknown as LiveData,
+  palette: {
+    brand: "#0c477f",
+    brandInk: "#071f3a",
+    brandSoft: "#e8f0f8",
+    brandDeep: "#083660",
+    brandTint: "#e9f1fa",
+    brandTint2: "#d3e3f3",
+    hl: "#f7b32b",
+    hlDeep: "#ef9a0a",
+    hlSoft: "#fef5e3",
+    hlInk: "#8a5300",
+    accentOnDark: "#9fc4ec",
+    surfaceAlt: "#f3f6fa",
+    line: "#dce4ee",
+    ink: "#0b1a2e",
+    muted: "#4a5668",
+  },
+  heroImage: {
+    src: "/assets/tiruchirappalli/hero/ai-hero-science-cutout.webp",
+    alt: "Science student in a lab coat holding a tablet, with microscope, DNA, satellite and computing imagery",
+    width: 1200,
+    height: 1841,
+    circle: { cx: 50.8, w: 70, top: -2 },
+  },
+  globe: { home: [10.95, 78.75], partners: false, base: [0.86, 0.91, 0.98], marker: [0.97, 0.62, 0.04], glow: [0.8, 0.87, 0.97] },
+};
+
+/** Easwari Engineering College – maroon (live site #430005) + Easwari yellow (#fbca38). */
+export const easwariSite: LiveSiteConfig = {
+  inst: easwari,
+  data: easwariData as unknown as LiveData,
+  palette: {
+    brand: "#7a1020",
+    brandInk: "#2a0508",
+    brandSoft: "#f8ecec",
+    brandDeep: "#4f0611",
+    brandTint: "#faeeee",
+    brandTint2: "#f2dbdb",
+    hl: "#fbca38",
+    hlDeep: "#e9b106",
+    hlSoft: "#fef7e0",
+    hlInk: "#7a5800",
+    accentOnDark: "#f5b8bf",
+    surfaceAlt: "#f8f4f2",
+    line: "#ebe0dd",
+    ink: "#23161a",
+    muted: "#5b4d50",
+  },
+  heroImage: {
+    src: "/assets/easwari/hero/ai-hero-cse-cutout.webp",
+    alt: "Computer engineering student holding a laptop, with AI robot, microchip, drone and circuit imagery",
+    width: 1200,
+    height: 2126,
+    circle: { cx: 44.7, w: 80, top: -1.75 },
+  },
+  globe: { home: [13.03, 80.18], partners: false, base: [0.98, 0.91, 0.91], marker: [0.98, 0.79, 0.22], glow: [0.96, 0.86, 0.86] },
+};
+
+/** SRM TRP Engineering College – engineering green (live site #00460a) + yellow. */
+export const trpSite: LiveSiteConfig = {
+  inst: trp,
+  data: trpData as unknown as LiveData,
+  palette: {
+    brand: "#0d5c32",
+    brandInk: "#05261a",
+    brandSoft: "#e8f3ec",
+    brandDeep: "#084325",
+    brandTint: "#eaf5ee",
+    brandTint2: "#d4eadb",
+    hl: "#fbca38",
+    hlDeep: "#e9b106",
+    hlSoft: "#fef7e0",
+    hlInk: "#7a5800",
+    accentOnDark: "#9fdcb6",
+    surfaceAlt: "#f2f6f3",
+    line: "#dde6e0",
+    ink: "#0f1f17",
+    muted: "#4a5a52",
+  },
+  heroImage: {
+    src: "/assets/trp/hero/ai-hero-mech-cutout.webp",
+    alt: "Engineering student holding a rolled blueprint, with wind turbine, electric car, gears and jet engine imagery",
+    width: 1200,
+    height: 2094,
+    circle: { cx: 46.8, w: 70, top: -1.78 },
+  },
+  globe: { home: [10.76, 78.81], partners: false, base: [0.88, 0.95, 0.9], marker: [0.98, 0.79, 0.22], glow: [0.84, 0.93, 0.87] },
+};

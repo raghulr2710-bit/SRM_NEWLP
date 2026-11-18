@@ -1,0 +1,642 @@
+{
+  "sourceUrl": "https://apply.trp.srmtrichy.edu.in/",
+  "meta": {
+    "shortName": "SRM TRP Engineering College",
+    "whyLabel": "Why TRP?",
+    "videoTitle": "SRM TRP Engineering College"
+  },
+  "hero": {
+    "headline": [
+      "Start Your Journey",
+      "to Success"
+    ],
+    "button": "Join the premier institute that will upskill your talent",
+    "formHeading": "Admissions Open 2027"
+  },
+  "logo": {
+    "src": "/assets/trp/logo/srm-trp-logo.jpg",
+    "alt": "SRM TRP Engineering College, Tiruchirappalli – An Autonomous Institution Affiliated to Anna University",
+    "width": 500,
+    "height": 203
+  },
+  "rankings": {
+    "heading": "Approvals & Accreditations",
+    "items": [
+      {
+        "title": "AICTE",
+        "text": "Approved by All India Council for Technical Education (AICTE), New Delhi",
+        "badge": {
+          "src": "/assets/trp/accreditation/aicte.png",
+          "alt": "All India Council for Technical Education (AICTE) logo",
+          "width": 84,
+          "height": 84
+        },
+        "body": "AICTE"
+      },
+      {
+        "title": "Anna University",
+        "text": "Affiliated to Anna University, Chennai",
+        "badge": {
+          "src": "/assets/trp/accreditation/anna-university.png",
+          "alt": "Anna University logo",
+          "width": 84,
+          "height": 84
+        },
+        "body": "Anna University"
+      },
+      {
+        "title": "NBA",
+        "text": "Accredited by National Board of Accreditation",
+        "badge": {
+          "src": "/assets/trp/accreditation/nba.png",
+          "alt": "National Board of Accreditation (NBA) logo",
+          "width": 84,
+          "height": 84
+        },
+        "body": "NBA"
+      }
+    ]
+  },
+  "promo": {
+    "heading": "About TRP",
+    "text": "SRM TRP Engineering College is headed by Dr. R. Shivakumar M.D., Ph.D. Chairman, Ramapuram and Trichy Campuses. The institution continues the blazing glory in the field of education, deservedly bequeathing it from SRM Group of Institutions. It is approved by All India Council for Technical Education (AICTE), New Delhi and affiliated to Anna University, Chennai.",
+    "videoUrl": "https://www.youtube.com/embed/7lbKue2Z_PQ"
+  },
+  "stats1": [
+    {
+      "value": "99%",
+      "label": "PLACEMENTS"
+    },
+    {
+      "value": "580+",
+      "label": "PLACEMENT OFFERS"
+    },
+    {
+      "value": "35LPA",
+      "label": "MAXIMUM PACKAGE"
+    }
+  ],
+  "facts": [
+    {
+      "value": "90+",
+      "label": "Interview Avenues",
+      "icon": "Briefcase"
+    },
+    {
+      "value": "8",
+      "label": "Undergraduate Programmes",
+      "icon": "GraduationCap"
+    },
+    {
+      "value": "6",
+      "label": "Postgraduate Programmes",
+      "icon": "BookOpen"
+    },
+    {
+      "value": "15",
+      "label": "Major Recruiters",
+      "icon": "Building2"
+    },
+    {
+      "value": "Autonomous",
+      "label": "Institution Affiliated to Anna University",
+      "icon": "Award"
+    }
+  ],
+  "programmes": {
+    "heading": "Courses Offered",
+    "items": [
+      {
+        "faculty": "UNDERGRADUATE",
+        "section": null,
+        "title": "B.E Civil Engineering",
+        "eligibility": "As per AICTE & Govt. of Tamil Nadu, Anna University, A Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics and Chemistry is required.",
+        "lateralEntry": true,
+        "partTime": false,
+        "level": "UG"
+      },
+      {
+        "faculty": "UNDERGRADUATE",
+        "section": null,
+        "title": "B.E Computer Science and Engineering",
+        "eligibility": "As per AICTE & Govt. of Tamil Nadu, Anna University, A Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics and Chemistry is required.",
+        "lateralEntry": true,
+        "partTime": false,
+        "level": "UG"
+      },
+      {
+        "faculty": "UNDERGRADUATE",
+        "section": null,
+        "title": "B.E Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+        "eligibility": "As per AICTE & Govt. of Tamil Nadu, Anna University, A Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics and Chemistry is required.",
+        "lateralEntry": true,
+        "partTime": false,
+        "level": "UG"
+      },
+      {
+        "faculty": "UNDERGRADUATE",
+        "section": null,
+        "title": "B.E Electrical and Electronics Engineering",
+        "eligibility": "As per AICTE & Govt. of Tamil Nadu, Anna University, A Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics and Chemistry is required.",
+        "lateralEntry": true,
+        "partTime": false,
+        "level": "UG"
+      },
+      {
+        "faculty": "UNDERGRADUATE",
+        "section": null,
+        "title": "B.E Electronics and Communication Engineering",
+        "eligibility": "As per AICTE & Govt. of Tamil Nadu, Anna University, A Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics and Chemistry is required.",
+        "lateralEntry": true,
+        "partTime": false,
+        "level": "UG"
+      },
+      {
+        "faculty": "UNDERGRADUATE",
+        "section": null,
+        "title": "B.E Mechanical Engineering",
+        "eligibility": "As per AICTE & Govt. of Tamil Nadu, Anna University, A Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics and Chemistry is required.",
+        "lateralEntry": true,
+        "partTime": false,
+        "level": "UG"
+      },
+      {
+        "faculty": "UNDERGRADUATE",
+        "section": null,
+        "title": "B.Tech Artificial Intelligence and Data Science",
+        "eligibility": "As per AICTE & Govt. of Tamil Nadu, Anna University, A Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics and Chemistry is required.",
+        "lateralEntry": true,
+        "partTime": false,
+        "level": "UG"
+      },
+      {
+        "faculty": "UNDERGRADUATE",
+        "section": null,
+        "title": "B.Tech Information Technology",
+        "eligibility": "As per AICTE & Govt. of Tamil Nadu, Anna University, A Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics and Chemistry is required.",
+        "lateralEntry": true,
+        "partTime": false,
+        "level": "UG"
+      },
+      {
+        "faculty": "POSTGRADUATE",
+        "section": null,
+        "title": "MBA – Master of Business Administration",
+        "eligibility": "As per AICTE and Anna University norms",
+        "lateralEntry": false,
+        "partTime": false,
+        "level": "PG"
+      },
+      {
+        "faculty": "POSTGRADUATE",
+        "section": null,
+        "title": "M.E Thermal Engineering",
+        "eligibility": "As per AICTE and Anna University norms",
+        "lateralEntry": false,
+        "partTime": false,
+        "level": "PG"
+      },
+      {
+        "faculty": "POSTGRADUATE",
+        "section": null,
+        "title": "M.E VLSI Design",
+        "eligibility": "As per AICTE and Anna University norms",
+        "lateralEntry": false,
+        "partTime": false,
+        "level": "PG"
+      },
+      {
+        "faculty": "POSTGRADUATE",
+        "section": null,
+        "title": "M.S (Research) / Ph.D – Electronics and Communication Engineering",
+        "eligibility": "As per AICTE and Anna University norms",
+        "lateralEntry": false,
+        "partTime": false,
+        "level": "PG"
+      },
+      {
+        "faculty": "POSTGRADUATE",
+        "section": null,
+        "title": "M.S (Research) / Ph.D – Mechanical Engineering",
+        "eligibility": "As per AICTE and Anna University norms",
+        "lateralEntry": false,
+        "partTime": false,
+        "level": "PG"
+      },
+      {
+        "faculty": "POSTGRADUATE",
+        "section": null,
+        "title": "M.S (Research) / Ph.D – Physics",
+        "eligibility": "As per AICTE and Anna University norms",
+        "lateralEntry": false,
+        "partTime": false,
+        "level": "PG"
+      }
+    ]
+  },
+  "why": {
+    "heading": "Why TRP?",
+    "items": [
+      {
+        "title": "State-of-the-Art Infrastructure",
+        "image": {
+          "src": "/assets/trp/campus/state-of-the-art-infrastructure.jpg",
+          "alt": "SRM TRP academic blocks around open lawns",
+          "width": 1032,
+          "height": 774
+        }
+      },
+      {
+        "title": "HiTech Library",
+        "image": {
+          "src": "/assets/trp/infrastructure/hitech-library.jpeg",
+          "alt": "Students reading together in the SRM TRP library",
+          "width": 1820,
+          "height": 1365
+        }
+      },
+      {
+        "title": "Vibrant Campus Life",
+        "image": {
+          "src": "/assets/trp/events/vibrant-campus-life-cultural-night.jpg",
+          "alt": "Students performing on stage at a cultural night",
+          "width": 1024,
+          "height": 683
+        }
+      },
+      {
+        "title": "Green & Eco Friendly Campus",
+        "image": {
+          "src": "/assets/trp/campus/green-eco-friendly-campus.jpg",
+          "alt": "Palm-lined avenue at the SRM TRP campus entrance",
+          "width": 750,
+          "height": 330
+        }
+      },
+      {
+        "title": "Fully Equipped Research labs",
+        "image": {
+          "src": "/assets/trp/infrastructure/research-lab-robotics.jpg",
+          "alt": "Student working with a robotic arm in the research lab",
+          "width": 400,
+          "height": 300
+        }
+      }
+    ]
+  },
+  "placements": {
+    "heading": "Placement Records",
+    "profiles": [
+      {
+        "name": "GIFTSON TENSINGH.T",
+        "ctc": "CTC : 8 LPA+",
+        "company": "IDP India Education",
+        "photo": {
+          "src": "/assets/trp/placements/giftson-tensingh-t.jpg",
+          "alt": "Giftson Tensingh T",
+          "width": 479,
+          "height": 719
+        },
+        "companyLogo": null
+      },
+      {
+        "name": "VETRIVEERAN.G",
+        "ctc": "CTC : 6.12 LPA",
+        "company": "Kinaxis India",
+        "photo": {
+          "src": "/assets/trp/placements/vetriveeran-g.jpg",
+          "alt": "Vetriveeran G",
+          "width": 342,
+          "height": 513
+        },
+        "companyLogo": null
+      },
+      {
+        "name": "LOHITHA.A.M.K",
+        "ctc": "CTC : 7 LPA",
+        "company": "TCS",
+        "photo": {
+          "src": "/assets/trp/placements/lohitha-a-m-k.jpg",
+          "alt": "Lohitha A M K",
+          "width": 193,
+          "height": 290
+        },
+        "companyLogo": null
+      },
+      {
+        "name": "Satya Narayanan.A",
+        "ctc": "CTC : 5 LPA",
+        "company": "My Captain",
+        "photo": {
+          "src": "/assets/trp/placements/satya-narayanan-a.jpg",
+          "alt": "Satya Narayanan A",
+          "width": 193,
+          "height": 290
+        },
+        "companyLogo": null
+      }
+    ]
+  },
+  "recruiters": {
+    "heading": "Our major Recruiters",
+    "logos": [
+      {
+        "name": "Amazon",
+        "logo": {
+          "src": "/assets/trp/recruiters/amazon.jpg",
+          "alt": "Amazon",
+          "width": 200,
+          "height": 72
+        }
+      },
+      {
+        "name": "Google",
+        "logo": {
+          "src": "/assets/trp/recruiters/google.jpg",
+          "alt": "Google",
+          "width": 200,
+          "height": 72
+        }
+      },
+      {
+        "name": "Arista",
+        "logo": {
+          "src": "/assets/trp/recruiters/arista.jpg",
+          "alt": "Arista",
+          "width": 200,
+          "height": 72
+        }
+      },
+      {
+        "name": "Atlassian",
+        "logo": {
+          "src": "/assets/trp/recruiters/atlassian.jpg",
+          "alt": "Atlassian",
+          "width": 200,
+          "height": 72
+        }
+      },
+      {
+        "name": "Wipro",
+        "logo": {
+          "src": "/assets/trp/recruiters/wipro.jpg",
+          "alt": "Wipro",
+          "width": 206,
+          "height": 75
+        }
+      },
+      {
+        "name": "Zoho",
+        "logo": {
+          "src": "/assets/trp/recruiters/zoho.jpg",
+          "alt": "Zoho",
+          "width": 200,
+          "height": 72
+        }
+      },
+      {
+        "name": "IBM",
+        "logo": {
+          "src": "/assets/trp/recruiters/ibm.jpg",
+          "alt": "IBM",
+          "width": 200,
+          "height": 72
+        }
+      },
+      {
+        "name": "Infosys",
+        "logo": {
+          "src": "/assets/trp/recruiters/infosys.jpg",
+          "alt": "Infosys",
+          "width": 200,
+          "height": 72
+        }
+      },
+      {
+        "name": "Renault Nissan",
+        "logo": {
+          "src": "/assets/trp/recruiters/renault-nissan.jpg",
+          "alt": "Renault Nissan",
+          "width": 927,
+          "height": 618
+        }
+      },
+      {
+        "name": "Tech Mahindra",
+        "logo": {
+          "src": "/assets/trp/recruiters/tech-mahindra.png",
+          "alt": "Tech Mahindra",
+          "width": 1024,
+          "height": 290
+        }
+      },
+      {
+        "name": "Wells Fargo",
+        "logo": {
+          "src": "/assets/trp/recruiters/wells-fargo.png",
+          "alt": "Wells Fargo",
+          "width": 2048,
+          "height": 2048
+        }
+      },
+      {
+        "name": "Autodesk",
+        "logo": {
+          "src": "/assets/trp/recruiters/autodesk.webp",
+          "alt": "Autodesk",
+          "width": 256,
+          "height": 256
+        }
+      },
+      {
+        "name": "Tata Consultancy Services",
+        "logo": {
+          "src": "/assets/trp/recruiters/tcs.jpg",
+          "alt": "Tata Consultancy Services",
+          "width": 206,
+          "height": 75
+        }
+      },
+      {
+        "name": "Honeywell",
+        "logo": {
+          "src": "/assets/trp/recruiters/honeywell.png",
+          "alt": "Honeywell",
+          "width": 250,
+          "height": 63
+        }
+      },
+      {
+        "name": "Cognizant",
+        "logo": {
+          "src": "/assets/trp/recruiters/cognizant.png",
+          "alt": "Cognizant",
+          "width": 227,
+          "height": 70
+        }
+      }
+    ]
+  },
+  "ctaHeading": "Join the premier institute that will upskill your talent",
+  "campus": {
+    "heading": "Life at SRM TRP",
+    "items": [
+      {
+        "src": "/assets/trp/campus/state-of-the-art-infrastructure.jpg",
+        "alt": "SRM TRP academic blocks around open lawns",
+        "width": 1032,
+        "height": 774,
+        "title": "State-of-the-Art Infrastructure",
+        "tag": "Campus"
+      },
+      {
+        "src": "/assets/trp/events/vibrant-campus-life-cultural-night.jpg",
+        "alt": "Students performing on stage at a cultural night",
+        "width": 1024,
+        "height": 683,
+        "title": "Vibrant Campus Life",
+        "tag": "Events"
+      },
+      {
+        "src": "/assets/trp/infrastructure/hitech-library.jpeg",
+        "alt": "Students reading together in the SRM TRP library",
+        "width": 1820,
+        "height": 1365,
+        "title": "HiTech Library",
+        "tag": "Library"
+      },
+      {
+        "src": "/assets/trp/campus/green-eco-friendly-campus.jpg",
+        "alt": "Palm-lined avenue at the SRM TRP campus entrance",
+        "width": 750,
+        "height": 330,
+        "title": "Green & Eco Friendly Campus",
+        "tag": "Campus"
+      },
+      {
+        "src": "/assets/trp/infrastructure/research-lab-robotics.jpg",
+        "alt": "Student working with a robotic arm in the research lab",
+        "width": 400,
+        "height": 300,
+        "title": "Fully Equipped Research labs",
+        "tag": "Labs"
+      }
+    ]
+  },
+  "testimonials": {
+    "heading": "Testimonials",
+    "items": [
+      {
+        "name": "Abirami R",
+        "line2": "Relationship Manager in City Union Bank",
+        "line3": "B.E ,ECE - 2018-2022",
+        "quote": "Pathway for Success",
+        "photo": {
+          "src": "/assets/trp/testimonials/abirami-r.jpg",
+          "alt": "Abirami R",
+          "width": 601,
+          "height": 902
+        }
+      },
+      {
+        "name": "Shanawaz Khan",
+        "line2": "System Engineer in Infosys",
+        "line3": "Mechanical Engineering - 2017-2021",
+        "quote": "The place where I got different opportunity to explore myself",
+        "photo": {
+          "src": "/assets/trp/testimonials/shanawaz-khan.jpg",
+          "alt": "Shanawaz Khan",
+          "width": 853,
+          "height": 1280
+        }
+      },
+      {
+        "name": "R.Santhosh babu",
+        "line2": "Present designation Associate in Cognizant technology",
+        "line3": "B.E ,ECE - 2015 - 2019",
+        "quote": "The place where I got my new friends",
+        "photo": {
+          "src": "/assets/trp/testimonials/r-santhosh-babu.jpg",
+          "alt": "R. Santhosh Babu",
+          "width": 853,
+          "height": 1280
+        }
+      },
+      {
+        "name": "Sathish Kumar",
+        "line2": "Systems Engineer in Infosys Ltd., Chennai",
+        "line3": "B.E. Mechanical Engineering - 2016-2020",
+        "quote": "The place where I gained life time friends",
+        "photo": {
+          "src": "/assets/trp/testimonials/sathish-kumar.jpg",
+          "alt": "Sathish Kumar",
+          "width": 719,
+          "height": 1077
+        }
+      },
+      {
+        "name": "Rathish. S",
+        "line2": "Cricket Analyst in Kadamba Technologies",
+        "line3": "B.E. Mechanical Engineering - 2016-2020",
+        "quote": "Place where I made friends for life",
+        "photo": {
+          "src": "/assets/trp/testimonials/rathish-s.jpg",
+          "alt": "Rathish S",
+          "width": 821,
+          "height": 1231
+        }
+      },
+      {
+        "name": "Krishna Harini R",
+        "line2": "Relationship Manager Trainee, City Union Bank",
+        "line3": "B.E. Mechanical Engineering - 2018-2022",
+        "quote": "Extremely important in shaping my future",
+        "photo": {
+          "src": "/assets/trp/testimonials/krishna-harini-r.jpg",
+          "alt": "Krishna Harini R",
+          "width": 853,
+          "height": 1280
+        }
+      }
+    ]
+  },
+  "contact": {
+    "address": "SRM TRP Engineering College NH 45, Mannachanallur Taluk, Tiruchirappalli District, Irungalur, Tamil Nadu 621105",
+    "phones": [
+      {
+        "display": "1800 202 2535",
+        "href": "tel:18002022535"
+      },
+      {
+        "display": "0431-2258947",
+        "href": "tel:+914312258947"
+      }
+    ],
+    "emails": [
+      "helpdesk@trp.srmtrichy.edu.in"
+    ],
+    "map": null,
+    "footer": "© 2027 SRM TRP Engineering College."
+  },
+  "_notes": [
+    "hero.headline: first words of the live hero H1 \"Start Your Journey to Success at our premier Institution with excellent records\", split into two lines; the rest of the sentence is dropped to fit the 2-line limit.",
+    "hero.button: fragment of the live hero sub-line (\"…join the premier institute that will upskill your talent\") – the site has no separate sub-line.",
+    "meta.videoTitle \"SRM TRP Engineering College\" written by us (YouTube title of the embedded video is \"SRM TRP Engineering College - Admission  Open Now - 2022\").",
+    "meta.whyLabel \"Why TRP?\" is the live nav/section label.",
+    "logo.alt written by us from the logo artwork (live alt is \"logo\").",
+    "rankings.heading \"Approvals & Accreditations\" written by us; the live badges sit unlabelled under \"About TRP\".",
+    "rankings AICTE / Anna University texts are trimmed from the live About TRP sentence (\"It is approved by ... and affiliated to ...\").",
+    "rankings NBA text \"Accredited by National Board of Accreditation\" is read from the badge artwork only; the live page does not say which programmes are NBA-accredited (unverified, same as src/data/institutions/trp.ts).",
+    "promo.text: ligatures \"ﬁ\"/\"ﬃ\" in the live About TRP text normalised to \"fi\"/\"ffi\".",
+    "stats1: 3 of the 4 live counters; the 4th (\"90+ INTERVIEW AVENUES\") moved to facts. stats2 omitted (no academic/scale figures on the live site).",
+    "facts labels written by us: \"Interview Avenues\" (live: INTERVIEW AVENUES), \"Undergraduate Programmes\" / \"Postgraduate Programmes\" (counts of the 8 UG / 6 PG courses listed under Courses Offered), \"Major Recruiters\" (count of the 15 logos under Our major Recruiters), \"Autonomous\" / \"Institution Affiliated to Anna University\" (from the logo artwork \"An AUTONOMOUS Institution Affiliated to ANNA UNIVERSITY\").",
+    "programmes: faculty = the live tab names (UNDERGRADUATE / POSTGRADUATE); section null (live column header is just \"Specialization\"). M.S (Research) / Ph.D entries set to level PG because the live site lists them under the POSTGRADUATE tab.",
+    "programmes: lateralEntry true for all UG courses from the live note \"( Lateral Entry Available )\" on the UG tab; no lateral-entry eligibility text is published, so programmes.lateralEntry is omitted.",
+    "placements.profiles ctc: live cards show a \"CTC\" label above the value; rendered as \"CTC : <value>\" like the Ramapuram file. Department, batch and company logos are not shown on the live cards.",
+    "ctaHeading \"Join the premier institute that will upskill your talent\" is a fragment of the live hero sub-headline.",
+    "campus.heading \"Life at SRM TRP\" and campus tags (Campus, Events, Library, Labs) written by us; titles are the live \"Why TRP?\" captions. Only 5 real campus photos exist on the live page (same photos as the Why section).",
+    "Image alt texts for why/campus/placements/testimonials photos written by us (live page has empty alts), taken from src/data/institutions/trp.ts.",
+    "testimonials: line2 joins the live role and company lines (\"Relationship Manager\" + \"in City Union Bank\"); for Krishna Harini R the live company line has no \"in\", joined with a comma. Each quote answers the live prompt \"One word about trpec:\".",
+    "Omitted (not on live site): stats2, highlightSlides, steps, madeSimple, collaborations, placements.cards, faqs, contact.map, contact.landmarks."
+  ]
+}
