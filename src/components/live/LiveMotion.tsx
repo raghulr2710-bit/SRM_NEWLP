@@ -16,9 +16,9 @@ import { Children, useCallback, useEffect, useRef, useState, type CSSProperties,
 import { AnimatePresence, LayoutGroup, motion, useReducedMotion, useScroll, useSpring } from "motion/react";
 import { Counter } from "@/components/common/Counter";
 import { VideoEmbed } from "@/components/common/VideoEmbed";
-import { ArrowLeft, ArrowRight, Award, BookOpen, Briefcase, Building2, Calendar, Camera, ClipboardList, FlaskConical, Globe2, GraduationCap, HelpCircle, Hourglass, MapPin, Medal, MessageSquareQuote, Quote, Star, Trophy, Users, PlayCircle, Send, Smartphone, Sparkles, Upload, UserPlus, type LucideIcon } from "lucide-react";
+import { ArrowLeft, ArrowRight, Award, BadgeCheck, BookOpen, Briefcase, Building2, Calendar, Camera, ClipboardList, FlaskConical, Globe2, GraduationCap, HelpCircle, Hourglass, MapPin, Medal, MessageSquareQuote, Quote, Search, Star, Trophy, Users, PlayCircle, Send, Smartphone, Sparkles, Upload, UserPlus, type LucideIcon } from "lucide-react";
 
-const STEP_ICON_SET: Record<string, LucideIcon> = { UserPlus, Smartphone, ClipboardList, Upload, Send };
+const STEP_ICON_SET: Record<string, LucideIcon> = { UserPlus, Smartphone, ClipboardList, Upload, Send, BookOpen, Search, Users, BadgeCheck };
 const TAB_ICONS: Record<string, LucideIcon> = { Award, BookOpen, Briefcase, Building2, Camera, ClipboardList, Globe2, HelpCircle, MapPin, PlayCircle, Sparkles };
 
 export function ScrollProgress() {
@@ -27,7 +27,8 @@ export function ScrollProgress() {
   return <motion.div aria-hidden="true" style={{ scaleX }} className="fixed inset-x-0 top-0 z-[60] h-[3px] origin-left bg-accent" />;
 }
 
-export function SectionTabs({ items }: { items: { id: string; label: string; icon: string }[] }) {
+export function SectionTabs({ items, tone = "brand" }: { items: { id: string; label: string; icon: string }[]; /** bar colour: brand (default) or the highlight colour */ tone?: "brand" | "hl" }) {
+  const hl = tone === "hl";
   const [active, setActive] = useState(items[0]?.id);
   const bar = useRef<HTMLDivElement>(null);
   const wrap = useRef<HTMLDivElement>(null);
@@ -57,7 +58,7 @@ export function SectionTabs({ items }: { items: { id: string; label: string; ico
   }, [active]);
 
   return (
-    <div ref={wrap} className="sticky top-[4.5rem] z-40 bg-brand shadow-[0_10px_30px_-18px_rgba(8,15,40,0.6)]">
+    <div ref={wrap} className={`sticky top-[4.5rem] z-40 shadow-[0_10px_30px_-18px_rgba(8,15,40,0.6)] ${hl ? "bg-[var(--hl)]" : "bg-brand"}`}>
       <LayoutGroup>
         <div ref={bar} className="no-scrollbar container-x flex gap-1 overflow-x-auto py-2">
           {items.map(({ id, label, icon }) => {
@@ -83,10 +84,10 @@ export function SectionTabs({ items }: { items: { id: string; label: string; ico
                   window.scrollTo({ top, behavior: reduce ? "auto" : "smooth" });
                   history.replaceState(null, "", `#${id}`);
                 }}
-                className={`group relative isolate inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full px-4 text-sm font-semibold transition-colors ${on ? "text-brand-ink" : "text-white/90 hover:text-white"}`}
+                className={`group relative isolate inline-flex min-h-10 shrink-0 items-center gap-2 rounded-full px-4 text-sm font-semibold transition-colors ${on ? (hl ? "text-white" : "text-brand-ink") : hl ? "text-brand-ink/85 hover:text-brand-ink" : "text-white/90 hover:text-white"}`}
               >
-                {on && <motion.span layoutId="section-tab" className="absolute inset-0 -z-10 rounded-full bg-[var(--hl)]" transition={{ type: "spring", stiffness: 420, damping: 36 }} />}
-                <Icon aria-hidden="true" className={`h-4 w-4 transition-colors ${on ? "text-brand-ink" : "text-[var(--hl)]"}`} />
+                {on && <motion.span layoutId="section-tab" className={`absolute inset-0 -z-10 rounded-full ${hl ? "bg-brand" : "bg-[var(--hl)]"}`} transition={{ type: "spring", stiffness: 420, damping: 36 }} />}
+                <Icon aria-hidden="true" className={`h-4 w-4 transition-colors ${on ? (hl ? "text-[var(--hl)]" : "text-brand-ink") : hl ? "text-brand" : "text-[var(--hl)]"}`} />
                 {label}
               </a>
             );
@@ -358,6 +359,8 @@ export interface StatSlide {
   /** Rendered in order; `big` items are highlighted figures (count up when numeric). */
   parts: { text: string; big?: boolean; accent?: boolean; value?: number; suffix?: string }[];
   image: { src: string; alt: string; width: number; height: number };
+  /** true for a logo/badge (not a cut-out photo): shown smaller, centred inside the card */
+  logo?: boolean;
 }
 
 /**
@@ -410,9 +413,17 @@ export function StatBannerCarousel({ slides, interval = 5500 }: { slides: StatSl
                   )}
                 </p>
               </div>
-              <div className="relative min-h-0">
-                <Image src={s.image.src} alt={s.image.alt} fill sizes="(min-width:1024px) 26rem, 80vw" className="object-contain object-bottom" />
-              </div>
+              {s.logo ? (
+                <div className="flex min-h-0 items-center justify-center pb-6 pt-14 sm:pb-0 sm:pt-10">
+                  <span className="relative block aspect-square h-32 overflow-hidden rounded-3xl shadow-[0_24px_48px_-26px_rgba(10,20,50,0.55)] ring-4 ring-white sm:h-40">
+                    <Image src={s.image.src} alt={s.image.alt} fill sizes="160px" className="object-cover" />
+                  </span>
+                </div>
+              ) : (
+                <div className="relative min-h-0">
+                  <Image src={s.image.src} alt={s.image.alt} fill sizes="(min-width:1024px) 26rem, 80vw" className="object-contain object-bottom" />
+                </div>
+              )}
             </div>
           </motion.div>
         </AnimatePresence>

@@ -1912,5 +1912,9 @@
         "height": 492
       }
     }
-  ]
+  ],
+  "ctaStudent": {
+    "src": "/assets/ramapuram/students/ai-student-laptop-cutout.webp",
+    "ratio": "800 / 1268"
+  }
 }

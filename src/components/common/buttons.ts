@@ -1,6 +1,6 @@
 /** Shared button class recipes. Colours come from the active institution theme. */
 const base =
-  "inline-flex min-h-12 items-center justify-center gap-2 px-6 text-[0.95rem] font-semibold transition-[background-color,color,box-shadow,transform] duration-200 active:translate-y-px disabled:cursor-not-allowed disabled:opacity-60 rounded-[var(--radius-card)] cursor-pointer";
+  "inline-flex min-h-12 items-center justify-center gap-2 px-6 text-[0.95rem] font-semibold transition-[background-color,color,box-shadow,transform] duration-200 active:translate-y-px disabled:cursor-not-allowed disabled:opacity-60 rounded-[var(--btn-radius,var(--radius-card))] cursor-pointer";
 
 export const btn = {
   accent: `${base} bg-accent text-on-accent hover:brightness-110 shadow-[0_8px_24px_-12px_var(--accent)]`,

@@ -12,15 +12,25 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { youTubeId } from "@/components/common/VideoEmbed";
 
-export function PromoVideo({ url, title }: { url: string; title: string }) {
+/** Thumbnail chain: local poster (if given) → YouTube HD (1280px) → SD → HQ. */
+const YT_SIZES = ["maxresdefault", "sddefault", "hqdefault"] as const;
+
+export function PromoVideo({ url, title, poster }: { url: string; title: string; poster?: string }) {
   const id = youTubeId(url);
   const [open, setOpen] = useState(false);
-  const [thumb, setThumb] = useState(id ? `https://i.ytimg.com/vi/${id}/sddefault.jpg` : "");
+  const [thumb, setThumb] = useState(poster ?? (id ? `https://i.ytimg.com/vi/${id}/maxresdefault.jpg` : ""));
   const reduce = useReducedMotion();
   const trigger = useRef<HTMLButtonElement>(null);
   const closeBtn = useRef<HTMLButtonElement>(null);
   const img = useRef<HTMLImageElement>(null);
-  const fallback = () => setThumb(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`);
+  const fallback = () =>
+    setThumb((cur) => {
+      const i = YT_SIZES.findIndex((q) => cur.includes(`/${q}.`));
+      const next = i < 0 ? YT_SIZES[0] : YT_SIZES[i + 1];
+      return next ? `https://i.ytimg.com/vi/${id}/${next}.jpg` : cur;
+    });
+  /** SD/HQ thumbnails are 4:3 with black bars – zoom them to fill the 16:9 frame; HD/posters are already 16:9. */
+  const letterboxed = /sddefault|hqdefault/.test(thumb);
 
   // the image can finish loading before hydration attaches onLoad: re-check once mounted
   useEffect(() => {
@@ -62,10 +72,10 @@ export function PromoVideo({ url, title }: { url: string; title: string }) {
           loading="lazy"
           onLoad={(e) => {
             // a missing thumbnail returns a 120px grey placeholder when missing
-            if (e.currentTarget.naturalWidth < 200 && !thumb.includes("hqdefault")) fallback();
+            if (e.currentTarget.naturalWidth < 200) fallback();
           }}
           onError={fallback}
-          className="absolute inset-0 h-full w-full scale-[1.13] object-cover transition-transform duration-700 ease-out group-hover:scale-[1.18]"
+          className={`absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out ${letterboxed ? "scale-[1.13] group-hover:scale-[1.18]" : "group-hover:scale-[1.04]"}`}
         />
         <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-ink/70 via-brand-ink/10 to-transparent transition-opacity duration-500 group-hover:opacity-70" />
         <span className="absolute inset-0 flex items-center justify-center">

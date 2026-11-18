@@ -5,6 +5,9 @@ import ramapuramData from "./ramapuram.json";
 import tiruchirappalliData from "./tiruchirappalli.json";
 import easwariData from "./easwari.json";
 import trpData from "./trp.json";
+import { tiruchirappalliSections } from "@/components/live/sections/tiruchirappalli";
+import { easwariSections } from "@/components/live/sections/easwari";
+import { trpSections } from "@/components/live/sections/trp";
 
 /**
  * Per-institution identity for the live landing pages. Content: ./<key>.json (verbatim from each
@@ -54,6 +57,7 @@ export const tiruchirappalliSite: LiveSiteConfig = {
     hlSoft: "#fef5e3",
     hlInk: "#8a5300",
     accentOnDark: "#9fc4ec",
+    buttonRadius: "30px",
     surfaceAlt: "#f3f6fa",
     line: "#dce4ee",
     ink: "#0b1a2e",
@@ -67,6 +71,7 @@ export const tiruchirappalliSite: LiveSiteConfig = {
     circle: { cx: 50.8, w: 70, top: -2 },
   },
   globe: { home: [10.95, 78.75], partners: false, base: [0.86, 0.91, 0.98], marker: [0.97, 0.62, 0.04], glow: [0.8, 0.87, 0.97] },
+  sections: tiruchirappalliSections,
 };
 
 /** Easwari Engineering College – maroon (live site #430005) + Easwari yellow (#fbca38). */
@@ -98,28 +103,29 @@ export const easwariSite: LiveSiteConfig = {
     circle: { cx: 44.7, w: 80, top: -1.75 },
   },
   globe: { home: [13.03, 80.18], partners: false, base: [0.98, 0.91, 0.91], marker: [0.98, 0.79, 0.22], glow: [0.96, 0.86, 0.86] },
+  sections: easwariSections,
 };
 
-/** SRM TRP Engineering College – engineering green (live site #00460a) + yellow. */
+/** SRM TRP Engineering College – logo indigo-purple (#2f2f62) + yellow. */
 export const trpSite: LiveSiteConfig = {
   inst: trp,
   data: trpData as unknown as LiveData,
   palette: {
-    brand: "#0d5c32",
-    brandInk: "#05261a",
-    brandSoft: "#e8f3ec",
-    brandDeep: "#084325",
-    brandTint: "#eaf5ee",
-    brandTint2: "#d4eadb",
+    brand: "#33337a",
+    brandInk: "#14143a",
+    brandSoft: "#ececf7",
+    brandDeep: "#232358",
+    brandTint: "#eeeef9",
+    brandTint2: "#d9d9f0",
     hl: "#fbca38",
     hlDeep: "#e9b106",
     hlSoft: "#fef7e0",
     hlInk: "#7a5800",
-    accentOnDark: "#9fdcb6",
-    surfaceAlt: "#f2f6f3",
-    line: "#dde6e0",
-    ink: "#0f1f17",
-    muted: "#4a5a52",
+    accentOnDark: "#b9b9ee",
+    surfaceAlt: "#f4f4f9",
+    line: "#e0e0ec",
+    ink: "#14142b",
+    muted: "#50506a",
   },
   heroImage: {
     src: "/assets/trp/hero/ai-hero-mech-cutout.webp",
@@ -128,5 +134,8 @@ export const trpSite: LiveSiteConfig = {
     height: 2094,
     circle: { cx: 46.8, w: 70, top: -1.78 },
   },
-  globe: { home: [10.76, 78.81], partners: false, base: [0.88, 0.95, 0.9], marker: [0.98, 0.79, 0.22], glow: [0.84, 0.93, 0.87] },
+  globe: { home: [10.76, 78.81], partners: false, base: [0.9, 0.9, 0.97], marker: [0.98, 0.79, 0.22], glow: [0.86, 0.86, 0.96] },
+  sections: trpSections,
+  tabsTone: "hl",
+  hideHeroBadges: true,
 };

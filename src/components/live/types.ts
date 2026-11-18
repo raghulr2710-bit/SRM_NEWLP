@@ -26,6 +26,8 @@ export interface LiveData {
     headline: [string, string];
     /** Sub-line under the headline, e.g. "Registrations Open for 2027". */
     button: string;
+    /** Optional hero paragraph shown under the headline (replaces the `button` sub-line). */
+    text?: string;
     /** Pill above the headline and form-card title, e.g. "Admissions Open 2027". */
     formHeading: string;
   };
@@ -44,6 +46,7 @@ export interface LiveData {
   highlightSlides?: {
     parts: { text: string; big?: boolean; accent?: boolean; value?: number; suffix?: string }[];
     image: LiveImg; // transparent cut-out preferred
+    logo?: boolean; // badge/logo image: rendered smaller, centred
   }[];
   programmes: {
     heading: string;
@@ -60,7 +63,8 @@ export interface LiveData {
       level: "UG" | "PG" | "Diploma" | "PhD" | string;
     }[];
   };
-  steps?: { items: string[] };
+  /** heading/intro default to "Steps to follow"; icons = names from STEP_ICON_SET in LiveMotion.tsx */
+  steps?: { items: string[]; heading?: string; intro?: string; icons?: string[] };
   madeSimple?: { heading: string; subheading: string; items: string[] }; // "Title – detail"
   why?: { heading: string; intro?: string; items: { title: string; image: LiveImg | null }[] };
   collaborations?: { heading: string; items: { name: string; logo: LiveImg | null }[] };
@@ -79,6 +83,8 @@ export interface LiveData {
   };
   recruiters?: { heading: string; logos: { name: string; logo: LiveImg | null }[] };
   ctaHeading: string;
+  /** Optional student cut-out shown on the closing CTA band (ratio = "w / h"). */
+  ctaStudent?: { src: string; ratio: string };
   campus?: { heading: string; items: (LiveImg & { title: string; tag?: string })[] };
   testimonials?: {
     heading: string;

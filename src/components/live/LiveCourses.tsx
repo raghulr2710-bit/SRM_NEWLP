@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { AnimatePresence, LayoutGroup, motion } from "motion/react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { animate, AnimatePresence, LayoutGroup, motion } from "motion/react";
 import {
   ArrowUpRight,
   BookOpen,
@@ -139,6 +139,24 @@ export function LiveCourses({
     groups.set(key, [...(groups.get(key) ?? []), c]);
   }
 
+  /** horizontal faculty strip (mobile/tablet): bring the chosen tab to the centre */
+  const strip = useRef<HTMLUListElement>(null);
+  // runs after the tab change has rendered (a scroll started inside the click handler is cancelled by the re-render)
+  useEffect(() => {
+    const ul = strip.current;
+    const el = ul?.querySelector<HTMLElement>("[aria-selected=\"true\"]")?.parentElement;
+    if (!ul || !el || ul.scrollWidth <= ul.clientWidth) return; // desktop: vertical list, nothing to scroll
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const target = Math.max(0, Math.min(el.offsetLeft - (ul.clientWidth - el.offsetWidth) / 2, ul.scrollWidth - ul.clientWidth));
+    // animate scrollLeft directly: a native smooth scroll gets cancelled by the pill layout animation
+    if (reduce) {
+      ul.scrollLeft = target;
+      return;
+    }
+    const controls = animate(ul.scrollLeft, target, { duration: 0.45, ease: [0.22, 1, 0.36, 1], onUpdate: (v) => (ul.scrollLeft = v) });
+    return () => controls.stop();
+  }, [tab]);
+
   const choose = (f: string) => {
     setTab(f);
     setQ("");
@@ -147,7 +165,7 @@ export function LiveCourses({
   };
 
   return (
-    <div className="grid grid-cols-[minmax(0,1fr)] gap-6 lg:grid-cols-[17rem_minmax(0,1fr)] lg:gap-8">
+    <div className="grid grid-cols-[minmax(0,1fr)] gap-6 lg:grid-cols-[18.5rem_minmax(0,1fr)] lg:gap-8">
       {/* ---------- faculty navigation ---------- */}
       <LayoutGroup>
         <nav aria-label="Faculties" className="min-w-0 lg:sticky lg:top-36 lg:self-start lg:overflow-hidden lg:rounded-3xl lg:border lg:border-brand/10 lg:bg-gradient-to-b lg:from-brand-soft lg:to-[var(--hl-soft)] lg:p-3 lg:shadow-[0_24px_48px_-36px_rgba(10,20,50,0.45)]">
@@ -159,7 +177,7 @@ export function LiveCourses({
             </span>
             <span className="relative rounded-full bg-[var(--hl)] px-2.5 py-0.5 text-xs font-bold text-brand-ink">{items.length} courses</span>
           </div>
-          <ul role="tablist" className="no-scrollbar -mx-5 flex gap-2 overflow-x-auto px-5 lg:mx-0 lg:flex-col lg:gap-1.5 lg:overflow-visible lg:px-0">
+          <ul ref={strip} role="tablist" className="no-scrollbar relative -mx-5 flex gap-2 overflow-x-auto px-5 lg:mx-0 lg:flex-col lg:gap-1.5 lg:overflow-visible lg:px-0">
             {faculties.map((f) => {
               const active = !query && tab === f;
               const Icon = ICON(f);
@@ -177,7 +195,7 @@ export function LiveCourses({
                     <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors ${active ? "bg-[var(--hl)] text-brand-ink" : "bg-brand-soft text-brand group-hover:bg-[var(--hl)]/30"}`}>
                       <Icon aria-hidden="true" className="h-4 w-4" />
                     </span>
-                    <span className="flex-1 whitespace-nowrap lg:whitespace-normal">{label(f)}</span>
+                    <span className="flex-1 whitespace-nowrap lg:whitespace-normal lg:text-balance lg:leading-snug">{label(f)}</span>
                     <span className={`rounded-full px-2 py-0.5 text-xs font-semibold tabular-nums ${active ? "bg-white/20 text-white" : "bg-brand-soft text-brand"}`}>{counts.get(f)}</span>
                   </button>
                 </li>

@@ -11,7 +11,8 @@
       "to Success"
     ],
     "button": "Join the premier institute that will upskill your talent",
-    "formHeading": "Admissions Open 2027"
+    "formHeading": "Admissions Open 2027",
+    "text": "SRM TRP is a place for learning, discovery, innovation and expression. Join the premier institute that will upskill your talent"
   },
   "logo": {
     "src": "/assets/trp/logo/srm-trp-logo.jpg",
@@ -267,19 +268,19 @@
       {
         "title": "Green & Eco Friendly Campus",
         "image": {
-          "src": "/assets/trp/campus/green-eco-friendly-campus.jpg",
+          "src": "/assets/trp/campus/green-eco-friendly-campus-hd.webp",
           "alt": "Palm-lined avenue at the SRM TRP campus entrance",
-          "width": 750,
-          "height": 330
+          "width": 1500,
+          "height": 660
         }
       },
       {
         "title": "Fully Equipped Research labs",
         "image": {
-          "src": "/assets/trp/infrastructure/research-lab-robotics.jpg",
+          "src": "/assets/trp/infrastructure/research-lab-robotics-hd.webp",
           "alt": "Student working with a robotic arm in the research lab",
-          "width": 400,
-          "height": 300
+          "width": 1600,
+          "height": 1200
         }
       }
     ]
@@ -506,18 +507,18 @@
         "tag": "Library"
       },
       {
-        "src": "/assets/trp/campus/green-eco-friendly-campus.jpg",
+        "src": "/assets/trp/campus/green-eco-friendly-campus-hd.webp",
         "alt": "Palm-lined avenue at the SRM TRP campus entrance",
-        "width": 750,
-        "height": 330,
+        "width": 1500,
+        "height": 660,
         "title": "Green & Eco Friendly Campus",
         "tag": "Campus"
       },
       {
-        "src": "/assets/trp/infrastructure/research-lab-robotics.jpg",
+        "src": "/assets/trp/infrastructure/research-lab-robotics-hd.webp",
         "alt": "Student working with a robotic arm in the research lab",
-        "width": 400,
-        "height": 300,
+        "width": 1600,
+        "height": 1200,
         "title": "Fully Equipped Research labs",
         "tag": "Labs"
       }
@@ -532,10 +533,10 @@
         "line3": "B.E ,ECE - 2018-2022",
         "quote": "Pathway for Success",
         "photo": {
-          "src": "/assets/trp/testimonials/abirami-r.jpg",
+          "src": "/assets/trp/testimonials/abirami-r-face.webp",
           "alt": "Abirami R",
-          "width": 601,
-          "height": 902
+          "width": 600,
+          "height": 900
         }
       },
       {
@@ -544,10 +545,10 @@
         "line3": "Mechanical Engineering - 2017-2021",
         "quote": "The place where I got different opportunity to explore myself",
         "photo": {
-          "src": "/assets/trp/testimonials/shanawaz-khan.jpg",
+          "src": "/assets/trp/testimonials/shanawaz-khan-face.webp",
           "alt": "Shanawaz Khan",
-          "width": 853,
-          "height": 1280
+          "width": 600,
+          "height": 900
         }
       },
       {
@@ -556,10 +557,10 @@
         "line3": "B.E ,ECE - 2015 - 2019",
         "quote": "The place where I got my new friends",
         "photo": {
-          "src": "/assets/trp/testimonials/r-santhosh-babu.jpg",
+          "src": "/assets/trp/testimonials/r-santhosh-babu-face.webp",
           "alt": "R. Santhosh Babu",
-          "width": 853,
-          "height": 1280
+          "width": 600,
+          "height": 900
         }
       },
       {
@@ -568,10 +569,10 @@
         "line3": "B.E. Mechanical Engineering - 2016-2020",
         "quote": "The place where I gained life time friends",
         "photo": {
-          "src": "/assets/trp/testimonials/sathish-kumar.jpg",
+          "src": "/assets/trp/testimonials/sathish-kumar-face.webp",
           "alt": "Sathish Kumar",
-          "width": 719,
-          "height": 1077
+          "width": 600,
+          "height": 900
         }
       },
       {
@@ -580,10 +581,10 @@
         "line3": "B.E. Mechanical Engineering - 2016-2020",
         "quote": "Place where I made friends for life",
         "photo": {
-          "src": "/assets/trp/testimonials/rathish-s.jpg",
+          "src": "/assets/trp/testimonials/rathish-s-face.webp",
           "alt": "Rathish S",
-          "width": 821,
-          "height": 1231
+          "width": 600,
+          "height": 900
         }
       },
       {
@@ -592,10 +593,10 @@
         "line3": "B.E. Mechanical Engineering - 2018-2022",
         "quote": "Extremely important in shaping my future",
         "photo": {
-          "src": "/assets/trp/testimonials/krishna-harini-r.jpg",
+          "src": "/assets/trp/testimonials/krishna-harini-r-face.webp",
           "alt": "Krishna Harini R",
-          "width": 853,
-          "height": 1280
+          "width": 600,
+          "height": 900
         }
       }
     ]
@@ -637,6 +638,28 @@
     "campus.heading \"Life at SRM TRP\" and campus tags (Campus, Events, Library, Labs) written by us; titles are the live \"Why TRP?\" captions. Only 5 real campus photos exist on the live page (same photos as the Why section).",
     "Image alt texts for why/campus/placements/testimonials photos written by us (live page has empty alts), taken from src/data/institutions/trp.ts.",
     "testimonials: line2 joins the live role and company lines (\"Relationship Manager\" + \"in City Union Bank\"); for Krishna Harini R the live company line has no \"in\", joined with a comma. Each quote answers the live prompt \"One word about trpec:\".",
-    "Omitted (not on live site): stats2, highlightSlides, steps, madeSimple, collaborations, placements.cards, faqs, contact.map, contact.landmarks."
-  ]
+    "Omitted (not on live site): stats2, highlightSlides, steps, madeSimple, collaborations, placements.cards, faqs, contact.map, contact.landmarks.",
+    "steps: the live page publishes no admission steps; these indicative steps (and the caveat shown as intro) come from src/data/institutions/trp.ts, added at the client’s request so the hero “Admission” button has a section on every page.",
+    "hero.text: paragraph supplied by the client (replaces the one-line sub-heading)."
+  ],
+  "steps": {
+    "heading": "Your admission, step by step",
+    "intro": "Indicative steps. The exact process follows Anna University / TNEA and college policy.",
+    "items": [
+      "Explore programmes",
+      "Check eligibility",
+      "Register online",
+      "Complete documentation",
+      "Review / counselling",
+      "Confirm admission"
+    ],
+    "icons": [
+      "BookOpen",
+      "Search",
+      "UserPlus",
+      "Upload",
+      "Users",
+      "BadgeCheck"
+    ]
+  }
 }
