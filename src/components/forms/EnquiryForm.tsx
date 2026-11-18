@@ -38,6 +38,8 @@ export interface EnquiryFormProps {
   tone?: "light" | "dark";
   /** "hero": condensed two-column layout for the hero card; "full": standalone section form. */
   variant?: "hero" | "full";
+  /** Extra-compact sizing for tight hero cards (option-2 pages). */
+  dense?: boolean;
 }
 
 const FORM_INTENTS: Intent[] = ["enquiry", "programme", "counselling", "campus_visit", "whatsapp_callback", "brochure", "scholarship"];
@@ -57,8 +59,9 @@ export function EnquiryForm(props: EnquiryFormProps) {
   const { institution, programmes, levels, faculties, consent, tone = "light", variant = "full" } = props;
   const dark = tone === "dark";
   const hero = variant === "hero";
+  const dense = !!props.dense;
   /** Fields that sit side by side in the hero card but span the row in the full form. */
-  const pair = hero ? "" : "sm:col-span-2";
+  const pair = hero && levels.length <= 2 ? "" : "sm:col-span-2";
   const uid = useId();
   const { prefill } = useEnquiry();
   const formRef = useRef<HTMLFormElement>(null);
@@ -194,9 +197,9 @@ export function EnquiryForm(props: EnquiryFormProps) {
   }
 
   // ----- styles -----
-  const label = `${hero ? "mb-1 text-[0.8125rem]" : "mb-1.5 text-sm"} block font-semibold ${dark ? "text-white" : "text-ink"}`;
+  const label = `${dense ? "mb-1 text-[0.8125rem] font-medium lg:mb-0.5 lg:text-xs" : hero ? "mb-1 text-[0.8125rem]" : "mb-1.5 text-sm"} block font-semibold ${dark ? "text-white" : "text-ink"}`;
   const field = (invalid: boolean) =>
-    `block w-full ${hero ? "min-h-11" : "min-h-12"} rounded-[var(--radius-card)] border px-3.5 text-base transition-[border-color,box-shadow,background-color] duration-200 outline-none focus-visible:outline-none focus:ring-4 ${
+    `block w-full ${dense ? "min-h-11 px-3 text-base lg:min-h-9 lg:px-2.5 lg:text-[0.8125rem]" : hero ? "min-h-11 px-3.5 text-base" : "min-h-12 px-3.5 text-base"} rounded-[var(--radius-card)] border transition-[border-color,box-shadow,background-color] duration-200 outline-none focus-visible:outline-none focus:ring-4 ${
       dark
         ? "bg-white/[0.07] text-white placeholder:text-white/50 focus:ring-accent [&>option]:text-ink [&>optgroup]:text-ink"
         : `${hero ? "bg-surface-alt/60 focus:bg-white" : "bg-white"} text-ink placeholder:text-muted/70 focus:ring-brand/15`
@@ -271,7 +274,7 @@ export function EnquiryForm(props: EnquiryFormProps) {
   return (
     <form ref={formRef} noValidate className={dark ? "on-dark" : undefined} onSubmit={onSubmit} onFocus={onFirstInteraction} aria-describedby={`${uid}-privacy`}>
       {TURNSTILE_KEY && <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="lazyOnload" />}
-      <div className={`grid sm:grid-cols-2 ${hero ? "gap-x-3 gap-y-3.5" : "gap-4"}`}>
+      <div className={`grid sm:grid-cols-2 ${dense ? "gap-x-3 gap-y-2" : hero ? "gap-x-3 gap-y-3.5" : "gap-4"}`}>
         <div className="sm:col-span-2">
           <label htmlFor="enq-name" className={label}>
             Student name <span aria-hidden="true" className="text-accent-ink">*</span>
@@ -387,12 +390,12 @@ export function EnquiryForm(props: EnquiryFormProps) {
           </div>
         )}
 
-        <fieldset>
+        <fieldset className={levels.length > 2 ? "sm:col-span-2" : undefined}>
           <legend className={label}>
             Preferred level <span aria-hidden="true" className="text-accent-ink">*</span>
           </legend>
           <div
-            className="grid grid-cols-2 gap-2"
+            className={`grid gap-2 ${levels.length > 2 ? "grid-cols-3" : "grid-cols-2"}`}
             role="radiogroup"
             aria-invalid={!!show("level")}
             aria-describedby={describe("level")}
@@ -400,7 +403,7 @@ export function EnquiryForm(props: EnquiryFormProps) {
             {levels.map((l) => (
               <label
                 key={l}
-                className={`flex min-h-12 cursor-pointer items-center justify-center rounded-[var(--radius-card)] border text-sm font-semibold transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-accent ${
+                className={`flex ${dense ? "min-h-11 lg:min-h-9 lg:text-[0.8125rem]" : "min-h-12"} cursor-pointer items-center justify-center rounded-[var(--radius-card)] border text-sm font-semibold transition-colors has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-accent ${
                   values.level === l
                     ? dark
                       ? "border-accent bg-accent text-on-accent"
@@ -519,7 +522,15 @@ export function EnquiryForm(props: EnquiryFormProps) {
               className="mt-0.5 h-5 w-5 shrink-0 cursor-pointer accent-[var(--accent)]"
             />
             <span>
-              {consent} <span aria-hidden="true" className="text-accent-ink">*</span>
+              {dense ? (
+                <>
+                  <span aria-hidden="true">I agree to be contacted about admissions.</span>
+                  <span className="sr-only">{consent}</span>
+                </>
+              ) : (
+                consent
+              )}{" "}
+              <span aria-hidden="true" className="text-accent-ink">*</span>
             </span>
           </label>
           {errorMsg("consent")}
@@ -561,7 +572,7 @@ export function EnquiryForm(props: EnquiryFormProps) {
         )}
       </AnimatePresence>
 
-      <button type="submit" disabled={status.kind === "submitting"} className={`${btn.accent} ${hero ? "mt-4 !min-h-12" : "mt-6 !min-h-14"} w-full text-base`}>
+      <button type="submit" disabled={status.kind === "submitting"} className={`${btn.accent} ${dense ? "mt-3 !min-h-12 lg:!min-h-10 lg:!text-sm" : hero ? "mt-4 !min-h-12" : "mt-6 !min-h-14"} w-full text-base`}>
         {status.kind === "submitting" ? (
           <>
             <Loader2 aria-hidden="true" className="h-5 w-5 animate-spin" />
@@ -571,10 +582,13 @@ export function EnquiryForm(props: EnquiryFormProps) {
           "Submit Enquiry"
         )}
       </button>
-      <p id={`${uid}-privacy`} className={`${hero ? "mt-3" : "mt-4"} flex items-start gap-2 text-xs leading-relaxed ${dark ? "text-white/60" : "text-muted"}`}>
+      <p id={`${uid}-privacy`} className={`${dense ? "sr-only" : hero ? "mt-3" : "mt-4"} flex items-start gap-2 text-xs leading-relaxed ${dark ? "text-white/60" : "text-muted"}`}>
         <ShieldCheck aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0" />
-        Your details are used only to respond to your admission enquiry and are shared only with the {props.institutionName} admissions
-        team. We never share them with advertisers.
+        {dense ? (
+          <>Shared only with the {props.institutionName} admissions team. Never with advertisers.</>
+        ) : (
+          <>Your details are used only to respond to your admission enquiry and are shared only with the {props.institutionName} admissions team. We never share them with advertisers.</>
+        )}
       </p>
     </form>
   );

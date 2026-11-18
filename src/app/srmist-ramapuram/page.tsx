@@ -1,24 +1,33 @@
-import { Fraunces, Inter } from "next/font/google";
-import { LandingPage } from "@/components/LandingPage";
+import type { Metadata } from "next";
+import { Inter, Poppins } from "next/font/google";
+import { RamapuramLive } from "@/components/live/RamapuramLive";
 import { ramapuram } from "@/data/institutions";
 import { institutionMetadata } from "@/lib/site";
 
-// Identity: editorial serif display (Fraunces) + neutral grotesque body (Inter).
-// Static weights (not the full variable font): the variable file carries optical-size axes
-// that tripled style & layout time on throttled mobile (QA: TBT 500 ms → ~40–170 ms).
-const display = Fraunces({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-rmp-display", display: "swap" });
-const body = Inter({ subsets: ["latin"], variable: "--font-rmp-body", display: "swap" });
+// Live design (formerly option 2): clean geometric sans (Poppins) for headings, Inter for body text.
+const display = Poppins({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--font-rmp2-display", display: "swap" });
+const body = Inter({ subsets: ["latin"], variable: "--font-rmp2-body", display: "swap" });
 
-export const metadata = institutionMetadata(ramapuram);
+const title = "SRMIST Ramapuram Admissions 2027 | Courses, Eligibility & Placements";
+const description =
+  "Shape your future at SRM Institute of Science and Technology, Ramapuram. Courses and eligibility, rankings, placements and campus life – registrations open for 2027.";
+
+const base = institutionMetadata(ramapuram);
+export const metadata: Metadata = {
+  ...base,
+  title,
+  description,
+  openGraph: { ...base.openGraph, title, description },
+  twitter: { ...base.twitter, title, description },
+};
 
 export default function Page() {
   return (
-    <LandingPage
-      inst={ramapuram}
+    <RamapuramLive
       fonts={{
         className: `${display.variable} ${body.variable}`,
-        display: "var(--font-rmp-display), Georgia, serif",
-        body: "var(--font-rmp-body), system-ui, sans-serif",
+        display: "var(--font-rmp2-display), system-ui, sans-serif",
+        body: "var(--font-rmp2-body), system-ui, sans-serif",
       }}
     />
   );

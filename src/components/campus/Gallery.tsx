@@ -147,18 +147,31 @@ function Lightbox({
   );
 }
 
-function Tile({ item, sizes, onOpen, register, className = "" }: { item: GalleryItem; sizes: string; onOpen?: () => void; register?: (el: HTMLButtonElement | null) => void; className?: string }) {
+function Tile({ item, sizes, onOpen, register, className = "", brand = false, index }: { item: GalleryItem; sizes: string; onOpen?: () => void; register?: (el: HTMLButtonElement | null) => void; className?: string; brand?: boolean; index?: number }) {
   const inner = (
     <>
       <MediaFill media={item.media} sizes={sizes} zoom />
-      <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/5 to-transparent" />
+      {brand ? (
+        <>
+          <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-ink/95 via-brand-ink/35 to-transparent transition-opacity duration-500 group-hover:opacity-90" />
+          <span aria-hidden="true" className="absolute inset-0 bg-brand/0 transition-colors duration-500 group-hover:bg-brand/10" />
+          {index !== undefined && (
+            <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 font-display text-xs font-semibold text-brand-ink backdrop-blur sm:left-5 sm:top-5">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+          )}
+        </>
+      ) : (
+        <span aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/5 to-transparent" />
+      )}
       {onOpen && (
         <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-ink opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
           <Expand aria-hidden="true" className="h-4 w-4" />
         </span>
       )}
-      <span className="absolute inset-x-0 bottom-0 p-4 text-left sm:p-5">
-        <span className="block translate-y-1 font-display text-base leading-tight text-white transition-transform duration-500 group-hover:translate-y-0 [overflow-wrap:anywhere] sm:text-lg">
+      <span className={`absolute inset-x-0 bottom-0 text-left ${brand ? "p-5 sm:p-6" : "p-4 sm:p-5"}`}>
+        {brand && <span aria-hidden="true" className="mb-3 block h-1 w-10 rounded-full bg-[#f2c14e] transition-[width] duration-500 group-hover:w-16" />}
+        <span className={`block translate-y-1 font-display leading-tight text-white ${brand ? "text-lg font-semibold sm:text-xl" : "text-base sm:text-lg"} transition-transform duration-500 group-hover:translate-y-0 [overflow-wrap:anywhere]`}>
           {item.title}
         </span>
         {item.description && (
@@ -243,7 +256,23 @@ const isDesktop = () => window.matchMedia("(min-width: 1024px)").matches;
  * screens and reduced-motion: a native swipeable snap row. Every tile opens
  * the shared lightbox.
  */
-export function ImmersiveGallery({ items, heading }: { items: GalleryItem[]; heading: ReactNode }) {
+export function ImmersiveGallery({
+  items,
+  heading,
+  stickyPad = "pt-16",
+  tileHeight = "h-[min(50vh,30rem)]",
+  uniform = false,
+  brand = false,
+}: {
+  items: GalleryItem[];
+  heading: ReactNode;
+  stickyPad?: string;
+  tileHeight?: string;
+  /** Same width for every tile (otherwise every third tile is wide). */
+  uniform?: boolean;
+  /** Brand-tinted overlay with index chip and accent rule. */
+  brand?: boolean;
+}) {
   const viewable = items.filter((i) => !isPending(i.media)) as Viewable[];
   const lb = useLightbox(viewable.length);
   const reduce = useReducedMotion();
@@ -284,8 +313,8 @@ export function ImmersiveGallery({ items, heading }: { items: GalleryItem[]; hea
         <div className="container-x">{heading}</div>
         <ul className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto px-5 pb-2 md:px-8">
           {tiles.map(({ item, vIdx, wide }, i) => (
-            <Reveal as="li" key={`${item.title}-${i}`} delay={0.05 * (i % 4)} className={`h-[22rem] shrink-0 snap-start sm:h-[26rem] ${wide ? "w-[86vw] sm:w-[34rem]" : "w-[72vw] sm:w-[24rem]"}`}>
-              <Tile item={item} sizes="(min-width:640px) 34rem, 86vw" onOpen={vIdx >= 0 ? () => lb.open(vIdx) : undefined} register={vIdx >= 0 ? lb.register(vIdx) : undefined} />
+            <Reveal as="li" key={`${item.title}-${i}`} delay={0.05 * (i % 4)} className={`h-[24rem] shrink-0 snap-start sm:h-[28rem] ${uniform ? "w-[80vw] sm:w-[26rem]" : wide ? "w-[86vw] sm:w-[34rem]" : "w-[72vw] sm:w-[24rem]"}`}>
+              <Tile item={item} brand={brand} index={i} sizes="(min-width:640px) 34rem, 86vw" onOpen={vIdx >= 0 ? () => lb.open(vIdx) : undefined} register={vIdx >= 0 ? lb.register(vIdx) : undefined} />
             </Reveal>
           ))}
         </ul>
@@ -297,12 +326,12 @@ export function ImmersiveGallery({ items, heading }: { items: GalleryItem[]; hea
   return (
     <>
       <div ref={outer} style={{ height: `calc(100vh + ${distance}px)` }} className="relative">
-        <div className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden pt-16">
+        <div className={`sticky top-0 flex h-screen flex-col justify-center overflow-hidden ${stickyPad}`}>
           <div className="container-x">{heading}</div>
           <motion.ul ref={track} style={{ x }} className="flex w-max gap-5 pl-[max(2.5rem,calc((100vw-1320px)/2+2.5rem))] pr-10 will-change-transform">
             {tiles.map(({ item, vIdx, wide }, i) => (
-              <li key={`${item.title}-${i}`} className={`h-[min(50vh,30rem)] shrink-0 ${wide ? "w-[min(52vw,46rem)]" : "w-[min(32vw,28rem)]"}`}>
-                <Tile item={item} sizes="50vw" onOpen={vIdx >= 0 ? () => lb.open(vIdx) : undefined} register={vIdx >= 0 ? lb.register(vIdx) : undefined} />
+              <li key={`${item.title}-${i}`} className={`${tileHeight} shrink-0 ${uniform ? "w-[min(34vw,27rem)]" : wide ? "w-[min(52vw,46rem)]" : "w-[min(32vw,28rem)]"}`}>
+                <Tile item={item} brand={brand} index={i} sizes="(min-width:1024px) 34vw, 80vw" onOpen={vIdx >= 0 ? () => lb.open(vIdx) : undefined} register={vIdx >= 0 ? lb.register(vIdx) : undefined} />
               </li>
             ))}
           </motion.ul>

@@ -3,14 +3,39 @@ import { aiImage, group, PENDING_SCHOLARSHIP } from "./helpers";
 
 /**
  * SRM TRP Engineering College, Tiruchirappalli
- * Source: https://apply.trp.srmtrichy.edu.in/ (audited 2026-11-17).
- * "Autonomous" is taken from the official logo artwork. AICTE approval and
- * Anna University affiliation are stated in the page text.
+ * Source: https://apply.trp.srmtrichy.edu.in/ (content migrated 2026-11-18).
+ * Official photographs and logos are mirrored from the live page into
+ * public/assets/trp/. "Autonomous" is taken from the official logo artwork.
+ * AICTE approval and Anna University affiliation are stated in "About TRP".
+ * Inventory: scratchpad/scrape/trp-inventory.json.
  */
 
+const A = "/assets/trp";
+
+/** Verbatim from "Courses Offered" → UNDERGRADUATE tab. */
 const UG_ELIG =
-  "As per AICTE, Govt. of Tamil Nadu and Anna University: a pass in 10+2 with Mathematics, Physics and Chemistry.";
-const PG_ELIG = "As per AICTE and Anna University norms.";
+  "As per AICTE & Govt. of Tamil Nadu, Anna University, A Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics and Chemistry is required.";
+/** Verbatim from "Courses Offered" → POSTGRADUATE tab. */
+const PG_ELIG = "As per AICTE and Anna University norms";
+
+const CAMPUS = {
+  infrastructure: { src: `${A}/campus/state-of-the-art-infrastructure.jpg`, width: 1032, height: 774 },
+  library: { src: `${A}/infrastructure/hitech-library.jpeg`, width: 1820, height: 1365 },
+  cultural: { src: `${A}/events/vibrant-campus-life-cultural-night.jpg`, width: 1024, height: 683 },
+  green: { src: `${A}/campus/green-eco-friendly-campus.jpg`, width: 750, height: 330 },
+  lab: { src: `${A}/infrastructure/research-lab-robotics.jpg`, width: 400, height: 300 },
+} as const;
+
+const BADGES = {
+  aicte: { src: `${A}/accreditation/aicte.png`, alt: "AICTE", width: 84, height: 84 },
+  anna: { src: `${A}/accreditation/anna-university.png`, alt: "Anna University", width: 84, height: 84 },
+  nba: { src: `${A}/accreditation/nba.png`, alt: "National Board of Accreditation (NBA)", width: 84, height: 84 },
+} as const;
+
+const logo = (file: string, name: string, width: number, height: number) => ({
+  name,
+  image: { src: `${A}/recruiters/${file}`, alt: `${name} logo`, width, height },
+});
 
 export const trp: Institution = {
   key: "trp",
@@ -20,7 +45,7 @@ export const trp: Institution = {
   legalLine: "Autonomous · Approved by AICTE · Affiliated to Anna University",
   city: "Tiruchirappalli",
   logo: {
-    src: "/img/trp/logo.jpg",
+    src: `${A}/logo/srm-trp-logo.jpg`,
     alt: "SRM TRP Engineering College, Tiruchirappalli",
     width: 500,
     height: 203,
@@ -84,19 +109,12 @@ export const trp: Institution = {
     eyebrow: "Admissions Open 2027–28 · Tiruchirappalli",
     headline: ["Skills that", "get you hired."],
     body:
-      "Start your journey at SRM TRP Engineering College, a place for learning, discovery, innovation and expression. Join an institute that will upskill your talent and back it with a 99% placement record.",
+      "SRM TRP is a place for learning, discovery, innovation and expression. Join the premier institute that will upskill your talent.",
+    // The live hero visual is a transparent student cut-out (public/assets/trp/hero/hero-student.webp),
+    // not a landscape campus photograph, so the illustrative landscape is kept here.
     image: aiImage("trp", "hero", "Energetic group of engineering students high-fiving outside a colourful college building", "70% center"),
-    secondaryImage: {
-      src: "/img/trp/sl-1.jpg",
-      alt: "SRM TRP Engineering College main building and lawn",
-      width: 1032,
-      height: 774,
-    },
-    badges: [
-      { src: "/img/trp/hero-logo1.png", alt: "AICTE", width: 84, height: 84 },
-      { src: "/img/trp/hero-logo2.png", alt: "Anna University", width: 84, height: 84 },
-      { src: "/img/trp/hero-logo3.png", alt: "NBA", width: 84, height: 84 },
-    ],
+    secondaryImage: { ...CAMPUS.infrastructure, alt: "SRM TRP Engineering College main academic building and lawn" },
+    badges: [BADGES.aicte, BADGES.anna, BADGES.nba],
     proof: [
       { value: 99, suffix: "%", label: "Placements" },
       { value: 580, suffix: "+", label: "Placement offers" },
@@ -110,7 +128,7 @@ export const trp: Institution = {
     body: "Tell us your interests. Our team will call you with programme advice, eligibility and lateral entry details.",
     levels: ["UG", "PG"],
     consent:
-      "I authorise SRM TRP Engineering College and its representatives to contact me via email, SMS, WhatsApp or call. This overrides DND/NDNC registration.",
+      "I authorise SRM TRP Engineering College & its representatives to contact me with updates and notifications via Email/SMS/What'sApp/Call. This will override DND/NDNC.",
     nextSteps: [
       "An SRM TRP counsellor calls you back.",
       "You get advice on programme, eligibility and lateral entry.",
@@ -119,55 +137,74 @@ export const trp: Institution = {
   },
 
   why: {
-    image: aiImage("trp", "core-lab", "Students working on a go-kart chassis in the college workshop"),
-    heading: "Why TRP",
+    videoUrl: "https://www.youtube.com/watch?v=7lbKue2Z_PQ",
+    videoTitle: "SRM TRP Engineering College – Admission Open",
+    image: { ...CAMPUS.infrastructure, alt: "SRM TRP Engineering College academic building with lawn in front" },
+    heading: "Why TRP?",
     intro: "A student-focused engineering college that continues the legacy of the SRM Group of Institutions.",
-    source: "apply.trp.srmtrichy.edu.in",
+    source: "“Why TRP?” slider, apply.trp.srmtrichy.edu.in",
+    // Titles verbatim from the live "Why TRP?" slider (no body copy is published there);
+    // bodies describe the official photograph shown with each title.
     items: [
-      { title: "State-of-the-art infrastructure", body: "Modern academic buildings on a large campus off NH 45." },
-      { title: "HiTech library", body: "A well-stocked library for study and research." },
-      { title: "Fully equipped research labs", body: "Hands-on labs, including robotics and automation." },
-      { title: "Vibrant campus life", body: "Cultural nights, clubs and events across the year." },
-      { title: "Green & eco-friendly campus", body: "Tree-lined avenues and open green spaces." },
-      { title: "Lateral entry available", body: "Diploma holders can join UG programmes through lateral entry." },
+      { title: "State-of-the-Art Infrastructure", media: { src: "/assets/trp/campus/state-of-the-art-infrastructure.jpg", alt: "SRM TRP academic blocks around open lawns", width: 1032, height: 774 }, body: "Multi-storey academic blocks set around open lawns on the Irungalur campus." },
+      { title: "HiTech Library", media: { src: "/assets/trp/infrastructure/hitech-library.jpeg", alt: "Students reading together in the SRM TRP library", width: 1820, height: 1365 }, body: "Students reading together among the library's departmental collections." },
+      { title: "Fully Equipped Research labs", media: { src: "/assets/trp/infrastructure/research-lab-robotics.jpg", alt: "Student working with a robotic arm in the research lab", width: 400, height: 300 }, body: "Hands-on lab work, including robotic arms and automation hardware." },
+      { title: "Vibrant Campus Life", media: { src: "/assets/trp/events/vibrant-campus-life-cultural-night.jpg", alt: "Students performing on stage at a cultural night", width: 1024, height: 683 }, body: "Student dance troupes on stage at SRM cultural nights." },
+      { title: "Green & Eco Friendly Campus", media: { src: "/assets/trp/campus/green-eco-friendly-campus.jpg", alt: "Palm-lined avenue at the SRM TRP campus entrance", width: 750, height: 330 }, body: "Palm-lined avenues and green open spaces at the campus entrance." },
     ],
   },
 
   programmes: {
     heading: "Pick your branch",
-    intro: "Eight UG and six PG / research programmes, as listed on the official admissions page.",
+    intro: "Eight undergraduate and six postgraduate programmes, as listed under “Courses Offered” on the official admissions page.",
     footnote:
       "Programme duration and approved intake are not published on the admissions page. They will be shown once the college confirms them. Lateral entry is available for UG programmes.",
     items: [
       ...group(
+        { degree: "B.E", level: "UG", department: "Core Engineering", eligibility: UG_ELIG },
+        [["Civil Engineering", { lateralEntry: true }]],
+      ),
+      ...group(
         { degree: "B.E", level: "UG", department: "Computing", eligibility: UG_ELIG },
         [
-          "Computer Science and Engineering",
-          "Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
+          ["Computer Science and Engineering", { lateralEntry: true }],
+          ["Computer Science and Engineering (Artificial Intelligence and Machine Learning)", { lateralEntry: true }],
         ],
       ),
       ...group(
-        { degree: "B.Tech", level: "UG", department: "Computing", eligibility: UG_ELIG },
-        ["Artificial Intelligence and Data Science", "Information Technology"],
-      ),
-      ...group(
         { degree: "B.E", level: "UG", department: "Electrical & Electronics", eligibility: UG_ELIG },
-        ["Electrical and Electronics Engineering", "Electronics and Communication Engineering"],
+        [
+          ["Electrical and Electronics Engineering", { lateralEntry: true }],
+          ["Electronics and Communication Engineering", { lateralEntry: true }],
+        ],
       ),
       ...group(
         { degree: "B.E", level: "UG", department: "Core Engineering", eligibility: UG_ELIG },
-        ["Civil Engineering", "Mechanical Engineering"],
+        [["Mechanical Engineering", { lateralEntry: true }]],
       ),
       ...group(
-        { degree: "M.E", level: "PG", department: "Engineering (PG)", eligibility: PG_ELIG },
-        ["Thermal Engineering", "VLSI Design"],
+        { degree: "B.Tech", level: "UG", department: "Computing", eligibility: UG_ELIG },
+        [
+          ["Artificial Intelligence and Data Science", { lateralEntry: true }],
+          ["Information Technology", { lateralEntry: true }],
+        ],
       ),
       ...group(
         { degree: "MBA", level: "PG", department: "Management", eligibility: PG_ELIG },
         ["Master of Business Administration"],
       ),
       ...group(
-        { degree: "M.S (Research) / Ph.D", level: "Research", department: "Research", eligibility: PG_ELIG },
+        { degree: "M.E", level: "PG", department: "Engineering (PG)", eligibility: PG_ELIG },
+        ["Thermal Engineering", "VLSI Design"],
+      ),
+      ...group(
+        {
+          degree: "M.S (Research) / Ph.D",
+          level: "PG",
+          department: "Research",
+          eligibility: PG_ELIG,
+          notes: "Listed under the POSTGRADUATE tab on the official admissions page.",
+        },
         ["Electronics and Communication Engineering", "Mechanical Engineering", "Physics"],
       ),
     ],
@@ -185,18 +222,76 @@ export const trp: Institution = {
     ],
     scopeNote:
       "Institution-wide figures as published on the official admissions page. The batch / year is not stated and must be confirmed. Average package is not published.",
+    // "Placement Records" – in the order and spelling published on the live page.
     records: [
-      { name: "Giftson Tensingh T", company: "IDP India Education", package: "8 LPA+" },
-      { name: "Lohitha A M K", company: "TCS", package: "7 LPA" },
-      { name: "Vetriveeran G", company: "Kinaxis India", package: "6.12 LPA" },
-      { name: "Satya Narayanan A", company: "My Captain", package: "5 LPA" },
+      {
+        name: "GIFTSON TENSINGH.T",
+        company: "IDP India Education",
+        package: "8 LPA+",
+        photo: { src: `${A}/placements/giftson-tensingh-t.jpg`, alt: "Giftson Tensingh T", width: 479, height: 719 },
+      },
+      {
+        name: "VETRIVEERAN.G",
+        company: "Kinaxis India",
+        package: "6.12 LPA",
+        photo: { src: `${A}/placements/vetriveeran-g.jpg`, alt: "Vetriveeran G", width: 342, height: 513 },
+      },
+      {
+        name: "LOHITHA.A.M.K",
+        company: "TCS",
+        package: "7 LPA",
+        photo: { src: `${A}/placements/lohitha-a-m-k.jpg`, alt: "Lohitha A M K", width: 193, height: 290 },
+      },
+      {
+        name: "Satya Narayanan.A",
+        company: "My Captain",
+        package: "5 LPA",
+        photo: { src: `${A}/placements/satya-narayanan-a.jpg`, alt: "Satya Narayanan A", width: 193, height: 290 },
+      },
     ],
-    recordsNote: "Individual placement records as published (CTC). Department and batch to be confirmed.",
-    recruiters: { pending: "Approved recruiter logos and names for SRM TRP" },
+    recordsNote: "Individual placement records as published (CTC). Department and batch are not stated on the official page.",
+    // "Our major Recruiters" – logos in the order published on the live page.
+    recruiters: {
+      names: [
+        "Amazon",
+        "Google",
+        "Arista",
+        "Atlassian",
+        "Wipro",
+        "Zoho",
+        "IBM",
+        "Infosys",
+        "Renault Nissan",
+        "Tech Mahindra",
+        "Wells Fargo",
+        "Autodesk",
+        "Tata Consultancy Services",
+        "Honeywell",
+        "Cognizant",
+      ],
+      logos: [
+        logo("amazon.jpg", "Amazon", 200, 72),
+        logo("google.jpg", "Google", 200, 72),
+        logo("arista.jpg", "Arista", 200, 72),
+        logo("atlassian.jpg", "Atlassian", 200, 72),
+        logo("wipro.jpg", "Wipro", 206, 75),
+        logo("zoho.jpg", "Zoho", 200, 72),
+        logo("ibm.jpg", "IBM", 200, 72),
+        logo("infosys.jpg", "Infosys", 200, 72),
+        logo("renault-nissan.jpg", "Renault Nissan", 927, 618),
+        logo("tech-mahindra.png", "Tech Mahindra", 1024, 290),
+        logo("wells-fargo.png", "Wells Fargo", 2048, 2048),
+        logo("autodesk.webp", "Autodesk", 256, 256),
+        logo("tcs.jpg", "Tata Consultancy Services", 206, 75),
+        logo("honeywell.png", "Honeywell", 250, 63),
+        logo("cognizant.png", "Cognizant", 227, 70),
+      ],
+      note: "“Our major Recruiters”, as published on the official admissions page.",
+    },
     careerDevelopment: [
       { title: "Interview avenues", body: "90+ interview avenues for students." },
-      { title: "Research labs", body: "Fully equipped labs for project-based learning." },
-      { title: "Upskilling", body: "Programmes designed to upskill your talent for industry." },
+      { title: "Research labs", body: "Fully equipped research labs for project-based learning." },
+      { title: "Upskilling", body: "Join the premier institute that will upskill your talent." },
     ],
   },
 
@@ -208,17 +303,17 @@ export const trp: Institution = {
       {
         title: "Robotics & automation lab",
         body: "Hands-on work with robotic arms and automation hardware.",
-        source: "Campus photography, official admissions page",
+        source: "“Fully Equipped Research labs” photograph, official admissions page",
       },
       {
         title: "Research programmes",
         body: "M.S (Research) and Ph.D in ECE, Mechanical Engineering and Physics.",
-        source: "Programme list, official admissions page",
+        source: "Courses Offered, official admissions page",
       },
       {
         title: "SRM Group legacy",
-        body: "Part of the SRM Group of Institutions, led by Dr. R. Shivakumar, Chairman of the Ramapuram and Trichy campuses.",
-        source: "About, official admissions page",
+        body: "Headed by Dr. R. Shivakumar M.D., Ph.D., Chairman, Ramapuram and Trichy Campuses.",
+        source: "About TRP, official admissions page",
       },
     ],
     timeline: [
@@ -234,46 +329,46 @@ export const trp: Institution = {
     intro: "Labs, library and a green campus on NH 45.",
     items: [
       {
-        title: "Research labs",
-        description: "Fully equipped labs including robotics and automation.",
-        media: { src: "/img/trp/sl-5.jpg", alt: "Student working with a robotic arm in the lab", width: 400, height: 300 },
+        title: "Fully Equipped Research labs",
+        description: "Hands-on labs, including robotics and automation.",
+        media: { ...CAMPUS.lab, alt: "Student working with a robotic arm in the research lab" },
       },
       {
-        title: "HiTech library",
+        title: "HiTech Library",
         description: "Quiet study among departmental collections.",
-        media: { src: "/img/trp/sl-2.jpeg", alt: "Two students reading together in the library", width: 1820, height: 1365 },
+        media: { ...CAMPUS.library, alt: "Two students reading together in the HiTech Library" },
       },
       {
-        title: "Campus",
-        description: "State-of-the-art academic buildings.",
-        media: { src: "/img/trp/sl-1.jpg", alt: "Main academic building with lawn in front", width: 1032, height: 774 },
+        title: "State-of-the-Art Infrastructure",
+        description: "Multi-storey academic blocks around open lawns.",
+        media: { ...CAMPUS.infrastructure, alt: "Main academic building with lawn in front" },
       },
       {
-        title: "Green & eco-friendly",
+        title: "Green & Eco Friendly Campus",
         description: "Palm-lined avenues and green open spaces.",
-        media: { src: "/img/trp/sl-4.jpg", alt: "Aerial view of the palm-lined campus entrance", width: 750, height: 330 },
+        media: { ...CAMPUS.green, alt: "Aerial view of the palm-lined campus entrance" },
       },
-      { title: "Hostels", description: "Residential facilities.", media: aiImage("trp", "hostel", "Hostel block with balconies around a green courtyard") },
-      { title: "Sports", description: "Sports facilities.", media: aiImage("trp", "sports", "Students playing volleyball on an outdoor court") },
     ],
   },
 
   academics: {
     heading: "Approved. Affiliated. Autonomous.",
-    intro: "Recognitions and approvals for SRM TRP Engineering College.",
+    // Verbatim "About TRP" text from the live page.
+    intro:
+      "SRM TRP Engineering College is headed by Dr. R. Shivakumar M.D., Ph.D. Chairman, Ramapuram and Trichy Campuses. The institution continues the blazing glory in the field of education, deservedly bequeathing it from SRM Group of Institutions. It is approved by All India Council for Technical Education (AICTE), New Delhi and affiliated to Anna University, Chennai.",
     accreditations: [
       {
         title: "AICTE approved",
-        body: "Approved by the All India Council for Technical Education (AICTE), New Delhi.",
-        badge: { src: "/img/trp/hero-logo1.png", alt: "AICTE logo", width: 84, height: 84 },
-        source: "About, official admissions page",
+        body: "Approved by All India Council for Technical Education (AICTE), New Delhi.",
+        badge: { ...BADGES.aicte, alt: "AICTE logo" },
+        source: "About TRP, official admissions page",
         verified: true,
       },
       {
         title: "Anna University",
         body: "Affiliated to Anna University, Chennai.",
-        badge: { src: "/img/trp/hero-logo2.png", alt: "Anna University logo", width: 84, height: 84 },
-        source: "About, official admissions page",
+        badge: { ...BADGES.anna, alt: "Anna University logo" },
+        source: "About TRP, official admissions page",
         verified: true,
       },
       {
@@ -285,17 +380,12 @@ export const trp: Institution = {
       {
         title: "NBA",
         body: "NBA mark displayed on the official admissions page. Accredited programmes to be confirmed.",
-        badge: { src: "/img/trp/hero-logo3.png", alt: "NBA logo", width: 84, height: 84 },
-        source: "Official admissions page",
+        badge: { ...BADGES.nba, alt: "NBA logo" },
+        source: "About TRP badge row, official admissions page",
         verified: false,
       },
     ],
-    image: {
-      src: "/img/trp/sl-2.jpeg",
-      alt: "Students studying in the SRM TRP library",
-      width: 1820,
-      height: 1365,
-    },
+    image: { ...CAMPUS.library, alt: "Students studying in the SRM TRP HiTech Library" },
   },
 
   scholarships: {
@@ -311,14 +401,57 @@ export const trp: Institution = {
   testimonials: {
     heading: "Alumni in the industry",
     intro: "SRM TRP graduates now working across banking, IT and sports analytics.",
-    note: "Alumni details as published on the official admissions page. Approved photos, full quotes and videos are pending.",
+    note: "Each quote is the alumnus's answer to “One word about trpec:”, as published on the official admissions page.",
+    // Order, names, roles and quotes as published in the live "Testimonials" slider.
     items: [
-      { name: "Abirami R", programme: "B.E ECE", year: "2018–2022", role: "Relationship Manager, City Union Bank" },
-      { name: "Shanawaz Khan", programme: "Mechanical Engineering", year: "2017–2021", role: "System Engineer, Infosys" },
-      { name: "R. Santhosh Babu", programme: "B.E ECE", year: "2015–2019", role: "Associate, Cognizant Technology" },
-      { name: "Sathish Kumar", programme: "B.E. Mechanical Engineering", year: "2016–2020", role: "Systems Engineer, Infosys Ltd., Chennai" },
-      { name: "Rathish S", programme: "B.E. Mechanical Engineering", year: "2016–2020", role: "Cricket Analyst, Kadamba Technologies" },
-      { name: "Krishna Harini R", programme: "B.E. Mechanical Engineering", year: "2018–2022", role: "Relationship Manager Trainee, City Union Bank" },
+      {
+        name: "Abirami R",
+        programme: "B.E, ECE",
+        year: "2018-2022",
+        role: "Relationship Manager in City Union Bank",
+        quote: "Pathway for Success",
+        photo: { src: `${A}/testimonials/abirami-r.jpg`, alt: "Abirami R", width: 601, height: 902 },
+      },
+      {
+        name: "Shanawaz Khan",
+        programme: "Mechanical Engineering",
+        year: "2017-2021",
+        role: "System Engineer in Infosys",
+        quote: "The place where I got different opportunity to explore myself",
+        photo: { src: `${A}/testimonials/shanawaz-khan.jpg`, alt: "Shanawaz Khan", width: 853, height: 1280 },
+      },
+      {
+        name: "R.Santhosh babu",
+        programme: "B.E, ECE",
+        year: "2015 - 2019",
+        role: "Present designation Associate in Cognizant technology",
+        quote: "The place where I got my new friends",
+        photo: { src: `${A}/testimonials/r-santhosh-babu.jpg`, alt: "R. Santhosh Babu", width: 853, height: 1280 },
+      },
+      {
+        name: "Sathish Kumar",
+        programme: "B.E. Mechanical Engineering",
+        year: "2016-2020",
+        role: "Systems Engineer in Infosys Ltd., Chennai",
+        quote: "The place where I gained life time friends",
+        photo: { src: `${A}/testimonials/sathish-kumar.jpg`, alt: "Sathish Kumar", width: 719, height: 1077 },
+      },
+      {
+        name: "Rathish. S",
+        programme: "B.E. Mechanical Engineering",
+        year: "2016-2020",
+        role: "Cricket Analyst in Kadamba Technologies",
+        quote: "Place where I made friends for life",
+        photo: { src: `${A}/testimonials/rathish-s.jpg`, alt: "Rathish S", width: 821, height: 1231 },
+      },
+      {
+        name: "Krishna Harini R",
+        programme: "B.E. Mechanical Engineering",
+        year: "2018-2022",
+        role: "Relationship Manager Trainee, City Union Bank",
+        quote: "Extremely important in shaping my future",
+        photo: { src: `${A}/testimonials/krishna-harini-r.jpg`, alt: "Krishna Harini R", width: 853, height: 1280 },
+      },
     ],
   },
 
@@ -327,22 +460,20 @@ export const trp: Institution = {
     intro: "Big stages, bold performances and a campus community that shows up.",
     items: [
       {
-        title: "Cultural nights",
-        body: "Inter-institution cultural events across the SRM Trichy group.",
-        media: { src: "/img/trp/sl-3.jpg", alt: "Students performing a dance on stage at a cultural event", width: 1024, height: 683 },
+        title: "Vibrant Campus Life",
+        body: "Cultural nights on the SRM stage.",
+        media: { ...CAMPUS.cultural, alt: "Students performing a dance on stage at a cultural event" },
       },
       {
-        title: "Innovation",
+        title: "Fully Equipped Research labs",
         body: "Robotics and lab projects.",
-        media: { src: "/img/trp/sl-5.jpg", alt: "Student with a robotic arm", width: 400, height: 300 },
+        media: { ...CAMPUS.lab, alt: "Student with a robotic arm in the research lab" },
       },
       {
-        title: "Green campus",
+        title: "Green & Eco Friendly Campus",
         body: "Space to think and breathe.",
-        media: { src: "/img/trp/sl-4.jpg", alt: "Aerial view of campus entrance", width: 750, height: 330 },
+        media: { ...CAMPUS.green, alt: "Aerial view of the campus entrance" },
       },
-      { title: "Technical symposiums", media: aiImage("trp", "symposium", "Students cheering at a robotics competition") },
-      { title: "Sports", media: aiImage("trp", "sports", "Students playing volleyball") },
     ],
   },
 
@@ -351,7 +482,7 @@ export const trp: Institution = {
     intro: "Indicative steps. The exact process follows Anna University / TNEA and college policy.",
     indicative: true,
     steps: [
-      { title: "Explore programmes", body: "Choose from 8 UG and 6 PG / research programmes." },
+      { title: "Explore programmes", body: "Choose from 8 undergraduate and 6 postgraduate programmes." },
       { title: "Check eligibility", body: "UG: 10+2 with Mathematics, Physics and Chemistry. Lateral entry available." },
       { title: "Register online", body: "Register on the official portal with your mobile number (OTP) and email." },
       { title: "Complete documentation", body: "Submit the documents requested by the admissions office." },
@@ -367,7 +498,11 @@ export const trp: Institution = {
     },
     {
       q: "What is the eligibility for UG programmes?",
-      a: "As per AICTE, Govt. of Tamil Nadu and Anna University: a pass in 10+2 with Mathematics, Physics and Chemistry. Lateral entry is available.",
+      a: "As per AICTE & Govt. of Tamil Nadu, Anna University, a pass in Higher Secondary Examinations of (10+2) curriculum with Mathematics, Physics and Chemistry is required. Lateral entry is available.",
+    },
+    {
+      q: "What is the eligibility for PG programmes?",
+      a: "As per AICTE and Anna University norms.",
     },
     {
       q: "Is SRM TRP approved and affiliated?",
@@ -396,7 +531,7 @@ export const trp: Institution = {
   ],
 
   contact: {
-    address: "NH 45, Mannachanallur Taluk, Tiruchirappalli District, Irungalur, Tamil Nadu – 621105",
+    address: "NH 45, Mannachanallur Taluk, Tiruchirappalli District, Irungalur, Tamil Nadu 621105",
     addressVerified: true,
     phones: [
       { label: "Toll-free", display: "1800 202 2535", tel: "18002022535" },
@@ -410,12 +545,7 @@ export const trp: Institution = {
   finalCta: {
     headline: "Your future starts here.",
     body: "Admissions for 2027–28 are open. Apply now or speak to a counsellor.",
-    image: {
-      src: "/img/trp/sl-4.jpg",
-      alt: "Aerial view of the SRM TRP campus entrance",
-      width: 750,
-      height: 330,
-    },
+    image: { ...CAMPUS.green, alt: "Aerial view of the SRM TRP campus entrance" },
   },
 
   footer: {

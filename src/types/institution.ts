@@ -57,6 +57,8 @@ export interface Programme {
   /** Approved intake. Leave undefined unless verified. */
   intake?: number;
   notes?: string;
+  /** Lateral (direct second-year) entry available, as published. */
+  lateralEntry?: boolean;
   verified: boolean;
 }
 
@@ -163,8 +165,11 @@ export interface Institution {
   why: {
     heading: string;
     intro: string;
-    items: { title: string; body: string }[];
+    items: { title: string; body: string; media?: Media }[];
     image?: Media;
+    /** Official YouTube video shown on the live page (watch or embed URL). */
+    videoUrl?: string;
+    videoTitle?: string;
     source: string;
   };
 
@@ -180,9 +185,22 @@ export interface Institution {
     intro: string;
     stats: Stat[];
     scopeNote: string;
-    records: { name: string; programme?: string; company?: string; package: string; batch?: string }[];
+    /** Individual placement profiles exactly as published (original photo, name, CTC / stipend, company). */
+    records: {
+      name: string;
+      programme?: string;
+      company?: string;
+      /** CTC as published, e.g. "55 LPA". */
+      package: string;
+      batch?: string;
+      photo?: ImageAsset;
+      /** Company logo shown on the original profile card. */
+      companyLogo?: ImageAsset;
+      stipend?: string;
+      designation?: string;
+    }[];
     recordsNote?: string;
-    recruiters: { names: string[]; note: string } | PendingAsset;
+    recruiters: { names: string[]; logos?: { name: string; image: ImageAsset }[]; note: string } | PendingAsset;
     careerDevelopment: { title: string; body: string }[];
     image?: Media;
   };
@@ -209,6 +227,9 @@ export interface Institution {
     factsNote?: string;
     image?: Media;
     caution?: string;
+    /** Global academic collaborations / partner universities shown on the live page. */
+    collaborations?: { name: string; logo?: ImageAsset }[];
+    collaborationsHeading?: string;
   };
 
   scholarships: {
@@ -245,6 +266,8 @@ export interface Institution {
     indicative: boolean;
     documents?: string[];
     payment?: string;
+    /** Important dates as published (label / date text kept verbatim). */
+    importantDates?: { label: string; date: string }[];
   };
 
   faqs: { q: string; a: string }[];

@@ -71,6 +71,24 @@ export function AcademicExcellence({ inst, index }: { inst: Institution; index: 
           </div>
         )}
 
+        {a.collaborations && a.collaborations.length > 0 && (
+          <div className="mt-14">
+            <h3 className="type-h3 mb-5 font-display text-ink">{a.collaborationsHeading ?? "Global academic collaborations"}</h3>
+            <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+              {a.collaborations.map((c, i) => (
+                <Reveal as="li" key={c.name} delay={0.03 * (i % 5)} className="flex flex-col items-center justify-center gap-3 rounded-[var(--radius-card)] border border-line bg-white p-4 text-center">
+                  {c.logo && (
+                    <span className="relative h-14 w-full">
+                      <Image src={c.logo.src} alt={c.logo.alt} fill sizes="200px" className="object-contain" />
+                    </span>
+                  )}
+                  <span className="text-sm font-medium leading-snug text-ink">{c.name}</span>
+                </Reveal>
+              ))}
+            </ul>
+          </div>
+        )}
+
         {a.caution && (
           <p className="mt-8 flex max-w-4xl items-start gap-2 rounded-[var(--radius-card)] border border-dashed border-line p-4 text-sm text-muted">
             <Info aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-accent-ink" />

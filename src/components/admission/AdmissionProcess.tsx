@@ -50,6 +50,20 @@ export function AdmissionProcess({ inst, index }: { inst: Institution; index: st
           </ol>
         </div>
 
+        {pr.importantDates && pr.importantDates.length > 0 && (
+          <div className="mt-12">
+            <h3 className="type-h3 mb-4 font-display">Important dates</h3>
+            <dl className="grid gap-px overflow-hidden rounded-[var(--radius-card)] bg-white/15 sm:grid-cols-2 lg:grid-cols-3">
+              {pr.importantDates.map((d) => (
+                <div key={d.label} className="flex flex-col-reverse gap-1 bg-brand p-5">
+                  <dt className="text-sm text-white/75">{d.label}</dt>
+                  <dd className="font-display text-lg">{d.date}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )}
+
         {(pr.documents || pr.payment) && (
           <div className="mt-10 grid gap-4 md:grid-cols-2">
             {pr.documents && (

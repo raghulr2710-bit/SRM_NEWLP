@@ -15,11 +15,14 @@ export function FloatingControls({
   applyUrl,
   whatsapp,
   institutionName,
+  topClassName,
 }: {
   institution: InstitutionKey;
   applyUrl: string;
   whatsapp: string | null;
   institutionName: string;
+  /** Optional style override for the back-to-top button. */
+  topClassName?: string;
 }) {
   const [pastHero, setPastHero] = useState(false);
   const [formVisible, setFormVisible] = useState(false);
@@ -87,7 +90,7 @@ export function FloatingControls({
               window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
               document.querySelector<HTMLElement>("header a[href='#top']")?.focus({ preventScroll: true });
             }}
-            className="fixed bottom-6 right-6 z-40 hidden h-12 w-12 items-center justify-center rounded-full bg-ink text-surface shadow-lg hover:bg-brand md:flex"
+            className={topClassName ?? "fixed bottom-6 right-6 z-40 hidden h-12 w-12 items-center justify-center rounded-full bg-ink text-surface shadow-lg hover:bg-brand md:flex"}
           >
             <ArrowUp aria-hidden="true" className="h-5 w-5" />
             <span className="sr-only">Back to top</span>

@@ -215,6 +215,9 @@ export function ProgrammeExplorer({
                               {p.duration}
                             </span>
                           )}
+                          {p.lateralEntry && (
+                            <span className="rounded-full bg-brand-soft px-2 py-0.5 text-xs font-semibold text-brand">Lateral entry</span>
+                          )}
                           {!p.verified && <PendingTag className="text-accent-ink">Details to be confirmed</PendingTag>}
                         </p>
                       </div>
@@ -252,7 +255,7 @@ export function ProgrammeExplorer({
                           <dl className={`mt-4 grid gap-3 rounded-[var(--radius-card)] bg-surface-alt p-4 text-sm ${layout === "rows" ? "md:ml-[9.5rem] md:grid-cols-3" : ""}`}>
                             <div>
                               <dt className="font-semibold text-ink">Eligibility</dt>
-                              <dd className="mt-1 text-muted">{p.eligibility ?? "Ask an admission counsellor."}</dd>
+                              <dd className="mt-1 whitespace-pre-line text-muted">{p.eligibility ?? "Ask an admission counsellor."}</dd>
                             </div>
                             <div>
                               <dt className="font-semibold text-ink">Duration</dt>
@@ -265,7 +268,7 @@ export function ProgrammeExplorer({
                             {p.notes && (
                               <div className={layout === "rows" ? "md:col-span-3" : ""}>
                                 <dt className="font-semibold text-ink">Note</dt>
-                                <dd className="mt-1 text-muted">{p.notes}</dd>
+                                <dd className="mt-1 whitespace-pre-line text-muted">{p.notes}</dd>
                               </div>
                             )}
                           </dl>

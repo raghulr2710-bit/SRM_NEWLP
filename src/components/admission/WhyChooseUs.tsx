@@ -2,6 +2,7 @@ import type { Institution } from "@/types/institution";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { Reveal } from "@/components/common/Reveal";
 import { MediaFill } from "@/components/common/Media";
+import { VideoEmbed } from "@/components/common/VideoEmbed";
 
 /**
  * Section 03 – Why choose us.
@@ -28,6 +29,7 @@ export function WhyChooseUs({ inst, index }: { inst: Institution; index: string 
                   )}
                 </Reveal>
               )}
+              {why.videoUrl && <VideoEmbed url={why.videoUrl} title={why.videoTitle ?? `${inst.shortName} – campus video`} className="mt-4" />}
             </div>
           </div>
           <ol className="lg:col-span-7 lg:pt-2">
@@ -45,9 +47,16 @@ export function WhyChooseUs({ inst, index }: { inst: Institution; index: string 
                 <span className="font-display text-2xl leading-none text-accent-ink sm:text-3xl" aria-hidden="true">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <div>
-                  <h3 className="type-h3 font-display text-ink transition-colors duration-300 group-hover:text-brand">{item.title}</h3>
-                  <p className="type-lead mt-2 max-w-xl text-muted">{item.body}</p>
+                <div className={item.media ? "grid gap-4 sm:grid-cols-[1fr_9rem] sm:items-start" : ""}>
+                  <div>
+                    <h3 className="type-h3 font-display text-ink transition-colors duration-300 group-hover:text-brand">{item.title}</h3>
+                    <p className="type-lead mt-2 max-w-xl text-muted">{item.body}</p>
+                  </div>
+                  {item.media && (
+                    <div className="relative aspect-[16/10] overflow-hidden rounded-[var(--radius-card)] sm:order-none">
+                      <MediaFill media={item.media} sizes="(min-width:640px) 9rem, 90vw" zoom tagClassName="left-1.5 top-1.5" />
+                    </div>
+                  )}
                 </div>
               </Reveal>
             ))}
@@ -101,7 +110,13 @@ export function WhyChooseUs({ inst, index }: { inst: Institution; index: string 
                 span(i)
               } ${i % 3 === 0 ? "bg-accent-soft" : i % 3 === 1 ? "bg-surface-alt" : "bg-brand-soft"}`}
             >
-              <span className="font-mono text-sm text-muted">{String(i + 2).padStart(2, "0")}</span>
+              {item.media ? (
+                <div className="relative -mx-6 -mt-6 mb-4 aspect-[16/9] overflow-hidden lg:-mx-7 lg:-mt-7">
+                  <MediaFill media={item.media} sizes="(min-width:1024px) 30vw, 90vw" zoom />
+                </div>
+              ) : (
+                <span className="font-mono text-sm text-muted">{String(i + 2).padStart(2, "0")}</span>
+              )}
               <div>
                 <h3 className="type-h3 font-display font-semibold text-ink">{item.title}</h3>
                 <p className="mt-2 text-[0.95rem] leading-relaxed text-muted">{item.body}</p>
@@ -110,6 +125,11 @@ export function WhyChooseUs({ inst, index }: { inst: Institution; index: string 
             </Reveal>
           ))}
         </ul>
+        {why.videoUrl && (
+          <Reveal className="mx-auto mt-8 max-w-3xl">
+            <VideoEmbed url={why.videoUrl} title={why.videoTitle ?? `${inst.shortName} – campus video`} />
+          </Reveal>
+        )}
         <p className="mt-6 text-xs text-muted">Source: {why.source}</p>
       </div>
     </section>

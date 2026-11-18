@@ -1,0 +1,1808 @@
+{
+ "sourceUrl": "https://registration.srmrmp.edu.in/",
+ "hero": {
+  "headline": [
+   "Shape Your Future,",
+   "Land Your Dream Job"
+  ],
+  "button": "Registrations Open for 2027",
+  "formHeading": "Admissions Open 2027",
+  "image": {
+   "src": "/assets/ramapuram/hero/srm-banner-image-new.webp",
+   "alt": "SRMIST Ramapuram student holding books",
+   "width": 843,
+   "height": 1100
+  }
+ },
+ "logo": {
+  "src": "/assets/ramapuram/logo/srmist-ramapuram-logo.png",
+  "alt": "SRM Institute of Science and Technology, Ramapuram",
+  "width": 2294,
+  "height": 995
+ },
+ "seal": {
+  "src": "/assets/ramapuram/logo/srm-full-logo.png",
+  "alt": "SRM Institute of Science and Technology seal",
+  "width": 711,
+  "height": 712
+ },
+ "rankings": {
+  "heading": "Rankings & Accreditations",
+  "items": [
+   {
+    "title": "Highest 'A++' Grade",
+    "text": "SRM Institute of Science and Technology has been accredited by NAAC with the highest 'A++' grade.",
+    "badge": {
+     "src": "/assets/ramapuram/accreditation/naac.png",
+     "alt": "Highest 'A++' Grade",
+     "width": 115,
+     "height": 111
+    }
+   },
+   {
+    "title": "12 B Status by MHRD-UGC",
+    "text": "SRM IST is placed in Category 1 with 12 B status by MHRD-UGC.",
+    "badge": {
+     "src": "/assets/ramapuram/accreditation/mhrd-ugc.png",
+     "alt": "12 B Status by MHRD-UGC",
+     "width": 79,
+     "height": 124
+    }
+   },
+   {
+    "title": null,
+    "text": "SRMIST has been ranked 11th nationally under universities category by NIRF (National Institutional Ranking Framework) in 2025.",
+    "badge": {
+     "src": "/assets/ramapuram/accreditation/nirf.png",
+     "alt": "Ranking badge",
+     "width": 97,
+     "height": 124
+    }
+   },
+   {
+    "title": null,
+    "text": "SRMIST is regularly gets ranked by world ranking agencies like QS (UK) and Times Higher Education (UK)",
+    "badge": {
+     "src": "/assets/ramapuram/accreditation/times-higher-education.png",
+     "alt": "Ranking badge",
+     "width": 195,
+     "height": 105
+    }
+   },
+   {
+    "title": null,
+    "text": "World ranking 1 among 46 Indian universities.",
+    "badge": {
+     "src": "/assets/ramapuram/accreditation/qs.png",
+     "alt": "Ranking badge",
+     "width": 101,
+     "height": 96
+    }
+   },
+   {
+    "title": null,
+    "text": "SHANGAI Ranking – 2023 World ranking 1 among 15 Indian Universities",
+    "badge": {
+     "src": "/assets/ramapuram/accreditation/shanghai-ranking.png",
+     "alt": "Ranking badge",
+     "width": 220,
+     "height": 70
+    }
+   }
+  ]
+ },
+ "promo": {
+  "heading": "Join the Premier Institution Ranked as the #1 University in India",
+  "text": "Experience the best in placements alongside academic excellence. SRM IST, Ramapuram is a place for learning, discovery, innovation, expression, and discourse.",
+  "videoUrl": "https://www.youtube.com/embed/YxMB6limtf0?rel=0"
+ },
+ "stats1": [
+  {
+   "value": "5700+",
+   "label": "Job Offers"
+  },
+  {
+   "value": "1100+",
+   "label": "Companies Visited"
+  },
+  {
+   "value": "55 LPA",
+   "label": "Highest Package"
+  }
+ ],
+ "stats2": [
+  {
+   "value": "950+",
+   "label": "International Students"
+  },
+  {
+   "value": "3200+",
+   "label": "Faculty"
+  },
+  {
+   "value": "200+",
+   "label": "Research Labs"
+  }
+ ],
+ "facts": [
+  {
+   "value": "1985",
+   "label": "Established"
+  },
+  {
+   "value": "52,000+",
+   "label": "Students"
+  },
+  {
+   "value": "#1",
+   "label": "SRM IST Ranked India's No.1 University"
+  },
+  {
+   "value": "17",
+   "label": "Institution"
+  },
+  {
+   "value": "4",
+   "label": "Decades"
+  },
+  {
+   "value": "A++",
+   "label": "NAAC Accreditation"
+  },
+  {
+   "value": "2nd",
+   "label": "in ARIIA"
+  },
+  {
+   "value": "40+",
+   "label": "Years of experience in education"
+  }
+ ],
+ "banners": [
+  {
+   "src": "/assets/ramapuram/campus/banner-research-publications.webp",
+   "alt": "Empowering Scholars with 1000+ Research Publications",
+   "width": 1354,
+   "height": 495
+  },
+  {
+   "src": "/assets/ramapuram/campus/banner-placement-offers.webp",
+   "alt": "Successful 2306+ Placement offers with above 50+LPA",
+   "width": 1354,
+   "height": 495
+  }
+ ],
+ "programmes": {
+  "heading": "Courses We Offer and Eligibility Criteria",
+  "ugEligibility": {
+   "status": "extracted",
+   "heading": "UNDERGRADUATE ELIGIBILITY",
+   "text": [
+    "Eligibility for B.Tech Programs under Regular Stream:",
+    "Nationality and Age: Resident Indian.",
+    "Note: Non-Resident Indian (NRI), holders of PIO or OCI card issued by Government of India should apply under International student application form only.",
+    "Should have attained the age of 16 years and 6 months on the 31st July of the calendar year in which the 12th Board examination is to be held.",
+    "Students with year gap of more than 3 years after 10+2 are not eligible for admission."
+   ],
+   "qualifyingExamination": "Applicant should have passed in Higher secondary examination (10, +2 pattern) or appearing in Higher Secondary examination in the current academic year with a minimum of 60% aggregate ( 3 subjects) in Physics (mandatory) , Mathematics (mandatory) and at least one of Chemistry / Biotechnology / Biology / Computer Science / Information Technology / Informatics Practices / Engineering Graphics / Botany and (or) Zoology as major subjects in regular subjects in regular stream from any board within India , CBSE , ISCE , Matriculation , IB or NIOS",
+   "gceALevel": "Physics and Mathematics as compulsory subjects along with one of the Chemistry/ Biotechnology/ Biology/ Computer Science/ Information Technology/ Informatics Practices/ Engineering Graphics as major subjects (equivalent to Advanced Placement level in each subject) in any International schools within India.",
+   "internationalBaccalaureate": {
+    "text": "International Baccalaureate (IB) diploma or IB certificate 2 subjects in HL (equivalent to Advanced Placement level or Honors) and 1 subject in SL is mandatory",
+    "table": [
+     {
+      "program": "All B.Tech Programs",
+      "HL": "Maths",
+      "SL/HL": "Physics and Chemistry/ Biotechnology/ Biology/ Computer Science/ Information Technology/ Informatics Practices/ Engineering Graphics"
+     },
+     {
+      "program": "For Biotech , Biotech (Genetic/Regenerative)and Biomedical",
+      "HL": "Biology",
+      "SL/HL": "Physics and Chemistry/ Biotechnology/ Biology/ Computer Science/ Information Technology/ Informatics Practices/ Engineering Graphics/Maths"
+     }
+    ]
+   },
+   "note": "For B.Tech Programs offered by the Department of Biotechnology, Department of Genetic Engineering and Department of Biomedical Engineering – Minimum 60% aggregate in PCM / PMB/PCB/PCB or Z (Botany or Zoology). Students who have not studied Mathematics as one of the major subjects in +2 must undertake an additional 4 credit courses in Mathematics during the First Year of B.Tech. Students who have completed +2 under NIOS must have completed the 10th standard from regular schooling or vice-versa. Students who have not studied Chemistry should undergo a bridge course in Chemistry in the first year."
+  },
+  "flabsUgNote": "* Students can choose to add a 4th year to their education to obtain a B.A (Honors.) / B.Sc (Honors.) / B.C.A (Honors.) / B.Com (Honors.) degree in accordance with NEP regulations.",
+  "lateralEntry": {
+   "status": "extracted",
+   "eligibility": "Eligibility Criteria - Candidates must have passed a 3 year Diploma in engineering/technology with aggregate of 60% in relevant specialization from a recognized university/college.",
+   "programmes": [
+    "B.Tech - Artificial Intelligence",
+    "B.Tech – Biomedical Engineering",
+    "B.Tech – Biotechnology",
+    "B.Tech – Civil Engineering",
+    "B.Tech – Computer Science and Business systems (TCS)",
+    "B.Tech – Computer Science and Engineering",
+    "B.Tech – Computer Science and Engineering with Specialization in Artificial Intelligence and Machine Learning",
+    "B.Tech – Computer Science and Engineering with Specialization in Cloud Computing",
+    "B.Tech – Computer Science and Engineering with Specialization in Gaming Technology",
+    "B.Tech – Computer Science and Engineering with Specialization in Big data Analytics",
+    "B.Tech – Computer Science and Engineering with Specialization in Internet Of Things",
+    "B.Tech – Computer Science and Engineering with Specialization in Cyber Security",
+    "B.Tech - Electronics and Communications Engineering with specialization in Data Science",
+    "B.Tech – Electrical and Electronics Engineering",
+    "B.Tech – Electronics and Communication Engineering",
+    "B.Tech – Information Technology",
+    "B.Tech – Mechanical Engineering"
+   ]
+  },
+  "items": [
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Biomedical Engineering",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Biology (PCM/PCB)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Biomedical Engineering with Specialization in Machine Intelligence",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Biology (PCM/PCB)",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Biotechnology",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Biology (PCM/PCB)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Civil Engineering",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Computer Science and Engineering",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Artificial Intelligence",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Computer Science and Engineering (Data Science)",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Computer Science and Business systems (TCS)",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Computer Science and Engineering with Specialization in Artificial Intelligence and Machine Learning",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Computer Science and Engineering with Specialization in Cloud Computing",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Computer Science and Engineering with Specialization in Gaming Technology",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Computer Science and Engineering with Specialization in Big data Analytics",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Computer Science and Engineering with Specialization in Internet Of Things",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Computer Science and Engineering with Specialization in Cyber Security",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech Electronics and Communications Engineering with specialization in Data Science",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Electrical and Electronics Engineering",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Electronics and Communication Engineering",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Information Technology",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Mechanical Engineering",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": true,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
+    "title": "B.Tech - Mechanical Engineering with Specialization in Artificial Intelligence and Machine Learning",
+    "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "POSTGRADUATE PROGRAMME – Full Time",
+    "title": "M.Tech – Computer Science and Engineering",
+    "eligibility": "B.E/B.Tech (Any Stream) (except B. Tech in Biotechnology and specialisations, Food Technology and specialisations), Four year Bachelor’s Degree in Mathematics, MCA/ M.Sc (CSE, IT) (or) any equivalent degree in the above Disciplines with a minimum aggregate of 50%.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "POSTGRADUATE PROGRAMME – Full Time",
+    "title": "M.Tech – Computer Science and Engineering with Specialization in Artificial Intelligence and Machine Learning",
+    "eligibility": "B.E/B.Tech (Any Stream) (except B. Tech in Biotechnology and specialisations, Food Technology and specialisations), Four year Bachelor’s Degree in Mathematics, MCA/ M.Sc. (CSE, IT) (or) any equivalent degree in the above Disciplines with a minimum aggregate of 50%.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "POSTGRADUATE PROGRAMME – Full Time",
+    "title": "M.Tech – Data Science",
+    "eligibility": "B.E/B.Tech. (Any Stream) (except B. Tech in Biotechnology and specializations, Food Technology and specialisations), MCA/MSc Maths, Statistics, IT, Computer Science, Physics, Chemistry (or) any equivalent degree in the above disciplines with a minimum aggregate of 50%.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "POSTGRADUATE PROGRAMME – Full Time",
+    "title": "M.Tech – Cyber Security",
+    "eligibility": "BE/BTech (Any Stream) (or) MCA/MSc – in Maths/Statistics/IT/Computer Science (or) its equivalent with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "POSTGRADUATE PROGRAMME – Full Time",
+    "title": "M.Tech – Electric Vehicle Technology",
+    "eligibility": "Eligibility for this B.E/B.Tech. in Automobile, Mechanical, EEE, EIE, ECE, Mechatronics, Manufacturing Engineering, M.Sc. (Physics, Electronics) (or) any equivalent degree in the above Disciplines with a minimum aggregate of 50%.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "POSTGRADUATE PROGRAMME – Full Time",
+    "title": "M.Tech – Computer Aided Design",
+    "eligibility": "Eligibility for this M.Tech Program is a basic degree or equivalent in B.E / B.Tech. in Mechanical Engineering / Production Engineering / Automobile Engineering. / Aerospace / Aeronautical Engineering (or) AMIE (Mech) / AMAeSI(Aero) / IMechE (or) any equivalent degree in the above Disciplines with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "POSTGRADUATE PROGRAMME – Full Time",
+    "title": "M.Tech – Construction Engineering and Management",
+    "eligibility": "Eligibility for this M.Tech Program is a basic degree or equivalent in B.E / B.Tech. in Civil / Civil Infrastructure Engineering / Architectural Engineering (or) B.Arch. (or) its equivalent degree in the above Disciplines with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "ENGINEERING PROGRAMME",
+    "section": "POSTGRADUATE PROGRAMME – Full Time",
+    "title": "M.Tech – Structural Engineering",
+    "eligibility": "Eligibility for this M.Tech Program is a basic degree or equivalent in B.E / B.Tech. in Civil / Civil Infrastructure Engineering / Architectural Engineering (or) its equivalent degree in the above Disciplines with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "ARCHITECTURE PROGRAMME",
+    "section": "UNDERGRADUATE COURSES",
+    "title": "B.Arch - Architecture (Duration: 5 Years)",
+    "eligibility": "Pass in 10+2 scheme of examination with at least 50% aggregate marks in Physics, Chemistry and Mathematics and also at least 50% marks in aggregate of the 10+2 level examination or passed 10+3 Diploma Examination with Mathematics as compulsory subject with at least 50% marks in aggregate. Qualify an Aptitude Test in Architecture conducted by the Council of Architecture or by a competent authority of the Central Government or the respective State Government complying with the admission norms prescribed by the Council of Architecture / competent authority. Eligibility norms will be aligned as per the norms amended by the Council of Architecture from time to time.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ARCHITECTURE PROGRAMME",
+    "section": "UNDERGRADUATE COURSES",
+    "title": "B.Des - Interior Design (Duration 4 years)",
+    "eligibility": "Pass in 10+2 scheme of examination or any other equivalent examination conducted by any authority recognized by SRMIST with at least 50% aggregate marks in 10+2 level examination. Candidate can belong to any group of study (Science, Commerce, Fine Arts or any other stream). Candidates with UCEED score will be given preference.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ARCHITECTURE PROGRAMME",
+    "section": "UNDERGRADUATE COURSES",
+    "title": "B.Des - Industrial Design (Duration 4 years)",
+    "eligibility": "Pass in 10+2 scheme of examination or any other equivalent examination conducted by any authority recognized by SRMIST with at least 50% aggregate marks in 10+2 level examination. Candidate can belong to any group of study (Science, Commerce, Fine Arts or any other stream). Candidates with UCEED score will be given preference.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "ARCHITECTURE PROGRAMME",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "M.Arch - Architecture and Construction Project Management",
+    "eligibility": "50% aggregate in the Bachelor of Architecture degree program or any other equivalent qualification recognized by the Council of Architecture / competent authority. Qualify in Post Graduate Entrance Test in Architecture (PG NATA) conducted by the Council of Architecture or by a competent authority of the Central Government or the respective State Government complying with the admission norms prescribed by the Council of Architecture / Competent Authority. Eligibility norms will be aligned as per the norms amended by the Council of Architecture from time to time.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - Commerce",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - Corporate Secretaryship",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - Accounting and Finance",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - Information Systems and Management",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - Professional Accounting",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - Strategic Finance",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - International Accounting & Finance",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - Logistics",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - Computer Applications",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - Banking, Financial Services and Insurance",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - Business Analytics",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - Fintech",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Com* - Finance and Taxation (embedded with Coaching for Chartered Accountant (CA))",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.A* - English",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.A* - Journalism and Mass Communications",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "BCA* - Computer applications",
+    "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) with Mathematics / Business Mathematics / Statistics / Business Statistics/ Allied Mathematics / Computer Science/ Computer Application/ as one of the core subjects. (OR) Diploma in Engineering (10+3 / 10+2+2 Pattern) recognized by the Government / Competent Authority.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "BCA* - Data Science",
+    "eligibility": "A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognised government or competent authority with a minimum aggregate of 50%. Mandatory subjects : 10 + 2 (Higher Secondary) with Mathematics / Business Mathematics / Statistics / Business Statistics/ Allied Mathematics / Computer Science/ Computer Application as one of the core subjects.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "BCA*- Computer Applications with Specialization in Generative AI",
+    "eligibility": "A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognised government or competent authority with a minimum aggregate of 50%. Mandatory subjects : 10 + 2 (Higher Secondary) with Mathematics / Business Mathematics / Statistics / Business Statistics/ Allied Mathematics / Computer Science/ Computer Application as one of the core subjects.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Biotechnology",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% Mandatory subjects :1. Biology 2. Atleast one of Physics/ Chemistry/ Computer Science/ Mathematics/ Psychology or any Life Science subjects.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Computer science",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognised government or competent authority with a minimum aggregate of 50%. Mandatory subjects :1. Atleast one of Mathematics / Business Mathematics / Statistics / Allied Mathematics.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Computer Science with Specialization in Cyber Security",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognised government or competent authority with a minimum aggregate of 50%. Mandatory subjects :1. Atleast one of Mathematics / Business Mathematics / Statistics / Allied Mathematics.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Computer Science With Specialization in Artificial Intelligence and Machine Learning",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognised government or competent authority with a minimum aggregate of 50%. Mandatory subjects :1. Atleast one of Mathematics / Business Mathematics / Statistics / Allied Mathematics.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Computer Science with Specialization in Agentic AI",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognised government or competent authority with a minimum aggregate of 50%. Mandatory subjects :1. Atleast one of Mathematics / Business Mathematics / Statistics / Allied Mathematics.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Computer with Specialization in Data Science",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognised government or competent authority with a minimum aggregate of 50%. Mandatory subjects :1. Atleast one of Mathematics / Business Mathematics / Statistics / Allied Mathematics.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Mathematics with Specialization in Computational Finance",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50%. Mandatory subjects :1. Atleast one of Mathematics / Business Mathematics / Statistics / Business Statistics / Allied Mathematics.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Statistics",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% Mandatory subjects : Atleast one of Mathematics / Statistics.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Visual Communication",
+    "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) Any group (or) 10+3 Year Diploma. (Minimum Aggregate of 50%)",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Visual Communication with Specialization in Artificial Intelligence",
+    "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) Any group (or) 10+3 Year Diploma. (Minimum Aggregate of 50%)",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Artificial Intelligence and Animation",
+    "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) Any group (or) 10+3 Year Diploma. (Minimum Aggregate of 50%)",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Hotel and Hospitality Administration",
+    "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) Any group (or) 10+3 Year Diploma. (Minimum Aggregate of 50%)",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Digital Film Technology",
+    "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) with Any Group. (Minimum aggregate of 40%)",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Fashion designing",
+    "eligibility": "A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
+    "title": "B.Sc* - Psychology",
+    "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "M.A - English (Duration 2 years)",
+    "eligibility": "A pass in B.A (English) with a minimum aggregate of 50% in UG.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "M.Com - Commerce (Duration 2 years)",
+    "eligibility": "Eligibility Criteria - 1. A pass in any UG degree with Commerce and Accountancy / Business studies as major subjects. 2. A minimum aggregate of 50% in UG",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "M.Com - Accounting and Finance (Duration 2 years)",
+    "eligibility": "Eligibility Criteria - 1. A pass in any UG degree with Commerce and Accountancy / Business studies as major subjects. 2. A minimum aggregate of 50% in UG.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "MCA - Computer applications(Duration 2 years)",
+    "eligibility": "Eligibility Criteria - 1. A Pass in BCA / B.Sc. in Computer Science / B.Sc. in Information Technology / B.Sc in Computer Technology / Bachelor Degree in Computer Science Engineering or equivalent Degree from a University recognized / certified by UGC / SRMIST / AIU (OR) A Pass in B.Sc. / B.Com. / B.A. from University recognized/certified by UGC / SRMIST / AIU with Mathematics/ Business Mathematics/ Statistics/Business Statistics/Applied Mathematics at 10+2 Level or at Graduation Level. 2. A minimum aggregate of 50% in UG.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "MCA - Computer Application with Specialization Generative AI",
+    "eligibility": "Eligibility Criteria - 1. A Pass in BCA / B.Sc. in Computer Science / B.Sc. in Information Technology / B.Sc in Computer Technology / Bachelor Degree in Computer Science Engineering or equivalent Degree from a University recognized / certified by UGC / SRMIST / AIU (OR) A Pass in B.Sc. / B.Com. / B.A. from University recognized/certified by UGC / SRMIST / AIU with Mathematics/ Business Mathematics/ Statistics/Business Statistics/Applied Mathematics at 10+2 Level or at Graduation Level. 2. A minimum aggregate of 50% in UG.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "M.Sc - Biotechnology",
+    "eligibility": "Eligibility Criteria - 1. A pass in one of B.Sc. Biotechnology (or) B.Sc. Biology (or) B.Sc. Microbiology (or) B.Sc. Biochemistry (or) B.Sc Medical Lab Technology (or)B.Sc. Agriculture (or) B.Sc. Physics (or) B.Sc. Botany (or) B.Sc. Zoology (or) B.Sc. Chemistry (or) B.Tech. Biotech (or) MBBS (or) BDS (or) BVSC (or) Genetics (or) any UG course with Biotechnology as one of the subjects. 2. A minimum aggregate of 50% in UG.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "M.Sc - Fashion Design",
+    "eligibility": "Eligibility Criteria - A pass in any UG degree with a minimum aggregate of 50%.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "M.Sc - Applied Data science",
+    "eligibility": "Eligibility Criteria - 1. A pass in B.Sc Computer Science / BCA / B.Sc IT / B.Sc Mathematics / B.Sc Statistics/ B.Sc Physics/ B.Sc Electronics / B.Voc Data Science and Analytics/ B.Sc Computer System and Design/ B.Sc Triple major subjects with Computer Science as one of the Major subjects / Bachelor Degree in Computer Science Engineering or equivalent Degree from a University recognized / certified by UGC / SRMIST / AIU 2. A minimum aggregate of 50% in UG.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "M.Sc - Visual communication",
+    "eligibility": "Eligibility Criteria - A pass in any UG degree with a minimum aggregate of 50%.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "M.Sc - Computer Science",
+    "eligibility": "Eligibility Criteria - 1. A pass in B.Sc Computer Science / BCA / B.Sc IT / B.Sc Mathematics / B.Sc Statistics/ B.Sc Physics/ B.Sc Electronics / B.Sc Triple major subjects with Computer Science as one of the Major subjects / Bachelor Degree in Computer Science Engineering or equivalent Degree from a University recognized / certified by UGC / SRMIST / AIU 2. A minimum aggregate of 50% in UG.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "M.Sc - Computer Science with specialization in Cyber Security",
+    "eligibility": "Eligibility Criteria - 1. A pass in B.Sc Computer Science / BCA / B.Sc IT / B.Sc Mathematics / B.Sc Statistics/ B.Sc Physics/ B.Sc Electronics / B.Sc Triple major subjects with Computer Science as one of the Major subjects / Bachelor Degree in Computer Science Engineering or equivalent Degree from a University recognized / certified by UGC / SRMIST / AIU 2. A minimum aggregate of 50% in UG.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "M.Sc - Computer Science with specialization in Artificial Intelligence and Machine Learning",
+    "eligibility": "Eligibility Criteria - 1. A pass in B.Sc Computer Science / BCA / B.Sc IT / B.Sc Mathematics / B.Sc Statistics/ B.Sc Physics/ B.Sc Electronics / B.Sc Triple major subjects with Computer Science as one of the Major subjects / Bachelor Degree in Computer Science Engineering or equivalent Degree from a University recognized / certified by UGC / SRMIST / AIU 2. A minimum aggregate of 50% in UG.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+    "section": "DIPLOMA COURSE",
+    "title": "Executive PG Diploma in Practical English and Life Skills",
+    "eligibility": null,
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "Diploma"
+   },
+   {
+    "faculty": "MANAGEMENT PROGRAMME",
+    "section": "UNDERGRADUATE COURSES",
+    "title": "BBA - Business Administration (Duration 3 years)",
+    "eligibility": "A Pass in Higher Secondary Examination with Minimum eligibility of aggregate of 50% in +2 (Preference will be given to students without any break in study)",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "MANAGEMENT PROGRAMME",
+    "section": "UNDERGRADUATE COURSES",
+    "title": "BBA - Data Science (Duration 3 years)",
+    "eligibility": "A Pass in Higher Secondary Examination with Minimum eligibility of aggregate of 50% in +2 (Preference will be given to students without any break in study)",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "UG"
+   },
+   {
+    "faculty": "MANAGEMENT PROGRAMME",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "MBA - Business Administration (Duration 2 years)",
+    "eligibility": "1. A Bachelor's degree with minimum aggregate of 50%. 2. Admission will be done through SRM Joint Entrance Examination for Management (SRMJEEM) followed by a Personal Interview. Students with eligible entrance scores in CAT/XAT/MAT/GMAT/NMAT/CMAT/TANCET will be granted direct consideration for the personal interview. 3. Preference would be given to candidates with work experience.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "MANAGEMENT PROGRAMME",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "MBA - Artificial Intelligence and Data Science (Duration 2 years)",
+    "eligibility": "1. A Bachelor's degree with minimum aggregate of 50%. 2. Admission will be done through SRM Joint Entrance Examination for Management (SRMJEEM) followed by a Personal Interview. Students with eligible entrance scores in CAT/XAT/MAT/GMAT/NMAT/CMAT/TANCET will be granted direct consideration for the personal interview. 3. Preference would be given to candidates with work experience.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "MANAGEMENT PROGRAMME",
+    "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
+    "title": "MBA - Business Analytics (Duration 2 years)",
+    "eligibility": "1. A Bachelor's degree with minimum aggregate of 50%. 2. Admission will be done through SRM Joint Entrance Examination for Management (SRMJEEM) followed by a Personal Interview. Students with eligible entrance scores in CAT/XAT/MAT/GMAT/NMAT/CMAT/TANCET will be granted direct consideration for the personal interview. 3. Preference would be given to candidates with work experience.",
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "PG"
+   },
+   {
+    "faculty": "MANAGEMENT PROGRAMME",
+    "section": "DIPLOMA COURSES",
+    "title": "Executive PG Diploma in Deep Tech and Leadership",
+    "eligibility": null,
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "Diploma"
+   },
+   {
+    "faculty": "MANAGEMENT PROGRAMME",
+    "section": "DIPLOMA COURSES",
+    "title": "Executive PG Diploma in AI Based Healthcare Management",
+    "eligibility": null,
+    "lateralEntry": false,
+    "partTime": false,
+    "level": "Diploma"
+   },
+   {
+    "faculty": "WORKING PROFESSIONAL COURSES(WPC)",
+    "section": null,
+    "title": "B.Tech - Civil Engineering (Part Time)",
+    "eligibility": "Passed 10th along with 3 years of diploma in relevant engineering or technology branch from a recognised DOTE Affiliated institution.",
+    "lateralEntry": false,
+    "partTime": true,
+    "level": "UG"
+   },
+   {
+    "faculty": "WORKING PROFESSIONAL COURSES(WPC)",
+    "section": null,
+    "title": "B.Tech - Electrical & Electronics Engineering (Part Time)",
+    "eligibility": "Passed 10th along with 3 years of diploma in relevant engineering or technology branch from a recognised DOTE Affiliated institution.",
+    "lateralEntry": false,
+    "partTime": true,
+    "level": "UG"
+   },
+   {
+    "faculty": "WORKING PROFESSIONAL COURSES(WPC)",
+    "section": null,
+    "title": "B.Tech - Mechanical Engineering (Part Time)",
+    "eligibility": "Passed 10th along with 3 years of diploma in relevant engineering or technology branch from a recognised DOTE Affiliated institution.",
+    "lateralEntry": false,
+    "partTime": true,
+    "level": "UG"
+   },
+   {
+    "faculty": "WORKING PROFESSIONAL COURSES(WPC)",
+    "section": null,
+    "title": "M.Tech - Structural Engineering (Part Time)",
+    "eligibility": "Passed 10th along with 3 years of diploma in relevant engineering or technology branch from a recognised DOTE Affiliated institution.",
+    "lateralEntry": false,
+    "partTime": true,
+    "level": "PG"
+   },
+   {
+    "faculty": "WORKING PROFESSIONAL COURSES(WPC)",
+    "section": null,
+    "title": "M.Tech - Computer Science and Engineering (Part Time)",
+    "eligibility": "B.E/B.Tech (Any Stream) (except B. Tech in Biotechnology and specialisations, Food Technology and specialisations), Four year Bachelor’s Degree in Mathematics, MCA/ M.Sc (CSE, IT) (or) any equivalent degree in the above Disciplines with a minimum aggregate of 50%.",
+    "lateralEntry": false,
+    "partTime": true,
+    "level": "PG"
+   },
+   {
+    "faculty": "WORKING PROFESSIONAL COURSES(WPC)",
+    "section": null,
+    "title": "M.Tech - Computer Science and Engineering W/S in Artificial Intelligence and Machine Learning (Part Time)",
+    "eligibility": "B.E/B.Tech (Any Stream) (except B. Tech in Biotechnology and specialisations, Food Technology and specialisations), Four year Bachelor’s Degree in Mathematics, MCA/ M.Sc. (CSE, IT) (or) any equivalent degree in the above Disciplines with a minimum aggregate of 50%.",
+    "lateralEntry": false,
+    "partTime": true,
+    "level": "PG"
+   },
+   {
+    "faculty": "WORKING PROFESSIONAL COURSES(WPC)",
+    "section": null,
+    "title": "M.Tech - Artificial Intelligence and Data Science (Part Time)",
+    "eligibility": "B.E./B.Tech. (any stream) (or) MCA/MSc – in Maths/Statistics/IT/Computer Science/Physics/Chemistry (or) its equivalent with a minimum aggregate of 50%.",
+    "lateralEntry": false,
+    "partTime": true,
+    "level": "PG"
+   }
+  ]
+ },
+ "steps": {
+  "image": {
+   "src": "/assets/ramapuram/process/steps-to-follow.png",
+   "alt": "Steps to follow",
+   "width": 414,
+   "height": 472
+  },
+  "items": [
+   "Register Yourself",
+   "Verify Mobile",
+   "Fill Enquiry Form",
+   "Upload required documents",
+   "Submit Enquiry form"
+  ]
+ },
+ "madeSimple": {
+  "heading": "Made Simple",
+  "subheading": "Keep documents ready",
+  "items": [
+   "Photograph Image – 200 X 230 px, 5 MB",
+   "Signature Image – 140 X 60 px, 5 MB",
+   "Net banking | Credit Debit Card | UPI | Wallet"
+  ]
+ },
+ "why": {
+  "heading": "Why SRM IST Ramapuram",
+  "intro": "We focus on the enlightenment and enhancement of the students. We offer various facilities for the benefits of the students to make the learning environment a better place for them.",
+  "items": [
+   {
+    "title": "Placement in the Fortune 5oo companies",
+    "image": {
+     "src": "/assets/ramapuram/campus/why-placement-fortune-500.jpg",
+     "alt": "Students outside the SRM Institute of Science & Technology building",
+     "width": 700,
+     "height": 467
+    }
+   },
+   {
+    "title": "Safely located with in Chennai city",
+    "image": {
+     "src": "/assets/ramapuram/campus/why-chennai-city.jpg",
+     "alt": "Chennai Central railway station",
+     "width": 1000,
+     "height": 434
+    }
+   },
+   {
+    "title": "Semester Abroad Program in 9+ countries",
+    "image": {
+     "src": "/assets/ramapuram/campus/why-semester-abroad.jpg",
+     "alt": "Young man smiling at a desk",
+     "width": 1597,
+     "height": 1789
+    }
+   },
+   {
+    "title": "International Internships",
+    "image": {
+     "src": "/assets/ramapuram/campus/why-international-internships.jpg",
+     "alt": "Student group at the Petronas Towers with banner \"College of Engineering and Technology – International Immersion and Internship Programme – October 2023 – India–Malaysia\"",
+     "width": 780,
+     "height": 1040
+    }
+   },
+   {
+    "title": "Support for Innovation & Start-ups",
+    "image": {
+     "src": "/assets/ramapuram/campus/why-innovation-startups.jpg",
+     "alt": "Student testing a sensor glove in a lab",
+     "width": 2560,
+     "height": 1709
+    }
+   },
+   {
+    "title": "Vibrant Campus Life",
+    "image": {
+     "src": "/assets/ramapuram/campus/why-vibrant-campus-life.png",
+     "alt": "Students on stage at an \"Epoch\" event",
+     "width": 800,
+     "height": 800
+    }
+   },
+   {
+    "title": "Fully Equipped Hostel Facilities",
+    "image": {
+     "src": "/assets/ramapuram/infrastructure/hostel.jpg",
+     "alt": "Student with ID card among trees (does not show a hostel)",
+     "width": 2560,
+     "height": 1709
+    }
+   },
+   {
+    "title": "State-of-the-Art Infrastructure",
+    "image": {
+     "src": "/assets/ramapuram/infrastructure/state-of-the-art-infrastructure.jpg",
+     "alt": "Multi-storey campus building",
+     "width": 320,
+     "height": 400
+    }
+   }
+  ]
+ },
+ "collaborations": {
+  "heading": "Global Academic Collaborations",
+  "items": [
+   {
+    "name": "Massachusetts Institute of Technology",
+    "logo": {
+     "src": "/assets/ramapuram/accreditation/collab-mit.png",
+     "alt": "Massachusetts Institute of Technology",
+     "width": 810,
+     "height": 308
+    }
+   },
+   {
+    "name": "National University of Singapore",
+    "logo": {
+     "src": "/assets/ramapuram/accreditation/collab-nus.png",
+     "alt": "National University of Singapore",
+     "width": 810,
+     "height": 308
+    }
+   },
+   {
+    "name": "Birmingham City University",
+    "logo": {
+     "src": "/assets/ramapuram/accreditation/collab-birmingham-city-university.png",
+     "alt": "Birmingham City University",
+     "width": 810,
+     "height": 308
+    }
+   },
+   {
+    "name": "Tsing Hua University",
+    "logo": {
+     "src": "/assets/ramapuram/accreditation/collab-tsing-hua-university.png",
+     "alt": "Tsing Hua University",
+     "width": 1181,
+     "height": 449
+    }
+   },
+   {
+    "name": "Illinois Tech",
+    "logo": {
+     "src": "/assets/ramapuram/accreditation/collab-illinois-tech.svg",
+     "alt": "Illinois Tech",
+     "width": 531,
+     "height": 130
+    }
+   },
+   {
+    "name": "Taipei Tech – National Taipei University of Technology",
+    "logo": {
+     "src": "/assets/ramapuram/accreditation/collab-taipei-tech.png",
+     "alt": "Taipei Tech – National Taipei University of Technology",
+     "width": 350,
+     "height": 56
+    }
+   },
+   {
+    "name": "UC Davis",
+    "logo": {
+     "src": "/assets/ramapuram/accreditation/collab-uc-davis.svg",
+     "alt": "UC Davis",
+     "width": 100,
+     "height": 16
+    }
+   },
+   {
+    "name": "La Trobe University",
+    "logo": {
+     "src": "/assets/ramapuram/accreditation/collab-la-trobe-university.svg",
+     "alt": "La Trobe University",
+     "width": 452,
+     "height": 153
+    }
+   },
+   {
+    "name": "Harvard Medical School",
+    "logo": {
+     "src": "/assets/ramapuram/accreditation/collab-harvard-medical-school.svg",
+     "alt": "Harvard Medical School",
+     "width": 291,
+     "height": 75
+    }
+   }
+  ]
+ },
+ "placements": {
+  "heading": "Placements at SRM IST Ramapuram",
+  "cards": [
+   {
+    "title": "Outstanding Placement Record",
+    "text": "Graduates have consistently secured placements with top companies across diverse sectors."
+   },
+   {
+    "title": "Impeccable Statistics",
+    "text": "SRM IST displays the best professional outcomes for students with impeccable placement records each year!"
+   },
+   {
+    "title": "Students Placed In Reputed Organizations",
+    "text": "Students placed in Top Companies in India & Abroad"
+   }
+  ],
+  "profiles": [
+   {
+    "name": "Rupali M",
+    "batch": "2026 BATCH",
+    "department": "CSE",
+    "ctc": "CTC : 55 LPA",
+    "company": "Microsoft",
+    "photo": {
+     "src": "/assets/ramapuram/placements/rupali-m.png",
+     "alt": "Rupali M",
+     "width": 135,
+     "height": 135
+    },
+    "companyLogo": {
+     "src": "/assets/ramapuram/recruiters/microsoft.png",
+     "alt": "Microsoft",
+     "width": 110,
+     "height": 55
+    }
+   },
+   {
+    "name": "Prajol D",
+    "batch": "2026 BATCH",
+    "department": "B.TECH - CSE",
+    "ctc": "CTC : 50 LPA",
+    "company": "Interact",
+    "photo": {
+     "src": "/assets/ramapuram/placements/prajol-d.jpg",
+     "alt": "Prajol D",
+     "width": 218,
+     "height": 222
+    },
+    "companyLogo": {
+     "src": "/assets/ramapuram/placements/company-interact.jpg",
+     "alt": "Interact",
+     "width": 200,
+     "height": 200
+    }
+   },
+   {
+    "name": "Shreya Pandey",
+    "batch": "2026 BATCH",
+    "department": "B.TECH - CSE(CS)",
+    "ctc": "CTC : 27 LPA",
+    "company": "Juspay",
+    "photo": {
+     "src": "/assets/ramapuram/placements/shreya-pandey.png",
+     "alt": "Shreya Pandey",
+     "width": 135,
+     "height": 135
+    },
+    "companyLogo": {
+     "src": "/assets/ramapuram/placements/company-juspay.png",
+     "alt": "Juspay",
+     "width": 137,
+     "height": 83
+    }
+   },
+   {
+    "name": "S Abirami",
+    "batch": "2026 BATCH",
+    "department": "B.TECH - CSE",
+    "ctc": "CTC : 25 LPA",
+    "company": "Morgan Stanley",
+    "photo": {
+     "src": "/assets/ramapuram/placements/s-abirami.png",
+     "alt": "S Abirami",
+     "width": 135,
+     "height": 135
+    },
+    "companyLogo": {
+     "src": "/assets/ramapuram/recruiters/morgan-stanley.png",
+     "alt": "Morgan Stanley",
+     "width": 151,
+     "height": 30
+    }
+   },
+   {
+    "name": "Vikash P",
+    "batch": "2026 BATCH",
+    "department": "B.TECH - CSBS",
+    "ctc": "CTC : 26 LPA",
+    "company": "Oracle Financial Services",
+    "photo": {
+     "src": "/assets/ramapuram/placements/vikash-p.png",
+     "alt": "Vikash P",
+     "width": 135,
+     "height": 135
+    },
+    "companyLogo": {
+     "src": "/assets/ramapuram/placements/company-oracle-fs.png",
+     "alt": "Oracle Financial Services",
+     "width": 137,
+     "height": 83
+    }
+   },
+   {
+    "name": "U Sanjaykumar",
+    "batch": "2026 BATCH",
+    "department": "B.TECH - CSE",
+    "ctc": "CTC : 26 LPA",
+    "company": "Oracle Financial Services",
+    "photo": {
+     "src": "/assets/ramapuram/placements/u-sanjaykumar.png",
+     "alt": "U Sanjaykumar",
+     "width": 135,
+     "height": 135
+    },
+    "companyLogo": {
+     "src": "/assets/ramapuram/placements/company-oracle-fs.png",
+     "alt": "Oracle Financial Services",
+     "width": 137,
+     "height": 83
+    }
+   },
+   {
+    "name": "R Mohan",
+    "batch": "2026 BATCH",
+    "department": "B.TECH - CSE(AIML)",
+    "ctc": "CTC : 22 LPA",
+    "company": "Packy",
+    "photo": {
+     "src": "/assets/ramapuram/placements/r-mohan.png",
+     "alt": "R Mohan",
+     "width": 135,
+     "height": 135
+    },
+    "companyLogo": {
+     "src": "/assets/ramapuram/placements/company-packy.png",
+     "alt": "Packy",
+     "width": 137,
+     "height": 83
+    }
+   },
+   {
+    "name": "J Pooja",
+    "batch": "2026 BATCH",
+    "department": "B.TECH - CSE - AIML",
+    "ctc": "CTC : 20 LPA",
+    "company": "JPMorgan Chase",
+    "photo": {
+     "src": "/assets/ramapuram/placements/j-pooja.png",
+     "alt": "J Pooja",
+     "width": 135,
+     "height": 135
+    },
+    "companyLogo": {
+     "src": "/assets/ramapuram/placements/company-jpmorgan.png",
+     "alt": "JPMorgan Chase",
+     "width": 137,
+     "height": 83
+    }
+   },
+   {
+    "name": "Ivin Poly",
+    "batch": "2026 BATCH",
+    "department": "B.TECH - CSE(CC)",
+    "ctc": "CTC : 20 LPA",
+    "company": "Booking Holdings",
+    "photo": {
+     "src": "/assets/ramapuram/placements/ivin-poly.png",
+     "alt": "Ivin Poly",
+     "width": 135,
+     "height": 135
+    },
+    "companyLogo": {
+     "src": "/assets/ramapuram/placements/company-booking-holdings.png",
+     "alt": "Booking Holdings",
+     "width": 137,
+     "height": 83
+    }
+   },
+   {
+    "name": "Anushka Bhattacharji",
+    "batch": "2027 BATCH",
+    "department": "B.TECH - CSE(AIML)",
+    "ctc": "CTC : 20 LPA",
+    "company": "JPMorgan Chase",
+    "photo": {
+     "src": "/assets/ramapuram/placements/anushka-bhattacharji.png",
+     "alt": "Anushka Bhattacharji",
+     "width": 135,
+     "height": 135
+    },
+    "companyLogo": {
+     "src": "/assets/ramapuram/placements/company-jpmorgan.png",
+     "alt": "JPMorgan Chase",
+     "width": 137,
+     "height": 83
+    }
+   }
+  ]
+ },
+ "recruiters": {
+  "heading": "Top Placements in the Fortune 500 Companies",
+  "logos": [
+   {
+    "name": "Code Nation",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/code-nation.png",
+     "alt": "Code Nation",
+     "width": 118,
+     "height": 29
+    }
+   },
+   {
+    "name": "Wells Fargo",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/wells-fargo.png",
+     "alt": "Wells Fargo",
+     "width": 50,
+     "height": 54
+    }
+   },
+   {
+    "name": "Adobe",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/adobe.png",
+     "alt": "Adobe",
+     "width": 113,
+     "height": 31
+    }
+   },
+   {
+    "name": "Microsoft",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/microsoft.png",
+     "alt": "Microsoft",
+     "width": 110,
+     "height": 55
+    }
+   },
+   {
+    "name": "Amazon",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/amazon.png",
+     "alt": "Amazon",
+     "width": 129,
+     "height": 40
+    }
+   },
+   {
+    "name": "SquadCast",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/squadcast.png",
+     "alt": "SquadCast",
+     "width": 146,
+     "height": 77
+    }
+   },
+   {
+    "name": "ReverseLab",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/reverselab.png",
+     "alt": "ReverseLab",
+     "width": 87,
+     "height": 61
+    }
+   },
+   {
+    "name": "Arm",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/arm.png",
+     "alt": "Arm",
+     "width": 126,
+     "height": 84
+    }
+   },
+   {
+    "name": "TCS",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/tcs.png",
+     "alt": "TCS",
+     "width": 128,
+     "height": 52
+    }
+   },
+   {
+    "name": "MaxLinear",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/maxlinear.png",
+     "alt": "MaxLinear",
+     "width": 123,
+     "height": 55
+    }
+   },
+   {
+    "name": "Intel",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/intel.png",
+     "alt": "Intel",
+     "width": 90,
+     "height": 90
+    }
+   },
+   {
+    "name": "Western Digital",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/western-digital.png",
+     "alt": "Western Digital",
+     "width": 119,
+     "height": 37
+    }
+   },
+   {
+    "name": "HyperVerge",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/hyperverge.png",
+     "alt": "HyperVerge",
+     "width": 80,
+     "height": 80
+    }
+   },
+   {
+    "name": "Richpanel",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/richpanel.png",
+     "alt": "Richpanel",
+     "width": 144,
+     "height": 45
+    }
+   },
+   {
+    "name": "Arista",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/arista.png",
+     "alt": "Arista",
+     "width": 123,
+     "height": 70
+    }
+   },
+   {
+    "name": "Google",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/google.png",
+     "alt": "Google",
+     "width": 99,
+     "height": 34
+    }
+   },
+   {
+    "name": "Atlassian",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/atlassian.png",
+     "alt": "Atlassian",
+     "width": 141,
+     "height": 18
+    }
+   },
+   {
+    "name": "Autodesk",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/autodesk.png",
+     "alt": "Autodesk",
+     "width": 165,
+     "height": 93
+    }
+   },
+   {
+    "name": "Commvault",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/commvault.png",
+     "alt": "Commvault",
+     "width": 144,
+     "height": 39
+    }
+   },
+   {
+    "name": "Kaleyra",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/kaleyra.png",
+     "alt": "Kaleyra",
+     "width": 107,
+     "height": 49
+    }
+   },
+   {
+    "name": "Infosys",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/infosys.png",
+     "alt": "Infosys",
+     "width": 103,
+     "height": 40
+    }
+   },
+   {
+    "name": "CTS",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/cts.png",
+     "alt": "CTS",
+     "width": 138,
+     "height": 25
+    }
+   },
+   {
+    "name": "Wipro",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/wipro.png",
+     "alt": "Wipro",
+     "width": 75,
+     "height": 60
+    }
+   },
+   {
+    "name": "Capgemini",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/capgemini.png",
+     "alt": "Capgemini",
+     "width": 135,
+     "height": 32
+    }
+   },
+   {
+    "name": "Morgan Stanley",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/morgan-stanley.png",
+     "alt": "Morgan Stanley",
+     "width": 151,
+     "height": 30
+    }
+   },
+   {
+    "name": "Tech Mahindra",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/tech-mahindra.png",
+     "alt": "Tech Mahindra",
+     "width": 130,
+     "height": 38
+    }
+   },
+   {
+    "name": "Cloudera",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/cloudera.png",
+     "alt": "Cloudera",
+     "width": 129,
+     "height": 17
+    }
+   },
+   {
+    "name": "AB InBev",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/ab-inbev.png",
+     "alt": "AB InBev",
+     "width": 145,
+     "height": 51
+    }
+   },
+   {
+    "name": "L&T",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/l-and-t.png",
+     "alt": "L&T",
+     "width": 165,
+     "height": 45
+    }
+   },
+   {
+    "name": "AiDash",
+    "logo": {
+     "src": "/assets/ramapuram/recruiters/aidash.png",
+     "alt": "AiDash",
+     "width": 137,
+     "height": 22
+    }
+   }
+  ]
+ },
+ "ctaHeading": "Join India's #1 Ranked deemed to be University",
+ "campus": {
+  "heading": "A Campus That You Will Love",
+  "items": [
+   {
+    "src": "/assets/ramapuram/events/campus-event-celebration.jpg",
+    "alt": "Students and staff in traditional dress around a floral pookalam (festival celebration)",
+    "width": 602,
+    "height": 338
+   },
+   {
+    "src": "/assets/ramapuram/events/campus-event-stage.png",
+    "alt": "Large group of students in red T-shirts celebrating on a stage",
+    "width": 900,
+    "height": 400
+   },
+   {
+    "src": "/assets/ramapuram/campus/basketball-court.jpg",
+    "alt": "Student playing basketball on campus court",
+    "width": 900,
+    "height": 400
+   }
+  ]
+ },
+ "testimonials": {
+  "heading": "Student Testimonials",
+  "items": [
+   {
+    "name": "Mehul Choudhary",
+    "line2": "Fractal Analytics - 14.25 LPA",
+    "line3": "SRM IST Ramapuram Alumni",
+    "videoUrl": "https://www.youtube.com/embed/LUkqSZpU3a0?si=7lttVuscUSKD0D02"
+   },
+   {
+    "name": "Amishra Arun",
+    "line2": "III Year ECE",
+    "line3": "SRM IST Ramapuram Student",
+    "videoUrl": "https://www.youtube.com/embed/V65gxjqGMPM?si=dHENMzBk_NQNUrOS"
+   },
+   {
+    "name": "Pavani Sai",
+    "line2": "Adobe - 41 LPA",
+    "line3": "SRM IST Ramapuram Alumni",
+    "videoUrl": "https://www.youtube.com/embed/hSEw_VAbxRA?si=TaZjnWq9bkxHovUk"
+   }
+  ]
+ },
+ "contact": {
+  "address": "Bharathi Salai, Ramapuram,Chennai – 600 089. Tamil Nadu India",
+  "phones": [
+   {
+    "display": "1800 102 1525",
+    "href": "tel:18001021525"
+   }
+  ],
+  "emails": [
+   "helpdesk@srmrmp.edu.in"
+  ],
+  "map": {
+   "src": "/assets/ramapuram/campus/ist-map-light.jpg",
+   "alt": "Map: SRMIST Ramapuram and nearby landmarks",
+   "width": 800,
+   "height": 400
+  },
+  "landmarks": [
+   "SRMIST, Ramapuram Campus",
+   "Guindy metro",
+   "Chennai Airport",
+   "Phoenix Mall",
+   "Chennai Central Railway Station",
+   "Anna Centenary Library",
+   "Vijaya forum mall"
+  ],
+  "footer": "© 2026 SRM Institute of Science and Technology."
+ }
+}
