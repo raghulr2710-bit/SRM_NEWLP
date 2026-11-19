@@ -32,6 +32,7 @@ export const ramapuramSite: LiveSiteConfig = {
     hlInk: "#7a5a00",
     accentOnDark: "#9cc3ff",
   },
+  hideHeroSubline: true,
   heroImage: {
     src: "/assets/ramapuram/hero/ai-hero-btech-cutout.webp",
     alt: "Engineering student in a hard hat, with construction, robotics and computing imagery",

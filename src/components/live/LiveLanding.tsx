@@ -51,6 +51,8 @@ export interface LiveSiteConfig {
   globe?: { home: [number, number]; partners: boolean; base: Rgb; marker: Rgb; glow: Rgb };
   /** Hero background: pattern + optional faint campus photo (right side, fades to the left). */
   heroBg?: { pattern: "grid" | "dots" | "diagonal" | "plus" | "rings"; image?: string; position?: string; opacity?: number };
+  /** Hide the one-line sub-heading under the hero headline. */
+  hideHeroSubline?: boolean;
   /** Hide the looping accreditation logo strip in the hero. */
   hideHeroBadges?: boolean;
   /** Section tab bar colour (default: brand). */
@@ -205,7 +207,7 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
                   <p className="hero-rise mt-4 max-w-[32rem] text-[0.9375rem] leading-relaxed text-muted lg:text-base" style={d(0.14)}>
                     {live.hero.text}
                   </p>
-                ) : (
+                ) : site.hideHeroSubline ? null : (
                   <p className="hero-rise mt-4 inline-flex items-center gap-2 text-base font-semibold text-ink sm:text-lg" style={d(0.14)}>
                     <GraduationCap aria-hidden="true" className="h-5 w-5 text-accent-ink" />
                     {live.hero.button}
