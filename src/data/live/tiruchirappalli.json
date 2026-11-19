@@ -429,7 +429,7 @@
         "faculty": "FLABS (formerly Faculty of Science and Humanities)",
         "section": "UNDERGRADUATE COURSES",
         "title": "B.Sc* Computer Science with specialization in Cyber Security",
-        "eligibility": "Eligibility Criteria - 11 + 2 (Higher Secondary) with Mathematics mandatory or Computer Science with Mathematics. (Minimum Aggregate of 50%)",
+        "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with Mathematics mandatory or Computer Science with Mathematics. (Minimum Aggregate of 50%)",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -438,7 +438,7 @@
         "faculty": "FLABS (formerly Faculty of Science and Humanities)",
         "section": "UNDERGRADUATE COURSES",
         "title": "B.Sc* Computer Science with specialization in Artificial Intelligence & Machine Learning",
-        "eligibility": "Eligibility Criteria - 11 + 2 (Higher Secondary) with Mathematics mandatory or Computer Science with Mathematics. (Minimum Aggregate of 50%)",
+        "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with Mathematics mandatory or Computer Science with Mathematics. (Minimum Aggregate of 50%)",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -456,7 +456,7 @@
         "faculty": "FLABS (formerly Faculty of Science and Humanities)",
         "section": "UNDERGRADUATE COURSES",
         "title": "B.Sc* Visual Communication",
-        "eligibility": "Eligibility Criteria - 11 + 2 (Higher Secondary) with Mathematics mandatory or Computer Science with Mathematics. (Minimum Aggregate of 50%)",
+        "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) Any group (Minimum Aggregate of 50%)",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -465,7 +465,7 @@
         "faculty": "FLABS (formerly Faculty of Science and Humanities)",
         "section": "UNDERGRADUATE COURSES",
         "title": "B.Sc* Visual Communication & Artificial Intelligence",
-        "eligibility": "Eligibility Criteria - 11 + 2 (Higher Secondary) with Mathematics mandatory or Computer Science with Mathematics. (Minimum Aggregate of 50%)",
+        "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) Any group (Minimum Aggregate of 50%)",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -474,7 +474,7 @@
         "faculty": "FLABS (formerly Faculty of Science and Humanities)",
         "section": "UNDERGRADUATE COURSES",
         "title": "B.Sc* Psychology",
-        "eligibility": "Eligibility Criteria - 11 + 2 (Higher Secondary) with Mathematics mandatory or Computer Science with Mathematics. (Minimum Aggregate of 50%)",
+        "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -482,8 +482,8 @@
       {
         "faculty": "FLABS (formerly Faculty of Science and Humanities)",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc* Biotechnology",
-        "eligibility": "Eligibility Criteria - 11 + 2 (Higher Secondary) with Mathematics mandatory or Computer Science with Mathematics. (Minimum Aggregate of 50%)",
+        "title": "B.Sc* Artificial Intelligence and Animation",
+        "eligibility": null,
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -636,7 +636,7 @@
         "faculty": "COLLEGE OF MANAGEMENT",
         "section": "POSTGRADUATE COURSES",
         "title": "MBA Master of Business Administration",
-        "eligibility": "Eligibility Criteria\n1. A Bachelor's degree with minimum aggregate of 50%.\n2. Admission will be done through SRM Joint Entrance Examination for Management (SRMJEEM) followed by a Personal Interview. Students with eligible entrance scores in CAT/XAT/MAT/GMAT/NMAT/CMAT/TANCET will be granted direct consideration for the personal interview.\n3. Preference would be given to candidates with work experience.",
+        "eligibility": "Eligibility Criteria - A Pass in Higher Secondary Examination or Equivalent (Academic or Vocational Stream) with a Minimum eligibility of aggregate of 50% in +2 (Preference will be given to students without any break in study and students who secures aggregate of 60 % of Marks in +2)",
         "lateralEntry": false,
         "partTime": false,
         "level": "PG"
@@ -645,7 +645,7 @@
         "faculty": "COLLEGE OF MANAGEMENT",
         "section": "POSTGRADUATE COURSES",
         "title": "MBA Health Care & Hospital Management",
-        "eligibility": "Eligibility Criteria\n1. A Bachelor's degree with minimum aggregate of 50%.\n2. Admission will be done through SRM Joint Entrance Examination for Management (SRMJEEM) followed by a Personal Interview. Students with eligible entrance scores in CAT/XAT/MAT/GMAT/NMAT/CMAT/TANCET will be granted direct consideration for the personal interview.\n3. Preference would be given to candidates with work experience.",
+        "eligibility": "Eligibility Criteria - A Pass in Higher Secondary Examination or Equivalent (Academic or Vocational Stream) with a Minimum eligibility of aggregate of 50% in +2 (Preference will be given to students without any break in study and students who secures aggregate of 60 % of Marks in +2)",
         "lateralEntry": false,
         "partTime": false,
         "level": "PG"
@@ -654,7 +654,7 @@
         "faculty": "COLLEGE OF MANAGEMENT",
         "section": "POSTGRADUATE COURSES",
         "title": "MBA Business Analytics",
-        "eligibility": "Eligibility Criteria\n1. A Bachelor's degree with minimum aggregate of 50%.\n2. Admission will be done through SRM Joint Entrance Examination for Management (SRMJEEM) followed by a Personal Interview. Students with eligible entrance scores in CAT/XAT/MAT/GMAT/NMAT/CMAT/TANCET will be granted direct consideration for the personal interview.\n3. Preference would be given to candidates with work experience.",
+        "eligibility": "Eligibility Criteria - A Pass in Higher Secondary Examination or Equivalent (Academic or Vocational Stream) with a Minimum eligibility of aggregate of 50% in +2 (Preference will be given to students without any break in study and students who secures aggregate of 60 % of Marks in +2)",
         "lateralEntry": false,
         "partTime": false,
         "level": "PG"
@@ -673,7 +673,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Artificial Intelligence",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO).",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -682,7 +682,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Artificial Intelligence and Future Technologies",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO).",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -691,7 +691,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Biomedical Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PCB)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -700,7 +700,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Biotechnology",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Biology (PCM/PCB)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -709,7 +709,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Biotechnology with specialization in Food Technology",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths/Biology (PCM/PCB)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -736,7 +736,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -745,7 +745,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering with specialization in Artificial Intelligence and Machine Learning",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -754,7 +754,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering with specialization in Big Data Analytics",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -763,7 +763,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering with specialization in Block Chain Technology",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -772,7 +772,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Business Systems (TCS)",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -781,7 +781,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering with specialization in Cyber Security",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -790,7 +790,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering (Data Science)",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -799,7 +799,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering with specialization in Medical Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -808,7 +808,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering with specialization in Internet of Things",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -817,7 +817,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Electronics and Communication Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -826,7 +826,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Electronics and Communication Engineering with specialization in Data Science",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -844,7 +844,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Electrical and Electronics Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -853,7 +853,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Information Technology",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -862,7 +862,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Mechanical Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -880,7 +880,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Software Product Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -915,7 +915,7 @@
         "faculty": "COLLEGE OF ENGINEERING & TECHNOLOGY",
         "section": "POSTGRADUATE COURSES",
         "title": "M.Tech - Biotechnology",
-        "eligibility": "Eligibility Criteria - Four year Bachelor’s Degree in Engineering/ Mathematics or Statistics (except B.Tech -Biotechnology, Food Technology and its specialisations), (or) MCA (or) M.Sc (CSE / IT) (or) its equivalent with a minimum aggregate of 50%",
+        "eligibility": "Eligibility Criteria - B.E./B.Tech. in Chemical Engineering, Biotechnology, Bio-Chemical Engineering, Genetic Engineering, Bioinformatics, Bioprocess Engineering, Food Process Engineering, or B. Pharm. /B.Sc. Agri /M.Sc. in any branch of Life Sciences/Biotechnology (or) any equivalent degree in the above disciplines with a minimum aggregate of 50%.",
         "lateralEntry": false,
         "partTime": false,
         "level": "PG"
@@ -932,7 +932,7 @@
       {
         "faculty": "MEDICINE AND ALLIED HEALTH SCINCES",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc Cardiac Care Technology 4 Years(3 Years + 1 Year Internship)",
+        "title": "B.Sc. Cardiac Care Technology 4 Years(3 Years + 1 Year Internship)",
         "eligibility": "Eligibility Criteria - Candidate shall be completed the age of 17 years on or before 31st December of the year of admission to the course.\nThe Maximum age limit for admission is 30 years on or before 31st December of the year of admission to the course.\nHe/She has passed the H.S.C / (10+2) or equivalent Examination from a recognized board / University in India with Minimum aggregate of60 % Marks in Physics, Chemistry and Biology/ Botany + Zoology / Biotechnology , provided the candidate has passed in each subject separately.\nCandidate who have studied abroad and have passed the equivalent qualification as determined by the association of Indian Universites as per the guidelines to determine the eligibility and must have passed in the subjects Physics, Chemistry and Biology / Botany + Zoology / Biotechnology and English up to 12th standard level.\nThe qualifying Examinations passed by FN/PIO/CIWGC Students should be considered equivalent to Eligibility Examinations by the Association of Indian Universities / Academic Council.",
         "lateralEntry": false,
         "partTime": false,
@@ -941,7 +941,7 @@
       {
         "faculty": "MEDICINE AND ALLIED HEALTH SCINCES",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc Cardio Perfusion Technology 4 Years(3 Years + 1 Year Internship)",
+        "title": "B.Sc. Cardio Perfusion Technology 4 Years(3 Years + 1 Year Internship)",
         "eligibility": "Eligibility Criteria - Candidate shall be completed the age of 17 years on or before 31st December of the year of admission to the course.\nThe Maximum age limit for admission is 30 years on or before 31st December of the year of admission to the course.\nHe/She has passed the H.S.C / (10+2) or equivalent Examination from a recognized board / University in India with Minimum aggregate of 60 % MarksinPhysics,Chemistry and Biology/ Botany + Zoology/ Biotechnology , provided the candidate has passed in each subject separately.\nCandidate who have studied abroad and have passed the equivalent qualification as determined by the association of Indian Universites as per the guidelines to dertermine the eligibility and must have passed in the subjects Physics, Chemistry and Biology / Botany + Zoology / Biotechnology and English up to 12th standard level.\nThe qualifying Examinations passed by FN/PIO/CIWGC Students should be considered equivalent to Eligibility Examinations by the Association of Indian Universities / Academic Council.",
         "lateralEntry": false,
         "partTime": false,
@@ -950,7 +950,7 @@
       {
         "faculty": "MEDICINE AND ALLIED HEALTH SCINCES",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc Medical Radiology and Imaging Technology 4 Years(3 Years + 1 Year Internship)",
+        "title": "Bachelor of Medical Radiology and Imaging Technology 4 Years(3 Years + 1 Year Internship)",
         "eligibility": "Eligibility Criteria - Candidate shall be completed the age of 17 years on or before 31st December of the year of admission to the course.\nThe Maximum age limit for admission is 30 years on or before 31st December of the year of admission to the course.\nHe/She has passed the H.S.C / (10+2) or equivalent Examination from a recognized board / University in India with Minimum aggregate of 60 % Marks in Physics, Chemistry and Biology/ Botany + Zoology provided the candidate has passed in each subject separately.\nCandidate who have studied abroad and have passed the equivalent qualification as determined by the association of Indian Universites as per the guidelines to dertermine the eligibility and must have passed in the subjects Physics, Chemistry and Biology / Botany + Zoology and English up to 12th standard level.\nThe qualifying Examinations passed by FN/PIO/CIWGC Students should be considered equivalent to Eligibility Examinations by the Association of Indian Universities / Academic Council.",
         "lateralEntry": false,
         "partTime": false,
@@ -959,7 +959,7 @@
       {
         "faculty": "MEDICINE AND ALLIED HEALTH SCINCES",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc Medical Laboratory Science 4Years(3 Years + 1 Year Internship)",
+        "title": "Bachelor of Medical Laboratory Science 4Years(3 Years + 1 Year Internship)",
         "eligibility": "Eligibility Criteria - Candidate shall be completed the age of 17 years on or before 31st December of the year of admission to the course.\nThe Maximum age limit for admission is 30 years on or before 31st December of the year of admission to the course.\nHe/She has passed the H.S.C / (10+2) or equivalent Examination from a recognized board / University in India with Minimum aggregate of 60 % Marks in Physics, Chemistry and Biology/ Botany + Zoology provided the candidate has passed in each subject separately.\nCandidate who have studied abroad and have passed the equivalent qualification as determined by the association of Indian Universites as per the guidelines to dertermine the eligibility and must have passed in the subjects Physics, Chemistry and Biology / Botany + Zoology and English up to 12th standard level.\nThe qualifying Examinations passed by FN/PIO/CIWGC Students should be considered equivalent to Eligibility Examinations by the Association of Indian Universities / Academic Council..",
         "lateralEntry": false,
         "partTime": false,
@@ -968,7 +968,7 @@
       {
         "faculty": "MEDICINE AND ALLIED HEALTH SCINCES",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc Anaesthesia and Operation Theatre Technology 4Years(3 Years + 1 Year Internship)",
+        "title": "Bachelor of Anaesthesia and Operation Theatre Technology 4Years(3 Years + 1 Year Internship)",
         "eligibility": "Eligibility Criteria - Candidate shall be completed the age of 17 years on or before 31st December of the year of admission to the course.\nThe Maximum age limit for admission is 30 years on or before 31st December of the year of admission to the course.\nHe/She has passed the H.S.C / (10+2) or equivalent Examination from a recognized board / University in India with Minimum aggregate of 60 % Marks in Physics, Chemistry and Biology/ Botany + Zoology / Biotechnology , provided the candidate has passed in each subject separately.\nCandidate who have studied abroad and have passed the equivalent qualification as determined by the association of Indian Universites as per the guidelines to dertermine the eligibility and must have passed in the subjects Physics, Chemistry and Biology / Botany + Zoology / Biotechnology and English up to 12th standard level.\nThe qualifying Examinations passed by FN/PIO/CIWGC Students should be considered equivalent to Eligibility Examinations by the Association of Indian Universities / Academic Council.",
         "lateralEntry": false,
         "partTime": false,
@@ -977,7 +977,7 @@
       {
         "faculty": "MEDICINE AND ALLIED HEALTH SCINCES",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc Physician Associates 4Years(3 Years + 1 Year Internship)",
+        "title": "Bachelor of Physician Associates 4Years(3 Years + 1 Year Internship)",
         "eligibility": "Eligibility Criteria - Candidate shall be completed the age of 17 years on or before 31st December of the year of admission to the course.\nThe Maximum age limit for admission is 30 years on or before 31st December of the year of admission to the course.\nHe/She has passed the H.S.C / (10+2) or equivalent Examination from a recognized board / University in India with Minimum aggregate of 60 % Marks in Physics, Chemistry and Biology/ Botany + Zoology / Biotechnology , provided the candidate has passed in a Biotechnology , provided the candidate has passed in each subject separately.\nCandidate who have studied abroad and have passed the equivalent qualification as determined by the association of Indian Universites as per the guidelines to dertermine the eligibility and must have passed in the subjects Physics, Chemistry and Biology / Botany + Zoology / Biotechnology and English up to 12th standard level.\nThe qualifying Examinations passed by FN/PIO/CIWGC Students should be considered equivalent to Eligibility Examinations by the Association of Indian Universities / Academic Council.",
         "lateralEntry": false,
         "partTime": false,
@@ -986,7 +986,7 @@
       {
         "faculty": "MEDICINE AND ALLIED HEALTH SCINCES",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc Dialysis Therapy Technology 4Years(3 Years + 1 Year Internship)",
+        "title": "Bachelor of Dialysis Therapy Technology 4Years(3 Years + 1 Year Internship)",
         "eligibility": "Eligibility Criteria - Candidate shall be completed the age of 17 years on or before 31st December of the year of admission to the course.\nThe Maximum age limit for admission is 30 years on or before 31st December of the year of admission to the course.\nHe/She has passed the H.S.C / (10+2) or equivalent Examination from a recognized board / University in India with Minimum aggregate of 60 % Marks in Physics, Chemistry and Biology/ Botany + Zoology provided the candidate has passed in each subject separately.\nCandidate who have studied abroad and have passed the equivalent qualification as determined by the association of Indian Universites as per the guidelines to dertermine the eligibility and must have passed in the subjects Physics, Chemistry and Biology / Botany + Zoology and English up to 12th standard level.\nThe qualifying Examinations passed by FN/PIO/CIWGC Students should be considered equivalent to Eligibility Examinations by the Association of Indian Universities / Academic Council.",
         "lateralEntry": false,
         "partTime": false,
@@ -995,7 +995,7 @@
       {
         "faculty": "MEDICINE AND ALLIED HEALTH SCINCES",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc Critical Care Technology 4Years(3 Years + 1 Year Internship)",
+        "title": "B.Sc. Critical Care Technology 4Years(3 Years + 1 Year Internship)",
         "eligibility": "Eligibility Criteria - Age : Minimum age limit is 17 years and maximum age limit is 30 years on or before 31st December of the year of Admission\nQualification : HSC / 10+2 / Plus two or equivalent with English, Physics, Chemistry, Biology / Botany & Zoology / Biotechnology from a recognized Board/University in India\nPercentage of Marks : Minimum 50 % aggregate of marks in PCB\nCandidates who studied abroad should possess equivalent qualification as determined by Association of Indian Universities. The qualifying examination passed by FN/PIO/CIWGC students should be considered equivalent to eligibility examination by the Association",
         "lateralEntry": false,
         "partTime": false,
@@ -1004,7 +1004,7 @@
       {
         "faculty": "MEDICINE AND ALLIED HEALTH SCINCES",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc Optometry 5 Years (4 Years + 1 Year Internship)",
+        "title": "Bachelor of Optometry 5 Years (4 Years + 1 Year Internship)",
         "eligibility": "Eligibility Criteria - Age: Completion of 17 years on or before 31st December of year of Admission\nQualification: HSC / 10+2 / Plus two or equivalent with English, Physics, Chemistry and Mathematics / Biology / Botany & Zoology\nPercentage of Marks: Minimum 50 % aggregate of marks in PCB / PCM\nCandidate must possess both Physical and Mental fitness to undergo the academic course and does not suffer from any intellectual disability or contagious disease",
         "lateralEntry": false,
         "partTime": false,
@@ -1013,7 +1013,7 @@
       {
         "faculty": "MEDICINE AND ALLIED HEALTH SCINCES",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc Emergency Medical Technologist (Paramedics) 4Years(3 Years + 1 Year Internship)",
+        "title": "Bachelor of Emergency Medical Technologist (Paramedics) 4Years(3 Years + 1 Year Internship)",
         "eligibility": "Eligibility Criteria - Age : Minimum age limit is 17 years and maximum age limit is 30 years on or before 31st December of year of Admission.\nQualification : HSC / 10+2 / Plus two or equivalent with English, Physics, Chemistry, Biology / Botany & Zoology / Biotechnology has passed in each subject Separately.\nPercentage of Marks : Minimum 50 % aggregate of marks in PCB.\nCandidates who studied abroad should possess equivalent qualification as determined by Association of Indian Universities. The qualifying examination passed by FN/PIO/CIWGC students should be considered equivalent to eligibility examination by the Association of Indian Universities/ Academic Council.",
         "lateralEntry": false,
         "partTime": false,
@@ -1022,7 +1022,7 @@
       {
         "faculty": "MEDICINE AND ALLIED HEALTH SCINCES",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc Nutrition and Dietetics (Honours) 4Years(includes 6 Months Internship)",
+        "title": "Bachelor of Nutrition and Dietetics (Honours) 4Years(includes 6 Months Internship)",
         "eligibility": "Eligibility Criteria - Age : Minimum age limit is 17 years and the maximum age limit is 30 years on or before 31st December of the year of Admission\nQualification : HSC / 10+2 / Plus two or equivalent with English, Physics, Chemistry and Biology / Botany & Zoology / Biotechnology / Nutrition / Home Science from a recognized Board/University in India\nPercentage of Marks : Minimum 50 % aggregate of marks in Physics, Chemistry and Biology/Botany & Zoology/ Biotechnology/Nutrition/Home Science\nCandidates who studied abroad should possess equivalent qualifications as determined by the Association of Indian Universities. The qualifying examination passed by FN/PIO/CIWGC students should be considered equivalent to eligibility examination by the Association of Indian University as per the guidelines/ Academic Council.",
         "lateralEntry": false,
         "partTime": false,
@@ -1031,7 +1031,7 @@
       {
         "faculty": "MEDICINE AND ALLIED HEALTH SCINCES",
         "section": "UNDERGRADUATE COURSES",
-        "title": "B.Sc Respiratory Technology 4Years(3 Years + 1 Year Internship)",
+        "title": "Bachelor of Respiratory Technology 4Years(3 Years + 1 Year Internship)",
         "eligibility": "Eligibility Criteria - Age : Minimum age limit is 17 years and maximum age limit is 30 years on or before 31st December of year of Admission\nQualification : HSC / 10+2 / Plus two or equivalent with English, Physics, Chemistry, Biology / Botany & Zoology / Biotechnology\nPercentage of Marks : Minimum 50 % aggregate of marks in PCB\nCandidates who studied abroad should possess equivalent qualification as determined by Association of Indian Universities. The qualifying examination passed by FN/PIO/CIWGC students should be considered equivalent to eligibility examination by the Association of Indian Universities/Academic Council.",
         "lateralEntry": false,
         "partTime": false,
@@ -2068,7 +2068,8 @@
     "steps: the Trichy live page shows no step list; the 5 steps are the SRMIST online registration flow as published on registration.srmrmp.edu.in (same SRMIST application process), added at the client’s request.",
     "logo: header copy of the official logo with the white SRM wordmark recoloured to brand blue (#0c477f) so it reads on the white header; original file kept unchanged.",
     "campus.items: official photos from https://www.srmtrichy.edu.in/campus-life (titles = the site’s image names; tags and alt text written by us).",
-    "why.items images: official photos from srmtrichy.edu.in (campus-life, international-relations, academic-programme) and the registration page (Rockfort, infrastructure – AI-upscaled 4x for clarity)."
+    "why.items images: official photos from srmtrichy.edu.in (campus-life, international-relations, academic-programme) and the registration page (Rockfort, infrastructure – AI-upscaled 4x for clarity).",
+    "Client corrections (SRM IST Trichy Corrections doc, Nov 2026): Lateral-entry badge removed from all B.Tech cards; M.Tech Biotechnology, B.Sc Cyber Security / AI & ML / Visual Communication / Visual Communication & AI / Psychology and MBA eligibility replaced with the client's text; B.Sc Biotechnology removed and B.Sc Artificial Intelligence and Animation added (no eligibility supplied – card shows the 'ask a counsellor' fallback); Medicine & Allied Health UG course names changed to the client's names (duration text kept)."
   ],
   "steps": {
     "items": [
