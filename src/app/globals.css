@@ -51,6 +51,10 @@ html {
   scroll-padding-top: 88px;
   -webkit-text-size-adjust: 100%;
 }
+/* live landing pages: only the section tab bar is sticky (~56px) – sections add scroll-mt-10 */
+html:has(.live-page) {
+  scroll-padding-top: 24px;
+}
 
 @media (prefers-reduced-motion: reduce) {
   html {

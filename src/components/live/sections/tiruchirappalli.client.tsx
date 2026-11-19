@@ -363,13 +363,34 @@ export function RankingTabs({ items }: { items: { title?: string | null; text: s
 
   return (
     <div className="grid grid-cols-[minmax(0,1fr)] gap-5 lg:grid-cols-[21rem_minmax(0,1fr)] lg:items-stretch lg:gap-8">
+      {/* mobile / tablet: all rankings as stacked cards (logo on top, then text) */}
+      <ul className="grid gap-3 sm:grid-cols-2 lg:hidden">
+        {items.map((r, i) => {
+          const t = r.title && r.title.trim().toLowerCase() !== r.body.trim().toLowerCase() ? r.title : null;
+          return (
+            <li key={r.body} className="flex flex-col rounded-2xl border border-line bg-white p-5 shadow-[0_14px_30px_-26px_rgba(10,20,50,0.5)]">
+              <span className="flex h-16 w-24 items-center justify-center rounded-xl bg-surface-alt p-2.5 ring-1 ring-line">
+                <span className="relative h-full w-full">
+                  {r.badge ? <Image src={r.badge.src} alt={r.badge.alt} fill sizes="96px" className="object-contain" /> : <Award aria-hidden="true" className="absolute inset-0 m-auto h-7 w-7 text-brand" strokeWidth={1.5} />}
+                </span>
+              </span>
+              <p className="mt-4 font-display text-xs font-semibold tracking-[0.14em] text-[var(--hl-ink)]">
+                {String(i + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
+              </p>
+              <h3 className="mt-1 font-display text-base font-semibold text-ink">{r.body}</h3>
+              {t && <p className="mt-1 text-sm font-semibold text-brand">{t}</p>}
+              <p className="mt-1.5 whitespace-pre-line text-sm leading-relaxed text-muted">{r.text}</p>
+            </li>
+          );
+        })}
+      </ul>
       {/* ranking bodies: logo tiles (mobile) → vertical list (desktop) */}
       <div
         role="tablist"
         aria-label="Ranking bodies"
         aria-orientation="vertical"
         onKeyDown={onKey}
-        className="grid grid-cols-3 gap-2 sm:gap-3 lg:grid-cols-1 lg:gap-1.5 lg:rounded-3xl lg:border lg:border-line lg:bg-white lg:p-2.5 lg:shadow-[0_24px_48px_-36px_rgba(10,20,50,0.45)]"
+        className="hidden lg:grid lg:grid-cols-1 lg:gap-1.5 lg:rounded-3xl lg:border lg:border-line lg:bg-white lg:p-2.5 lg:shadow-[0_24px_48px_-36px_rgba(10,20,50,0.45)]"
       >
         {items.map((r, i) => {
           const on = i === active;
@@ -417,7 +438,7 @@ export function RankingTabs({ items }: { items: { title?: string | null; text: s
 
       {/* detail panel */}
       {cur && (
-        <div id={`${uid}-panel`} role="tabpanel" aria-labelledby={`${uid}-tab-${active}`} className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-brand to-[var(--brand-deep)] p-6 text-white shadow-[0_30px_60px_-40px_rgba(10,20,50,0.6)] sm:p-10">
+        <div id={`${uid}-panel`} role="tabpanel" aria-labelledby={`${uid}-tab-${active}`} className="relative hidden overflow-hidden rounded-3xl lg:block bg-gradient-to-br from-brand to-[var(--brand-deep)] p-6 text-white shadow-[0_30px_60px_-40px_rgba(10,20,50,0.6)] sm:p-10">
           <span aria-hidden="true" className="absolute -right-16 -top-16 h-56 w-56 rounded-full border-[2.5rem] border-white/5" />
           <span aria-hidden="true" className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(white_1px,transparent_1px),linear-gradient(90deg,white_1px,transparent_1px)] [background-size:28px_28px]" />
           <AnimatePresence mode="wait" initial={false}>

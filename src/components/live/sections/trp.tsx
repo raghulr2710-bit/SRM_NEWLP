@@ -198,7 +198,7 @@ function TrpRecruiters({ live }: SectionProps) {
   return (
     <section id="recruiters" className="scroll-mt-10 overflow-hidden bg-surface-alt py-12 lg:py-16">
       <div className="container-x">
-        <Heading eyebrow={`${live.recruiters.logos.length} recruiters`} Icon={Building2}>
+        <Heading>
           {live.recruiters.heading}
         </Heading>
       </div>

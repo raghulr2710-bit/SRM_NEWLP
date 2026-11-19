@@ -33,12 +33,13 @@ export const ramapuramSite: LiveSiteConfig = {
     accentOnDark: "#9cc3ff",
   },
   hideHeroSubline: true,
+  heroBg: { pattern: "none", image: "/assets/ramapuram/infrastructure/campus-building-hd.webp", position: "center 40%", opacity: 0.14 }, // client: no grid; faint college photo under a white tone
   heroImage: {
-    src: "/assets/ramapuram/hero/ai-hero-btech-cutout.webp",
+    src: "/assets/ramapuram/hero/ai-hero-btech-girl-cutout.webp",
     alt: "Engineering student in a hard hat, with construction, robotics and computing imagery",
     width: 1200,
-    height: 1887,
-    circle: { cx: 50, w: 80, top: -2 },
+    height: 2050,
+    circle: { cx: 43.3, w: 80, top: -1.85 },
   },
 };
 
@@ -65,6 +66,7 @@ export const tiruchirappalliSite: LiveSiteConfig = {
     muted: "#4a5668",
   },
   heroBg: { pattern: "dots", image: "/assets/tiruchirappalli/campus/campus-entrance.webp", position: "30% center", opacity: 0.17 },
+  hideHeroSubline: true,
   heroImage: {
     src: "/assets/tiruchirappalli/hero/ai-hero-science-cutout.webp",
     alt: "Science student in a lab coat holding a tablet, with microscope, DNA, satellite and computing imagery",

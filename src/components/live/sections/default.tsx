@@ -59,7 +59,7 @@ export function PromoSection({ live }: SectionProps) {
           {live.promo.videoUrl && (
             <ScrollTiltFrame className="mx-auto mt-10 max-w-5xl lg:mt-12">
               <div className="rounded-[1.75rem] bg-white p-2 shadow-[0_30px_60px_-40px_rgba(10,20,50,0.45)] ring-1 ring-line">
-                <PromoVideo url={live.promo.videoUrl} title={live.meta.videoTitle ?? live.meta.shortName} />
+                <PromoVideo url={live.promo.videoUrl} title={live.meta.videoTitle ?? live.meta.shortName} poster={live.promo.poster} />
               </div>
             </ScrollTiltFrame>
           )}
@@ -169,7 +169,7 @@ export function RecruitersSection({ live }: SectionProps) {
   return (
       <section id="recruiters" className="py-12 lg:py-16 scroll-mt-10 overflow-hidden bg-surface-alt">
         <div className="container-x">
-          <Heading eyebrow={`${live.recruiters.logos.length} recruiters`} Icon={Building2}>
+          <Heading>
             {live.recruiters.heading}
           </Heading>
         </div>
@@ -185,7 +185,7 @@ export function CollaborationsSection({ live, globe }: SectionProps) {
         <div className="container-x grid grid-cols-[minmax(0,1fr)] items-end gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-8">
           {/* left: heading + looping partner logos */}
           <div className="min-w-0 lg:self-center lg:pb-16">
-            <Heading eyebrow="Global" Icon={Globe2} align="left">
+            <Heading align="left">
               {live.collaborations.heading}
             </Heading>
             <div className="-mx-5 sm:mx-0">
@@ -219,11 +219,11 @@ export function RankingsSection({ live }: SectionProps) {
                   as="li"
                   key={i}
                   delay={0.05 * (i % 3)}
-                  className="group relative flex h-full items-start gap-4 overflow-hidden rounded-2xl border border-line bg-white p-4 shadow-[0_1px_2px_rgba(10,20,50,0.04)] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-brand/25 sm:flex-col sm:items-stretch sm:gap-0 sm:p-5 lg:p-6"
+                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-white p-5 shadow-[0_1px_2px_rgba(10,20,50,0.04)] transition-[transform,box-shadow,border-color] duration-300 hover:-translate-y-1 hover:border-brand/25 lg:p-6"
                 >
                   <span aria-hidden="true" className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-brand transition-transform duration-500 group-hover:scale-x-100" />
                   <div className="flex shrink-0 items-center justify-between gap-4">
-                    <span className="flex h-14 w-20 items-center sm:h-16 sm:w-24 justify-center rounded-xl bg-surface-alt p-2.5 ring-1 ring-line transition-[transform,background-color] duration-300 group-hover:scale-[1.03] group-hover:bg-white">
+                    <span className="flex h-16 w-24 items-center justify-center rounded-xl bg-surface-alt p-2.5 ring-1 ring-line transition-[transform,background-color] duration-300 group-hover:scale-[1.03] group-hover:bg-white">
                       <span className="relative h-full w-full">
                         {r.badge ? <Pic img={r.badge} sizes="96px" contain /> : <Award aria-hidden="true" className="absolute inset-0 m-auto h-7 w-7 text-brand" strokeWidth={1.5} />}
                       </span>
@@ -233,7 +233,7 @@ export function RankingsSection({ live }: SectionProps) {
                     </span>
                   </div>
                   <div className="min-w-0">
-                  <h3 className="font-display text-base font-semibold text-ink sm:mt-5">{body}</h3>
+                  <h3 className="mt-4 font-display text-base font-semibold text-ink sm:mt-5">{body}</h3>
                   {r.title && r.title.trim().toLowerCase() !== body.trim().toLowerCase() && <p className="mt-1 text-sm font-semibold text-brand">{r.title}</p>}
                   <p className="mt-1.5 whitespace-pre-line text-sm leading-relaxed text-muted sm:mt-2">{r.text}</p>
                   </div>

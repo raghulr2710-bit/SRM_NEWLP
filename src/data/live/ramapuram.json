@@ -100,7 +100,8 @@
   "promo": {
     "heading": "Join the Premier Institution Ranked as the #1 University in India",
     "text": "Experience the best in placements alongside academic excellence. SRM IST, Ramapuram is a place for learning, discovery, innovation, expression, and discourse.",
-    "videoUrl": "https://www.youtube.com/embed/YxMB6limtf0?rel=0"
+    "videoUrl": "https://www.youtube.com/embed/YxMB6limtf0?rel=0",
+    "poster": "/assets/ramapuram/promo/video-poster.webp"
   },
   "stats1": [
     {

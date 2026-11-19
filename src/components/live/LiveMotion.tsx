@@ -27,7 +27,17 @@ export function ScrollProgress() {
   return <motion.div aria-hidden="true" style={{ scaleX }} className="fixed inset-x-0 top-0 z-[60] h-[3px] origin-left bg-accent" />;
 }
 
-export function SectionTabs({ items, tone = "brand" }: { items: { id: string; label: string; icon: string }[]; /** bar colour: brand (default) or the highlight colour */ tone?: "brand" | "hl" }) {
+export function SectionTabs({
+  items,
+  tone = "brand",
+  aside,
+}: {
+  items: { id: string; label: string; icon: string }[];
+  /** bar colour: brand (default) or the highlight colour */
+  tone?: "brand" | "hl";
+  /** right-hand slot (desktop): e.g. helpline + register – the bar is the only sticky band */
+  aside?: ReactNode;
+}) {
   const hl = tone === "hl";
   const [active, setActive] = useState(items[0]?.id);
   const bar = useRef<HTMLDivElement>(null);
@@ -58,9 +68,10 @@ export function SectionTabs({ items, tone = "brand" }: { items: { id: string; la
   }, [active]);
 
   return (
-    <div ref={wrap} className={`sticky top-[4.5rem] z-40 shadow-[0_10px_30px_-18px_rgba(8,15,40,0.6)] ${hl ? "bg-[var(--hl)]" : "bg-brand"}`}>
+    <div ref={wrap} className={`sticky top-0 z-40 shadow-[0_10px_30px_-18px_rgba(8,15,40,0.6)] ${hl ? "bg-[var(--hl)]" : "bg-brand"}`}>
       <LayoutGroup>
-        <div ref={bar} className="no-scrollbar container-x flex gap-1 overflow-x-auto py-2">
+        <div className="container-x flex items-center gap-3">
+        <div ref={bar} className="no-scrollbar flex min-w-0 flex-1 gap-1 overflow-x-auto py-2">
           {items.map(({ id, label, icon }) => {
             const on = active === id;
             const Icon = TAB_ICONS[icon] ?? Sparkles;
@@ -74,8 +85,8 @@ export function SectionTabs({ items, tone = "brand" }: { items: { id: string; la
                   const target = document.getElementById(id);
                   if (!target) return;
                   e.preventDefault();
-                  // land exactly under the sticky header + this tab bar
-                  const offset = (wrap.current?.getBoundingClientRect().bottom ?? 128) + 8;
+                  // land exactly under this tab bar (the only sticky band once scrolled)
+                  const offset = (wrap.current?.offsetHeight ?? 56) + 12;
                   const top = target.getBoundingClientRect().top + window.scrollY - offset;
                   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
                   setActive(id);
@@ -92,6 +103,8 @@ export function SectionTabs({ items, tone = "brand" }: { items: { id: string; la
               </a>
             );
           })}
+        </div>
+        {aside && <div className="hidden shrink-0 items-center gap-3 lg:flex">{aside}</div>}
         </div>
       </LayoutGroup>
     </div>

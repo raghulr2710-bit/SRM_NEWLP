@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { CSSProperties } from "react";
-import { BookOpen, GraduationCap } from "lucide-react";
+import { BookOpen, GraduationCap, Phone } from "lucide-react";
 import type { Institution, ThemeTokens } from "@/types/institution";
 import type { LiveData, LiveImg } from "./types";
 import { ThemeScope } from "@/components/common/ThemeScope";
@@ -50,7 +50,7 @@ export interface LiveSiteConfig {
   heroImage: LiveImg & { circle: { cx: number; w: number; top: number } };
   globe?: { home: [number, number]; partners: boolean; base: Rgb; marker: Rgb; glow: Rgb };
   /** Hero background: pattern + optional faint campus photo (right side, fades to the left). */
-  heroBg?: { pattern: "grid" | "dots" | "diagonal" | "plus" | "rings"; image?: string; position?: string; opacity?: number };
+  heroBg?: { pattern: "none" | "grid" | "dots" | "diagonal" | "plus" | "rings"; image?: string; position?: string; opacity?: number };
   /** Hide the one-line sub-heading under the hero headline. */
   hideHeroSubline?: boolean;
   /** Hide the looping accreditation logo strip in the hero. */
@@ -68,6 +68,7 @@ export interface LiveSiteConfig {
  */
 /** Hero background patterns (all in the brand colour, very light). */
 const HERO_PATTERN = {
+  none: "",
   grid: "[background-image:linear-gradient(color-mix(in_srgb,var(--brand)_7%,transparent)_1px,transparent_1px),linear-gradient(90deg,color-mix(in_srgb,var(--brand)_7%,transparent)_1px,transparent_1px)] [background-size:24px_24px]",
   dots: "[background-image:radial-gradient(color-mix(in_srgb,var(--brand)_11%,transparent)_1.1px,transparent_1.3px)] [background-size:20px_20px]",
   diagonal: "[background-image:repeating-linear-gradient(135deg,color-mix(in_srgb,var(--brand)_8%,transparent)_0_1px,transparent_1px_14px)]",
@@ -142,39 +143,42 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
 
   return (
     <ThemeScope theme={theme} displayFont={fonts.display} bodyFont={fonts.body} fontClassName={fonts.className}>
-      <div style={vars}>
+      <div style={vars} className="live-page">
       <EnquiryProvider institution={inst.key}>
         <ScrollProgress />
 
         {/* Header */}
-        <header className="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur-md">
+        <header className="relative z-50 border-b border-line bg-white">
           <div className="container-x flex h-[4.5rem] items-center justify-between gap-4">
             <a href="#top" className="relative h-12 w-40 shrink-0" aria-label={`${live.meta.shortName} – back to top`}>
               <Pic img={live.logo as Img} sizes="160px" contain priority />
             </a>
-            <nav aria-label="Primary" className="hidden lg:block">
-              <ul className="flex items-center gap-1">
-                {(
-                  [
-                    ["#offer", "Courses we offer"],
-                    has.why && ["#why", live.meta.whyLabel],
-                    has.placements && ["#placements", "Placements"],
-                    ["#offer", "Eligibility"],
-                  ].filter(Boolean) as [string, string][]
-                ).map(([href, l]) => (
-                  <li key={l}>
-                    <a href={href} className="inline-flex min-h-11 items-center px-3 text-[0.92rem] font-medium text-ink/80 transition-colors hover:text-brand">
-                      {l}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
             <div className="flex items-center gap-2">
               {phone && (
-                <PhoneLink tel={phone.href.replace("tel:", "")} location="header" className="hidden min-h-11 items-center gap-2 px-3 text-sm font-semibold text-ink hover:text-brand md:inline-flex" icon>
-                  {phone.display}
-                </PhoneLink>
+                <>
+                  {/* helpline – highlighted */}
+                  <PhoneLink
+                    tel={phone.href.replace("tel:", "")}
+                    location="header"
+                    className="group hidden min-h-11 items-center gap-2.5 rounded-full bg-[var(--hl)]/20 py-1 pl-1 pr-4 ring-1 ring-[var(--hl)]/60 transition-colors hover:bg-[var(--hl)]/35 md:inline-flex"
+                  >
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-white">
+                      <Phone aria-hidden="true" className="h-4 w-4" />
+                    </span>
+                    <span className="leading-tight">
+                      <span className="block text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-brand">Admission Helpline</span>
+                      <span className="block text-sm font-bold text-ink">{phone.display}</span>
+                    </span>
+                  </PhoneLink>
+                  <PhoneLink
+                    tel={phone.href.replace("tel:", "")}
+                    location="header_mobile"
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-[var(--hl)] text-brand-ink md:hidden"
+                  >
+                    <Phone aria-hidden="true" className="h-5 w-5" />
+                    <span className="sr-only">Call the admission helpline {phone.display}</span>
+                  </PhoneLink>
+                </>
               )}
               <a href="#top" className={`${btn.accent} !min-h-11 shrink-0 whitespace-nowrap !px-4 text-sm sm:!px-5`}>
                 Register Now
@@ -217,7 +221,7 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
                   <a href={has.admission ? "#admission" : "#top"} className={`${btn.accent} group whitespace-nowrap px-2 text-sm sm:px-6 sm:text-[0.95rem]`}>
                     Admission
                   </a>
-                  <a href="#offer" className={`${btn.outline} whitespace-nowrap px-2 text-sm sm:px-6 sm:text-[0.95rem] hover:border-[var(--hl)] hover:!bg-[var(--hl)] hover:!text-brand-ink`}>
+                  <a href="#offer" className={`${btn.outline} whitespace-nowrap !border-[var(--hl)] !bg-[var(--hl)] px-2 text-sm !text-brand-ink sm:px-6 sm:text-[0.95rem] hover:!border-[var(--hl-deep)] hover:!bg-[var(--hl-deep)]`}>
                     Courses we offer
                   </a>
                 </div>
@@ -264,7 +268,30 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
             </div>
           </section>
 
-          <SectionTabs items={tabs} tone={site.tabsTone} />
+          <SectionTabs
+            items={tabs}
+            tone={site.tabsTone}
+            aside={
+              <>
+                {phone && (
+                  <PhoneLink
+                    tel={phone.href.replace("tel:", "")}
+                    location="tabbar"
+                    className={`inline-flex min-h-10 items-center gap-2 whitespace-nowrap text-sm font-bold ${site.tabsTone === "hl" ? "text-brand-ink" : "text-white"}`}
+                  >
+                    <Phone aria-hidden="true" className={`h-4 w-4 ${site.tabsTone === "hl" ? "text-brand" : "text-[var(--hl)]"}`} />
+                    {phone.display}
+                  </PhoneLink>
+                )}
+                <a
+                  href="#top"
+                  className={`inline-flex min-h-10 items-center whitespace-nowrap rounded-[var(--btn-radius,var(--radius-card))] px-4 text-sm font-semibold transition-colors ${site.tabsTone === "hl" ? "bg-brand text-white hover:bg-brand-ink" : "bg-[var(--hl)] text-brand-ink hover:bg-[var(--hl-deep)]"}`}
+                >
+                  Register Now
+                </a>
+              </>
+            }
+          />
 
           {live.promo && <S.promo {...sp} />}
           {has.why && <S.why {...sp} />}

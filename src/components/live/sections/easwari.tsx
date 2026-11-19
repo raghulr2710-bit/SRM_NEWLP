@@ -6,7 +6,6 @@ import {
   Building2,
   Camera,
   ClipboardList,
-  Globe2,
   GraduationCap,
   HelpCircle,
   Hourglass,
@@ -208,7 +207,7 @@ function EasRecruiters({ live }: SectionProps) {
   return (
     <section id="recruiters" className="scroll-mt-10 bg-surface-alt py-12 lg:py-16">
       <div className="container-x">
-        <Heading eyebrow={`${live.recruiters.logos.length} recruiters`} Icon={Building2}>
+        <Heading>
           {live.recruiters.heading}
         </Heading>
         <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-8">
@@ -237,7 +236,7 @@ function EasCollaborations({ live }: SectionProps) {
   return (
     <section id="collaborations" className="scroll-mt-10 bg-white py-12 lg:py-16">
       <div className="container-x">
-        <Heading eyebrow="Global" Icon={Globe2}>
+        <Heading>
           {live.collaborations.heading}
         </Heading>
         <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">

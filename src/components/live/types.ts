@@ -36,7 +36,8 @@ export interface LiveData {
     heading: string;
     items: { title?: string; text: string; badge: LiveImg | null; body: string }[]; // body = issuing body, e.g. "NAAC"
   };
-  promo?: { heading: string; text: string; videoUrl?: string };
+  /** poster = optional local HD thumbnail (when YouTube has no HD one) */
+  promo?: { heading: string; text: string; videoUrl?: string; poster?: string };
   /** Exactly 3 figures each for the two blue bands (placements / academics). */
   stats1?: LiveStat[];
   stats2?: LiveStat[];

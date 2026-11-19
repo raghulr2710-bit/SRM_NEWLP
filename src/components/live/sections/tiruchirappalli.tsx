@@ -186,7 +186,7 @@ function RecruitersSection({ live }: SectionProps) {
       <div className="container-x relative grid grid-cols-[minmax(0,1fr)] items-end gap-4 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:gap-10">
         {/* left: heading + student (official Trichy hero cut-out) standing on the section edge */}
         <div className="flex min-w-0 flex-col">
-          <Heading eyebrow={`${live.recruiters.logos.length} recruiters`} Icon={Building2} align="left">
+          <Heading align="left">
             {live.recruiters.heading}
           </Heading>
           <div className="relative hidden h-[22rem] sm:block lg:h-[24rem]">
@@ -219,7 +219,7 @@ function CollaborationsSection({ live }: SectionProps) {
     <section id="collaborations" className="relative scroll-mt-10 overflow-hidden bg-white py-12 lg:py-16">
       <div aria-hidden="true" className="absolute inset-0 opacity-40 [background-image:linear-gradient(var(--line)_1px,transparent_1px),linear-gradient(90deg,var(--line)_1px,transparent_1px)] [background-size:48px_48px] [mask-image:radial-gradient(ellipse_at_top,black,transparent_70%)]" />
       <div className="container-x relative">
-        <Heading eyebrow="Global" Icon={Globe2}>
+        <Heading>
           {live.collaborations.heading}
         </Heading>
         <ul className="mx-auto grid max-w-5xl grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
