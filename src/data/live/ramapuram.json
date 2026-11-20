@@ -670,7 +670,7 @@
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
         "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
         "title": "BCA* - Computer applications",
-        "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) with Mathematics / Business Mathematics / Statistics / Business Statistics/ Allied Mathematics / Computer Science/ Computer Application/ as one of the core subjects. (OR) Diploma in Engineering (10+3 / 10+2+2 Pattern) recognized by the Government / Competent Authority.",
+        "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognized government or competent authority with a minimum aggregate of 50%. Mandatory subjects : 10 + 2 (Higher Secondary) with Mathematics / Business Mathematics / Statistics / Business Statistics/ Allied Mathematics / Computer Science/ Computer Application as one of the core subjects",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -796,7 +796,7 @@
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
         "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
         "title": "B.Sc* - Hotel and Hospitality Administration",
-        "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) Any group (or) 10+3 Year Diploma. (Minimum Aggregate of 50%)",
+        "eligibility": "Eligibility Criteria - A pass in 10+2 (Higher Secondary) Any Group. (Minimum aggregate of 35%).",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -805,7 +805,7 @@
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
         "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
         "title": "B.Sc* - Digital Film Technology",
-        "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) with Any Group. (Minimum aggregate of 40%)",
+        "eligibility": "Eligibility Criteria - A pass in 10+2 (Higher Secondary) Any Group. (Minimum aggregate of 50%).",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -841,7 +841,7 @@
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
         "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
         "title": "M.Com - Commerce (Duration 2 years)",
-        "eligibility": "Eligibility Criteria - 1. A pass in any UG degree with Commerce and Accountancy / Business studies as major subjects. 2. A minimum aggregate of 50% in UG",
+        "eligibility": "Eligibility Criteria - 1. A pass in any UG degree with Commerce and Accountancy as major subjects. 2. A minimum aggregate of 50% in UG.",
         "lateralEntry": false,
         "partTime": false,
         "level": "PG"
@@ -850,7 +850,7 @@
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
         "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
         "title": "M.Com - Accounting and Finance (Duration 2 years)",
-        "eligibility": "Eligibility Criteria - 1. A pass in any UG degree with Commerce and Accountancy / Business studies as major subjects. 2. A minimum aggregate of 50% in UG.",
+        "eligibility": "Eligibility Criteria - 1. A pass in any UG degree with Commerce and Accountancy as major subjects. 2. A minimum aggregate of 50% in UG.",
         "lateralEntry": false,
         "partTime": false,
         "level": "PG"
@@ -913,7 +913,7 @@
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
         "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
         "title": "M.Sc - Computer Science",
-        "eligibility": "Eligibility Criteria - 1. A pass in B.Sc Computer Science / BCA / B.Sc IT / B.Sc Mathematics / B.Sc Statistics/ B.Sc Physics/ B.Sc Electronics / B.Sc Triple major subjects with Computer Science as one of the Major subjects / Bachelor Degree in Computer Science Engineering or equivalent Degree from a University recognized / certified by UGC / SRMIST / AIU 2. A minimum aggregate of 50% in UG.",
+        "eligibility": "Eligibility Criteria - 1. A pass in B.Sc. Computer Science (or) B.Sc. (IT) (or) BCA (or) B.Sc. Mathematics (or) B.Sc. Statistics (or) B.Sc. Physics (or) B.Sc. Electronics (or) B.Sc. Triple Major with Computer Science as one of the major subjects. 2. A minimum aggregate of 50% in UG.",
         "lateralEntry": false,
         "partTime": false,
         "level": "PG"
@@ -922,7 +922,7 @@
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
         "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
         "title": "M.Sc - Computer Science with specialization in Cyber Security",
-        "eligibility": "Eligibility Criteria - 1. A pass in B.Sc Computer Science / BCA / B.Sc IT / B.Sc Mathematics / B.Sc Statistics/ B.Sc Physics/ B.Sc Electronics / B.Sc Triple major subjects with Computer Science as one of the Major subjects / Bachelor Degree in Computer Science Engineering or equivalent Degree from a University recognized / certified by UGC / SRMIST / AIU 2. A minimum aggregate of 50% in UG.",
+        "eligibility": "Eligibility Criteria - 1. A pass in B.Sc. Computer Science (or) B.Sc. (IT) (or) BCA (or) B.Sc. Mathematics (or) B.Sc. Statistics (or) B.Sc. Physics (or) B.Sc. Electronics (or) B.Sc. Triple Major with Computer Science as one of the major subjects. 2. A minimum aggregate of 50% in UG.",
         "lateralEntry": false,
         "partTime": false,
         "level": "PG"
@@ -931,7 +931,7 @@
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
         "section": "POSTGRADUATE COURSES (DURATION 2 YEARS)",
         "title": "M.Sc - Computer Science with specialization in Artificial Intelligence and Machine Learning",
-        "eligibility": "Eligibility Criteria - 1. A pass in B.Sc Computer Science / BCA / B.Sc IT / B.Sc Mathematics / B.Sc Statistics/ B.Sc Physics/ B.Sc Electronics / B.Sc Triple major subjects with Computer Science as one of the Major subjects / Bachelor Degree in Computer Science Engineering or equivalent Degree from a University recognized / certified by UGC / SRMIST / AIU 2. A minimum aggregate of 50% in UG.",
+        "eligibility": "Eligibility Criteria - 1. A pass in B.Sc. Computer Science (or) B.Sc. (IT) (or) BCA (or) B.Sc. Mathematics (or) B.Sc. Statistics (or) B.Sc. Physics (or) B.Sc. Electronics (or) B.Sc. Triple Major with Computer Science as one of the major subjects. 2. A minimum aggregate of 50% in UG.",
         "lateralEntry": false,
         "partTime": false,
         "level": "PG"
@@ -940,7 +940,7 @@
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
         "section": "DIPLOMA COURSE",
         "title": "Executive PG Diploma in Practical English and Life Skills",
-        "eligibility": null,
+        "eligibility": "Eligibility Criteria - A pass in any UG Degree",
         "lateralEntry": false,
         "partTime": false,
         "level": "Diploma"
@@ -994,7 +994,7 @@
         "faculty": "MANAGEMENT PROGRAMME",
         "section": "DIPLOMA COURSES",
         "title": "Executive PG Diploma in Deep Tech and Leadership",
-        "eligibility": null,
+        "eligibility": "Eligibility Criteria - A pass in any UG Degree",
         "lateralEntry": false,
         "partTime": false,
         "level": "Diploma"
@@ -1003,7 +1003,7 @@
         "faculty": "MANAGEMENT PROGRAMME",
         "section": "DIPLOMA COURSES",
         "title": "Executive PG Diploma in AI Based Healthcare Management",
-        "eligibility": null,
+        "eligibility": "Eligibility Criteria - A pass in any UG Degree",
         "lateralEntry": false,
         "partTime": false,
         "level": "Diploma"
@@ -1468,7 +1468,28 @@
           "height": 83
         }
       }
-    ]
+    ],
+    "facultyStats": {
+      "heading": "Faculty of Liberal Arts and Business Studies",
+      "items": [
+        {
+          "value": "2300+",
+          "label": "Job Offers"
+        },
+        {
+          "value": "1650+",
+          "label": "Students Placed"
+        },
+        {
+          "value": "400+",
+          "label": "Companies Visited"
+        },
+        {
+          "value": "11.7 LPA",
+          "label": "Highest Package"
+        }
+      ]
+    }
   },
   "recruiters": {
     "heading": "Top Placements in the Fortune 500 Companies",
@@ -1917,5 +1938,9 @@
   "ctaStudent": {
     "src": "/assets/ramapuram/students/ai-student-laptop-cutout.webp",
     "ratio": "800 / 1268"
-  }
+  },
+  "_notes": [
+    "Client corrections (corrections flabs ramapuram doc, Nov 2026): eligibility replaced with the client's text for B.Sc Digital Film Technology, BCA Computer Applications, B.Sc Hotel and Hospitality Administration, M.Com Commerce / Accounting and Finance, M.Sc Computer Science (+ Cyber Security, AI & ML), and the Executive PG Diplomas in Practical English and Life Skills, Deep Tech and Leadership, and AI Based Healthcare Management. Only whitespace normalised (\"50%.Mandatory subjects :10 + 2\" → \"50%. Mandatory subjects : 10 + 2\").",
+    "Client update (Nov 2026): placements.facultyStats = FLABS placement figures supplied by the client (2300+ Job Offers, 1650+ Students Placed, 400+ Companies Visited, 11.7 LPA Highest Package); shown as a panel in the Placements section, separate from the institution-wide stats1 figures."
+  ]
 }

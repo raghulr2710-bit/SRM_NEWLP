@@ -124,7 +124,7 @@ export function TrpStickyWhy({ items }: { items: { title: string; image: LiveImg
 /* Placements — Motion Studio `reactbits-components-tilted-card`                               */
 /* Large portrait card that tilts toward a mouse pointer (static on touch / reduced motion).   */
 /* ------------------------------------------------------------------------------------------ */
-export function TrpTiltProfile({ name, company, ctc, photo }: { name: string; company?: string; ctc?: string; photo: Img }) {
+export function TrpTiltProfile({ name, company, ctc, photo, department, companyLogo }: { name: string; company?: string; ctc?: string; photo: Img; department?: string; companyLogo?: Img | null }) {
   const reduce = useReducedMotion();
   const rx = useMotionValue(0);
   const ry = useMotionValue(0);
@@ -156,12 +156,20 @@ export function TrpTiltProfile({ name, company, ctc, photo }: { name: string; co
       >
         <Pic img={photo} sizes="(min-width:1024px) 260px, 50vw" className="object-top" />
         <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-brand-ink/95 via-brand-ink/55 to-transparent" />
+        {companyLogo && (
+          <span className="absolute left-3 top-3 flex h-9 w-[5.5rem] items-center rounded-lg bg-white px-2 py-1.5 shadow-sm sm:left-4 sm:top-4 sm:h-10 sm:w-24" style={reduce ? undefined : { transform: "translateZ(30px)" }}>
+            <span className="relative block h-full w-full">
+              <Pic img={companyLogo} sizes="96px" contain />
+            </span>
+          </span>
+        )}
         <div className="absolute inset-x-0 bottom-0 p-3.5 sm:p-5" style={reduce ? undefined : { transform: "translateZ(40px)" }}>
           {ctc && (
             <span className="inline-block rounded-full bg-[var(--hl)] px-2.5 py-1 text-xs font-bold text-brand-ink sm:text-[0.8125rem]">{ctc}</span>
           )}
           <h4 className="mt-2 break-words font-display text-[0.9375rem] font-semibold leading-tight text-white sm:text-lg">{name}</h4>
           {company && <p className="mt-0.5 text-xs font-medium text-white/80 sm:text-sm">{company}</p>}
+          {department && <p className="mt-1 text-[0.6875rem] font-semibold uppercase tracking-wider text-[var(--hl)] sm:text-xs">{department}</p>}
         </div>
       </motion.article>
     </div>
@@ -326,7 +334,25 @@ export function TrpFlipCard({ badge, body, text, index }: { badge: Img; body: st
 /* Testimonials — Motion Studio `motion-primitives-carousel` (Apple-cards-carousel feel)       */
 /* Horizontal scroll-snap row of tall photo cards; swipe natively, arrow buttons on all sizes. */
 /* ------------------------------------------------------------------------------------------ */
-type Story = { name: string; line2: string; line3: string; quote?: string; photo?: LiveImg | null };
+type Story = { name: string; line2: string; line3: string; quote?: string; package?: string; photo?: LiveImg | null };
+
+/** Alumni card (no quote): round portrait – the alumni photos are small square headshots. */
+function AlumniCard({ t }: { t: Story }) {
+  return (
+    <article className="relative flex h-full flex-col items-center overflow-hidden rounded-[1.75rem] border border-line bg-white px-6 pb-7 pt-8 text-center shadow-[0_24px_50px_-40px_color-mix(in_srgb,var(--brand-deep)_70%,transparent)]">
+      <span aria-hidden="true" className="absolute inset-x-0 top-0 h-24 bg-gradient-to-br from-brand to-[var(--brand-deep)]" />
+      <span className="relative block h-28 w-28 shrink-0 overflow-hidden rounded-full bg-brand-soft ring-4 ring-white shadow-[0_0_0_6px_var(--hl)]">
+        {t.photo && <Pic img={t.photo} sizes="112px" className="object-top" />}
+      </span>
+      {t.package && (
+        <span className="relative mt-5 inline-block rounded-full bg-[var(--hl)] px-3 py-1 text-[0.8125rem] font-bold text-brand-ink">{t.package}</span>
+      )}
+      <p className="relative mt-3 font-display text-lg font-semibold leading-snug text-ink">{t.name}</p>
+      <p className="relative mt-1.5 text-sm leading-snug text-muted">{t.line2}</p>
+      <p className="relative mt-auto pt-4 text-xs font-semibold uppercase tracking-wider text-brand">{t.line3}</p>
+    </article>
+  );
+}
 
 export function TrpQuoteCarousel({ items }: { items: Story[] }) {
   const ref = useRef<HTMLUListElement>(null);
@@ -353,11 +379,22 @@ export function TrpQuoteCarousel({ items }: { items: Story[] }) {
         ref={ref}
         onScroll={update}
         tabIndex={0}
-        aria-label="Student testimonials"
+        aria-label={items.some((t) => t.quote) ? "Student testimonials" : "Alumni success stories"}
         className={`-mx-5 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-px-5 px-5 pb-4 pt-1 [scrollbar-width:none] md:-mx-8 md:scroll-px-8 md:px-8 [&::-webkit-scrollbar]:hidden ${focusRing} rounded-2xl`}
       >
         {items.map((t) => (
           <li key={t.name} className="w-[82%] max-w-[21rem] shrink-0 snap-start sm:w-72 lg:w-[19.5rem]">
+            {!t.quote ? (
+              <motion.div
+                initial={reduce ? false : { opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "0px 0px -10% 0px" }}
+                transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+                className="h-full"
+              >
+                <AlumniCard t={t} />
+              </motion.div>
+            ) : (
             <motion.article
               initial={reduce ? false : { opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -383,6 +420,7 @@ export function TrpQuoteCarousel({ items }: { items: Story[] }) {
                 </div>
               </div>
             </motion.article>
+            )}
           </li>
         ))}
       </ul>

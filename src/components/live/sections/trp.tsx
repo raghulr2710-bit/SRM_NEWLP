@@ -181,7 +181,7 @@ function TrpPlacements({ live }: SectionProps) {
               {profiles.map((p, i) => (
                 <Reveal as="li" key={p.name} delay={0.07 * i} className="w-[78%] shrink-0 snap-center sm:w-auto">
 
-                  <TrpTiltProfile name={p.name} company={p.company} ctc={p.ctc} photo={p.photo as Img} />
+                  <TrpTiltProfile name={p.name} company={p.company} ctc={p.ctc} photo={p.photo as Img} department={p.department} companyLogo={p.companyLogo as Img | null} />
                 </Reveal>
               ))}
             </ul>
@@ -216,7 +216,7 @@ function TrpRankings({ live }: SectionProps) {
         <Heading eyebrow="Recognition" Icon={Award}>
           {live.rankings.heading}
         </Heading>
-        <ul className="mx-auto grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <ul className={`mx-auto grid gap-4 sm:grid-cols-2 lg:gap-6 ${live.rankings.items.length === 4 ? "max-w-6xl lg:grid-cols-4" : "max-w-5xl lg:grid-cols-3"}`}>
           {live.rankings.items.map((r, i) => (
             <Reveal as="li" key={i} delay={0.06 * i}>
               <TrpFlipCard badge={r.badge} body={r.body} text={r.text} index={i} />
@@ -290,7 +290,7 @@ function TrpTestimonials({ live }: SectionProps) {
   return (
     <section id="testimonials" className="relative scroll-mt-10 overflow-hidden bg-white py-12 lg:py-16">
       <div className="container-x">
-        <Heading eyebrow="Student voices" Icon={PlayCircle}>
+        <Heading eyebrow={live.testimonials.items.some((t) => t.quote) ? "Student voices" : "Our alumni"} Icon={live.testimonials.items.some((t) => t.quote) ? PlayCircle : GraduationCap}>
           {live.testimonials.heading}
         </Heading>
         <TrpQuoteCarousel items={live.testimonials.items} />

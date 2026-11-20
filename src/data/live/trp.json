@@ -55,6 +55,17 @@
           "height": 84
         },
         "body": "NBA"
+      },
+      {
+        "title": "NAAC",
+        "text": "Accredited by NAAC with A+ Grade",
+        "badge": {
+          "src": "/assets/trp/accreditation/naac-a-plus.png",
+          "alt": "NAAC A+ accreditation logo",
+          "width": 214,
+          "height": 156
+        },
+        "body": "NAAC A+"
       }
     ]
   },
@@ -94,7 +105,7 @@
       "icon": "BookOpen"
     },
     {
-      "value": "15",
+      "value": "50+",
       "label": "Major Recruiters",
       "icon": "Building2"
     },
@@ -241,10 +252,10 @@
       {
         "title": "State-of-the-Art Infrastructure",
         "image": {
-          "src": "/assets/trp/campus/state-of-the-art-infrastructure.jpg",
-          "alt": "SRM TRP academic blocks around open lawns",
-          "width": 1032,
-          "height": 774
+          "src": "/assets/trp/campus/srm-trp-campus-aerial.webp",
+          "alt": "Aerial view of the SRM TRP Engineering College campus",
+          "width": 1300,
+          "height": 873
         }
       },
       {
@@ -289,52 +300,130 @@
     "heading": "Placement Records",
     "profiles": [
       {
-        "name": "GIFTSON TENSINGH.T",
-        "ctc": "CTC : 8 LPA+",
-        "company": "IDP India Education",
+        "name": "Jeyakartika G",
+        "department": "B.Tech – AI & DS",
+        "ctc": "CTC : 14 LPA",
+        "company": "Shnoor International LLC",
         "photo": {
-          "src": "/assets/trp/placements/giftson-tensingh-t.jpg",
-          "alt": "Giftson Tensingh T",
-          "width": 479,
-          "height": 719
+          "src": "/assets/trp/placements/2027/jeyakartika-g.webp",
+          "width": 473,
+          "height": 598,
+          "alt": "Jeyakartika G"
         },
-        "companyLogo": null
+        "companyLogo": {
+          "src": "/assets/trp/recruiters/2027/shnoor.webp",
+          "width": 210,
+          "height": 70,
+          "alt": "Shnoor International LLC logo"
+        }
       },
       {
-        "name": "VETRIVEERAN.G",
-        "ctc": "CTC : 6.12 LPA",
-        "company": "Kinaxis India",
+        "name": "Priyaa Ravi",
+        "department": "B.Tech – AI & DS",
+        "ctc": "CTC : 10.75 LPA",
+        "company": "IBM",
         "photo": {
-          "src": "/assets/trp/placements/vetriveeran-g.jpg",
-          "alt": "Vetriveeran G",
-          "width": 342,
-          "height": 513
+          "src": "/assets/trp/placements/2027/priyaa-ravi.webp",
+          "width": 348,
+          "height": 382,
+          "alt": "Priyaa Ravi"
         },
-        "companyLogo": null
+        "companyLogo": {
+          "src": "/assets/trp/recruiters/2027/ibm.webp",
+          "width": 305,
+          "height": 120,
+          "alt": "IBM logo"
+        }
       },
       {
-        "name": "LOHITHA.A.M.K",
+        "name": "R. Rajadurai",
+        "department": "B.E – CSE",
+        "ctc": "CTC : 10 LPA",
+        "company": "Rocket",
+        "photo": {
+          "src": "/assets/trp/placements/2027/r-rajadurai.webp",
+          "width": 354,
+          "height": 473,
+          "alt": "R. Rajadurai"
+        },
+        "companyLogo": {
+          "src": "/assets/trp/recruiters/2027/rocket.webp",
+          "width": 809,
+          "height": 156,
+          "alt": "Rocket logo"
+        }
+      },
+      {
+        "name": "R. Arun Balaji",
+        "department": "B.E – CSE",
+        "ctc": "CTC : 14 LPA",
+        "company": "Shnoor International LLC",
+        "photo": {
+          "src": "/assets/trp/placements/2027/r-arun-balaji.webp",
+          "width": 473,
+          "height": 432,
+          "alt": "R. Arun Balaji"
+        },
+        "companyLogo": {
+          "src": "/assets/trp/recruiters/2027/shnoor.webp",
+          "width": 210,
+          "height": 70,
+          "alt": "Shnoor International LLC logo"
+        }
+      },
+      {
+        "name": "Mounika M",
+        "department": "B.E – EEE",
+        "ctc": "CTC : 14 LPA",
+        "company": "Shnoor International LLC",
+        "photo": {
+          "src": "/assets/trp/placements/2027/mounika-m.webp",
+          "width": 339,
+          "height": 373,
+          "alt": "Mounika M"
+        },
+        "companyLogo": {
+          "src": "/assets/trp/recruiters/2027/shnoor.webp",
+          "width": 210,
+          "height": 70,
+          "alt": "Shnoor International LLC logo"
+        }
+      },
+      {
+        "name": "Mohamed Faisal S",
+        "department": "B.E – CSE",
         "ctc": "CTC : 7 LPA",
-        "company": "TCS",
+        "company": "TCS Digital",
         "photo": {
-          "src": "/assets/trp/placements/lohitha-a-m-k.jpg",
-          "alt": "Lohitha A M K",
-          "width": 193,
-          "height": 290
+          "src": "/assets/trp/placements/2027/mohamed-faisal-s.webp",
+          "width": 278,
+          "height": 357,
+          "alt": "Mohamed Faisal S"
         },
-        "companyLogo": null
+        "companyLogo": {
+          "src": "/assets/trp/recruiters/2027/tcs.webp",
+          "width": 670,
+          "height": 459,
+          "alt": "TCS Digital logo"
+        }
       },
       {
-        "name": "Satya Narayanan.A",
-        "ctc": "CTC : 5 LPA",
-        "company": "My Captain",
+        "name": "Aarthi S",
+        "department": "B.E – CSE",
+        "ctc": "Stipend : ₹50,000 / month",
+        "company": "IBM",
         "photo": {
-          "src": "/assets/trp/placements/satya-narayanan-a.jpg",
-          "alt": "Satya Narayanan A",
-          "width": 193,
-          "height": 290
+          "src": "/assets/trp/placements/2027/aarthi-s.webp",
+          "width": 312,
+          "height": 312,
+          "alt": "Aarthi S"
         },
-        "companyLogo": null
+        "companyLogo": {
+          "src": "/assets/trp/recruiters/2027/ibm.webp",
+          "width": 305,
+          "height": 120,
+          "alt": "IBM logo"
+        }
       }
     ]
   },
@@ -483,10 +572,10 @@
     "heading": "Life at SRM TRP",
     "items": [
       {
-        "src": "/assets/trp/campus/state-of-the-art-infrastructure.jpg",
-        "alt": "SRM TRP academic blocks around open lawns",
-        "width": 1032,
-        "height": 774,
+        "src": "/assets/trp/campus/srm-trp-campus-aerial.webp",
+        "alt": "Aerial view of the SRM TRP Engineering College campus",
+        "width": 1300,
+        "height": 873,
         "title": "State-of-the-Art Infrastructure",
         "tag": "Campus"
       },
@@ -525,78 +614,162 @@
     ]
   },
   "testimonials": {
-    "heading": "Testimonials",
+    "heading": "Alumni Success Stories",
     "items": [
       {
-        "name": "Abirami R",
-        "line2": "Relationship Manager in City Union Bank",
-        "line3": "B.E ,ECE - 2018-2022",
-        "quote": "Pathway for Success",
+        "name": "Karen Rajathi",
+        "line2": "Software Engineer, TD Bank, Canada",
+        "line3": "CSE · Batch 2011-2015",
+        "package": "$90,000 per annum",
         "photo": {
-          "src": "/assets/trp/testimonials/abirami-r-face.webp",
-          "alt": "Abirami R",
-          "width": 600,
-          "height": 900
+          "src": "/assets/trp/alumni/karen-rajathi.webp",
+          "width": 268,
+          "height": 293,
+          "alt": "Karen Rajathi"
         }
       },
       {
-        "name": "Shanawaz Khan",
-        "line2": "System Engineer in Infosys",
-        "line3": "Mechanical Engineering - 2017-2021",
-        "quote": "The place where I got different opportunity to explore myself",
+        "name": "Rizwanul Hassan J",
+        "line2": "Project Lead, SRM Technologies, Perungudi, Chennai",
+        "line3": "ECE · Batch 2011-2015",
+        "package": "17 LPA per annum",
         "photo": {
-          "src": "/assets/trp/testimonials/shanawaz-khan-face.webp",
-          "alt": "Shanawaz Khan",
-          "width": 600,
-          "height": 900
+          "src": "/assets/trp/alumni/rizwanul-hassan-j.webp",
+          "width": 236,
+          "height": 240,
+          "alt": "Rizwanul Hassan J"
         }
       },
       {
-        "name": "R.Santhosh babu",
-        "line2": "Present designation Associate in Cognizant technology",
-        "line3": "B.E ,ECE - 2015 - 2019",
-        "quote": "The place where I got my new friends",
+        "name": "Varsha P",
+        "line2": "MDM Developer, Majix Solutions Inc., United States",
+        "line3": "ECE · Batch 2018-2022",
+        "package": "$300,000 per annum",
         "photo": {
-          "src": "/assets/trp/testimonials/r-santhosh-babu-face.webp",
-          "alt": "R. Santhosh Babu",
-          "width": 600,
-          "height": 900
+          "src": "/assets/trp/alumni/varsha-p.webp",
+          "width": 243,
+          "height": 234,
+          "alt": "Varsha P"
         }
       },
       {
-        "name": "Sathish Kumar",
-        "line2": "Systems Engineer in Infosys Ltd., Chennai",
-        "line3": "B.E. Mechanical Engineering - 2016-2020",
-        "quote": "The place where I gained life time friends",
+        "name": "Gokul Gandhi",
+        "line2": "Assistant Consultant, TCS, Chennai",
+        "line3": "ECE · Batch 2011-2015",
+        "package": "25 LPA per annum",
         "photo": {
-          "src": "/assets/trp/testimonials/sathish-kumar-face.webp",
-          "alt": "Sathish Kumar",
-          "width": 600,
-          "height": 900
+          "src": "/assets/trp/alumni/gokul-gandhi.webp",
+          "width": 202,
+          "height": 176,
+          "alt": "Gokul Gandhi"
         }
       },
       {
-        "name": "Rathish. S",
-        "line2": "Cricket Analyst in Kadamba Technologies",
-        "line3": "B.E. Mechanical Engineering - 2016-2020",
-        "quote": "Place where I made friends for life",
+        "name": "Mohamed Ibrahim",
+        "line2": "Project Engineer, Exact Technical Solutions, Saudi Arabia",
+        "line3": "Mechanical · Batch 2018-2022",
+        "package": "10 LPA per annum",
         "photo": {
-          "src": "/assets/trp/testimonials/rathish-s-face.webp",
-          "alt": "Rathish S",
-          "width": 600,
-          "height": 900
+          "src": "/assets/trp/alumni/mohamed-ibrahim.webp",
+          "width": 284,
+          "height": 275,
+          "alt": "Mohamed Ibrahim"
         }
       },
       {
-        "name": "Krishna Harini R",
-        "line2": "Relationship Manager Trainee, City Union Bank",
-        "line3": "B.E. Mechanical Engineering - 2018-2022",
-        "quote": "Extremely important in shaping my future",
+        "name": "Hemanth Kumar",
+        "line2": "Senior Costing Engineer, Caterpillar",
+        "line3": "Mechanical · Batch 2013-2017",
+        "package": "18 LPA per annum",
         "photo": {
-          "src": "/assets/trp/testimonials/krishna-harini-r-face.webp",
-          "alt": "Krishna Harini R",
-          "width": 600,
-          "height": 900
+          "src": "/assets/trp/alumni/hemanth-kumar.webp",
+          "width": 289,
+          "height": 254,
+          "alt": "Hemanth Kumar"
+        }
+      },
+      {
+        "name": "Karthikeyan K",
+        "line2": "Senior Welding Engineer, ESAB, Chennai",
+        "line3": "Mechanical · Batch 2014-2018",
+        "package": "15 LPA per annum",
+        "photo": {
+          "src": "/assets/trp/alumni/karthikeyan-k.webp",
+          "width": 295,
+          "height": 227,
+          "alt": "Karthikeyan K"
+        }
+      },
+      {
+        "name": "Ajith",
+        "line2": "CSWIP Welding & B-Gas Painting Inspector, Interface Technical Inspection, Dubai",
+        "line3": "Mechanical · Batch 2018-2022",
+        "package": "18 LPA per annum",
+        "photo": {
+          "src": "/assets/trp/alumni/ajith.webp",
+          "width": 217,
+          "height": 218,
+          "alt": "Ajith"
+        }
+      },
+      {
+        "name": "Haripriya Gunasekar",
+        "line2": "Sr. Associate, Cognizant, Chennai",
+        "line3": "EEE · Batch 2012-2016",
+        "package": "20 LPA per annum",
+        "photo": {
+          "src": "/assets/trp/alumni/haripriya-gunasekar.webp",
+          "width": 283,
+          "height": 283,
+          "alt": "Haripriya Gunasekar"
+        }
+      },
+      {
+        "name": "Parmesh Raja Udayar",
+        "line2": "Technical Sales Manager – UAE, Oman & India, Corrosion RADAR Ltd, UAE",
+        "line3": "Mechanical · Batch 2011-2015",
+        "package": "$80,000 per annum",
+        "photo": {
+          "src": "/assets/trp/alumni/parmesh-raja-udayar.webp",
+          "width": 279,
+          "height": 280,
+          "alt": "Parmesh Raja Udayar"
+        }
+      },
+      {
+        "name": "Ravivarma Ramadas",
+        "line2": "Lead Data Engineer, Relevantz Technologies Services India Pvt. Ltd.",
+        "line3": "ECE · Batch 2013-2017",
+        "package": "35 LPA per annum",
+        "photo": {
+          "src": "/assets/trp/alumni/ravivarma-ramadas.webp",
+          "width": 245,
+          "height": 263,
+          "alt": "Ravivarma Ramadas"
+        }
+      },
+      {
+        "name": "Mohamed Hanief Tajudeen",
+        "line2": "Lead Project Engineer, Industrial Projection Company, Saudi Arabia",
+        "line3": "EEE · Batch 2015-2019",
+        "package": "20 LPA per annum",
+        "photo": {
+          "src": "/assets/trp/alumni/mohamed-hanief-tajudeen.webp",
+          "width": 229,
+          "height": 229,
+          "alt": "Mohamed Hanief Tajudeen"
+        }
+      },
+      {
+        "name": "Hariharan Thirugnanasambandam",
+        "line2": "Senior Software Engineer, TikTok, USA",
+        "line3": "Mechanical · Batch 2013-2017",
+        "package": "1 Cr per annum",
+        "photo": {
+          "src": "/assets/trp/alumni/hariharan-thirugnanasambandam.webp",
+          "width": 300,
+          "height": 252,
+          "alt": "Hariharan Thirugnanasambandam"
         }
       }
     ]
@@ -633,14 +806,16 @@
     "facts labels written by us: \"Interview Avenues\" (live: INTERVIEW AVENUES), \"Undergraduate Programmes\" / \"Postgraduate Programmes\" (counts of the 8 UG / 6 PG courses listed under Courses Offered), \"Major Recruiters\" (count of the 15 logos under Our major Recruiters), \"Autonomous\" / \"Institution Affiliated to Anna University\" (from the logo artwork \"An AUTONOMOUS Institution Affiliated to ANNA UNIVERSITY\").",
     "programmes: faculty = the live tab names (UNDERGRADUATE / POSTGRADUATE); section null (live column header is just \"Specialization\"). M.S (Research) / Ph.D entries set to level PG because the live site lists them under the POSTGRADUATE tab.",
     "programmes: lateralEntry true for all UG courses from the live note \"( Lateral Entry Available )\" on the UG tab; no lateral-entry eligibility text is published, so programmes.lateralEntry is omitted.",
-    "placements.profiles ctc: live cards show a \"CTC\" label above the value; rendered as \"CTC : <value>\" like the Ramapuram file. Department, batch and company logos are not shown on the live cards.",
     "ctaHeading \"Join the premier institute that will upskill your talent\" is a fragment of the live hero sub-headline.",
     "campus.heading \"Life at SRM TRP\" and campus tags (Campus, Events, Library, Labs) written by us; titles are the live \"Why TRP?\" captions. Only 5 real campus photos exist on the live page (same photos as the Why section).",
     "Image alt texts for why/campus/placements/testimonials photos written by us (live page has empty alts), taken from src/data/institutions/trp.ts.",
-    "testimonials: line2 joins the live role and company lines (\"Relationship Manager\" + \"in City Union Bank\"); for Krishna Harini R the live company line has no \"in\", joined with a comma. Each quote answers the live prompt \"One word about trpec:\".",
     "Omitted (not on live site): stats2, highlightSlides, steps, madeSimple, collaborations, placements.cards, faqs, contact.map, contact.landmarks.",
     "steps: the live page publishes no admission steps; these indicative steps (and the caveat shown as intro) come from src/data/institutions/trp.ts, added at the client’s request so the hero “Admission” button has a section on every page.",
-    "hero.text: paragraph supplied by the client (replaces the one-line sub-heading)."
+    "hero.text: paragraph supplied by the client (replaces the one-line sub-heading).",
+    "Client corrections (Nov 2026): NAAC A+ logo supplied by the client (white background removed) added to rankings (About TRP badges + Approvals & Accreditations) and to the header next to the college logo; rankings NAAC text \"Accredited by NAAC with A+ Grade\" read from the logo artwork. facts Major Recruiters changed from 15 (logo count) to \"50+\" at the client's request.",
+    "Client update (Nov 2026) – building: the State-of-the-Art Infrastructure image in Why TRP? and Life at SRM TRP is the client's aerial campus photo (srm-trp-campus-aerial.webp); alt text ours. The hero background still uses the earlier building photo.",
+    "Client update (Nov 2026) – placements.profiles: the 7 students from \"SRM TRP - Placement Student Details 2027\" replace the 4 earlier live-site profiles. Names in title case (doc mixes upper/lower case; \"MohamedFaisal S\" spaced, \"Mounika.M\" → \"Mounika M\"); \"M/s.\" dropped from company names; department labels shortened (B.Tech-AI&DS → B.Tech – AI & DS). Aarthi S: doc says \"50,000/- stipend per month\", shown as \"Stipend : ₹50,000 / month\". Company logos are the ones in the doc.",
+    "Client update (Nov 2026) – testimonials: replaced by the 13 alumni in \"SRM TRP - Alumni Details\". The doc has no quotes, so cards show role, company, department/batch and the salary package. Heading \"Alumni Success Stories\" is ours. Package values as in the doc, normalised: \"17LPA\" → \"17 LPA\", \"20 lpa\"/\"20 Lakhs\" → \"20 LPA\", \"3,500,000\" → \"35 LPA\" (assumed INR), \"80000 USD\" → \"$80,000\", \"1Cr\" → \"1 Cr\". Hemanth Kumar's row had three stray photos in the company column (duplicates of other alumni) – only the Photo column is used."
   ],
   "steps": {
     "heading": "Your admission, step by step",

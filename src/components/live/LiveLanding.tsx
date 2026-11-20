@@ -55,6 +55,8 @@ export interface LiveSiteConfig {
   hideHeroSubline?: boolean;
   /** Hide the looping accreditation logo strip in the hero. */
   hideHeroBadges?: boolean;
+  /** Accreditation seal shown in the header next to the college logo (e.g. NAAC A+). */
+  headerBadge?: LiveImg;
   /** Section tab bar colour (default: brand). */
   tabsTone?: "brand" | "hl";
   /** Campus-specific section designs (fallback: default design). */
@@ -150,9 +152,18 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
         {/* Header */}
         <header className="relative z-50 border-b border-line bg-white">
           <div className="container-x flex h-[4.5rem] items-center justify-between gap-4">
-            <a href="#top" className="relative h-12 w-40 shrink-0" aria-label={`${live.meta.shortName} – back to top`}>
-              <Pic img={live.logo as Img} sizes="160px" contain priority />
-            </a>
+            <div className="flex min-w-0 items-center gap-2 sm:gap-4">
+              <a href="#top" className={`relative h-12 shrink-0 sm:w-40 ${site.headerBadge ? "w-28" : "w-32"}`} aria-label={`${live.meta.shortName} – back to top`}>
+                <Pic img={live.logo as Img} sizes="160px" contain priority />
+              </a>
+              {site.headerBadge && (
+                <span className="relative h-10 w-11 shrink-0 sm:h-12 sm:w-[4.5rem] sm:border-l sm:border-line sm:pl-4">
+                  <span className="relative block h-full w-full">
+                    <Pic img={site.headerBadge as Img} sizes="72px" contain priority />
+                  </span>
+                </span>
+              )}
+            </div>
             <div className="flex items-center gap-2">
               {phone && (
                 <>
@@ -180,7 +191,7 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
                   </PhoneLink>
                 </>
               )}
-              <a href="#top" className={`${btn.accent} !min-h-11 shrink-0 whitespace-nowrap !px-4 text-sm sm:!px-5`}>
+              <a href="#top" className={`${btn.accent} !min-h-11 shrink-0 whitespace-nowrap text-sm sm:!px-5 ${site.headerBadge ? "!px-3" : "!px-4"}`}>
                 Register Now
               </a>
             </div>

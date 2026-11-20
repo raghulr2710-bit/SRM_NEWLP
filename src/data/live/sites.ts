@@ -142,6 +142,7 @@ export const trpSite: LiveSiteConfig = {
   },
   globe: { home: [10.76, 78.81], partners: false, base: [0.9, 0.9, 0.97], marker: [0.98, 0.79, 0.22], glow: [0.86, 0.86, 0.96] },
   sections: trpSections,
+  headerBadge: { src: "/assets/trp/accreditation/naac-a-plus.png", alt: "Accredited by NAAC with A+ Grade", width: 214, height: 156 },
   tabsTone: "hl",
   hideHeroBadges: true,
 };

@@ -72,6 +72,8 @@ export interface LiveData {
   placements?: {
     heading: string;
     cards?: { title: string; text: string }[];
+    /** Faculty-level placement figures (e.g. FLABS), shown as a panel under the cards. */
+    facultyStats?: { heading: string; items: { value: string; label: string }[] };
     profiles?: {
       name: string;
       batch?: string;
@@ -90,7 +92,8 @@ export interface LiveData {
   testimonials?: {
     heading: string;
     /** Video testimonials (YouTube) and/or written quotes with a photo. line2 = role/company, line3 = batch/college. */
-    items: { name: string; line2: string; line3: string; videoUrl?: string; quote?: string; photo?: LiveImg | null }[];
+    /** package = salary line for alumni cards (shown when there is no quote). */
+    items: { name: string; line2: string; line3: string; videoUrl?: string; quote?: string; package?: string; photo?: LiveImg | null }[];
   };
   faqs?: { heading: string; items: { q: string; a: string }[] };
   contact: {
