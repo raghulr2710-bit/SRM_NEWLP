@@ -14,6 +14,7 @@ import {
   Trophy,
   type LucideIcon,
 } from "lucide-react";
+import type { CSSProperties } from "react";
 import { Reveal } from "@/components/common/Reveal";
 import { PhoneLink } from "@/components/common/Cta";
 import { PromoVideo } from "../PromoVideo";
@@ -173,18 +174,27 @@ function TrpPlacements({ live }: SectionProps) {
         {profiles.length ? (
           <>
             <h3 className="sr-only">Student placement profiles</h3>
-            {/* mobile: one large card at a time, swipe for the rest (snap); sm+: grid */}
-            <ul
-              aria-label="Student placement profiles"
-              className="no-scrollbar -mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:mx-auto sm:grid sm:max-w-5xl sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-4 lg:gap-6"
-            >
-              {profiles.map((p, i) => (
-                <Reveal as="li" key={p.name} delay={0.07 * i} className="w-[78%] shrink-0 snap-center sm:w-auto">
-
-                  <TrpTiltProfile name={p.name} company={p.company} ctc={p.ctc} photo={p.photo as Img} department={p.department} companyLogo={p.companyLogo as Img | null} />
-                </Reveal>
-              ))}
-            </ul>
+            {/* one auto-scrolling row (CSS .marquee-track: pauses on hover/focus; reduced motion wraps) */}
+            <Reveal className="marquee relative -mx-5 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_5%,black_95%,transparent)] sm:mx-0 motion-reduce:[mask-image:none]">
+              <ul
+                aria-label="Student placement profiles"
+                className="marquee-track flex w-max gap-5 py-3 pr-5 motion-reduce:w-auto motion-reduce:justify-center"
+                style={{ "--marquee-duration": `${Math.max(profiles.length * 6, 36)}s` } as CSSProperties}
+              >
+                {[0, 1].map((copy) =>
+                  profiles.map((p) => (
+                    <li
+                      key={`${copy}-${p.name}`}
+                      aria-hidden={copy ? true : undefined}
+                      inert={copy ? true : undefined}
+                      className={`w-[220px] shrink-0 sm:w-[240px] ${copy ? "motion-reduce:hidden" : ""}`}
+                    >
+                      <TrpTiltProfile name={p.name} company={p.company} ctc={p.ctc} photo={p.photo as Img} department={p.department} companyLogo={p.companyLogo as Img | null} />
+                    </li>
+                  )),
+                )}
+              </ul>
+            </Reveal>
           </>
         ) : null}
       </div>

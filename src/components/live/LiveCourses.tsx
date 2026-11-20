@@ -102,11 +102,13 @@ export function LiveCourses({
   items,
   ugEligibility,
   flabsUgNote,
+  flabsStats,
   lateral,
 }: {
   items: LiveCourse[];
   ugEligibility?: UgEligibility;
   flabsUgNote?: string;
+  flabsStats?: { heading: string; items: { value: string; label: string }[] };
   lateral?: { eligibility: string; programmes: string[] };
 }) {
   const { openEnquiry } = useEnquiry();
@@ -422,6 +424,24 @@ export function LiveCourses({
               </div>
             )}
             {!query && /^(LIBERAL|FLABS)/.test(tab) && flabsUgNote && <p className="text-sm text-muted">{flabsUgNote}</p>}
+            {!query && /^(LIBERAL|FLABS)/.test(tab) && flabsStats?.items.length ? (
+              <div className="on-dark relative mt-2 overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-brand to-[var(--brand-deep)] px-6 py-8 text-white sm:px-10">
+                <span aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.14)_1px,transparent_1px)] [background-size:14px_14px] [mask-image:linear-gradient(to_right,black,transparent_70%)]" />
+                <span aria-hidden="true" className="absolute -right-10 -top-14 h-40 w-40 rounded-full border-[1.25rem] border-[var(--hl)]/20" />
+                <h3 className="relative text-center font-display text-lg font-semibold leading-snug sm:text-xl">
+                  <span className="eyebrow mb-2 block text-[var(--hl)]">Placements</span>
+                  {flabsStats.heading}
+                </h3>
+                <dl className="relative mt-6 grid grid-cols-2 gap-x-4 gap-y-6 lg:grid-cols-4 lg:divide-x lg:divide-white/15">
+                  {flabsStats.items.map((s) => (
+                    <div key={s.label} className="flex flex-col-reverse justify-end text-center lg:px-4">
+                      <dt className="mt-1.5 text-xs font-medium uppercase tracking-[0.12em] text-white/75 sm:text-[0.8125rem]">{s.label}</dt>
+                      <dd className="font-display text-[1.875rem] font-semibold leading-none tracking-tight text-white sm:text-4xl">{s.value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            ) : null}
           </motion.div>
         </AnimatePresence>
       </div>

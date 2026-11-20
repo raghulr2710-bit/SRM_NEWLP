@@ -116,24 +116,6 @@ export function PlacementsSection({ live }: SectionProps) {
             })}
           </ul>
           ) : null}
-          {live.placements.facultyStats?.items.length ? (
-            <Reveal className="on-dark relative mx-auto mt-10 max-w-5xl overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-brand to-[var(--brand-deep)] px-6 py-8 text-white sm:px-10 lg:mt-12">
-              <span aria-hidden="true" className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.14)_1px,transparent_1px)] [background-size:14px_14px] [mask-image:linear-gradient(to_right,black,transparent_70%)]" />
-              <span aria-hidden="true" className="absolute -right-10 -top-14 h-40 w-40 rounded-full border-[1.25rem] border-[var(--hl)]/20" />
-              <h3 className="relative text-center font-display text-lg font-semibold leading-snug sm:text-xl">
-                <span className="eyebrow mb-2 block text-[var(--hl)]">Placements</span>
-                {live.placements.facultyStats.heading}
-              </h3>
-              <dl className="relative mt-6 grid grid-cols-2 gap-x-4 gap-y-6 lg:grid-cols-4 lg:divide-x lg:divide-white/15">
-                {live.placements.facultyStats.items.map((s) => (
-                  <div key={s.label} className="flex flex-col-reverse text-center lg:px-4">
-                    <dt className="mt-1.5 text-xs font-medium uppercase tracking-[0.12em] text-white/75 sm:text-[0.8125rem]">{s.label}</dt>
-                    <dd className="font-display text-[1.875rem] font-semibold leading-none tracking-tight text-white sm:text-4xl">{s.value}</dd>
-                  </div>
-                ))}
-              </dl>
-            </Reveal>
-          ) : null}
         </div>
         {live.placements.profiles?.length ? (
         <div className="relative mt-8">

@@ -314,7 +314,7 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
                 {live.programmes.heading}
               </Heading>
               <div>
-                <LiveCourses items={live.programmes.items as LiveCourse[]} ugEligibility={ug} flabsUgNote={live.programmes.flabsUgNote} lateral={lateral} />
+                <LiveCourses items={live.programmes.items as LiveCourse[]} ugEligibility={ug} flabsUgNote={live.programmes.flabsUgNote} flabsStats={live.placements?.facultyStats} lateral={lateral} />
               </div>
             </div>
           </section>
