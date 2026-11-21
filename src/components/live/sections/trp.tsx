@@ -6,7 +6,10 @@ import {
   Briefcase,
   Building2,
   Camera,
+  Globe2,
   GraduationCap,
+  Handshake,
+  Lightbulb,
   Mail,
   MapPin,
   Phone,
@@ -18,6 +21,7 @@ import type { CSSProperties } from "react";
 import { Reveal } from "@/components/common/Reveal";
 import { PhoneLink } from "@/components/common/Cta";
 import { PromoVideo } from "../PromoVideo";
+import { AutoScrollRow } from "../AutoScrollRow";
 import { Heading, Pic, Value, type Img, CtaStudent } from "../parts";
 import type { LiveImg } from "../types";
 import type { SectionProps, SectionSet } from "./types";
@@ -174,26 +178,13 @@ function TrpPlacements({ live }: SectionProps) {
         {profiles.length ? (
           <>
             <h3 className="sr-only">Student placement profiles</h3>
-            {/* one auto-scrolling row (CSS .marquee-track: pauses on hover/focus; reduced motion wraps) */}
-            <Reveal className="marquee relative -mx-5 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_5%,black_95%,transparent)] sm:mx-0 motion-reduce:[mask-image:none]">
-              <ul
-                aria-label="Student placement profiles"
-                className="marquee-track flex w-max gap-5 py-3 pr-5 motion-reduce:w-auto motion-reduce:justify-center"
-                style={{ "--marquee-duration": `${Math.max(profiles.length * 6, 36)}s` } as CSSProperties}
-              >
-                {[0, 1].map((copy) =>
-                  profiles.map((p) => (
-                    <li
-                      key={`${copy}-${p.name}`}
-                      aria-hidden={copy ? true : undefined}
-                      inert={copy ? true : undefined}
-                      className={`w-[220px] shrink-0 sm:w-[240px] ${copy ? "motion-reduce:hidden" : ""}`}
-                    >
-                      <TrpTiltProfile name={p.name} company={p.company} ctc={p.ctc} photo={p.photo as Img} department={p.department} companyLogo={p.companyLogo as Img | null} />
-                    </li>
-                  )),
-                )}
-              </ul>
+            {/* one auto-scrolling row with prev / next arrows (pauses on hover / touch) */}
+            <Reveal className="-mx-5 sm:mx-0">
+              <AutoScrollRow label="Student placement profiles" itemClassName="w-[220px] sm:w-[240px]">
+                {profiles.map((p) => (
+                  <TrpTiltProfile key={p.name} name={p.name} company={p.company} ctc={p.ctc} photo={p.photo as Img} department={p.department} companyLogo={p.companyLogo as Img | null} />
+                ))}
+              </AutoScrollRow>
             </Reveal>
           </>
         ) : null}
@@ -239,52 +230,106 @@ function TrpRankings({ live }: SectionProps) {
 }
 
 /* Highlights (facts) — bento: one large brand tile + four smaller tiles, count-up numbers. */
-const FACT_ICONS: Record<string, LucideIcon> = { Award, BookOpen, Briefcase, Building2, GraduationCap };
+const FACT_ICONS: Record<string, LucideIcon> = { Award, BookOpen, Briefcase, Building2, GraduationCap, Globe2, Handshake, Lightbulb };
 
 function TrpHighlights({ live }: SectionProps) {
   const facts = live.facts ?? [];
-  if (!facts.length) return null;
+  const mou = live.mou;
+  if (!facts.length && !mou?.logos.length) return null;
+  // Legacy layout (no MoU band): first fact is the large tile.
+  if (!mou?.logos.length) return <TrpFactBento facts={facts} />;
+  const logos = mou.logos;
+  return (
+    <section aria-label="Highlights" className="bg-surface-alt py-12 lg:py-16">
+      <div className="container-x space-y-3 sm:space-y-4">
+        {/* MoU partners: dark band with an auto-scrolling logo row (pauses on hover; wraps for reduced motion) */}
+        <Reveal className="on-dark relative overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-brand to-[var(--brand-deep)] p-6 text-white sm:p-8">
+          <span aria-hidden="true" className={`absolute inset-0 opacity-[0.08] ${gridPattern} [mask-image:radial-gradient(circle_at_bottom_right,black,transparent_75%)]`} />
+          <div className="relative flex flex-wrap items-end justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/20">
+                <Handshake aria-hidden="true" className="h-6 w-6 text-[var(--hl)]" strokeWidth={1.75} />
+              </span>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[var(--hl)]">MoU details</p>
+                <h2 className="mt-1 font-display text-2xl font-bold sm:text-3xl">{mou.heading}</h2>
+              </div>
+            </div>
+            {mou.intro && <p className="max-w-md text-sm text-white/80">{mou.intro}</p>}
+          </div>
+          <div className="marquee relative mt-6 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_5%,black_95%,transparent)] motion-reduce:[mask-image:none]">
+            <ul aria-label={mou.heading} className="marquee-track flex w-max gap-3 py-1 pr-3 motion-reduce:w-auto motion-reduce:flex-wrap motion-reduce:justify-center sm:gap-4 sm:pr-4" style={{ "--marquee-duration": `${Math.max(logos.length * 3.5, 36)}s` } as CSSProperties}>
+              {[0, 1].map((copy) =>
+                logos.map((l) => (
+                  <li key={`${copy}-${l.name}`} aria-hidden={copy ? true : undefined} title={l.name} className={`flex h-20 w-40 shrink-0 items-center justify-center rounded-2xl bg-white p-3 sm:h-24 sm:w-48 ${copy ? "motion-reduce:hidden" : ""}`}>
+                    <span className="relative block h-full w-full">
+                      <Pic img={l.logo as Img} sizes="192px" contain />
+                    </span>
+                  </li>
+                )),
+              )}
+            </ul>
+          </div>
+        </Reveal>
+        {facts.length ? (
+          <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
+            {facts.map((f, i) => (
+              <TrpFactTile key={f.label} f={f} i={i} wide={i === facts.length - 1 && facts.length % 2 === 1} />
+            ))}
+          </ul>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
+type Fact = NonNullable<SectionProps["live"]["facts"]>[number];
+
+function TrpFactTile({ f, i, wide = false }: { f: Fact; i: number; wide?: boolean }) {
+  const Icon = FACT_ICONS[f.icon ?? ""] ?? Award;
+  const numeric = /^D?d/.test(f.value);
+  return (
+    <Reveal
+      as="li"
+      delay={0.06 * i}
+      className={`group flex min-h-40 flex-col justify-between rounded-[1.5rem] border border-line bg-white p-5 transition-[border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-brand/30 sm:p-6 ${wide ? "col-span-2 sm:col-span-1" : ""}`}
+    >
+      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--hl-soft)] text-[var(--hl-ink)] transition-colors group-hover:bg-[var(--hl)] group-hover:text-brand-ink">
+        <Icon aria-hidden="true" className="h-5 w-5" strokeWidth={1.75} />
+      </span>
+      <div className="mt-6">
+        <p className={`font-display font-bold leading-none tracking-tight text-brand ${numeric ? "text-[2.5rem] sm:text-5xl" : "break-words text-lg sm:text-2xl"}`}>
+          <Value v={f.value} label={f.label} />
+        </p>
+        <p className="mt-2 min-h-[2.75em] text-[0.8125rem] font-medium leading-snug text-muted sm:text-sm">{f.label}</p>
+      </div>
+    </Reveal>
+  );
+}
+
+/** Original bento: first fact as a large dark tile, the rest as small tiles. */
+function TrpFactBento({ facts }: { facts: Fact[] }) {
   return (
     <section aria-label="Highlights" className="bg-surface-alt py-12 lg:py-16">
       <ul className="container-x grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4 lg:grid-rows-2">
         {facts.map((f, i) => {
+          if (i > 0) return <TrpFactTile key={f.label} f={f} i={i} />;
           const Icon = FACT_ICONS[f.icon ?? ""] ?? Award;
-          const numeric = /^\D?\d/.test(f.value);
-          if (i === 0) {
-            return (
-              <Reveal
-                as="li"
-                key={f.label}
-                className="on-dark relative col-span-2 flex min-h-56 flex-col justify-between overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-brand to-[var(--brand-deep)] p-6 text-white sm:p-8 lg:row-span-2 lg:min-h-0"
-              >
-                <span aria-hidden="true" className={`absolute inset-0 opacity-[0.08] ${gridPattern} [mask-image:radial-gradient(circle_at_bottom_right,black,transparent_75%)]`} />
-                <span className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/20">
-                  <Icon aria-hidden="true" className="h-6 w-6 text-[var(--hl)]" strokeWidth={1.75} />
-                </span>
-                <div className="relative mt-10">
-                  <p className="font-display text-[4rem] font-bold leading-none tracking-tight sm:text-[5.5rem] [&_[aria-hidden]>span]:text-[var(--hl)]">
-                    <Value v={f.value} label={f.label} />
-                  </p>
-                  <p className="mt-3 text-base font-semibold text-white/85 sm:text-lg">{f.label}</p>
-                </div>
-              </Reveal>
-            );
-          }
           return (
             <Reveal
               as="li"
               key={f.label}
-              delay={0.06 * i}
-              className="group flex min-h-40 flex-col justify-between rounded-[1.5rem] border border-line bg-white p-5 transition-[border-color,transform] duration-300 hover:-translate-y-0.5 hover:border-brand/30 sm:p-6"
+              className="on-dark relative col-span-2 flex min-h-56 flex-col justify-between overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-brand to-[var(--brand-deep)] p-6 text-white sm:p-8 lg:row-span-2 lg:min-h-0"
             >
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--hl-soft)] text-[var(--hl-ink)] transition-colors group-hover:bg-[var(--hl)] group-hover:text-brand-ink">
-                <Icon aria-hidden="true" className="h-5 w-5" strokeWidth={1.75} />
+              <span aria-hidden="true" className={`absolute inset-0 opacity-[0.08] ${gridPattern} [mask-image:radial-gradient(circle_at_bottom_right,black,transparent_75%)]`} />
+              <span className="relative flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 ring-1 ring-white/20">
+                <Icon aria-hidden="true" className="h-6 w-6 text-[var(--hl)]" strokeWidth={1.75} />
               </span>
-              <div className="mt-6">
-                <p className={`font-display font-bold leading-none tracking-tight text-brand ${numeric ? "text-[2.5rem] sm:text-5xl" : "break-words text-lg sm:text-2xl"}`}>
+              <div className="relative mt-10">
+                <p className="font-display text-[4rem] font-bold leading-none tracking-tight sm:text-[5.5rem] [&_[aria-hidden]>span]:text-[var(--hl)]">
                   <Value v={f.value} label={f.label} />
                 </p>
-                <p className="mt-2 text-[0.8125rem] font-medium leading-snug text-muted sm:text-sm">{f.label}</p>
+                <p className="mt-3 text-base font-semibold text-white/85 sm:text-lg">{f.label}</p>
               </div>
             </Reveal>
           );

@@ -50,7 +50,9 @@ export interface UgEligibility {
 
 const LATERAL = "LATERAL ENTRY PROGRAMME";
 const ICON = (f: string): LucideIcon =>
-  f === LATERAL
+  /PH.?D/i.test(f)
+    ? FlaskConical
+    : f === LATERAL
     ? ArrowUpRight
     : /ENGINEER|TECHNOLOG|COMPUT/.test(f)
       ? Cpu
@@ -109,6 +111,8 @@ export function LiveCourses({
   flabsUgNote,
   flabsStats,
   wording,
+  commonEligibility,
+  compactCards = false,
   lateral,
 }: {
   items: LiveCourse[];
@@ -116,6 +120,9 @@ export function LiveCourses({
   flabsUgNote?: string;
   flabsStats?: { heading: string; items: { value: string; label: string }[] };
   wording?: { one: string; many: string; group: string };
+  commonEligibility?: Record<string, { items: { label: string; text: string }[]; note?: string }>;
+  /** compact cards: one small title size for all names, footer without grey band, button on the left */
+  compactCards?: boolean;
   lateral?: { eligibility: string; programmes: string[]; degreeLabel?: string };
 }) {
   const { openEnquiry } = useEnquiry();
@@ -144,6 +151,7 @@ export function LiveCourses({
   const filtered = pool.filter(
     (c) => (level === "All" || LEVEL_OF(c) === level) && (!query || `${c.title} ${c.eligibility ?? ""}`.toLowerCase().includes(query)),
   );
+  const common = !query ? commonEligibility?.[tab] : undefined;
   const groups = new Map<string, LiveCourse[]>();
   for (const c of filtered) {
     const key = query ? label(c.faculty) : c.section ?? Many;
@@ -396,7 +404,7 @@ export function LiveCourses({
                                 {c.partTime && <span className="rounded-full bg-surface-alt px-2 py-0.5 text-xs font-semibold text-muted">Part time</span>}
                               </div>
                             </div>
-                            <p title={c.title} className={`mt-2 font-display font-medium leading-[1.45] text-ink sm:mt-3 ${name.length > 56 ? "text-[0.875rem]" : "text-[0.9375rem]"} ${isOpen ? "" : `${name.length > 56 ? "line-clamp-3" : "line-clamp-2"} sm:min-h-[2.75rem]`}`}>
+                            <p title={c.title} className={`mt-2 font-display font-medium leading-[1.45] text-ink sm:mt-3 ${compactCards || name.length > 70 ? "text-[0.78125rem] tracking-tight" : name.length > 56 ? "text-[0.8125rem]" : "text-[0.9375rem]"} ${isOpen ? "" : `${name.length > 56 ? "line-clamp-3" : "line-clamp-2"} sm:min-h-[2.75rem]`}`}>
                               {name}
                             </p>
                             <AnimatePresence initial={false}>
@@ -436,7 +444,8 @@ export function LiveCourses({
                             </AnimatePresence>
                           </div>
                           {!c.hideActions && (
-                          <div className="flex items-center justify-between gap-2 bg-surface-alt/70 px-4 py-2">
+                          <div className={`flex items-center gap-2 px-4 ${compactCards ? "pb-4 pt-1" : "bg-surface-alt/70 py-2"} ${compactCards ? "justify-start" : common ? "justify-end" : "justify-between"}`}>
+                            {!common && (
                             <button
                               type="button"
                               aria-expanded={isOpen}
@@ -446,6 +455,7 @@ export function LiveCourses({
                               {c.profile ? (isOpen ? "Hide details" : "View details") : isOpen ? "Hide eligibility" : "View eligibility"}
                               <ChevronDown aria-hidden="true" className={`h-3.5 w-3.5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
                             </button>
+                            )}
                             <button
                               type="button"
                               onClick={() => openEnquiry({ intent: "programme" })}
@@ -465,6 +475,22 @@ export function LiveCourses({
             {filtered.length === 0 && (
               <div className="rounded-2xl border border-dashed border-line p-10 text-center text-muted">
                 No {W.one} matches “{q}”. Try a shorter word such as “CSE”, “MBA” or “Design”.
+              </div>
+            )}
+            {common && (
+              <div className="rounded-2xl border border-brand/15 bg-brand-soft/50 p-5 sm:p-6">
+                <p className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-brand">
+                  <Info aria-hidden="true" className="h-4 w-4" /> Eligibility – common for all departments
+                </p>
+                <dl className="mt-3 space-y-3 text-sm leading-relaxed">
+                  {common.items.map((e) => (
+                    <div key={e.label}>
+                      <dt className="font-semibold text-ink">{e.label}</dt>
+                      <dd className="mt-0.5 text-ink/80">{e.text}</dd>
+                    </div>
+                  ))}
+                </dl>
+                {common.note && <p className="mt-3 inline-block rounded-full bg-[var(--hl)]/30 px-3 py-1 text-xs font-semibold text-[var(--hl-ink)]">{common.note}</p>}
               </div>
             )}
             {!query && /^(LIBERAL|FLABS)/.test(tab) && flabsUgNote && <p className="text-sm text-muted">{flabsUgNote}</p>}

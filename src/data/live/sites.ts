@@ -114,6 +114,8 @@ export const easwariSite: LiveSiteConfig = {
 
 /** SRM TRP Engineering College – logo indigo-purple (#2f2f62) + yellow. */
 export const trpSite: LiveSiteConfig = {
+  courseWording: { one: "programme", many: "programmes", group: "Programme" },
+  compactCourseCards: true,
   inst: trp,
   data: trpData as unknown as LiveData,
   palette: {

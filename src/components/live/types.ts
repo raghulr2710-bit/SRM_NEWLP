@@ -54,6 +54,8 @@ export interface LiveData {
     ugEligibility?: unknown; // see UgEligibility in LiveCourses.tsx (optional)
     flabsUgNote?: string;
     lateralEntry?: { eligibility: string; programmes: string[]; degreeLabel?: string };
+    /** one eligibility block per faculty tab (key = faculty); cards in that tab then show no "View eligibility" */
+    commonEligibility?: Record<string, { items: { label: string; text: string }[]; note?: string }>;
     items: {
       faculty: string; // grouping in the sidebar, e.g. "ENGINEERING PROGRAMME"
       section: string | null; // sub-heading inside a faculty, e.g. "UNDERGRADUATE COURSES (DURATION 4 YEARS)"
@@ -102,6 +104,8 @@ export interface LiveData {
     videos?: { url: string; title: string; cover?: string }[];
   };
   faqs?: { heading: string; items: { q: string; a: string }[] };
+  /** MoU partner logos (TRP highlights band) */
+  mou?: { heading: string; intro?: string; logos: { name: string; logo: LiveImg }[] };
   contact: {
     address: string;
     phones: { display: string; href: string }[];

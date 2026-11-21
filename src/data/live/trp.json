@@ -90,22 +90,22 @@
   ],
   "facts": [
     {
-      "value": "90+",
-      "label": "Interview Avenues",
-      "icon": "Briefcase"
+      "value": "100+",
+      "label": "Patents",
+      "icon": "Lightbulb"
     },
     {
-      "value": "8",
-      "label": "Undergraduate Programmes",
-      "icon": "GraduationCap"
+      "value": "40+",
+      "label": "Industry Partnerships",
+      "icon": "Handshake"
     },
     {
-      "value": "6",
-      "label": "Postgraduate Programmes",
-      "icon": "BookOpen"
+      "value": "10+",
+      "label": "Global Academic Collaborations",
+      "icon": "Globe2"
     },
     {
-      "value": "50+",
+      "value": "150+",
       "label": "Major Recruiters",
       "icon": "Building2"
     },
@@ -218,33 +218,64 @@
         "level": "PG"
       },
       {
-        "faculty": "POSTGRADUATE",
+        "faculty": "Ph.D. Programmes",
         "section": null,
         "title": "M.S (Research) / Ph.D – Electronics and Communication Engineering",
         "eligibility": "As per AICTE and Anna University norms",
         "lateralEntry": false,
         "partTime": false,
-        "level": "PG"
+        "level": "PhD"
       },
       {
-        "faculty": "POSTGRADUATE",
+        "faculty": "Ph.D. Programmes",
         "section": null,
         "title": "M.S (Research) / Ph.D – Mechanical Engineering",
         "eligibility": "As per AICTE and Anna University norms",
         "lateralEntry": false,
         "partTime": false,
-        "level": "PG"
+        "level": "PhD"
       },
       {
-        "faculty": "POSTGRADUATE",
+        "faculty": "Ph.D. Programmes",
         "section": null,
         "title": "M.S (Research) / Ph.D – Physics",
         "eligibility": "As per AICTE and Anna University norms",
         "lateralEntry": false,
         "partTime": false,
-        "level": "PG"
+        "level": "PhD"
       }
-    ]
+    ],
+    "commonEligibility": {
+      "UNDERGRADUATE": {
+        "items": [
+          {
+            "label": "Eligibility Criteria",
+            "text": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required."
+          },
+          {
+            "label": "Lateral Entry Eligibility Criteria",
+            "text": "As per AICTE and Anna University norms."
+          }
+        ],
+        "note": "Lateral Entry seats are available"
+      },
+      "POSTGRADUATE": {
+        "items": [
+          {
+            "label": "Eligibility Criteria",
+            "text": "As per AICTE and Anna University norms."
+          }
+        ]
+      },
+      "Ph.D. Programmes": {
+        "items": [
+          {
+            "label": "Eligibility Criteria",
+            "text": "As per AICTE and Anna University norms."
+          }
+        ]
+      }
+    }
   },
   "why": {
     "heading": "Why TRP?",
@@ -815,7 +846,8 @@
     "Client corrections (Nov 2026): NAAC A+ logo supplied by the client (white background removed) added to rankings (About TRP badges + Approvals & Accreditations) and to the header next to the college logo; rankings NAAC text \"Accredited by NAAC with A+ Grade\" read from the logo artwork. facts Major Recruiters changed from 15 (logo count) to \"50+\" at the client's request.",
     "Client update (Nov 2026) – building: the State-of-the-Art Infrastructure image in Why TRP? and Life at SRM TRP is the client's aerial campus photo (srm-trp-campus-aerial.webp); alt text ours. The hero background still uses the earlier building photo.",
     "Client update (Nov 2026) – placements.profiles: the 7 students from \"SRM TRP - Placement Student Details 2027\" replace the 4 earlier live-site profiles. Names in title case (doc mixes upper/lower case; \"MohamedFaisal S\" spaced, \"Mounika.M\" → \"Mounika M\"); \"M/s.\" dropped from company names; department labels shortened (B.Tech-AI&DS → B.Tech – AI & DS). Aarthi S: doc says \"50,000/- stipend per month\", shown as \"Stipend : ₹50,000 / month\". Company logos are the ones in the doc.",
-    "Client update (Nov 2026) – testimonials: replaced by the 13 alumni in \"SRM TRP - Alumni Details\". The doc has no quotes, so cards show role, company, department/batch and the salary package. Heading \"Alumni Success Stories\" is ours. Package values as in the doc, normalised: \"17LPA\" → \"17 LPA\", \"20 lpa\"/\"20 Lakhs\" → \"20 LPA\", \"3,500,000\" → \"35 LPA\" (assumed INR), \"80000 USD\" → \"$80,000\", \"1Cr\" → \"1 Cr\". Hemanth Kumar's row had three stray photos in the company column (duplicates of other alumni) – only the Photo column is used."
+    "Client update (Nov 2026) – testimonials: replaced by the 13 alumni in \"SRM TRP - Alumni Details\". The doc has no quotes, so cards show role, company, department/batch and the salary package. Heading \"Alumni Success Stories\" is ours. Package values as in the doc, normalised: \"17LPA\" → \"17 LPA\", \"20 lpa\"/\"20 Lakhs\" → \"20 LPA\", \"3,500,000\" → \"35 LPA\" (assumed INR), \"80000 USD\" → \"$80,000\", \"1Cr\" → \"1 Cr\". Hemanth Kumar's row had three stray photos in the company column (duplicates of other alumni) – only the Photo column is used.",
+    "Client corrections (Nov 2026): Ph.D. programmes (3, 'M.S (Research) / Ph.D – …') moved from Postgraduate to a separate 'Ph.D. Programmes' tab. programmes.commonEligibility = one block per tab (UG text and 'Lateral Entry seats are available' from the client screenshot; PG and Ph.D. use the existing 'As per AICTE and Anna University norms'); per-card View eligibility hidden in those tabs. Highlights: '90+ Interview Avenues' replaced by an MoU Partners band with the 15 client-supplied logos (duplicates of UMN and Delphi-TVS used once; Tigerworld cropped from the banner image; intro line ours); facts per the client screenshot – 100+ Patents, 40+ Industry Partnerships, 10+ Global Academic Collaborations, 150+ Major Recruiters, Autonomous. 'Why TRP?' / 'Life at SRM TRP' images: replacement images not supplied yet."
   ],
   "steps": {
     "heading": "Your admission, step by step",
@@ -835,6 +867,147 @@
       "Upload",
       "Users",
       "BadgeCheck"
+    ]
+  },
+  "mou": {
+    "heading": "MoU Partners",
+    "intro": "Memoranda of Understanding with universities and industry.",
+    "logos": [
+      {
+        "name": "National Central University, Taiwan",
+        "logo": {
+          "src": "/assets/trp/mou/national-central-university.webp",
+          "alt": "National Central University, Taiwan logo",
+          "width": 280,
+          "height": 77
+        }
+      },
+      {
+        "name": "Universitas Multimedia Nusantara, Indonesia",
+        "logo": {
+          "src": "/assets/trp/mou/universitas-multimedia-nusantara.webp",
+          "alt": "Universitas Multimedia Nusantara, Indonesia logo",
+          "width": 300,
+          "height": 137
+        }
+      },
+      {
+        "name": "National Formosa University, Taiwan",
+        "logo": {
+          "src": "/assets/trp/mou/national-formosa-university.webp",
+          "alt": "National Formosa University, Taiwan logo",
+          "width": 326,
+          "height": 240
+        }
+      },
+      {
+        "name": "Hungkuang University, Taiwan",
+        "logo": {
+          "src": "/assets/trp/mou/hungkuang-university.webp",
+          "alt": "Hungkuang University, Taiwan logo",
+          "width": 262,
+          "height": 240
+        }
+      },
+      {
+        "name": "Tigerworld Technologies",
+        "logo": {
+          "src": "/assets/trp/mou/tigerworld-technologies.webp",
+          "alt": "Tigerworld Technologies logo",
+          "width": 345,
+          "height": 75
+        }
+      },
+      {
+        "name": "Yokohama",
+        "logo": {
+          "src": "/assets/trp/mou/yokohama.webp",
+          "alt": "Yokohama logo",
+          "width": 480,
+          "height": 68
+        }
+      },
+      {
+        "name": "iTNT – Tamil Nadu Technology Hub",
+        "logo": {
+          "src": "/assets/trp/mou/itnt-hub.webp",
+          "alt": "iTNT – Tamil Nadu Technology Hub logo",
+          "width": 480,
+          "height": 182
+        }
+      },
+      {
+        "name": "NPCIL",
+        "logo": {
+          "src": "/assets/trp/mou/npcil.webp",
+          "alt": "NPCIL logo",
+          "width": 146,
+          "height": 240
+        }
+      },
+      {
+        "name": "Delphi-TVS Technologies",
+        "logo": {
+          "src": "/assets/trp/mou/delphi-tvs.webp",
+          "alt": "Delphi-TVS Technologies logo",
+          "width": 335,
+          "height": 180
+        }
+      },
+      {
+        "name": "KONE",
+        "logo": {
+          "src": "/assets/trp/mou/kone.webp",
+          "alt": "KONE logo",
+          "width": 464,
+          "height": 240
+        }
+      },
+      {
+        "name": "Apollo Tyres",
+        "logo": {
+          "src": "/assets/trp/mou/apollo-tyres.webp",
+          "alt": "Apollo Tyres logo",
+          "width": 469,
+          "height": 184
+        }
+      },
+      {
+        "name": "Infosys",
+        "logo": {
+          "src": "/assets/trp/mou/infosys.webp",
+          "alt": "Infosys logo",
+          "width": 480,
+          "height": 187
+        }
+      },
+      {
+        "name": "Sundram Fasteners Limited",
+        "logo": {
+          "src": "/assets/trp/mou/sundram-fasteners.webp",
+          "alt": "Sundram Fasteners Limited logo",
+          "width": 480,
+          "height": 119
+        }
+      },
+      {
+        "name": "Ashok Leyland",
+        "logo": {
+          "src": "/assets/trp/mou/ashok-leyland.webp",
+          "alt": "Ashok Leyland logo",
+          "width": 315,
+          "height": 240
+        }
+      },
+      {
+        "name": "BSNL",
+        "logo": {
+          "src": "/assets/trp/mou/bsnl.webp",
+          "alt": "BSNL logo",
+          "width": 480,
+          "height": 233
+        }
+      }
     ]
   }
 }

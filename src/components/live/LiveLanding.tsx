@@ -59,6 +59,8 @@ export interface LiveSiteConfig {
   headerBadge?: LiveImg;
   /** Course finder wording: "programmes" (Easwari) instead of "courses"; group label replaces "Faculty". */
   courseWording?: { one: string; many: string; group: string };
+  /** course cards: same small title size for every name, no grey footer, button on the left */
+  compactCourseCards?: boolean;
   /** Section tab bar colour (default: brand). */
   tabsTone?: "brand" | "hl";
   /** Campus-specific section designs (fallback: default design). */
@@ -316,7 +318,7 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
                 {live.programmes.heading}
               </Heading>
               <div>
-                <LiveCourses items={live.programmes.items as LiveCourse[]} ugEligibility={ug} flabsUgNote={live.programmes.flabsUgNote} flabsStats={live.placements?.facultyStats} wording={site.courseWording} lateral={lateral} />
+                <LiveCourses items={live.programmes.items as LiveCourse[]} ugEligibility={ug} flabsUgNote={live.programmes.flabsUgNote} flabsStats={live.placements?.facultyStats} wording={site.courseWording} commonEligibility={live.programmes.commonEligibility} compactCards={site.compactCourseCards} lateral={lateral} />
               </div>
             </div>
           </section>
