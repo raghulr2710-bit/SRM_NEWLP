@@ -206,7 +206,7 @@ export function LiveCourses({
                     <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg transition-colors ${active ? "bg-[var(--hl)] text-brand-ink" : "bg-brand-soft text-brand group-hover:bg-[var(--hl)]/30"}`}>
                       <Icon aria-hidden="true" className="h-4 w-4" />
                     </span>
-                    <span className="flex-1 whitespace-nowrap lg:whitespace-normal lg:text-balance lg:leading-snug">{label(f)}</span>
+                    <span className={`flex-1 whitespace-nowrap lg:whitespace-normal lg:leading-snug ${label(f).length > 30 ? "lg:text-[0.8125rem] lg:tracking-tight" : ""}`}>{label(f)}</span>
                     <span className={`rounded-full px-2 py-0.5 text-xs font-semibold tabular-nums ${active ? "bg-white/20 text-white" : "bg-brand-soft text-brand"}`}>{counts.get(f)}</span>
                   </button>
                 </li>
