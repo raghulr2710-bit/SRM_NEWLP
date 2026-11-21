@@ -57,6 +57,8 @@ export interface LiveSiteConfig {
   hideHeroBadges?: boolean;
   /** Accreditation seal shown in the header next to the college logo (e.g. NAAC A+). */
   headerBadge?: LiveImg;
+  /** Course finder wording: "programmes" (Easwari) instead of "courses"; group label replaces "Faculty". */
+  courseWording?: { one: string; many: string; group: string };
   /** Section tab bar colour (default: brand). */
   tabsTone?: "brand" | "hl";
   /** Campus-specific section designs (fallback: default design). */
@@ -233,7 +235,7 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
                     Admission
                   </a>
                   <a href="#offer" className={`${btn.outline} whitespace-nowrap !border-[var(--hl)] !bg-[var(--hl)] px-2 text-sm !text-brand-ink sm:px-6 sm:text-[0.95rem] hover:!border-[var(--hl-deep)] hover:!bg-[var(--hl-deep)]`}>
-                    Courses we offer
+                    {site.courseWording ? `${site.courseWording.many.charAt(0).toUpperCase()}${site.courseWording.many.slice(1)} we offer` : "Courses we offer"}
                   </a>
                 </div>
                 {/* Looping ranking / accreditation logo strip */}
@@ -314,7 +316,7 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
                 {live.programmes.heading}
               </Heading>
               <div>
-                <LiveCourses items={live.programmes.items as LiveCourse[]} ugEligibility={ug} flabsUgNote={live.programmes.flabsUgNote} flabsStats={live.placements?.facultyStats} lateral={lateral} />
+                <LiveCourses items={live.programmes.items as LiveCourse[]} ugEligibility={ug} flabsUgNote={live.programmes.flabsUgNote} flabsStats={live.placements?.facultyStats} wording={site.courseWording} lateral={lateral} />
               </div>
             </div>
           </section>

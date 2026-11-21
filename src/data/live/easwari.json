@@ -21,7 +21,7 @@
     "height": 119
   },
   "rankings": {
-    "heading": "Accreditation & Ranking in 2025",
+    "heading": "Accreditation & Ranking 2025-2026",
     "items": [
       {
         "title": "NBA",
@@ -85,39 +85,24 @@
   ],
   "facts": [
     {
-      "value": "29",
+      "value": "30",
       "label": "Years of Excellence",
       "icon": "Hourglass"
     },
     {
-      "value": "16K+",
+      "value": "25K+",
       "label": "Alumni",
       "icon": "Users"
-    },
-    {
-      "value": "1424+",
-      "label": "Students Placed",
-      "icon": "GraduationCap"
-    },
-    {
-      "value": "432",
-      "label": "Companies Visited",
-      "icon": "Building2"
-    },
-    {
-      "value": "51 LPA",
-      "label": "Highest Package",
-      "icon": "Trophy"
     }
   ],
   "programmes": {
-    "heading": "Courses Offered",
+    "heading": "Programmes Offered",
     "items": [
       {
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.E. Automobile Engineering",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -126,7 +111,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.E. Bio Medical Engineering",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -135,7 +120,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.E. Civil Engineering",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -144,7 +129,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.E. Computer Science and Design",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -153,7 +138,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.E. Computer Science and Engineering",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -162,7 +147,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.E. Computer Science and Engineering (Artificial Intelligence and Machine Learning)",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -171,7 +156,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.E. Computer Science and Engineering (Cyber Security)",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -180,7 +165,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.E. Electrical and Electronics Engineering",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -189,7 +174,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.E. Electronics and Communication Engineering",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -198,7 +183,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.E. Mechanical Engineering",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -207,7 +192,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.E. Robotics and Automation",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -216,7 +201,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.Tech. Artificial Intelligence and Data Science",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -225,7 +210,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.Tech. Bio Technology",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -234,7 +219,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.Tech. Computer Science and Business System (with TCS partnership)",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -243,7 +228,7 @@
         "faculty": "UNDERGRADUATE",
         "section": null,
         "title": "B.Tech. Information Technology",
-        "eligibility": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required.",
+        "eligibility": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -389,7 +374,7 @@
         }
       },
       {
-        "title": "Students Clubs",
+        "title": "Student Clubs",
         "image": {
           "src": "/assets/easwari/students/student-clubs.jpg",
           "alt": "Large group of students celebrating in a lecture hall",
@@ -409,7 +394,7 @@
     ]
   },
   "collaborations": {
-    "heading": "Global Academic Celebration",
+    "heading": "Global Academic Collaboration",
     "items": [
       {
         "name": "Harvard Medical School",
@@ -459,7 +444,7 @@
     ]
   },
   "placements": {
-    "heading": "Our Star Achievers",
+    "heading": "Our Star Achievers 2024-2025",
     "profiles": [
       {
         "name": "Radhika Swaminathan",
@@ -530,7 +515,7 @@
     ]
   },
   "recruiters": {
-    "heading": "Major Recruiters 2024-2025",
+    "heading": "Major Recruiters 2025-2026",
     "logos": [
       {
         "name": "Amazon",
@@ -814,7 +799,7 @@
       },
       {
         "q": "What is the eligibility for B.E. / B.Tech.?",
-        "a": "As per AICTE & Govt. of Tamil Nadu in Anna University, a Pass in Higher Secondary Examinations of (10+2) Curriculum with Mathematics, Physics, and Chemistry is Required."
+        "a": "As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required."
       },
       {
         "q": "What is the eligibility for postgraduate programmes?",
@@ -830,7 +815,7 @@
       },
       {
         "q": "How can I contact admissions?",
-        "a": "Call +91 8939628204 or +91 18001032535, or email helpdesk@eec.srmrmp.edu.in."
+        "a": "Call +91 8939628204 or toll-free 1800 103 2535, or email helpdesk@eec.srmrmp.edu.in."
       }
     ]
   },
@@ -842,7 +827,7 @@
         "href": "tel:+918939628204"
       },
       {
-        "display": "+91 18001032535",
+        "display": "1800 103 2535",
         "href": "tel:18001032535"
       }
     ],
@@ -869,6 +854,9 @@
     "testimonials: line3 'SRM Easwari Alumni' is ours (based on the live 'Alumni Testimonials' heading). Mr. Venky has no role/company on the live page (line2 empty). Aswanth Ram A S's line2: missing space added in 'Technology, Chicago'. Kishore V's quote ends mid-sentence ('The EEE dept.') as on the live page. 'Eeswari' spelling kept as published.",
     "faqs: the live page has no FAQ section. Heading and questions are ours; answers restate live-site facts only (programme list, eligibility text, steps to apply, contact details, and 'autonomous / affiliated to Anna University' from the logo).",
     "contact: phone displays are verbatim. The live toll-free link is 'tel:+9118001032535'; href changed to 'tel:18001032535' so it dials. No map image or landmarks on the live page (a Google Maps embed only), so map/landmarks are omitted.",
-    "Not used from the live page: 'Need Assistance ?' headings (no CTA/links) and its stock-style background image."
+    "Not used from the live page: 'Need Assistance ?' headings (no CTA/links) and its stock-style background image.",
+    "Client corrections (Nov 2026, 'Corrections (2).docx'): why item 7 'Students Clubs' → 'Student Clubs'; programmes.heading 'Programmes Offered'; recruiters.heading 'Major Recruiters 2025-2026' (logos unchanged – same 16 as the 2024-2025 list until the client sends the 2025-26 list); collaborations.heading 'Global Academic Collaboration'; rankings.heading 'Accreditation & Ranking 2025-2026'; facts now 30 Years of Excellence and 25K+ Alumni only (placement figures removed as they repeat the placement band); toll-free shown as '1800 103 2535' without +91.",
+    "Client corrections (Nov 2026): UG eligibility reworded for grammar ('As per AICTE & Govt. of Tamil Nadu in Anna University, … is Required.' → 'As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.') – our wording, meaning unchanged; to be confirmed by the client.",
+    "Client corrections (Nov 2026): placements.heading gets the academic year 2024-2025 (our inference: all six profiles are \"2025 Batch\" and the record band says \"2025 Record Setting Placements\") – to be confirmed."
   ]
 }

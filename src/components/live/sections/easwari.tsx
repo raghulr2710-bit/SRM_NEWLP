@@ -302,7 +302,7 @@ function EasHighlights({ live }: SectionProps) {
   if (!live.facts?.length) return null;
   return (
     <section aria-label="Highlights" className="bg-white py-12 lg:py-16">
-      <ul className="container-x grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
+      <ul className={`container-x grid grid-cols-2 gap-3 sm:gap-4 ${live.facts.length <= 2 ? "max-w-3xl" : "lg:grid-cols-5"}`}>
         {live.facts.map((f, i) => {
           const Icon = FACT_ICONS[f.icon ?? ""] ?? Award;
           return (
@@ -310,7 +310,7 @@ function EasHighlights({ live }: SectionProps) {
               as="li"
               key={f.label}
               delay={0.06 * i}
-              className="first:col-span-2 lg:first:col-span-1 flex flex-col rounded-2xl border border-line border-t-4 border-t-[var(--hl)] bg-surface-alt p-5 lg:p-6"
+              className={`${live.facts!.length > 2 ? "first:col-span-2 lg:first:col-span-1" : ""} flex flex-col rounded-2xl border border-line border-t-4 border-t-[var(--hl)] bg-surface-alt p-5 lg:p-6`}
             >
               <Icon aria-hidden="true" className="h-5 w-5 text-brand" strokeWidth={1.75} />
               <span className="mt-4 font-display text-3xl font-semibold leading-none tracking-tight text-brand lg:text-[2.5rem] [&_[aria-hidden]>span]:text-[var(--hl-ink)]">

@@ -103,15 +103,19 @@ export function LiveCourses({
   ugEligibility,
   flabsUgNote,
   flabsStats,
+  wording,
   lateral,
 }: {
   items: LiveCourse[];
   ugEligibility?: UgEligibility;
   flabsUgNote?: string;
   flabsStats?: { heading: string; items: { value: string; label: string }[] };
+  wording?: { one: string; many: string; group: string };
   lateral?: { eligibility: string; programmes: string[] };
 }) {
   const { openEnquiry } = useEnquiry();
+  const W = wording ?? { one: "course", many: "courses", group: "Faculty" };
+  const Many = W.many.charAt(0).toUpperCase() + W.many.slice(1);
   const faculties = useMemo(() => [...new Set(items.map((i) => i.faculty)), ...(lateral?.programmes.length ? [LATERAL] : [])], [items, lateral]);
   const counts = useMemo(() => {
     const m = new Map<string, number>();
@@ -137,7 +141,7 @@ export function LiveCourses({
   );
   const groups = new Map<string, LiveCourse[]>();
   for (const c of filtered) {
-    const key = query ? label(c.faculty) : c.section ?? "Courses";
+    const key = query ? label(c.faculty) : c.section ?? Many;
     groups.set(key, [...(groups.get(key) ?? []), c]);
   }
 
@@ -175,9 +179,9 @@ export function LiveCourses({
             <span aria-hidden="true" className="absolute -right-6 -top-8 h-24 w-24 rounded-full border-[0.9rem] border-[var(--hl)]/40" />
             <span className="relative">
               <span className="block text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-white/70">Choose a</span>
-              <span className="block font-display text-base font-semibold">Faculty</span>
+              <span className="block font-display text-base font-semibold">{W.group}</span>
             </span>
-            <span className="relative rounded-full bg-[var(--hl)] px-2.5 py-0.5 text-xs font-bold text-brand-ink">{items.length} courses</span>
+            <span className="relative rounded-full bg-[var(--hl)] px-2.5 py-0.5 text-xs font-bold text-brand-ink">{items.length} {W.many}</span>
           </div>
           <ul ref={strip} role="tablist" className="no-scrollbar relative -mx-5 flex gap-2 overflow-x-auto px-5 lg:mx-0 lg:flex-col lg:gap-1.5 lg:overflow-visible lg:px-0">
             {faculties.map((f) => {
@@ -212,7 +216,7 @@ export function LiveCourses({
         {/* toolbar */}
         <div className="flex flex-col gap-3 rounded-2xl border border-line bg-white p-3 shadow-[0_1px_2px_rgba(10,20,50,0.04)] sm:flex-row sm:items-center">
           <label className="relative block flex-1">
-            <span className="sr-only">Search all courses</span>
+            <span className="sr-only">Search all {W.many}</span>
             <Search aria-hidden="true" className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted" />
             <input
               value={q}
@@ -220,7 +224,7 @@ export function LiveCourses({
                 setQ(e.target.value);
                 setLevel("All");
               }}
-              placeholder={`Search all ${items.length} courses or eligibility…`}
+              placeholder={`Search all ${items.length} ${W.many} or eligibility…`}
               className="min-h-11 w-full rounded-xl bg-surface-alt pl-10 pr-10 text-sm outline-none transition-[box-shadow,background-color] focus:bg-white focus:ring-4 focus:ring-brand/15"
             />
             {q && (
@@ -254,7 +258,15 @@ export function LiveCourses({
             </>
           ) : (
             <>
-              <strong className="text-ink">{filtered.length}</strong> courses in {label(tab)}
+              {wording ? (
+                <>
+                  <strong className="text-ink">{filtered.length}</strong> {Many} Offered
+                </>
+              ) : (
+                <>
+                  <strong className="text-ink">{filtered.length}</strong> courses in {label(tab)}
+                </>
+              )}
             </>
           )}
         </p>
@@ -344,7 +356,7 @@ export function LiveCourses({
                         <Clock aria-hidden="true" className="h-3 w-3" /> {duration}
                       </span>
                     )}
-                    <span className="ml-auto text-xs font-medium text-muted">{courses.length} courses</span>
+                    <span className="ml-auto text-xs font-medium text-muted">{courses.length} {W.many}</span>
                   </div>
                   <ul className="grid gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-3">
                     {courses.map((c, i) => {
@@ -420,7 +432,7 @@ export function LiveCourses({
             })}
             {filtered.length === 0 && (
               <div className="rounded-2xl border border-dashed border-line p-10 text-center text-muted">
-                No course matches “{q}”. Try a shorter word such as “CSE”, “MBA” or “Design”.
+                No {W.one} matches “{q}”. Try a shorter word such as “CSE”, “MBA” or “Design”.
               </div>
             )}
             {!query && /^(LIBERAL|FLABS)/.test(tab) && flabsUgNote && <p className="text-sm text-muted">{flabsUgNote}</p>}
