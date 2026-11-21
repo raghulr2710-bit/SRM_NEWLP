@@ -21,6 +21,7 @@ import { PhoneLink } from "@/components/common/Cta";
 import { btn } from "@/components/common/buttons";
 import { ImmersiveGallery } from "@/components/campus/Gallery";
 import { PromoVideo, ScrollTiltFrame } from "../PromoVideo";
+import { VideoGrid } from "../VideoGrid";
 import { HalfGlobe } from "../HalfGlobe";
 import {
   AccordionGallery,
@@ -278,6 +279,7 @@ export function TestimonialsSection({ live }: SectionProps) {
             {live.testimonials.heading}
           </Heading>
           <AnimatedTestimonials items={live.testimonials.items} />
+          {live.testimonials.videos?.length ? <VideoGrid videos={live.testimonials.videos} heading="More student videos" /> : null}
         </div>
       </section>
   );
@@ -294,6 +296,7 @@ export function CampusSection({ live }: SectionProps) {
           <Reveal>
             <AccordionGallery items={live.campus.items} />
           </Reveal>
+          {live.campus.videos?.length ? <VideoGrid videos={live.campus.videos} heading="Campus videos" /> : null}
         </div>
       </section>
   );
@@ -362,7 +365,17 @@ export function FaqsSection({ live }: SectionProps) {
                     {f.q}
                     <span aria-hidden="true" className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-soft text-lg leading-none text-brand transition-transform group-open:rotate-45">+</span>
                   </summary>
-                  <p className="whitespace-pre-line px-5 pb-5 text-sm leading-relaxed text-muted">{f.a}</p>
+                  <p className="whitespace-pre-line px-5 pb-5 text-sm leading-relaxed text-muted">
+                    {f.a.split(/(https?:\/\/\S+)/).map((part, i) =>
+                      /^https?:\/\//.test(part) ? (
+                        <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="break-all font-semibold text-brand underline underline-offset-2">
+                          {part}
+                        </a>
+                      ) : (
+                        part
+                      ),
+                    )}
+                  </p>
                 </details>
               ))}
             </div>

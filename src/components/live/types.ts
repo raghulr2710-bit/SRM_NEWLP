@@ -53,7 +53,7 @@ export interface LiveData {
     heading: string;
     ugEligibility?: unknown; // see UgEligibility in LiveCourses.tsx (optional)
     flabsUgNote?: string;
-    lateralEntry?: { eligibility: string; programmes: string[] };
+    lateralEntry?: { eligibility: string; programmes: string[]; degreeLabel?: string };
     items: {
       faculty: string; // grouping in the sidebar, e.g. "ENGINEERING PROGRAMME"
       section: string | null; // sub-heading inside a faculty, e.g. "UNDERGRADUATE COURSES (DURATION 4 YEARS)"
@@ -62,6 +62,9 @@ export interface LiveData {
       lateralEntry: boolean;
       partTime: boolean;
       level: "UG" | "PG" | "Diploma" | "PhD" | string;
+      /** course profile from a client course guide: overview, placement roles, higher-study options */
+      profile?: { overview: string; careers: string[]; higherStudies: string[] };
+      hideActions?: boolean;
     }[];
   };
   /** heading/intro default to "Steps to follow"; icons = names from STEP_ICON_SET in LiveMotion.tsx */
@@ -88,12 +91,15 @@ export interface LiveData {
   ctaHeading: string;
   /** Optional student cut-out shown on the closing CTA band (ratio = "w / h"). */
   ctaStudent?: { src: string; ratio: string };
-  campus?: { heading: string; items: (LiveImg & { title: string; tag?: string })[] };
+  /** videos = extra campus-life video links (YouTube plays inline; others open in a new tab). */
+  campus?: { heading: string; items: (LiveImg & { title: string; tag?: string })[]; videos?: { url: string; title: string; cover?: string }[] };
   testimonials?: {
     heading: string;
     /** Video testimonials (YouTube) and/or written quotes with a photo. line2 = role/company, line3 = batch/college. */
     /** package = salary line for alumni cards (shown when there is no quote). */
     items: { name: string; line2: string; line3: string; videoUrl?: string; quote?: string; package?: string; photo?: LiveImg | null }[];
+    /** extra student video links shown as a grid under the stories */
+    videos?: { url: string; title: string; cover?: string }[];
   };
   faqs?: { heading: string; items: { q: string; a: string }[] };
   contact: {

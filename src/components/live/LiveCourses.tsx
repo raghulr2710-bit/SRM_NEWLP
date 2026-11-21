@@ -30,6 +30,11 @@ export interface LiveCourse {
   lateralEntry: boolean;
   partTime: boolean;
   level: string;
+  profile?: { overview: string; careers: string[]; higherStudies: string[] };
+  /** overrides the degree chip derived from the title (e.g. "B.Tech – Lateral Entry") */
+  degree?: string;
+  /** hide the "View eligibility" / "Enquire" footer (e.g. Ph.D. "Available in all disciplines") */
+  hideActions?: boolean;
 }
 
 export interface UgEligibility {
@@ -111,7 +116,7 @@ export function LiveCourses({
   flabsUgNote?: string;
   flabsStats?: { heading: string; items: { value: string; label: string }[] };
   wording?: { one: string; many: string; group: string };
-  lateral?: { eligibility: string; programmes: string[] };
+  lateral?: { eligibility: string; programmes: string[]; degreeLabel?: string };
 }) {
   const { openEnquiry } = useEnquiry();
   const W = wording ?? { one: "course", many: "courses", group: "Faculty" };
@@ -132,7 +137,7 @@ export function LiveCourses({
 
   const base: LiveCourse[] =
     tab === LATERAL && lateral
-      ? lateral.programmes.map((t) => ({ faculty: LATERAL, section: "Lateral entry – direct 2nd year B.Tech", title: t, eligibility: lateral.eligibility, lateralEntry: true, partTime: false, level: "UG" }))
+      ? lateral.programmes.map((t) => ({ faculty: LATERAL, section: "Lateral entry – direct 2nd year B.Tech", title: t, eligibility: lateral.eligibility, lateralEntry: true, partTime: false, level: "UG", degree: lateral.degreeLabel }))
       : items.filter((i) => i.faculty === tab);
   const pool = query ? items : base;
   const levels = ["All", ...new Set(pool.map(LEVEL_OF))].filter((l, i, a) => a.indexOf(l) === i);
@@ -293,7 +298,7 @@ export function LiveCourses({
               {ugEligibility.qualifyingExamination && (
                 <div>
                   <p className="font-semibold text-ink">QUALIFYING EXAMINATION</p>
-                  <p className="mt-1">{ugEligibility.qualifyingExamination}</p>
+                  <p className="mt-1 whitespace-pre-line">{ugEligibility.qualifyingExamination}</p>
                 </div>
               )}
               {ugEligibility.gceALevel && (
@@ -362,7 +367,9 @@ export function LiveCourses({
                     {courses.map((c, i) => {
                       const id = `${c.faculty}-${c.title}-${i}`;
                       const isOpen = open === id;
-                      const { degree, name } = splitTitle(c.title);
+                      const split = splitTitle(c.title);
+                      const { name } = split;
+                      const degree = c.degree ?? split.degree;
                       return (
                         <li
                           key={id}
@@ -389,22 +396,46 @@ export function LiveCourses({
                                 {c.partTime && <span className="rounded-full bg-surface-alt px-2 py-0.5 text-xs font-semibold text-muted">Part time</span>}
                               </div>
                             </div>
-                            <p title={c.title} className={`mt-2 font-display text-[0.9375rem] font-medium leading-[1.45] text-ink sm:mt-3 ${isOpen ? "" : "line-clamp-2 sm:min-h-[2.75rem]"}`}>
+                            <p title={c.title} className={`mt-2 font-display font-medium leading-[1.45] text-ink sm:mt-3 ${name.length > 56 ? "text-[0.875rem]" : "text-[0.9375rem]"} ${isOpen ? "" : `${name.length > 56 ? "line-clamp-3" : "line-clamp-2"} sm:min-h-[2.75rem]`}`}>
                               {name}
                             </p>
                             <AnimatePresence initial={false}>
                               {isOpen && (
                                 <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.25 }} className="overflow-hidden">
+                                  {c.profile && <p className="mt-3 text-sm leading-relaxed text-muted">{c.profile.overview}</p>}
                                   <div className="mt-3 rounded-xl border-l-4 border-[var(--hl)] bg-[var(--hl-soft)] p-3.5">
                                     <p className="text-xs font-semibold uppercase tracking-wider text-[var(--hl-ink)]">Eligibility</p>
                                     <p className="mt-1.5 whitespace-pre-line text-sm leading-relaxed text-ink/80">
                                       {c.eligibility ?? "Eligibility not published on the admissions page – ask a counsellor."}
                                     </p>
                                   </div>
+                                  {c.profile && (
+                                    <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                                      {[
+                                        { t: "Placement opportunities", Icon: Briefcase, items: c.profile.careers },
+                                        { t: "Higher studies", Icon: GraduationCap, items: c.profile.higherStudies },
+                                      ].map(({ t, Icon, items }) => (
+                                        <div key={t} className="rounded-xl border border-line bg-surface-alt/60 p-3.5">
+                                          <p className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-brand">
+                                            <Icon aria-hidden="true" className="h-3.5 w-3.5" /> {t}
+                                          </p>
+                                          <ul className="mt-2 space-y-1.5 text-sm leading-snug text-ink/80">
+                                            {items.map((x) => (
+                                              <li key={x} className="flex gap-2">
+                                                <span aria-hidden="true" className="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--hl)]" />
+                                                {x}
+                                              </li>
+                                            ))}
+                                          </ul>
+                                        </div>
+                                      ))}
+                                    </div>
+                                  )}
                                 </motion.div>
                               )}
                             </AnimatePresence>
                           </div>
+                          {!c.hideActions && (
                           <div className="flex items-center justify-between gap-2 bg-surface-alt/70 px-4 py-2">
                             <button
                               type="button"
@@ -412,7 +443,7 @@ export function LiveCourses({
                               onClick={() => setOpen(isOpen ? null : id)}
                               className="inline-flex min-h-10 items-center gap-1 text-[0.8125rem] font-medium text-brand transition-colors hover:text-brand-ink"
                             >
-                              {isOpen ? "Hide eligibility" : "View eligibility"}
+                              {c.profile ? (isOpen ? "Hide details" : "View details") : isOpen ? "Hide eligibility" : "View eligibility"}
                               <ChevronDown aria-hidden="true" className={`h-3.5 w-3.5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
                             </button>
                             <button
@@ -423,6 +454,7 @@ export function LiveCourses({
                               Enquire
                             </button>
                           </div>
+                          )}
                         </li>
                       );
                     })}

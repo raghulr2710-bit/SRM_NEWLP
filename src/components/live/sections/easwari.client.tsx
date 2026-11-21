@@ -128,10 +128,13 @@ export function TiltCard({ children, className = "" }: { children: ReactNode; cl
 export function FocusGallery({ items }: { items: (LiveImg & { title: string; tag?: string })[] }) {
   const [active, setActive] = useState<number | null>(null);
   // Bento that fits one screen on desktop: 5 × 2 grid, featured photo 2 × 2, six photos 1 × 1.
+  // With six photos the last one spans two columns (desktop and phone) so the grid has no hole.
   const span = (i: number) =>
     i === 0
       ? "col-span-2 aspect-[16/10] sm:row-span-2 sm:aspect-auto"
-      : i === 6
+      : items.length === 6 && i === 5
+        ? "col-span-2 aspect-[16/10] sm:col-span-1 sm:aspect-auto lg:col-span-2"
+        : i === 6
         ? "aspect-square sm:col-span-3 sm:aspect-auto lg:col-span-1"
         : "aspect-square sm:aspect-auto";
   return (

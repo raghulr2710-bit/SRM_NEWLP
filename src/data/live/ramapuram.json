@@ -199,10 +199,10 @@
         "Should have attained the age of 16 years and 6 months on the 31st July of the calendar year in which the 12th Board examination is to be held.",
         "Students with year gap of more than 3 years after 10+2 are not eligible for admission."
       ],
-      "qualifyingExamination": "Applicant should have passed in Higher secondary examination (10, +2 pattern) or appearing in Higher Secondary examination in the current academic year with a minimum of 60% aggregate ( 3 subjects) in Physics (mandatory) , Mathematics (mandatory) and at least one of Chemistry / Biotechnology / Biology / Computer Science / Information Technology / Informatics Practices / Engineering Graphics / Botany and (or) Zoology as major subjects in regular subjects in regular stream from any board within India , CBSE , ISCE , Matriculation , IB or NIOS",
-      "gceALevel": "Physics and Mathematics as compulsory subjects along with one of the Chemistry/ Biotechnology/ Biology/ Computer Science/ Information Technology/ Informatics Practices/ Engineering Graphics as major subjects (equivalent to Advanced Placement level in each subject) in any International schools within India.",
+      "qualifyingExamination": "Applicant should have passed in Higher secondary examination (10, +2 pattern) or appearing in Higher Secondary examination in the current academic year with a minimum of 60% aggregate (3 subjects) in Physics (mandatory), Mathematics (mandatory) and at least one of Chemistry / Biotechnology / Biology / Computer Science / Information Technology / Informatics Practices / Artificial Intelligence / Engineering Graphics / Botany and (or) Zoology as major subjects in regular subjects in regular stream from any board within India, CBSE, ISCE, Matriculation, IB or NIOS.\n\nFor B.Tech Programs offered by the Department of Biotechnology, Department of Genetic Engineering and Department of Biomedical Engineering – Minimum 60% aggregate in PCM / PMB / PCB / PCB or Z (Botany or Zoology). Students admitted for the above programs and Students who have not studied Mathematics as one of the major subjects in +2 must undertake an additional 4 credit courses in Mathematics during the First Year of B.Tech.",
+      "gceALevel": "Physics and Mathematics as compulsory subjects along with Chemistry/ Biotechnology/ Biology/ Computer Science/ Information Technology/ Informatics Practices/ Engineering Graphics as major subjects (equivalent to Advanced Placement level in each subject) in any International schools within India.",
       "internationalBaccalaureate": {
-        "text": "International Baccalaureate (IB) diploma or IB certificate 2 subjects in HL (equivalent to Advanced Placement level or Honors) and 1 subject in SL is mandatory",
+        "text": "International Baccalaureate (IB) diploma or IB certificate. 2 subjects in HL (equivalent to Advanced Placement level or Honors) and 1 subject in SL is mandatory.",
         "table": [
           {
             "program": "All B.Tech Programs",
@@ -210,13 +210,16 @@
             "SL/HL": "Physics and Chemistry/ Biotechnology/ Biology/ Computer Science/ Information Technology/ Informatics Practices/ Engineering Graphics"
           },
           {
-            "program": "For Biotech , Biotech (Genetic/Regenerative)and Biomedical",
+            "program": "For Biotech, Biotech (Genetic/Regenerative) and Biomedical",
             "HL": "Biology",
             "SL/HL": "Physics and Chemistry/ Biotechnology/ Biology/ Computer Science/ Information Technology/ Informatics Practices/ Engineering Graphics/Maths"
           }
         ]
       },
-      "note": "For B.Tech Programs offered by the Department of Biotechnology, Department of Genetic Engineering and Department of Biomedical Engineering – Minimum 60% aggregate in PCM / PMB/PCB/PCB or Z (Botany or Zoology). Students who have not studied Mathematics as one of the major subjects in +2 must undertake an additional 4 credit courses in Mathematics during the First Year of B.Tech. Students who have completed +2 under NIOS must have completed the 10th standard from regular schooling or vice-versa. Students who have not studied Chemistry should undergo a bridge course in Chemistry in the first year."
+      "note": [
+        "Students who have completed 10+2 under NIOS must have completed the 10th standard from regular schooling or vice versa.",
+        "Students who have not studied Chemistry in +2 level should undergo a bridge course in Chemistry in the first year."
+      ]
     },
     "flabsUgNote": "* Students can choose to add a 4th year to their education to obtain a B.A (Honors.) / B.Sc (Honors.) / B.C.A (Honors.) / B.Com (Honors.) degree in accordance with NEP regulations.",
     "lateralEntry": {
@@ -229,7 +232,6 @@
         "B.Tech – Civil Engineering",
         "B.Tech – Computer Science and Business systems (TCS)",
         "B.Tech – Computer Science and Engineering",
-        "B.Tech – Computer Science and Engineering with Specialization in Artificial Intelligence and Machine Learning",
         "B.Tech – Computer Science and Engineering with Specialization in Cloud Computing",
         "B.Tech – Computer Science and Engineering with Specialization in Gaming Technology",
         "B.Tech – Computer Science and Engineering with Specialization in Big data Analytics",
@@ -240,7 +242,8 @@
         "B.Tech – Electronics and Communication Engineering",
         "B.Tech – Information Technology",
         "B.Tech – Mechanical Engineering"
-      ]
+      ],
+      "degreeLabel": "B.Tech – Lateral Entry"
     },
     "items": [
       {
@@ -248,7 +251,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Biomedical Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Biology (PCM/PCB)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -266,7 +269,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Biotechnology",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Biology (PCM/PCB)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -275,7 +278,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Civil Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -284,7 +287,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -293,7 +296,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Artificial Intelligence",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -311,7 +314,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Business systems (TCS)",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -320,7 +323,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering with Specialization in Artificial Intelligence and Machine Learning",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -329,7 +332,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering with Specialization in Cloud Computing",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -338,7 +341,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering with Specialization in Gaming Technology",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -347,7 +350,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering with Specialization in Big data Analytics",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -356,7 +359,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering with Specialization in Internet Of Things",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -365,7 +368,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Computer Science and Engineering with Specialization in Cyber Security",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -374,7 +377,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech Electronics and Communications Engineering with specialization in Data Science",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -383,7 +386,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Electrical and Electronics Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -392,7 +395,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Electronics and Communication Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -401,7 +404,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Information Technology",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -410,7 +413,7 @@
         "section": "UNDERGRADUATE COURSES (DURATION 4 YEARS)",
         "title": "B.Tech - Mechanical Engineering",
         "eligibility": "Eligibility Criteria - A 60% Minimum marks in Physics, Chemistry & Maths (PCM/PMO)",
-        "lateralEntry": true,
+        "lateralEntry": false,
         "partTime": false,
         "level": "UG"
       },
@@ -472,7 +475,7 @@
         "faculty": "ENGINEERING PROGRAMME",
         "section": "POSTGRADUATE PROGRAMME – Full Time",
         "title": "M.Tech – Computer Aided Design",
-        "eligibility": "Eligibility for this M.Tech Program is a basic degree or equivalent in B.E / B.Tech. in Mechanical Engineering / Production Engineering / Automobile Engineering. / Aerospace / Aeronautical Engineering (or) AMIE (Mech) / AMAeSI(Aero) / IMechE (or) any equivalent degree in the above Disciplines with a minimum aggregate of 50%",
+        "eligibility": "B.E./B.Tech. in Mechanical Engineering, Production Engineering, Automobile Engineering, Aerospace, Aeronautical Engineering, or Mechatronics Engineering (or) any equivalent degree in the above disciplines with a minimum aggregate of 50%.",
         "lateralEntry": false,
         "partTime": false,
         "level": "PG"
@@ -481,7 +484,7 @@
         "faculty": "ENGINEERING PROGRAMME",
         "section": "POSTGRADUATE PROGRAMME – Full Time",
         "title": "M.Tech – Construction Engineering and Management",
-        "eligibility": "Eligibility for this M.Tech Program is a basic degree or equivalent in B.E / B.Tech. in Civil / Civil Infrastructure Engineering / Architectural Engineering (or) B.Arch. (or) its equivalent degree in the above Disciplines with a minimum aggregate of 50%",
+        "eligibility": "B.E./B.Tech. in Civil, Civil Infrastructure Engineering, Civil with Computer Applications, Structural Engineering, Architectural Engineering, or B.Arch. (or) any equivalent degree in the above disciplines with a minimum aggregate of 50%.",
         "lateralEntry": false,
         "partTime": false,
         "level": "PG"
@@ -490,7 +493,7 @@
         "faculty": "ENGINEERING PROGRAMME",
         "section": "POSTGRADUATE PROGRAMME – Full Time",
         "title": "M.Tech – Structural Engineering",
-        "eligibility": "Eligibility for this M.Tech Program is a basic degree or equivalent in B.E / B.Tech. in Civil / Civil Infrastructure Engineering / Architectural Engineering (or) its equivalent degree in the above Disciplines with a minimum aggregate of 50%",
+        "eligibility": "B.E./B.Tech. in Civil, Civil Infrastructure Engineering, Civil with Computer Applications, Structural Engineering / Architectural Engineering (or) its equivalent degree in the above disciplines with a minimum aggregate of 50%.",
         "lateralEntry": false,
         "partTime": false,
         "level": "PG"
@@ -499,7 +502,7 @@
         "faculty": "ARCHITECTURE PROGRAMME",
         "section": "UNDERGRADUATE COURSES",
         "title": "B.Arch - Architecture (Duration: 5 Years)",
-        "eligibility": "Pass in 10+2 scheme of examination with at least 50% aggregate marks in Physics, Chemistry and Mathematics and also at least 50% marks in aggregate of the 10+2 level examination or passed 10+3 Diploma Examination with Mathematics as compulsory subject with at least 50% marks in aggregate. Qualify an Aptitude Test in Architecture conducted by the Council of Architecture or by a competent authority of the Central Government or the respective State Government complying with the admission norms prescribed by the Council of Architecture / competent authority. Eligibility norms will be aligned as per the norms amended by the Council of Architecture from time to time.",
+        "eligibility": "Pass in 10+2 scheme of examination with at least 50% aggregate marks in Physics, Chemistry and Mathematics and also at least 50% marks in aggregate of the 10+2 level examination or passed 10+3 Diploma Examination with Mathematics as compulsory subject with at least 50% marks in aggregate. Qualify an Aptitude Test in Architecture (NATA) conducted by the Council of Architecture or by a competent authority of the Central Government or the respective State Government complying with the admission norms prescribed by the Council of Architecture / competent authority. Eligibility norms will be aligned as per the norms amended by the Council of Architecture from time to time.",
         "lateralEntry": false,
         "partTime": false,
         "level": "UG"
@@ -538,7 +541,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Commerce program is an undergraduate degree designed to impart analytical skills, financial literacy, business acumen, knowledge of business laws, and taxation. The curriculum aims to prepare students for diverse professional careers in banking, accounting, insurance, and financial management by combining core commerce principles with practical, industry-aligned knowledge.",
+          "careers": [
+            "Accountant",
+            "Financial Analyst",
+            "Junior Auditor",
+            "Tax Consultant",
+            "Business Analyst"
+          ],
+          "higherStudies": [
+            "Master of Commerce (M.Com)",
+            "Master of Business Administration (MBA)",
+            "Chartered Accountancy (CA)",
+            "Cost and Management Accountancy (CMA)",
+            "Company Secretaryship (CS)"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -556,7 +576,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Commerce in Accounting and Finance is an undergraduate program designed to offer in-depth knowledge in Accounts, Cost Accounting, Financial Management, and Taxation. Beyond technical core subjects, the program fosters broader social awareness and a deeper understanding of accounting and finance within a societal context.",
+          "careers": [
+            "Chartered Accountant (CA)",
+            "Certified Public Accountant (CPA)",
+            "Management Accountant",
+            "Forensic Accountant",
+            "Financial Analyst"
+          ],
+          "higherStudies": [
+            "Master's in Commerce (M.Com.) with focus on Accounting and Finance",
+            "Master's in Business Administration (MBA) with Finance specialization",
+            "Master's in Professional Accounting",
+            "Master's in Finance and Accounting",
+            "Chartered Professional Accountant (CPA) Program"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -565,7 +602,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Commerce in Information System and Management is a dynamic undergraduate program designed to cultivate knowledge, technical skills, a positive attitude, and strong ethical values through interactive learning. The program equips students to adapt to rapidly changing business environments, ensuring proficiency in information systems and management.",
+          "careers": [
+            "IT Manager",
+            "Systems Analyst",
+            "Project Manager",
+            "Business Intelligence Analyst",
+            "Database Administrator"
+          ],
+          "higherStudies": [
+            "Master's in Information Systems Management",
+            "Master's in Business Administration (MBA) with IT focus",
+            "Master's in Business Analytics",
+            "Master's in Computer Applications (M.C.A.)",
+            "Professional IT & Systems Certifications"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -592,7 +646,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Commerce in International Accounting and Finance provides a comprehensive foundation in accounting principles, global financial management, international taxation, and auditing. It equips students with the expertise needed to excel in international financial environments.",
+          "careers": [
+            "Financial Analyst",
+            "Corporate Financial Manager",
+            "International Auditor",
+            "Investment Analyst",
+            "Global Tax Consultant"
+          ],
+          "higherStudies": [
+            "Master's in International Finance",
+            "Master's in Global Accounting",
+            "MBA in Finance",
+            "Chartered Financial Analyst (CFA) Certification",
+            "Certified Public Accountant (CPA) Global Certification"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -601,7 +672,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Commerce (Honours) in Logistics focuses on supply chain management, freight forwarding, inventory control, and international trade operations. Integrated with core commerce principles, it prepares graduates to streamline global supply chains and manage modern commercial logistics.",
+          "careers": [
+            "Supply Chain Analyst",
+            "Logistics Executive",
+            "Inventory Control Manager",
+            "Freight Forwarding Specialist",
+            "Procurement Manager"
+          ],
+          "higherStudies": [
+            "MBA in Supply Chain & Logistics Management",
+            "M.Sc. in Supply Chain Management",
+            "Master of Commerce (M.Com.)",
+            "Post Graduate Diploma in Logistics & Shipping",
+            "Certified Supply Chain Professional (CSCP)"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -610,7 +698,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Commerce in Computer Applications merges commerce and IT. It equips students with practical skills in accounting, business principles, and computer programming, preparing graduates for roles in business analysis, software development, and IT consulting.",
+          "careers": [
+            "Software Developer",
+            "Web Developer",
+            "Database Administrator",
+            "IT Consultant",
+            "Systems Analyst"
+          ],
+          "higherStudies": [
+            "Master's in Computer Applications (M.C.A.)",
+            "Master's in Information Technology",
+            "MBA in Information Systems",
+            "Master's in Data Science",
+            "Professional IT Certifications (e.g., Oracle / Microsoft)"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -619,7 +724,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Commerce in Banking, Financial Services, and Insurance (BFSI) is structured to impart core principles of banking operations, retail banking, risk and recovery management, and FOREX & treasury. The course equips students with practical skills to be productive from day one in the financial sector.",
+          "careers": [
+            "Banking and Financial Services Executive",
+            "Insurance Underwriter",
+            "Investment Banking Associate",
+            "Risk Management Specialist",
+            "Wealth Manager"
+          ],
+          "higherStudies": [
+            "Master's in Banking and Finance",
+            "Master's in Financial Services",
+            "Chartered Financial Analyst (CFA) Program",
+            "Insurance and Risk Management Courses",
+            "MBA in Finance"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -628,7 +750,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The B.Com. Business Analytics program is a multidisciplinary initiative integrating commerce fundamentals with data science, digital technology, strategic decision-making, and business intelligence. It prepares graduates to become analytically empowered professionals capable of navigating complex digital economies.",
+          "careers": [
+            "Business Analyst",
+            "Operations Analyst",
+            "E-commerce or Customer Insights Analyst",
+            "Data Analyst",
+            "Market Research Analyst"
+          ],
+          "higherStudies": [
+            "Master of Business Administration (MBA)",
+            "Master of Commerce (M.Com)",
+            "M.Sc. in Finance / Accounting / Business Analytics",
+            "Chartered Accountant (CA) / Cost and Management Accountant (CMA)",
+            "Chartered Financial Analyst (CFA) / ACCA / CPA"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -655,7 +794,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Arts in English program focuses on English literature, linguistics, phonetics, creative writing, and literary history. It fosters critical thinking, analytical depth, and advanced communication skills.",
+          "careers": [
+            "Content Writer & Blogger",
+            "Copywriter",
+            "Technical Writer",
+            "Public Relations Officer",
+            "Editorial & Publishing Assistant"
+          ],
+          "higherStudies": [
+            "Master's in English Literature / Creative Writing",
+            "Master's in Journalism or Mass Communication",
+            "Master's in Digital Marketing or Technical Writing",
+            "Master of Education (M.Ed.)",
+            "MBA in Marketing or Communication"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -664,7 +820,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Arts in Journalism and Mass Communication focuses on core media concepts, news reporting, broadcast media, public relations, digital journalism, and multimedia production to prepare students for dynamic media careers.",
+          "careers": [
+            "News Reporter & Writer",
+            "Digital Media & Online Journalist",
+            "Editorial Executive",
+            "Public Relations (PR) Specialist",
+            "Multimedia Producer"
+          ],
+          "higherStudies": [
+            "Master's in Journalism or Mass Communication",
+            "Master's in Public Relations",
+            "Master's in Digital Media",
+            "Master's in Communication Studies",
+            "Master's in Film & Media Studies"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -673,7 +846,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognized government or competent authority with a minimum aggregate of 50%. Mandatory subjects : 10 + 2 (Higher Secondary) with Mathematics / Business Mathematics / Statistics / Business Statistics/ Allied Mathematics / Computer Science/ Computer Application as one of the core subjects",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Computer Applications program provides a solid foundation in software development, programming languages, database management, web development, computer networks, and information security.",
+          "careers": [
+            "Software Developer",
+            "Web Developer",
+            "Systems Analyst",
+            "Database Administrator",
+            "Network Administrator"
+          ],
+          "higherStudies": [
+            "Master's in Computer Applications (M.C.A.)",
+            "Master's in Information Technology (M.I.T.)",
+            "MBA in Information Systems",
+            "Master's in Data Science",
+            "Master's in Computer Science"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -682,7 +872,24 @@
         "eligibility": "A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognised government or competent authority with a minimum aggregate of 50%. Mandatory subjects : 10 + 2 (Higher Secondary) with Mathematics / Business Mathematics / Statistics / Business Statistics/ Allied Mathematics / Computer Science/ Computer Application as one of the core subjects.",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Computer Applications in Data Science blends computer science fundamentals with data analysis, machine learning, and artificial intelligence. It equips students to meet industry demand for data professionals across tech, finance, and healthcare sectors.",
+          "careers": [
+            "Data Analyst",
+            "Machine Learning Engineer",
+            "Big Data Engineer",
+            "Business Intelligence Analyst",
+            "Data Scientist"
+          ],
+          "higherStudies": [
+            "Master's in Data Science",
+            "Master's in Machine Learning",
+            "Master's in Big Data Analytics",
+            "Master of Computer Applications (MCA)",
+            "M.Sc. in Artificial Intelligence"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -709,7 +916,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognised government or competent authority with a minimum aggregate of 50%. Mandatory subjects :1. Atleast one of Mathematics / Business Mathematics / Statistics / Allied Mathematics.",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Science in Computer Science covers theoretical computing foundations and practical experience in hardware, software, and systems development. It prepares graduates to innovate technological solutions for complex computing problems.",
+          "careers": [
+            "Software Developer",
+            "Systems Analyst",
+            "Database Administrator",
+            "Network Engineer",
+            "Cybersecurity Analyst"
+          ],
+          "higherStudies": [
+            "Master's in Computer Science",
+            "Master's in Information Technology",
+            "Master's in Artificial Intelligence",
+            "Master of Computer Applications (MCA)",
+            "M.Sc. in Applied Data Science"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -718,7 +942,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognised government or competent authority with a minimum aggregate of 50%. Mandatory subjects :1. Atleast one of Mathematics / Business Mathematics / Statistics / Allied Mathematics.",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "This program blends core computer science concepts with a specialized focus on protecting digital systems, ethical hacking, network security, and cryptography to defend against cyber threats in connected environments.",
+          "careers": [
+            "Cybersecurity Analyst",
+            "Network Security Engineer",
+            "Incident Responder",
+            "Security Consultant",
+            "Ethical Hacker"
+          ],
+          "higherStudies": [
+            "Master's in Cybersecurity",
+            "Master's in Information Security",
+            "CISSP Certification Program",
+            "Certified Ethical Hacker (CEH) Professional Certification",
+            "Master's in Computer Science"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -727,7 +968,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognised government or competent authority with a minimum aggregate of 50%. Mandatory subjects :1. Atleast one of Mathematics / Business Mathematics / Statistics / Allied Mathematics.",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "This specialization imparts computing skills alongside advanced training in neural networks, deep learning, natural language processing, and machine learning to design autonomous, intelligent systems.",
+          "careers": [
+            "AI/ML Engineer",
+            "Research Scientist in AI",
+            "Computer Vision Engineer",
+            "NLP Specialist",
+            "AI Consultant"
+          ],
+          "higherStudies": [
+            "M.Sc. Artificial Intelligence",
+            "M.Sc. Data Science and Analytics",
+            "M.Sc. Robotics and Automation",
+            "M.Sc. Natural Language Processing (NLP)",
+            "M.Sc. Cybersecurity with AI"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -736,7 +994,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or) A pass in Diploma in Engineering (10+3 or 10+2+2 Pattern) from a recognised government or competent authority with a minimum aggregate of 50%. Mandatory subjects :1. Atleast one of Mathematics / Business Mathematics / Statistics / Allied Mathematics.",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "This honours program builds a strong computer science foundation, enriched with specialization in Agentic AI, autonomous intelligent agents, multi-agent systems, and cognitive architectures.",
+          "careers": [
+            "AI Engineer",
+            "Machine Learning Developer",
+            "Research Analyst",
+            "Intelligent Systems Specialist",
+            "Autonomous Systems / Robotics Specialist"
+          ],
+          "higherStudies": [
+            "M.S. in Artificial Intelligence",
+            "Ph.D. in Artificial Intelligence",
+            "M.S. / Ph.D. in Machine Learning",
+            "M.S. / Ph.D. in Robotics",
+            "M.S. / Ph.D. in Cognitive Computing"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -772,7 +1047,24 @@
         "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) Any group (or) 10+3 Year Diploma. (Minimum Aggregate of 50%)",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Science in Visual Communication introduces digital expression techniques, photo/video editing software, animation tools, web design, and advertising strategies for the creative industry.",
+          "careers": [
+            "Graphic Designer",
+            "Visual Communication Specialist",
+            "Multimedia Artist",
+            "Art Director",
+            "Web Designer"
+          ],
+          "higherStudies": [
+            "Master's in Visual Communication",
+            "Master's in Graphic Design",
+            "Master's in Multimedia Arts",
+            "Postgraduate Diploma in Advertising",
+            "M.Sc. in Film & Media Production"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -781,16 +1073,50 @@
         "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) Any group (or) 10+3 Year Diploma. (Minimum Aggregate of 50%)",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "This modern interdisciplinary program connects visual communication and digital art with AI tools, generative design, automated digital presentation, and intelligent media content creation.",
+          "careers": [
+            "AI Visual Content Creator",
+            "Digital Media Strategist",
+            "Generative AI Designer",
+            "Multimedia Artist",
+            "Creative Technology Director"
+          ],
+          "higherStudies": [
+            "Master's in Visual Communication",
+            "Master's in Generative Design & AI",
+            "Master's in Multimedia Arts",
+            "Postgraduate Diploma in Digital Media & AI",
+            "M.Sc. in Creative Technologies"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
         "section": "UNDERGRADUATE COURSES (DURATION 3 YEARS)",
         "title": "B.Sc* - Artificial Intelligence and Animation",
-        "eligibility": "Eligibility Criteria - 10 + 2 (Higher Secondary) Any group (or) 10+3 Year Diploma. (Minimum Aggregate of 50%)",
+        "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) with a minimum aggregate of 50% (or Diploma in Engineering) with Computer Science / Mathematics / IT / Visual Arts.",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "This specialized science program merges 3D animation, visual effects, and digital modeling with artificial intelligence algorithms to build high-end media, gaming, and interactive content.",
+          "careers": [
+            "3D Animator",
+            "AI Graphics Engineer",
+            "VFX Artist",
+            "Game Developer",
+            "Character Modeler"
+          ],
+          "higherStudies": [
+            "Master's in Animation & VFX",
+            "Master's in Game Design / Virtual Reality",
+            "M.Sc. in Computer Graphics & AI",
+            "Master's in Digital Media Production",
+            "Advanced Diploma in 3D Technologies"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -799,7 +1125,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10+2 (Higher Secondary) Any Group. (Minimum aggregate of 35%).",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "This undergraduate program provides theoretical and practical expertise in hotel management, front office operations, food and beverage service, catering science, and hospitality administration.",
+          "careers": [
+            "Hotel Manager",
+            "Front Office Executive",
+            "Food and Beverage (F&B) Manager",
+            "Event Coordinator",
+            "Catering Manager"
+          ],
+          "higherStudies": [
+            "Master's in Hotel Management (MHM)",
+            "MBA in Hospitality Management",
+            "Master's in Tourism and Travel Management (MTTM)",
+            "Postgraduate Diploma in Culinary Arts",
+            "Postgraduate Diploma in Accommodation Operations"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -826,7 +1169,24 @@
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Science in Psychology focuses on mental sciences, human nature, and behavioral dynamics. It prepares graduates for healthcare, counseling, childcare, and human resources careers.",
+          "careers": [
+            "Psychologist Assistant",
+            "Counseling Assistant",
+            "Human Resources Specialist",
+            "Clinical Research Assistant",
+            "Mental Health Advocate"
+          ],
+          "higherStudies": [
+            "Master's in Psychology",
+            "Master's in Clinical Psychology",
+            "Master's in Counseling Psychology",
+            "Master's in Organizational Psychology",
+            "Postgraduate Diploma in Counseling"
+          ]
+        }
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
@@ -946,13 +1306,56 @@
         "level": "Diploma"
       },
       {
+        "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
+        "section": "DIPLOMA COURSE",
+        "title": "Diploma in Hotel Management and Catering Science",
+        "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%.",
+        "lateralEntry": false,
+        "partTime": false,
+        "level": "Diploma",
+        "profile": {
+          "overview": "The Diploma program provides hands-on practical skills and fundamental operational knowledge in hotel management, food production, front desk routines, housekeeping, and catering operations.",
+          "careers": [
+            "Assistant Front Office Executive",
+            "F&B Service Steward",
+            "Housekeeping Supervisor",
+            "Catering Assistant",
+            "Culinary Trainee"
+          ],
+          "higherStudies": [
+            "Bachelor of Hotel Management (BHM)",
+            "B.Sc. in Hotel and Catering Management",
+            "Advanced Diploma in Culinary Arts",
+            "Certificate in Food & Beverage Management",
+            "Certificate in Accommodation Operations"
+          ]
+        }
+      },
+      {
         "faculty": "MANAGEMENT PROGRAMME",
         "section": "UNDERGRADUATE COURSES",
         "title": "BBA - Business Administration (Duration 3 years)",
         "eligibility": "A Pass in Higher Secondary Examination with Minimum eligibility of aggregate of 50% in +2 (Preference will be given to students without any break in study)",
         "lateralEntry": false,
         "partTime": false,
-        "level": "UG"
+        "level": "UG",
+        "profile": {
+          "overview": "The Bachelor of Business Administration program provides fundamental training in business management, organizational behavior, marketing, financial principles, human resources, and strategic decision-making to build modern corporate leadership skills.",
+          "careers": [
+            "Management Trainee",
+            "Business Development Executive",
+            "Marketing Specialist",
+            "Human Resources Generalist",
+            "Operations Associate"
+          ],
+          "higherStudies": [
+            "Master of Business Administration (MBA)",
+            "Post Graduate Diploma in Management (PGDM)",
+            "Master's in Human Resource Management",
+            "Master's in International Business",
+            "Certified Management Accountant (CMA)"
+          ]
+        }
       },
       {
         "faculty": "MANAGEMENT PROGRAMME",
@@ -1826,6 +2229,24 @@
         "title": "Sports",
         "tag": "Sports"
       }
+    ],
+    "videos": [
+      {
+        "url": "https://youtu.be/aQnGGUe4TC4",
+        "title": "SRMIST Ramapuram – Campus Tour"
+      },
+      {
+        "url": "https://youtu.be/lMJaphjIyNI",
+        "title": "TEXUS’26 Day 2 – Bigger, Louder, Better"
+      },
+      {
+        "url": "https://youtu.be/kWTuf4b2Uj4",
+        "title": "From the Himalayas to the TEXUS’26 stage!"
+      },
+      {
+        "url": "https://youtu.be/qJD-DxEV2LU",
+        "title": "Placement Day 2026"
+      }
     ]
   },
   "testimonials": {
@@ -1848,6 +2269,42 @@
         "line2": "Adobe - 41 LPA",
         "line3": "SRM IST Ramapuram Alumni",
         "videoUrl": "https://www.youtube.com/embed/hSEw_VAbxRA?si=TaZjnWq9bkxHovUk"
+      }
+    ],
+    "videos": [
+      {
+        "url": "https://youtube.com/shorts/oNT5Ns8pn2E",
+        "title": "SRMIST student excels in national-level martial arts championships"
+      },
+      {
+        "url": "https://youtube.com/shorts/GVt-Y9JRMdo",
+        "title": "Success Stories – ECE | Placements"
+      },
+      {
+        "url": "https://youtu.be/o0DsSgisqfs",
+        "title": "Inspiring Journeys. Successful Careers"
+      },
+      {
+        "url": "https://youtu.be/lOufnoUIrHk",
+        "title": "From Syria to SRM Ramapuram!"
+      },
+      {
+        "url": "https://youtube.com/shorts/49yyPGZMjKk",
+        "title": "SRM RMP Startup Spotlight | Powering Smarter, Greener Mobility"
+      },
+      {
+        "url": "https://youtube.com/shorts/pDvOgqsGgb8",
+        "title": "From the USA to SRMIST Ramapuram!"
+      },
+      {
+        "url": "https://www.facebook.com/share/v/14zagk4HZxB/",
+        "title": "Student video on Facebook",
+        "cover": "/assets/ramapuram/campus/why-vibrant-campus-life.png"
+      },
+      {
+        "url": "https://www.facebook.com/share/r/1Fm6FevABy/",
+        "title": "Student reel on Facebook",
+        "cover": "/assets/ramapuram/events/campus-event-celebration.jpg"
       }
     ]
   },
@@ -1941,6 +2398,34 @@
   },
   "_notes": [
     "Client corrections (corrections flabs ramapuram doc, Nov 2026): eligibility replaced with the client's text for B.Sc Digital Film Technology, BCA Computer Applications, B.Sc Hotel and Hospitality Administration, M.Com Commerce / Accounting and Finance, M.Sc Computer Science (+ Cyber Security, AI & ML), and the Executive PG Diplomas in Practical English and Life Skills, Deep Tech and Leadership, and AI Based Healthcare Management. Only whitespace normalised (\"50%.Mandatory subjects :10 + 2\" → \"50%. Mandatory subjects : 10 + 2\").",
-    "Client update (Nov 2026): placements.facultyStats = FLABS placement figures supplied by the client (2300+ Job Offers, 1650+ Students Placed, 400+ Companies Visited, 11.7 LPA Highest Package); shown as a panel in the Placements section, separate from the institution-wide stats1 figures."
-  ]
+    "Client update (Nov 2026): placements.facultyStats = FLABS placement figures supplied by the client (2300+ Job Offers, 1650+ Students Placed, 400+ Companies Visited, 11.7 LPA Highest Package); shown as a panel in the Placements section, separate from the institution-wide stats1 figures.",
+    "Client update (Nov 2026, 'FLABS SRMIST_24_COURSES_MASTER_GUIDE.pdf'): programmes.items[].profile (overview, placement opportunities, higher studies) added verbatim from the guide for 22 FLABS programmes and BBA – Business Administration (Management tab). New programme 'Diploma in Hotel Management and Catering Science' added under DIPLOMA COURSE (eligibility and profile from the guide; duration not given). Eligibility changed only for B.Sc* – Artificial Intelligence and Animation (guide adds the subject requirement). Other guide eligibility lines are shorter forms of the existing text and were not applied; conflicts left for the client: Hotel and Hospitality Administration (guide 50% vs 35% from the client's earlier correction), Agentic AI (guide drops the mandatory-subject line), BBA (guide omits the 'no break in study' preference). Guide item 'B.Sc. Fin Tech' not applied – the page lists 'B.Com* – Fintech'.",
+    "Client corrections (Nov 2026, 'SRMIST, Ramapuram LP-Correction File.docx'): (1) ugEligibility updated to the client text – 'Artificial Intelligence' added to the qualifying subjects, the Biotech/Genetic/Biomedical paragraph moved under Qualifying Examination (with 'Students admitted for the above programs'), GCE A-level 'one of the' removed, NOTE split into the two client lines; spacing normalised. (2) Engineering (regular) cards: lateralEntry set false (17 cards) so the 'Lateral entry' badge no longer shows. (3) M.Tech CAD / Construction Engineering and Management / Structural Engineering eligibility replaced (stray backtick dropped). (4) B.Arch eligibility replaced ('(NATA)' added). (5) lateralEntry.degreeLabel 'B.Tech – Lateral Entry' (chip on Lateral Entry tab cards); 'B.Tech – CSE with Specialization in AI and ML' removed from the lateral list. (6) testimonials.videos and campus.videos = client links (tracking parameters '?si=' / '?mibextid=' removed); titles are the official YouTube titles (emoji and channel name removed); the two Facebook links cannot be embedded, so they open on Facebook with our labels 'Student video/reel on Facebook'. (7) faqs = the five client Q&As; light grammar fixes ('Is the Registration fee is Refundable?' → 'Is the registration fee refundable?', 'Ans:' prefixes dropped).",
+    "Client feedback (Nov 2026): testimonial/campus video grids now a single-row slider with arrows. Facebook cards use official Ramapuram campus photos as covers (Facebook blocks fetching the real video thumbnails); covers are illustrative, not frames from the videos."
+  ],
+  "faqs": {
+    "heading": "Frequently Asked Questions",
+    "items": [
+      {
+        "q": "What is the eligibility for B.Tech?",
+        "a": "Kindly refer to the link below for further assistance:\nhttps://srmrmp.edu.in/admission-srm-ramapuram/eligibility-criteria/"
+      },
+      {
+        "q": "Is the registration fee refundable?",
+        "a": "Registration fee is non-refundable."
+      },
+      {
+        "q": "I have done the payment for the application, but in the portal the status is pending?",
+        "a": "Kindly wait for 24 hours or you can post your query under the “My queries” category."
+      },
+      {
+        "q": "What is the mode of payment for the application?",
+        "a": "Online payment (Debit card, Credit card, UPI, Net banking)."
+      },
+      {
+        "q": "Is lateral entry available for B.Tech?",
+        "a": "Yes, for the B.Tech programmes listed under the Lateral Entry Programme. Candidates must have passed a 3 year Diploma in engineering/technology with aggregate of 60% in relevant specialization from a recognized university/college."
+      }
+    ]
+  }
 }

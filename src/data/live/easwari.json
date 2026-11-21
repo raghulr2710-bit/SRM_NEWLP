@@ -59,7 +59,12 @@
       {
         "title": "Autonomous",
         "text": "An Autonomous Institution, Affiliated to Anna University",
-        "badge": null,
+        "badge": {
+          "src": "/assets/easwari/accreditation/anna-university.png",
+          "alt": "Anna University logo",
+          "width": 84,
+          "height": 84
+        },
         "body": "Anna University"
       }
     ]
@@ -71,6 +76,14 @@
   },
   "stats1": [
     {
+      "value": "30",
+      "label": "Years of Excellence"
+    },
+    {
+      "value": "25K+",
+      "label": "Alumni"
+    },
+    {
       "value": "1424+",
       "label": "Students Placed"
     },
@@ -81,18 +94,6 @@
     {
       "value": "51 LPA",
       "label": "Highest Package"
-    }
-  ],
-  "facts": [
-    {
-      "value": "30",
-      "label": "Years of Excellence",
-      "icon": "Hourglass"
-    },
-    {
-      "value": "25K+",
-      "label": "Alumni",
-      "icon": "Users"
     }
   ],
   "programmes": {
@@ -303,7 +304,8 @@
         "eligibility": "As per AICTE and Anna University norms",
         "lateralEntry": false,
         "partTime": false,
-        "level": "PhD"
+        "level": "PhD",
+        "hideActions": true
       }
     ]
   },
@@ -700,14 +702,6 @@
         "tag": "Labs"
       },
       {
-        "src": "/assets/easwari/infrastructure/control-and-instrumentation-lab.jpg",
-        "alt": "Control and Instrumentation laboratory",
-        "width": 500,
-        "height": 500,
-        "title": "Control & Instrumentation Lab",
-        "tag": "Labs"
-      },
-      {
         "src": "/assets/easwari/students/vibrant-campus-life.jpg",
         "alt": "Students performing live music on stage at a campus event",
         "width": 400,
@@ -857,6 +851,9 @@
     "Not used from the live page: 'Need Assistance ?' headings (no CTA/links) and its stock-style background image.",
     "Client corrections (Nov 2026, 'Corrections (2).docx'): why item 7 'Students Clubs' → 'Student Clubs'; programmes.heading 'Programmes Offered'; recruiters.heading 'Major Recruiters 2025-2026' (logos unchanged – same 16 as the 2024-2025 list until the client sends the 2025-26 list); collaborations.heading 'Global Academic Collaboration'; rankings.heading 'Accreditation & Ranking 2025-2026'; facts now 30 Years of Excellence and 25K+ Alumni only (placement figures removed as they repeat the placement band); toll-free shown as '1800 103 2535' without +91.",
     "Client corrections (Nov 2026): UG eligibility reworded for grammar ('As per AICTE & Govt. of Tamil Nadu in Anna University, … is Required.' → 'As per AICTE, Government of Tamil Nadu and Anna University norms, a pass in the Higher Secondary Examination (10+2) with Mathematics, Physics and Chemistry is required.') – our wording, meaning unchanged; to be confirmed by the client.",
-    "Client corrections (Nov 2026): placements.heading gets the academic year 2024-2025 (our inference: all six profiles are \"2025 Batch\" and the record band says \"2025 Record Setting Placements\") – to be confirmed."
+    "Client corrections (Nov 2026): placements.heading gets the academic year 2024-2025 (our inference: all six profiles are \"2025 Batch\" and the record band says \"2025 Record Setting Placements\") – to be confirmed.",
+    "Client feedback (Nov 2026): Years of Excellence (30) and Alumni (25K+) moved into the stats1 milestone band (first two figures); the separate Highlights (facts) section removed.",
+    "Client feedback (Nov 2026): Anna University logo added to the 4th rankings card (same official logo file as the TRP page).",
+    "Client corrections (Nov 2026, 'EEC CORRECTIONS1'): Ph.D. card has no View eligibility / Enquire (hideActions); long course names use a slightly smaller font and up to 3 lines (all campuses); course box reads 'Choose a Programme'; Control & Instrumentation Lab photo removed from Life at SRM Easwari (Robotics lab photo awaited from the client – none on file); admission section eyebrow 'Admission Enquiry'. Scholarship details: awaiting client template/scope – nothing added."
   ]
 }

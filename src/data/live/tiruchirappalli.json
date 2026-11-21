@@ -20,10 +20,10 @@
     }
   },
   "logo": {
-    "src": "/assets/tiruchirappalli/logo/srmist-tiruchirappalli-logo-light-bg.png",
+    "src": "/assets/tiruchirappalli/logo/srmist-tiruchirappalli-logo-2027.webp",
     "alt": "SRM Institute of Science and Technology, Tiruchirappalli",
-    "width": 197,
-    "height": 92
+    "width": 640,
+    "height": 285
   },
   "seal": {
     "src": "/assets/tiruchirappalli/accreditation/nirf-full-logo.png",
@@ -2069,7 +2069,8 @@
     "logo: header copy of the official logo with the white SRM wordmark recoloured to brand blue (#0c477f) so it reads on the white header; original file kept unchanged.",
     "campus.items: official photos from https://www.srmtrichy.edu.in/campus-life (titles = the site’s image names; tags and alt text written by us).",
     "why.items images: official photos from srmtrichy.edu.in (campus-life, international-relations, academic-programme) and the registration page (Rockfort, infrastructure – AI-upscaled 4x for clarity).",
-    "Client corrections (SRM IST Trichy Corrections doc, Nov 2026): Lateral-entry badge removed from all B.Tech cards; M.Tech Biotechnology, B.Sc Cyber Security / AI & ML / Visual Communication / Visual Communication & AI / Psychology and MBA eligibility replaced with the client's text; B.Sc Biotechnology removed and B.Sc Artificial Intelligence and Animation added (no eligibility supplied – card shows the 'ask a counsellor' fallback); Medicine & Allied Health UG course names changed to the client's names (duration text kept)."
+    "Client corrections (SRM IST Trichy Corrections doc, Nov 2026): Lateral-entry badge removed from all B.Tech cards; M.Tech Biotechnology, B.Sc Cyber Security / AI & ML / Visual Communication / Visual Communication & AI / Psychology and MBA eligibility replaced with the client's text; B.Sc Biotechnology removed and B.Sc Artificial Intelligence and Animation added (no eligibility supplied – card shows the 'ask a counsellor' fallback); Medicine & Allied Health UG course names changed to the client's names (duration text kept).",
+    "Client update (Nov 2026): header logo replaced with the client-supplied SRMIST Tiruchirappalli logo (light-grey background made transparent; resized to 640px)."
   ],
   "steps": {
     "items": [

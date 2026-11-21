@@ -92,11 +92,11 @@ function EasStats1({ live }: SectionProps) {
   return (
     <section aria-label="Key figures" className="on-dark relative overflow-hidden bg-gradient-to-r from-[var(--brand-deep)] to-brand text-on-brand">
       <div aria-hidden="true" className="absolute inset-0 opacity-[0.07] [background-image:repeating-linear-gradient(135deg,white_0_1px,transparent_1px_18px)]" />
-      <dl className="container-x relative grid gap-8 py-10 sm:grid-cols-3 sm:gap-6 lg:py-14">
+      <dl className={`container-x relative grid py-10 lg:py-14 ${live.stats1.length > 3 ? "grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-5 lg:gap-6" : "gap-8 sm:grid-cols-3 sm:gap-6"}`}>
         {live.stats1.map((s, i) => (
-          <Reveal key={s.label} delay={0.08 * i} className="flex flex-col sm:border-l sm:border-white/15 sm:pl-6 sm:first:border-l-0 sm:first:pl-0">
-            <dt className="text-[0.8125rem] font-semibold uppercase tracking-[0.16em] text-white/70">{s.label}</dt>
-            <dd className="mt-2 font-display text-[2.5rem] font-semibold leading-none tracking-tight sm:text-5xl lg:text-6xl [&_[aria-hidden]>span]:text-[var(--hl)]">
+          <Reveal key={s.label} delay={0.08 * i} className={`flex flex-col ${live.stats1!.length > 3 ? "lg:border-l lg:border-white/15 lg:pl-6 lg:first:border-l-0 lg:first:pl-0" : "sm:border-l sm:border-white/15 sm:pl-6 sm:first:border-l-0 sm:first:pl-0"}`}>
+            <dt className={`text-[0.8125rem] font-semibold uppercase tracking-[0.16em] text-white/70 ${live.stats1!.length > 3 ? "min-h-[2.75em] leading-snug sm:min-h-0" : ""}`}>{s.label}</dt>
+            <dd className={`mt-2 font-display font-semibold leading-none tracking-tight [&_[aria-hidden]>span]:text-[var(--hl)] ${live.stats1!.length > 3 ? "text-[2rem] sm:text-[2.5rem] lg:text-5xl" : "text-[2.5rem] sm:text-5xl lg:text-6xl"}`}>
               <Value v={s.value} label={s.label} />
             </dd>
             <span aria-hidden="true" className="mt-4 block h-1 w-16 rounded-full bg-[var(--hl)]" />
@@ -366,7 +366,7 @@ function EasAdmission({ live }: SectionProps) {
   return (
     <section id="admission" className="relative scroll-mt-10 overflow-hidden bg-surface-alt py-12 lg:py-16">
       <div className="container-x">
-        <Heading eyebrow="Admission process" Icon={ClipboardList}>
+        <Heading eyebrow="Admission Enquiry" Icon={ClipboardList}>
           Steps to follow
         </Heading>
         {steps.length ? (

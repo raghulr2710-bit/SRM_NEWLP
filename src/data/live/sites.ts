@@ -80,7 +80,7 @@ export const tiruchirappalliSite: LiveSiteConfig = {
 
 /** Easwari Engineering College – maroon (live site #430005) + Easwari yellow (#fbca38). */
 export const easwariSite: LiveSiteConfig = {
-  courseWording: { one: "programme", many: "programmes", group: "Programme Level" },
+  courseWording: { one: "programme", many: "programmes", group: "Programme" },
   inst: easwari,
   data: easwariData as unknown as LiveData,
   palette: {
