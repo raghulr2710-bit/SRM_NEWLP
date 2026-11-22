@@ -1473,6 +1473,15 @@
         "lateralEntry": false,
         "partTime": true,
         "level": "PG"
+      },
+      {
+        "faculty": "WORKING PROFESSIONAL COURSES(WPC)",
+        "section": null,
+        "title": "MBA - Business Administration (Part Time)",
+        "eligibility": "1. A Bachelor's degree with minimum aggregate of 50%\n2. Preference would be given to candidates with work experience",
+        "lateralEntry": false,
+        "partTime": true,
+        "level": "PG"
       }
     ]
   },
@@ -1507,37 +1516,37 @@
       {
         "title": "Placement in the Fortune 5oo companies",
         "image": {
-          "src": "/assets/ramapuram/campus/why-placement-fortune-500.jpg",
-          "alt": "Students outside the SRM Institute of Science & Technology building",
-          "width": 700,
-          "height": 467
+          "src": "/assets/ramapuram/campus/why-placement-student-library.webp",
+          "alt": "Smiling student in a library holding an SRM Ramapuram record book",
+          "width": 1200,
+          "height": 902
         }
       },
       {
         "title": "Safely located with in Chennai city",
         "image": {
-          "src": "/assets/ramapuram/campus/why-chennai-city.jpg",
-          "alt": "Chennai Central railway station",
-          "width": 1000,
-          "height": 434
+          "src": "/assets/ramapuram/infrastructure/campus-building-hd.webp",
+          "alt": "SRM IST Ramapuram campus building against the Chennai sky",
+          "width": 1280,
+          "height": 1600
         }
       },
       {
         "title": "Semester Abroad Program in 9+ countries",
         "image": {
-          "src": "/assets/ramapuram/campus/why-semester-abroad.jpg",
-          "alt": "Young man smiling at a desk",
-          "width": 1597,
-          "height": 1789
+          "src": "/assets/ramapuram/campus/why-semester-abroad-group.webp",
+          "alt": "Five students in formal wear in front of international flags and the SRM logo",
+          "width": 1008,
+          "height": 902
         }
       },
       {
         "title": "International Internships",
         "image": {
-          "src": "/assets/ramapuram/campus/why-international-internships.jpg",
-          "alt": "Student group at the Petronas Towers with banner \"College of Engineering and Technology – International Immersion and Internship Programme – October 2023 – India–Malaysia\"",
-          "width": 780,
-          "height": 1040
+          "src": "/assets/ramapuram/campus/why-international-internships-student.webp",
+          "alt": "Student in formal wear holding a networking textbook on campus",
+          "width": 1200,
+          "height": 902
         }
       },
       {
@@ -1552,28 +1561,28 @@
       {
         "title": "Vibrant Campus Life",
         "image": {
-          "src": "/assets/ramapuram/campus/why-vibrant-campus-life.png",
-          "alt": "Students on stage at an \"Epoch\" event",
-          "width": 800,
-          "height": 800
+          "src": "/assets/ramapuram/campus/why-campus-life-cafe.webp",
+          "alt": "Three students walking out of the campus cafe",
+          "width": 756,
+          "height": 1200
         }
       },
       {
         "title": "Fully Equipped Hostel Facilities",
         "image": {
-          "src": "/assets/ramapuram/infrastructure/hostel.jpg",
-          "alt": "Student with ID card among trees (does not show a hostel)",
-          "width": 2560,
-          "height": 1709
+          "src": "/assets/ramapuram/campus/why-students-computer-lab.webp",
+          "alt": "Students working at computers in a campus lab",
+          "width": 1197,
+          "height": 906
         }
       },
       {
         "title": "State-of-the-Art Infrastructure",
         "image": {
-          "src": "/assets/ramapuram/infrastructure/state-of-the-art-infrastructure.jpg",
-          "alt": "Multi-storey campus building",
-          "width": 320,
-          "height": 400
+          "src": "/assets/ramapuram/campus/why-infrastructure-campus-building.webp",
+          "alt": "SRM Ramapuram campus buildings and the TEXUS entrance block",
+          "width": 1200,
+          "height": 902
         }
       }
     ]
@@ -2214,18 +2223,18 @@
         "tag": "Theme days"
       },
       {
-        "src": "/assets/ramapuram/events/campus-event-celebration.jpg",
-        "alt": "Students and staff in traditional dress around a floral pookalam",
-        "width": 602,
-        "height": 338,
+        "src": "/assets/ramapuram/events/pongal-celebration.webp",
+        "alt": "Students and faculty in traditional attire celebrating Pongal on the campus steps",
+        "width": 1280,
+        "height": 675,
         "title": "Festival celebrations",
         "tag": "Traditions"
       },
       {
-        "src": "/assets/ramapuram/campus/basketball-court.jpg",
-        "alt": "Student playing basketball on the campus court",
-        "width": 900,
-        "height": 400,
+        "src": "/assets/ramapuram/campus/indoor-sports-court.webp",
+        "alt": "Students playing badminton and basketball on the indoor sports court",
+        "width": 1446,
+        "height": 1087,
         "title": "Sports",
         "tag": "Sports"
       }
@@ -2401,7 +2410,14 @@
     "Client update (Nov 2026): placements.facultyStats = FLABS placement figures supplied by the client (2300+ Job Offers, 1650+ Students Placed, 400+ Companies Visited, 11.7 LPA Highest Package); shown as a panel in the Placements section, separate from the institution-wide stats1 figures.",
     "Client update (Nov 2026, 'FLABS SRMIST_24_COURSES_MASTER_GUIDE.pdf'): programmes.items[].profile (overview, placement opportunities, higher studies) added verbatim from the guide for 22 FLABS programmes and BBA – Business Administration (Management tab). New programme 'Diploma in Hotel Management and Catering Science' added under DIPLOMA COURSE (eligibility and profile from the guide; duration not given). Eligibility changed only for B.Sc* – Artificial Intelligence and Animation (guide adds the subject requirement). Other guide eligibility lines are shorter forms of the existing text and were not applied; conflicts left for the client: Hotel and Hospitality Administration (guide 50% vs 35% from the client's earlier correction), Agentic AI (guide drops the mandatory-subject line), BBA (guide omits the 'no break in study' preference). Guide item 'B.Sc. Fin Tech' not applied – the page lists 'B.Com* – Fintech'.",
     "Client corrections (Nov 2026, 'SRMIST, Ramapuram LP-Correction File.docx'): (1) ugEligibility updated to the client text – 'Artificial Intelligence' added to the qualifying subjects, the Biotech/Genetic/Biomedical paragraph moved under Qualifying Examination (with 'Students admitted for the above programs'), GCE A-level 'one of the' removed, NOTE split into the two client lines; spacing normalised. (2) Engineering (regular) cards: lateralEntry set false (17 cards) so the 'Lateral entry' badge no longer shows. (3) M.Tech CAD / Construction Engineering and Management / Structural Engineering eligibility replaced (stray backtick dropped). (4) B.Arch eligibility replaced ('(NATA)' added). (5) lateralEntry.degreeLabel 'B.Tech – Lateral Entry' (chip on Lateral Entry tab cards); 'B.Tech – CSE with Specialization in AI and ML' removed from the lateral list. (6) testimonials.videos and campus.videos = client links (tracking parameters '?si=' / '?mibextid=' removed); titles are the official YouTube titles (emoji and channel name removed); the two Facebook links cannot be embedded, so they open on Facebook with our labels 'Student video/reel on Facebook'. (7) faqs = the five client Q&As; light grammar fixes ('Is the Registration fee is Refundable?' → 'Is the registration fee refundable?', 'Ans:' prefixes dropped).",
-    "Client feedback (Nov 2026): testimonial/campus video grids now a single-row slider with arrows. Facebook cards use official Ramapuram campus photos as covers (Facebook blocks fetching the real video thumbnails); covers are illustrative, not frames from the videos."
+    "Client feedback (Nov 2026): testimonial/campus video grids now a single-row slider with arrows. Facebook cards use official Ramapuram campus photos as covers (Facebook blocks fetching the real video thumbnails); covers are illustrative, not frames from the videos.",
+    "Client update (Nov 2026): added \"MBA - Business Administration (Part Time)\" to Working Professional Courses with the client's eligibility.",
+    "Client update (Nov 2026): campus Sports photo replaced with the client-supplied indoor sports court photo (compressed to WebP); alt text ours.",
+    "Client update (Nov 2026): campus Festival celebrations photo replaced with the client-supplied Pongal celebration photo (WebP); alt text ours.",
+    "Client update (Nov 2026): Why SRM IST Ramapuram – client photos for Placement, Semester Abroad, International Internships, Vibrant Campus Life and State-of-the-Art Infrastructure (resized to 1200 px WebP; tile matching and alt texts ours). Chennai city, Innovation & Start-ups and Hostel photos awaited.",
+    "Client feedback (Nov 2026): Why tiles 02 (Chennai city) and 07 (Hostel) now use college photos – the existing campus-building-hd photo, and a crop of the tall block from the client campus photo. No hostel photo is on file; the hostel tile shows a campus block, not the hostel itself.",
+    "Client feedback (Nov 2026): Why tile 07 (Hostel) image replaced with the client-supplied computer-lab photo (WebP); alt text ours.",
+    "Client feedback (Nov 2026): Why tile 03 (Semester Abroad) image replaced with the client-supplied group photo in front of the flags (WebP); alt text ours."
   ],
   "faqs": {
     "heading": "Frequently Asked Questions",
