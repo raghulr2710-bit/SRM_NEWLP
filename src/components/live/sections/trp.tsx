@@ -272,7 +272,7 @@ function TrpHighlights({ live }: SectionProps) {
           </div>
         </Reveal>
         {facts.length ? (
-          <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-5">
+          <ul className={`grid grid-cols-2 gap-3 sm:gap-4 ${facts.length % 4 === 0 ? "lg:grid-cols-4" : "sm:grid-cols-3 lg:grid-cols-5"}`}>
             {facts.map((f, i) => (
               <TrpFactTile key={f.label} f={f} i={i} wide={i === facts.length - 1 && facts.length % 2 === 1} />
             ))}

@@ -90,9 +90,24 @@
   ],
   "facts": [
     {
-      "value": "100+",
-      "label": "Patents",
+      "value": "129",
+      "label": "Patents Filed",
       "icon": "Lightbulb"
+    },
+    {
+      "value": "128",
+      "label": "Patents Published",
+      "icon": "Lightbulb"
+    },
+    {
+      "value": "5",
+      "label": "Designs Filed",
+      "icon": "Lightbulb"
+    },
+    {
+      "value": "2",
+      "label": "Designs Registered",
+      "icon": "Award"
     },
     {
       "value": "40+",
@@ -847,7 +862,8 @@
     "Client update (Nov 2026) – building: the State-of-the-Art Infrastructure image in Why TRP? and Life at SRM TRP is the client's aerial campus photo (srm-trp-campus-aerial.webp); alt text ours. The hero background still uses the earlier building photo.",
     "Client update (Nov 2026) – placements.profiles: the 7 students from \"SRM TRP - Placement Student Details 2027\" replace the 4 earlier live-site profiles. Names in title case (doc mixes upper/lower case; \"MohamedFaisal S\" spaced, \"Mounika.M\" → \"Mounika M\"); \"M/s.\" dropped from company names; department labels shortened (B.Tech-AI&DS → B.Tech – AI & DS). Aarthi S: doc says \"50,000/- stipend per month\", shown as \"Stipend : ₹50,000 / month\". Company logos are the ones in the doc.",
     "Client update (Nov 2026) – testimonials: replaced by the 13 alumni in \"SRM TRP - Alumni Details\". The doc has no quotes, so cards show role, company, department/batch and the salary package. Heading \"Alumni Success Stories\" is ours. Package values as in the doc, normalised: \"17LPA\" → \"17 LPA\", \"20 lpa\"/\"20 Lakhs\" → \"20 LPA\", \"3,500,000\" → \"35 LPA\" (assumed INR), \"80000 USD\" → \"$80,000\", \"1Cr\" → \"1 Cr\". Hemanth Kumar's row had three stray photos in the company column (duplicates of other alumni) – only the Photo column is used.",
-    "Client corrections (Nov 2026): Ph.D. programmes (3, 'M.S (Research) / Ph.D – …') moved from Postgraduate to a separate 'Ph.D. Programmes' tab. programmes.commonEligibility = one block per tab (UG text and 'Lateral Entry seats are available' from the client screenshot; PG and Ph.D. use the existing 'As per AICTE and Anna University norms'); per-card View eligibility hidden in those tabs. Highlights: '90+ Interview Avenues' replaced by an MoU Partners band with the 15 client-supplied logos (duplicates of UMN and Delphi-TVS used once; Tigerworld cropped from the banner image; intro line ours); facts per the client screenshot – 100+ Patents, 40+ Industry Partnerships, 10+ Global Academic Collaborations, 150+ Major Recruiters, Autonomous. 'Why TRP?' / 'Life at SRM TRP' images: replacement images not supplied yet."
+    "Client corrections (Nov 2026): Ph.D. programmes (3, 'M.S (Research) / Ph.D – …') moved from Postgraduate to a separate 'Ph.D. Programmes' tab. programmes.commonEligibility = one block per tab (UG text and 'Lateral Entry seats are available' from the client screenshot; PG and Ph.D. use the existing 'As per AICTE and Anna University norms'); per-card View eligibility hidden in those tabs. Highlights: '90+ Interview Avenues' replaced by an MoU Partners band with the 15 client-supplied logos (duplicates of UMN and Delphi-TVS used once; Tigerworld cropped from the banner image; intro line ours); facts per the client screenshot – 100+ Patents, 40+ Industry Partnerships, 10+ Global Academic Collaborations, 150+ Major Recruiters, Autonomous. 'Why TRP?' / 'Life at SRM TRP' images: replacement images not supplied yet.",
+    "Client update (Nov 2026): '100+ Patents' replaced by Patents Filed 129, Patents Published 128, Designs Filed 5, Designs Registered 2 (client wrote 'Design filed / Design registered'; pluralised)."
   ],
   "steps": {
     "heading": "Your admission, step by step",

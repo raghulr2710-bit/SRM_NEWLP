@@ -49,6 +49,7 @@ export interface UgEligibility {
 }
 
 const LATERAL = "LATERAL ENTRY PROGRAMME";
+const LATERAL_SECTION = "Lateral Entry – Direct 2nd Year B.Tech";
 const ICON = (f: string): LucideIcon =>
   /PH.?D/i.test(f)
     ? FlaskConical
@@ -93,6 +94,7 @@ function splitTitle(t: string) {
 }
 /** "UNDERGRADUATE COURSES (DURATION 4 YEARS)" → { title: "Undergraduate courses", duration: "4 years" } */
 function splitSection(s: string) {
+  if (s === LATERAL_SECTION) return { title: s, duration: null }; // already in title case
   const m = s.match(/\(DURATION ([^)]+)\)/i);
   const title = s.replace(/\s*\(DURATION [^)]+\)/i, "").trim();
   const nice = title.charAt(0) + title.slice(1).toLowerCase();
@@ -144,7 +146,7 @@ export function LiveCourses({
 
   const base: LiveCourse[] =
     tab === LATERAL && lateral
-      ? lateral.programmes.map((t) => ({ faculty: LATERAL, section: "Lateral entry – direct 2nd year B.Tech", title: t, eligibility: lateral.eligibility, lateralEntry: true, partTime: false, level: "UG", degree: lateral.degreeLabel }))
+      ? lateral.programmes.map((t) => ({ faculty: LATERAL, section: LATERAL_SECTION, title: t, eligibility: lateral.eligibility, lateralEntry: true, partTime: false, level: "UG", degree: lateral.degreeLabel }))
       : items.filter((i) => i.faculty === tab);
   const pool = query ? items : base;
   const levels = ["All", ...new Set(pool.map(LEVEL_OF))].filter((l, i, a) => a.indexOf(l) === i);
