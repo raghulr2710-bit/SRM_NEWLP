@@ -298,46 +298,46 @@
       {
         "title": "State-of-the-Art Infrastructure",
         "image": {
-          "src": "/assets/trp/campus/srm-trp-campus-aerial.webp",
-          "alt": "Aerial view of the SRM TRP Engineering College campus",
-          "width": 1300,
-          "height": 873
+          "src": "/assets/trp/campus/srm-trp-main-block.webp",
+          "alt": "SRM TRP Engineering College main block with its columned entrance and wind turbine",
+          "width": 918,
+          "height": 621
         }
       },
       {
         "title": "HiTech Library",
         "image": {
-          "src": "/assets/trp/infrastructure/hitech-library.jpeg",
-          "alt": "Students reading together in the SRM TRP library",
-          "width": 1820,
-          "height": 1365
+          "src": "/assets/trp/infrastructure/computer-lab-students.webp",
+          "alt": "Students smiling at a computer screen in a campus computer lab",
+          "width": 631,
+          "height": 467
         }
       },
       {
         "title": "Vibrant Campus Life",
         "image": {
-          "src": "/assets/trp/events/vibrant-campus-life-cultural-night.jpg",
-          "alt": "Students performing on stage at a cultural night",
-          "width": 1024,
-          "height": 683
+          "src": "/assets/trp/campus/students-campus-steps.webp",
+          "alt": "Students sitting on campus steps looking at a tablet together",
+          "width": 622,
+          "height": 473
         }
       },
       {
         "title": "Green & Eco Friendly Campus",
         "image": {
-          "src": "/assets/trp/campus/green-eco-friendly-campus-hd.webp",
-          "alt": "Palm-lined avenue at the SRM TRP campus entrance",
-          "width": 1500,
-          "height": 660
+          "src": "/assets/trp/campus/srm-trp-campus-aerial.webp",
+          "alt": "Aerial view of the SRM TRP Engineering College campus surrounded by greenery",
+          "width": 1300,
+          "height": 873
         }
       },
       {
         "title": "Fully Equipped Research labs",
         "image": {
-          "src": "/assets/trp/infrastructure/research-lab-robotics-hd.webp",
-          "alt": "Student working with a robotic arm in the research lab",
-          "width": 1600,
-          "height": 1200
+          "src": "/assets/trp/infrastructure/electronics-lab-students.webp",
+          "alt": "Students working with an oscilloscope and test equipment in an electronics lab",
+          "width": 1120,
+          "height": 837
         }
       }
     ]
@@ -618,42 +618,42 @@
     "heading": "Life at SRM TRP",
     "items": [
       {
-        "src": "/assets/trp/campus/srm-trp-campus-aerial.webp",
-        "alt": "Aerial view of the SRM TRP Engineering College campus",
-        "width": 1300,
-        "height": 873,
+        "src": "/assets/trp/campus/srm-trp-main-block.webp",
+        "alt": "SRM TRP Engineering College main block with its columned entrance and wind turbine",
+        "width": 918,
+        "height": 621,
         "title": "State-of-the-Art Infrastructure",
         "tag": "Campus"
       },
       {
-        "src": "/assets/trp/events/vibrant-campus-life-cultural-night.jpg",
-        "alt": "Students performing on stage at a cultural night",
-        "width": 1024,
-        "height": 683,
+        "src": "/assets/trp/campus/students-campus-steps.webp",
+        "alt": "Students sitting on campus steps looking at a tablet together",
+        "width": 622,
+        "height": 473,
         "title": "Vibrant Campus Life",
         "tag": "Events"
       },
       {
-        "src": "/assets/trp/infrastructure/hitech-library.jpeg",
-        "alt": "Students reading together in the SRM TRP library",
-        "width": 1820,
-        "height": 1365,
+        "src": "/assets/trp/infrastructure/computer-lab-students.webp",
+        "alt": "Students smiling at a computer screen in a campus computer lab",
+        "width": 631,
+        "height": 467,
         "title": "HiTech Library",
         "tag": "Library"
       },
       {
-        "src": "/assets/trp/campus/green-eco-friendly-campus-hd.webp",
-        "alt": "Palm-lined avenue at the SRM TRP campus entrance",
-        "width": 1500,
-        "height": 660,
+        "src": "/assets/trp/campus/srm-trp-campus-aerial.webp",
+        "alt": "Aerial view of the SRM TRP Engineering College campus surrounded by greenery",
+        "width": 1300,
+        "height": 873,
         "title": "Green & Eco Friendly Campus",
         "tag": "Campus"
       },
       {
-        "src": "/assets/trp/infrastructure/research-lab-robotics-hd.webp",
-        "alt": "Student working with a robotic arm in the research lab",
-        "width": 1600,
-        "height": 1200,
+        "src": "/assets/trp/infrastructure/electronics-lab-students.webp",
+        "alt": "Students working with an oscilloscope and test equipment in an electronics lab",
+        "width": 1120,
+        "height": 837,
         "title": "Fully Equipped Research labs",
         "tag": "Labs"
       }
@@ -863,7 +863,12 @@
     "Client update (Nov 2026) – placements.profiles: the 7 students from \"SRM TRP - Placement Student Details 2027\" replace the 4 earlier live-site profiles. Names in title case (doc mixes upper/lower case; \"MohamedFaisal S\" spaced, \"Mounika.M\" → \"Mounika M\"); \"M/s.\" dropped from company names; department labels shortened (B.Tech-AI&DS → B.Tech – AI & DS). Aarthi S: doc says \"50,000/- stipend per month\", shown as \"Stipend : ₹50,000 / month\". Company logos are the ones in the doc.",
     "Client update (Nov 2026) – testimonials: replaced by the 13 alumni in \"SRM TRP - Alumni Details\". The doc has no quotes, so cards show role, company, department/batch and the salary package. Heading \"Alumni Success Stories\" is ours. Package values as in the doc, normalised: \"17LPA\" → \"17 LPA\", \"20 lpa\"/\"20 Lakhs\" → \"20 LPA\", \"3,500,000\" → \"35 LPA\" (assumed INR), \"80000 USD\" → \"$80,000\", \"1Cr\" → \"1 Cr\". Hemanth Kumar's row had three stray photos in the company column (duplicates of other alumni) – only the Photo column is used.",
     "Client corrections (Nov 2026): Ph.D. programmes (3, 'M.S (Research) / Ph.D – …') moved from Postgraduate to a separate 'Ph.D. Programmes' tab. programmes.commonEligibility = one block per tab (UG text and 'Lateral Entry seats are available' from the client screenshot; PG and Ph.D. use the existing 'As per AICTE and Anna University norms'); per-card View eligibility hidden in those tabs. Highlights: '90+ Interview Avenues' replaced by an MoU Partners band with the 15 client-supplied logos (duplicates of UMN and Delphi-TVS used once; Tigerworld cropped from the banner image; intro line ours); facts per the client screenshot – 100+ Patents, 40+ Industry Partnerships, 10+ Global Academic Collaborations, 150+ Major Recruiters, Autonomous. 'Why TRP?' / 'Life at SRM TRP' images: replacement images not supplied yet.",
-    "Client update (Nov 2026): '100+ Patents' replaced by Patents Filed 129, Patents Published 128, Designs Filed 5, Designs Registered 2 (client wrote 'Design filed / Design registered'; pluralised)."
+    "Client update (Nov 2026): '100+ Patents' replaced by Patents Filed 129, Patents Published 128, Designs Filed 5, Designs Registered 2 (client wrote 'Design filed / Design registered'; pluralised).",
+    "Client update (Nov 2026): State-of-the-Art Infrastructure image (Why TRP? and Life at SRM TRP) replaced with the client photo of the main block (srm-trp-main-block.webp) instead of the aerial photo; alt text ours.",
+    "Client update (Nov 2026): HiTech Library image (Why TRP? and Life at SRM TRP) replaced with the client photo of students in a computer lab; title kept as supplied.",
+    "Client update (Nov 2026): Vibrant Campus Life image (Why TRP? and Life at SRM TRP) replaced with the client photo of students on the campus steps.",
+    "Client update (Nov 2026): Fully Equipped Research labs image (Why TRP? and Life at SRM TRP) replaced with the client photo of students in an electronics lab.",
+    "Client update (Nov 2026): Green & Eco Friendly Campus image (Why TRP? and Life at SRM TRP) replaced with the client aerial campus photo (same shot as srm-trp-campus-aerial.webp, which is the higher-resolution copy)."
   ],
   "steps": {
     "heading": "Your admission, step by step",
