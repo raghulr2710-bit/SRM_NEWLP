@@ -307,10 +307,10 @@
       {
         "title": "HiTech Library",
         "image": {
-          "src": "/assets/trp/infrastructure/computer-lab-students.webp",
-          "alt": "Students smiling at a computer screen in a campus computer lab",
-          "width": 631,
-          "height": 467
+          "src": "/assets/trp/infrastructure/library-students-laptop.webp",
+          "alt": "Two students working on a laptop among bookshelves in the library",
+          "width": 637,
+          "height": 472
         }
       },
       {
@@ -634,10 +634,10 @@
         "tag": "Events"
       },
       {
-        "src": "/assets/trp/infrastructure/computer-lab-students.webp",
-        "alt": "Students smiling at a computer screen in a campus computer lab",
-        "width": 631,
-        "height": 467,
+        "src": "/assets/trp/infrastructure/library-students-laptop.webp",
+        "alt": "Two students working on a laptop among bookshelves in the library",
+        "width": 637,
+        "height": 472,
         "title": "HiTech Library",
         "tag": "Library"
       },
@@ -868,7 +868,8 @@
     "Client update (Nov 2026): HiTech Library image (Why TRP? and Life at SRM TRP) replaced with the client photo of students in a computer lab; title kept as supplied.",
     "Client update (Nov 2026): Vibrant Campus Life image (Why TRP? and Life at SRM TRP) replaced with the client photo of students on the campus steps.",
     "Client update (Nov 2026): Fully Equipped Research labs image (Why TRP? and Life at SRM TRP) replaced with the client photo of students in an electronics lab.",
-    "Client update (Nov 2026): Green & Eco Friendly Campus image (Why TRP? and Life at SRM TRP) replaced with the client aerial campus photo (same shot as srm-trp-campus-aerial.webp, which is the higher-resolution copy)."
+    "Client update (Nov 2026): Green & Eco Friendly Campus image (Why TRP? and Life at SRM TRP) replaced with the client aerial campus photo (same shot as srm-trp-campus-aerial.webp, which is the higher-resolution copy).",
+    "Client update (Nov 2026): HiTech Library image (Why TRP? and Life at SRM TRP) now the client library photo (students with a laptop among bookshelves), replacing the interim computer-lab photo."
   ],
   "steps": {
     "heading": "Your admission, step by step",
