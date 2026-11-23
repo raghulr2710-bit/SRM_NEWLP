@@ -22,6 +22,7 @@ import { btn } from "@/components/common/buttons";
 import { ImmersiveGallery } from "@/components/campus/Gallery";
 import { PromoVideo, ScrollTiltFrame } from "../PromoVideo";
 import { VideoGrid } from "../VideoGrid";
+import { AutoScrollRow } from "../AutoScrollRow";
 import { HalfGlobe } from "../HalfGlobe";
 import {
   AccordionGallery,
@@ -278,8 +279,8 @@ export function TestimonialsSection({ live }: SectionProps) {
           <Heading eyebrow="Student voices" Icon={PlayCircle}>
             {live.testimonials.heading}
           </Heading>
-          <AnimatedTestimonials items={live.testimonials.items} />
-          {live.testimonials.videos?.length ? <VideoGrid videos={live.testimonials.videos} heading="More student videos" /> : null}
+          {live.testimonials.hideStories ? null : <AnimatedTestimonials items={live.testimonials.items} />}
+          {live.testimonials.videos?.length ? <VideoGrid videos={live.testimonials.videos} heading={live.testimonials.hideStories ? undefined : "More student videos"} variant={live.testimonials.hideStories ? "reel" : "card"} /> : null}
         </div>
       </section>
   );
@@ -294,7 +295,17 @@ export function CampusSection({ live }: SectionProps) {
             {live.campus.heading}
           </Heading>
           <Reveal>
-            <AccordionGallery items={live.campus.items} />
+            {live.campus.autoScroll ? (
+              <AutoScrollRow label="Campus life photos">
+                {live.campus.items.map((it) => (
+                  <div key={it.src} className="relative h-56 overflow-hidden rounded-2xl shadow-sm sm:h-72 lg:h-80" style={{ aspectRatio: `${it.width} / ${it.height}` }}>
+                    <Pic img={it} sizes="(min-width: 1024px) 480px, 80vw" />
+                  </div>
+                ))}
+              </AutoScrollRow>
+            ) : (
+              <AccordionGallery items={live.campus.items} />
+            )}
           </Reveal>
           {live.campus.videos?.length ? <VideoGrid videos={live.campus.videos} heading="Campus videos" /> : null}
         </div>

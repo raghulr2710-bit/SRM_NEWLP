@@ -47,7 +47,7 @@ export interface LiveSiteConfig {
     muted?: string;
   };
   /** Transparent cut-out; circle = disc behind the head, in % (cx/w of image width, top of image height). */
-  heroImage: LiveImg & { circle: { cx: number; w: number; top: number } };
+  heroImage: LiveImg & { circle: { cx: number; w: number; top: number; opacity?: number } };
   globe?: { home: [number, number]; partners: boolean; base: Rgb; marker: Rgb; glow: Rgb };
   /** Hero background: pattern + optional faint campus photo (right side, fades to the left). */
   heroBg?: { pattern: "none" | "grid" | "dots" | "diagonal" | "plus" | "rings"; image?: string; position?: string; opacity?: number };
@@ -265,7 +265,7 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
                     {/* brand circle locked behind the student's head */}
                     <div aria-hidden="true" className="absolute aspect-square rounded-full border border-dashed border-brand/25" style={ring(14)} />
                     <div aria-hidden="true" className="absolute aspect-square rounded-full border-2 border-[var(--hl-deep)]/30" style={ring(7)} />
-                    <div aria-hidden="true" className="absolute aspect-square rounded-full bg-[var(--hl-deep)] shadow-[0_30px_80px_-30px_color-mix(in_srgb,var(--hl-deep)_70%,transparent)]" style={ring(0)} />
+                    <div aria-hidden="true" className="absolute aspect-square rounded-full bg-[var(--hl-deep)] shadow-[0_30px_80px_-30px_color-mix(in_srgb,var(--hl-deep)_70%,transparent)]" style={{ ...ring(0), opacity: c.opacity ?? 1 }} />
                     <Image src={HERO_IMAGE.src} alt={HERO_IMAGE.alt} fill preload sizes="(min-width:1024px) 32vw, 90vw" className="object-contain" />
                   </div>
                 </div>

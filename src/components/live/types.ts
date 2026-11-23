@@ -94,7 +94,8 @@ export interface LiveData {
   /** Optional student cut-out shown on the closing CTA band (ratio = "w / h"). */
   ctaStudent?: { src: string; ratio: string };
   /** videos = extra campus-life video links (YouTube plays inline; others open in a new tab). */
-  campus?: { heading: string; items: (LiveImg & { title: string; tag?: string })[]; videos?: { url: string; title: string; cover?: string }[] };
+  /** autoScroll = photos only (no titles), in a single auto-scrolling row instead of the accordion. */
+  campus?: { heading: string; items: (LiveImg & { title: string; tag?: string })[]; videos?: { url: string; title: string; cover?: string }[]; autoScroll?: boolean };
   testimonials?: {
     heading: string;
     /** Video testimonials (YouTube) and/or written quotes with a photo. line2 = role/company, line3 = batch/college. */
@@ -102,6 +103,8 @@ export interface LiveData {
     items: { name: string; line2: string; line3: string; videoUrl?: string; quote?: string; package?: string; photo?: LiveImg | null }[];
     /** extra student video links shown as a grid under the stories */
     videos?: { url: string; title: string; cover?: string }[];
+    /** true = hide the stacked featured stories; only the video slider shows */
+    hideStories?: boolean;
   };
   faqs?: { heading: string; items: { q: string; a: string }[] };
   /** MoU partner logos (TRP highlights band) */

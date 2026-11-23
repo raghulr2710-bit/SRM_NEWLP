@@ -33,13 +33,13 @@ export const ramapuramSite: LiveSiteConfig = {
     accentOnDark: "#9cc3ff",
   },
   hideHeroSubline: true,
-  heroBg: { pattern: "none", image: "/assets/ramapuram/infrastructure/campus-building-hd.webp", position: "center 40%", opacity: 0.14 }, // client: no grid; faint college photo under a white tone
+  heroBg: { pattern: "none", image: "/assets/ramapuram/hero/hero-bg-steel-facade.webp", position: "center 40%", opacity: 0.5 }, // client: no grid; campus steel facade photo (no cafe sign) at 50% opacity
   heroImage: {
-    src: "/assets/ramapuram/hero/ai-hero-btech-girl-cutout.webp",
-    alt: "Engineering student in a hard hat, with construction, robotics and computing imagery",
-    width: 1200,
-    height: 2050,
-    circle: { cx: 43.3, w: 80, top: -1.85 },
+    src: "/assets/ramapuram/hero/hero-student-cse-girl-cutout.webp", // client-supplied photo (Nov 2026)
+    alt: "Smiling student with an ID lanyard holding a Data Communications and Networking textbook",
+    width: 1096,
+    height: 1436,
+    circle: { cx: 49.7, w: 72, top: -3.5, opacity: 0.55 },
   },
 };
 
