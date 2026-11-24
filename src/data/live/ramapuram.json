@@ -86,14 +86,14 @@
       },
       {
         "title": null,
-        "text": "SHANGAI Ranking – 2023 World ranking 1 among 15 Indian Universities",
+        "text": "SHANGAI Ranking – 2026 World ranking 1 among 15 Indian Universities",
         "badge": {
           "src": "/assets/ramapuram/accreditation/shanghai-ranking.png",
           "alt": "Ranking badge",
           "width": 220,
           "height": 70
         },
-        "body": "Shanghai Ranking 2023"
+        "body": "Shanghai Ranking 2026"
       }
     ]
   },
@@ -1298,7 +1298,7 @@
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
-        "section": "DIPLOMA COURSE",
+        "section": "DIPLOMA COURSE (DURATION 1 YEAR)",
         "title": "Executive PG Diploma in Practical English and Life Skills",
         "eligibility": "Eligibility Criteria - A pass in any UG Degree",
         "lateralEntry": false,
@@ -1307,7 +1307,7 @@
       },
       {
         "faculty": "LIBERAL ARTS AND BUSINESS STUDIES (formerly Faculty of Science and Humanities)",
-        "section": "DIPLOMA COURSE",
+        "section": "DIPLOMA COURSE (DURATION 1 YEAR)",
         "title": "Diploma in Hotel Management and Catering Science",
         "eligibility": "Eligibility Criteria - A pass in 10 + 2 (Higher Secondary) any group with a minimum aggregate of 50%.",
         "lateralEntry": false,
@@ -1516,10 +1516,10 @@
       {
         "title": "Placement in the Fortune 5oo companies",
         "image": {
-          "src": "/assets/ramapuram/campus/why-placement-student-library.webp",
-          "alt": "Smiling student in a library holding an SRM Ramapuram record book",
+          "src": "/assets/ramapuram/campus/why-placement-student-backpack.webp",
+          "alt": "Smiling student with an SRM ID lanyard and a backpack on campus",
           "width": 1200,
-          "height": 902
+          "height": 900
         }
       },
       {
@@ -2424,7 +2424,9 @@
     "Client feedback (Nov 2026): campus life gallery replaced with 7 client-supplied photos (6 new + existing Pongal photo; the client copy was a screenshot with our old label baked in) shown as a single auto-scrolling row with arrows, no titles/tags (campus.autoScroll). Alt text ours.",
     "Client feedback (Nov 2026): Why SRM – International Internships photo replaced with client-supplied photo (student in front of international flags); International Internships and Fully Equipped Hostel Facilities tiles swapped (now 07 and 04).",
     "Client feedback (Nov 2026): campus life row – client photo of students at the campus cafe added after the basketball photo.",
-    "Client feedback (Nov 2026): student video slider reordered – Syria (short clip), Syria international students, Florida first; then the rest in their previous order."
+    "Client feedback (Nov 2026): student video slider reordered – Syria (short clip), Syria international students, Florida first; then the rest in their previous order.",
+    "Client feedback (Nov 2026): Shanghai Ranking year changed from 2023 to 2026 (client instruction); Why tile 01 (Placement) photo replaced with the client-supplied student photo; alt text ours.",
+    "Client feedback (Nov 2026): Liberal Arts and Business Studies 'DIPLOMA COURSE' heading now states duration 1 year (client instruction)."
   ],
   "faqs": {
     "heading": "Frequently Asked Questions",
