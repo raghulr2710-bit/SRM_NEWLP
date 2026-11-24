@@ -1525,10 +1525,10 @@
       {
         "title": "Safely located with in Chennai city",
         "image": {
-          "src": "/assets/ramapuram/infrastructure/campus-building-hd.webp",
-          "alt": "SRM IST Ramapuram campus building against the Chennai sky",
-          "width": 1280,
-          "height": 1600
+          "src": "/assets/ramapuram/infrastructure/campus-gate-buildings.webp",
+          "alt": "SRM IST Ramapuram campus entrance gate and buildings beside the city road",
+          "width": 837,
+          "height": 607
         }
       },
       {
@@ -2247,7 +2247,7 @@
       },
       {
         "url": "https://youtu.be/lMJaphjIyNI",
-        "title": "TEXUS’26 Day 2 – Bigger, Louder, Better"
+        "title": "TEXUS’26 – Bigger, Louder, Better"
       },
       {
         "url": "https://youtu.be/kWTuf4b2Uj4",
@@ -2284,6 +2284,18 @@
     ],
     "videos": [
       {
+        "url": "https://youtu.be/lOufnoUIrHk",
+        "title": "From Syria to SRM Ramapuram!"
+      },
+      {
+        "url": "https://youtu.be/gG41P2ZlTaU",
+        "title": "From Syria to SRM Ramapuram | International Students Share Their Campus Experience"
+      },
+      {
+        "url": "https://youtube.com/shorts/1Cc9J-tQo9o",
+        "title": "From Florida to SRM Ramapuram | A Global Student Experience!"
+      },
+      {
         "url": "https://youtube.com/shorts/oNT5Ns8pn2E",
         "title": "SRMIST student excels in national-level martial arts championships"
       },
@@ -2296,24 +2308,12 @@
         "title": "Inspiring Journeys. Successful Careers"
       },
       {
-        "url": "https://youtu.be/lOufnoUIrHk",
-        "title": "From Syria to SRM Ramapuram!"
-      },
-      {
         "url": "https://youtube.com/shorts/49yyPGZMjKk",
         "title": "SRM RMP Startup Spotlight | Powering Smarter, Greener Mobility"
       },
       {
         "url": "https://youtube.com/shorts/pDvOgqsGgb8",
         "title": "From the USA to SRMIST Ramapuram!"
-      },
-      {
-        "url": "https://youtu.be/gG41P2ZlTaU",
-        "title": "From Syria to SRM Ramapuram | International Students Share Their Campus Experience"
-      },
-      {
-        "url": "https://youtube.com/shorts/1Cc9J-tQo9o",
-        "title": "From Florida to SRM Ramapuram | A Global Student Experience!"
       }
     ],
     "hideStories": true
@@ -2417,12 +2417,14 @@
     "Client update (Nov 2026): campus Festival celebrations photo replaced with the client-supplied Pongal celebration photo (WebP); alt text ours.",
     "Client update (Nov 2026): Why SRM IST Ramapuram – client photos for Placement, Semester Abroad, International Internships, Vibrant Campus Life and State-of-the-Art Infrastructure (resized to 1200 px WebP; tile matching and alt texts ours). Chennai city, Innovation & Start-ups and Hostel photos awaited.",
     "Client feedback (Nov 2026): Why tiles 02 (Chennai city) and 07 (Hostel) now use college photos – the existing campus-building-hd photo, and a crop of the tall block from the client campus photo. No hostel photo is on file; the hostel tile shows a campus block, not the hostel itself.",
+    "Client feedback (Nov 2026): Why tile 02 (Safely located with in Chennai city) now uses the client-supplied campus entrance photo (campus-gate-buildings.webp).",
     "Client feedback (Nov 2026): Why tile 07 (Hostel) image replaced with the client-supplied computer-lab photo (WebP); alt text ours.",
     "Client feedback (Nov 2026): Why tile 03 (Semester Abroad) image replaced with the client-supplied group photo in front of the flags (WebP); alt text ours.",
     "Client feedback (Nov 2026): stacked featured student stories (Amisha Arun etc.) hidden via testimonials.hideStories; items kept in the data. Only the student video slider shows.",
     "Client feedback (Nov 2026): campus life gallery replaced with 7 client-supplied photos (6 new + existing Pongal photo; the client copy was a screenshot with our old label baked in) shown as a single auto-scrolling row with arrows, no titles/tags (campus.autoScroll). Alt text ours.",
     "Client feedback (Nov 2026): Why SRM – International Internships photo replaced with client-supplied photo (student in front of international flags); International Internships and Fully Equipped Hostel Facilities tiles swapped (now 07 and 04).",
-    "Client feedback (Nov 2026): campus life row – client photo of students at the campus cafe added after the basketball photo."
+    "Client feedback (Nov 2026): campus life row – client photo of students at the campus cafe added after the basketball photo.",
+    "Client feedback (Nov 2026): student video slider reordered – Syria (short clip), Syria international students, Florida first; then the rest in their previous order."
   ],
   "faqs": {
     "heading": "Frequently Asked Questions",

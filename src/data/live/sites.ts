@@ -33,6 +33,7 @@ export const ramapuramSite: LiveSiteConfig = {
     accentOnDark: "#9cc3ff",
   },
   hideHeroSubline: true,
+  heroImageFill: true, // client: student the same size on every desktop screen (height-driven)
   heroBg: { pattern: "none", image: "/assets/ramapuram/hero/hero-bg-steel-facade.webp", position: "center 40%", opacity: 0.5 }, // client: no grid; campus steel facade photo (no cafe sign) at 50% opacity
   heroImage: {
     src: "/assets/ramapuram/hero/hero-student-cse-girl-cutout.webp", // client-supplied photo (Nov 2026)

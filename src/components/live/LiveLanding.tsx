@@ -55,6 +55,8 @@ export interface LiveSiteConfig {
   hideHeroSubline?: boolean;
   /** Hide the looping accreditation logo strip in the hero. */
   hideHeroBadges?: boolean;
+  /** desktop: size the hero student by the hero height (same look on every screen), not by the narrow middle column */
+  heroImageFill?: boolean;
   /** Accreditation seal shown in the header next to the college logo (e.g. NAAC A+). */
   headerBadge?: LiveImg;
   /** Course finder wording: "programmes" (Easwari) instead of "courses"; group label replaces "Faculty". */
@@ -212,7 +214,7 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
             )}
             <div aria-hidden="true" className={`absolute inset-0 -z-10 [background-position:center] [mask-image:radial-gradient(ellipse_90%_90%_at_50%_45%,black_40%,transparent_100%)] ${HERO_PATTERN[site.heroBg?.pattern ?? "grid"]}`} style={site.heroBg?.pattern === "plus" ? { backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='26' height='26'><path d='M13 8v10M8 13h10' stroke='${pal.brand}' stroke-opacity='0.22' stroke-width='1.4' stroke-linecap='round'/></svg>`)}")` } : undefined} />
             <div className={`container-x grid items-center gap-8 pt-8 lg:h-[calc(100svh-4.5rem)] lg:max-h-[52rem] lg:min-h-[36rem] lg:gap-5 lg:pb-0 lg:pt-4 ${longHeadline ? "lg:grid-cols-[minmax(0,1.6fr)_minmax(0,0.7fr)_minmax(0,0.9fr)]" : "lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.85fr)_minmax(0,0.95fr)]"}`}>
-              <div className="min-w-0">
+              <div className="relative z-[5] min-w-0">
                 <p className="hero-rise mb-4 inline-flex items-center gap-2 rounded-full bg-[var(--hl)] px-4 py-1.5 text-sm font-semibold text-brand-ink" style={d(0)}>
                   <span aria-hidden="true" className="h-2 w-2 animate-pulse rounded-full bg-brand" />
                   {live.hero.formHeading}
@@ -259,8 +261,8 @@ export function LiveLanding({ site, fonts }: { site: LiveSiteConfig; fonts: { cl
                     positioned relative to the student himself, never to empty letterbox space. */}
                 <div className="relative [container-type:size] lg:!aspect-auto lg:h-full" style={{ aspectRatio: `${HERO_IMAGE.width} / ${Math.round(HERO_IMAGE.height * 0.79)}` }}>
                   <div
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2"
-                    style={{ aspectRatio: `${HERO_IMAGE.width} / ${HERO_IMAGE.height}`, width: `min(100cqw, calc(100cqh * ${HERO_IMAGE.width} / ${HERO_IMAGE.height}))` }}
+                    className={`absolute bottom-0 left-1/2 -translate-x-1/2 ${site.heroImageFill ? "lg:[width:min(170cqw,calc(92cqh*var(--hero-ar)))]!" : ""}`}
+                    style={{ aspectRatio: `${HERO_IMAGE.width} / ${HERO_IMAGE.height}`, width: `min(100cqw, calc(100cqh * ${HERO_IMAGE.width} / ${HERO_IMAGE.height}))`, "--hero-ar": `${HERO_IMAGE.width / HERO_IMAGE.height}` } as CSSProperties}
                   >
                     {/* brand circle locked behind the student's head */}
                     <div aria-hidden="true" className="absolute aspect-square rounded-full border border-dashed border-brand/25" style={ring(14)} />
