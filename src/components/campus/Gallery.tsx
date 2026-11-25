@@ -328,7 +328,7 @@ export function ImmersiveGallery({
       <div ref={outer} style={{ height: `calc(100vh + ${distance}px)` }} className="relative">
         <div className={`sticky top-0 flex h-screen flex-col justify-center overflow-hidden ${stickyPad}`}>
           <div className="container-x">{heading}</div>
-          <motion.ul ref={track} style={{ x }} className="flex w-max gap-5 pl-[max(2.5rem,calc((100vw-1320px)/2+2.5rem))] pr-10 will-change-transform">
+          <motion.ul ref={track} style={{ x }} className="flex w-max gap-5 pl-[max(2.5rem,calc((100vw-1440px)/2+2.5rem))] pr-10 will-change-transform">
             {tiles.map(({ item, vIdx, wide }, i) => (
               <li key={`${item.title}-${i}`} className={`${tileHeight} shrink-0 ${uniform ? "w-[min(34vw,27rem)]" : wide ? "w-[min(52vw,46rem)]" : "w-[min(32vw,28rem)]"}`}>
                 <Tile item={item} brand={brand} index={i} sizes="(min-width:1024px) 34vw, 80vw" onOpen={vIdx >= 0 ? () => lb.open(vIdx) : undefined} register={vIdx >= 0 ? lb.register(vIdx) : undefined} />
