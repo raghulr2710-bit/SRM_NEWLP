@@ -92,7 +92,7 @@ function EasStats1({ live }: SectionProps) {
   return (
     <section aria-label="Key figures" className="on-dark relative overflow-hidden bg-gradient-to-r from-[var(--brand-deep)] to-brand text-on-brand">
       <div aria-hidden="true" className="absolute inset-0 opacity-[0.07] [background-image:repeating-linear-gradient(135deg,white_0_1px,transparent_1px_18px)]" />
-      <dl className={`container-x relative grid py-10 lg:py-14 ${live.stats1.length > 3 ? "grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-5 lg:gap-6" : "gap-8 sm:grid-cols-3 sm:gap-6"}`}>
+      <dl className={`container-x relative grid py-10 lg:py-14 ${live.stats1.length === 4 ? "grid-cols-2 gap-x-6 gap-y-8 lg:grid-cols-4 lg:gap-6" : live.stats1.length > 3 ? "grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-5 lg:gap-6" : "gap-8 sm:grid-cols-3 sm:gap-6"}`}>
         {live.stats1.map((s, i) => (
           <Reveal key={s.label} delay={0.08 * i} className={`flex flex-col ${live.stats1!.length > 3 ? "lg:border-l lg:border-white/15 lg:pl-6 lg:first:border-l-0 lg:first:pl-0" : "sm:border-l sm:border-white/15 sm:pl-6 sm:first:border-l-0 sm:first:pl-0"}`}>
             <dt className={`text-[0.8125rem] font-semibold uppercase tracking-[0.16em] text-white/70 ${live.stats1!.length > 3 ? "min-h-[2.75em] leading-snug sm:min-h-0" : ""}`}>{s.label}</dt>

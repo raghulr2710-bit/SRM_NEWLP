@@ -155,7 +155,7 @@ export const easwari: Institution = {
     eyebrow: "Registration Open for 2027–28",
     headline: ["Engineer your future", "in the heart of Chennai."],
     body:
-      "SRM Easwari, Ramapuram is a place for learning, discovery, innovation, expression, and discourse, with 29 years of excellence behind it.",
+      "SRM Easwari, Chennai is a place for learning, discovery, innovation, expression, and discourse, with 29 years of excellence behind it.",
     image: OFFICIAL.hero,
     secondaryImage: OFFICIAL.greenCampus,
     proof: [
@@ -182,7 +182,7 @@ export const easwari: Institution = {
   why: {
     videoUrl: "https://www.youtube.com/watch?v=7iD44Vk4epQ",
     videoTitle: "SRM Easwari Engineering College",
-    heading: "Why SRM EEC",
+    heading: "Why SRM Easwari, Chennai",
     intro:
       "Pursuing the philosophy of continuous learning, the Institution prepares the students to score creditably in the Academic sessions and also encourages them to develop their interpersonal skills and attitudes to approach life with confidence.",
     source: SRC,

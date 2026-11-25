@@ -36,40 +36,40 @@
     "items": [
       {
         "title": "Highest 'A++' Grade",
-        "text": "SRM Institute of Science and Technology has been accredited by NAAC with the highest 'A++' grade.",
+        "text": "SRM Institute of Science and Technology is accredited by NAAC with the highest 'A++' grade (CGPA 3.58) for the second consecutive cycle, valid until June 2031.",
         "badge": {
-          "src": "/assets/tiruchirappalli/accreditation/naac-a-plus-plus.png",
-          "alt": "Highest 'A++' Grade",
-          "width": 115,
-          "height": 111
+          "src": "/assets/tiruchirappalli/accreditation/naac-app-accredited-logo.png",
+          "alt": "NAAC A++ Accredited",
+          "width": 552,
+          "height": 194
         },
         "body": "NAAC"
       },
       {
-        "title": "12 B Status by MHRD-UGC",
-        "text": "SRM IST is placed in Category 1 with 12 B status by MHRD-UGC.",
+        "title": "Deemed to be University",
+        "text": "SRM IST is a Deemed to be University recognised by the University Grants Commission (UGC), Ministry of Education, Government of India, and is placed in Category 1 with 12 B status.",
         "badge": {
           "src": "/assets/tiruchirappalli/accreditation/mhrd-ugc-12b.png",
-          "alt": "12 B Status by MHRD-UGC",
+          "alt": "University Grants Commission, Ministry of Education",
           "width": 79,
           "height": 124
         },
-        "body": "MHRD-UGC"
+        "body": "UGC – Ministry of Education"
       },
       {
-        "title": null,
-        "text": "SRMIST has been ranked 11th nationally under universities category by NIRF (National Institutional Ranking Framework) in 2024.",
+        "title": "11th – University category",
+        "text": "SRMIST is ranked 11th among universities, 14th in Engineering and 22nd Overall in NIRF 2025 (National Institutional Ranking Framework).",
         "badge": {
           "src": "/assets/tiruchirappalli/accreditation/nirf.png",
-          "alt": "NIRF 2024 logo",
+          "alt": "NIRF – National Institutional Ranking Framework logo",
           "width": 97,
           "height": 124
         },
-        "body": "NIRF 2024"
+        "body": "NIRF 2025"
       },
       {
-        "title": null,
-        "text": "SRMIST is regularly gets ranked by world ranking agencies like QS (UK) and Times Higher Education (UK)",
+        "title": "1001–1200 band",
+        "text": "SRMIST is placed in the 1001–1200 band of the THE World University Rankings 2027, up from 1201–1500 in 2023–24, and in the 301–400 band of the THE Impact Rankings 2026.",
         "badge": {
           "src": "/assets/tiruchirappalli/accreditation/times-higher-education.png",
           "alt": "Times Higher Education logo",
@@ -79,8 +79,8 @@
         "body": "Times Higher Education"
       },
       {
-        "title": null,
-        "text": "World ranking 1 among 46 Indian universities.",
+        "title": "1001–1200 band",
+        "text": "SRMIST is placed in the 1001–1200 band of the QS World University Rankings 2027, up from 1201–1400 in 2023–24.",
         "badge": {
           "src": "/assets/tiruchirappalli/accreditation/qs-world-ranking.png",
           "alt": "QS World University Rankings logo",
@@ -90,8 +90,8 @@
         "body": "QS World University Rankings"
       },
       {
-        "title": null,
-        "text": "SHANGAI Ranking – 2023 World ranking 1 among 15 Indian Universities",
+        "title": "901–1000 band",
+        "text": "SRMIST is placed in the 901–1000 band of the ShanghaiRanking Academic Ranking of World Universities (ARWU) 2026.",
         "badge": {
           "src": "/assets/tiruchirappalli/accreditation/shanghai-ranking.png",
           "alt": "Shanghai Ranking logo",
@@ -147,8 +147,8 @@
       "icon": "Users"
     },
     {
-      "value": "#1",
-      "label": "SRM IST Ranked India's No.1 University",
+      "value": "11th",
+      "label": "NIRF 2025, University category",
       "icon": "Trophy"
     },
     {
@@ -168,7 +168,7 @@
     },
     {
       "value": "2nd",
-      "label": "in ARIIA",
+      "label": "in ARIIA 2020",
       "icon": "Medal"
     },
     {
@@ -2070,7 +2070,9 @@
     "campus.items: official photos from https://www.srmtrichy.edu.in/campus-life (titles = the site’s image names; tags and alt text written by us).",
     "why.items images: official photos from srmtrichy.edu.in (campus-life, international-relations, academic-programme) and the registration page (Rockfort, infrastructure – AI-upscaled 4x for clarity).",
     "Client corrections (SRM IST Trichy Corrections doc, Nov 2026): Lateral-entry badge removed from all B.Tech cards; M.Tech Biotechnology, B.Sc Cyber Security / AI & ML / Visual Communication / Visual Communication & AI / Psychology and MBA eligibility replaced with the client's text; B.Sc Biotechnology removed and B.Sc Artificial Intelligence and Animation added (no eligibility supplied – card shows the 'ask a counsellor' fallback); Medicine & Allied Health UG course names changed to the client's names (duration text kept).",
-    "Client update (Nov 2026): header logo replaced with the client-supplied SRMIST Tiruchirappalli logo (light-grey background made transparent; resized to 640px)."
+    "Client update (Nov 2026): header logo replaced with the client-supplied SRMIST Tiruchirappalli logo (light-grey background made transparent; resized to 640px).",
+    "Client update (Nov 2026, \"SRMIST_Trichy_Rankings_Accreditations_2026-27\" and \"nirf- srmist\" docs): Rankings & Accreditations cards rewritten from the briefing – NAAC A++ (CGPA 3.58, second consecutive cycle, valid to June 2031); UGC/MoE Deemed to be University (12 B status kept from the live site); NIRF 2025 University 11 / Engineering 14 / Overall 22; THE WUR 2027 1001–1200 (from 1201–1500 in 2023–24) and THE Impact 2026 301–400; QS WUR 2027 1001–1200 (from 1201–1400); ARWU 2026 901–1000. Old unverifiable lines removed (\"World ranking 1 among 46 Indian universities\", \"SHANGAI Ranking – 2023 World ranking 1 among 15 Indian Universities\", \"regularly gets ranked…\"). Card titles and wording are ours; the briefing marks some items † (re-confirm on the agency site) – none of those († items: NBA, ABET, IET, QS Asia 230, GreenMetric) are used. Highlights tile \"#1 SRM IST Ranked India's No.1 University\" replaced by \"11th – NIRF 2025, University category\"; ARIIA tile now \"2nd in ARIIA 2020\" (briefing: 2nd in 2020, 4th in 2021, the latest edition).",
+    "Client feedback (Nov 2026, \"A4 poster.pdf\"): NAAC card logo replaced with the \"NAAC A++ ACCREDITED\" logo cropped from the client poster (low-resolution source; a vector/original file would be sharper)."
   ],
   "steps": {
     "items": [

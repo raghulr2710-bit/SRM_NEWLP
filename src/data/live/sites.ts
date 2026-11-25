@@ -66,6 +66,7 @@ export const tiruchirappalliSite: LiveSiteConfig = {
     ink: "#0b1a2e",
     muted: "#4a5668",
   },
+  heroImageFill: true, // client: student the same size on every desktop screen (as Ramapuram / Easwari)
   heroBg: { pattern: "dots", image: "/assets/tiruchirappalli/campus/campus-entrance.webp", position: "30% center", opacity: 0.17 },
   hideHeroSubline: true,
   heroImage: {
@@ -101,6 +102,7 @@ export const easwariSite: LiveSiteConfig = {
     ink: "#23161a",
     muted: "#5b4d50",
   },
+  heroImageFill: true, // client: student the same size on every desktop screen (as Ramapuram)
   heroBg: { pattern: "diagonal", image: "/img/eec/green-campus.jpg", position: "center 35%", opacity: 0.15 },
   heroImage: {
     src: "/assets/easwari/hero/ai-hero-cse-cutout.webp",

@@ -1,8 +1,8 @@
 {
   "sourceUrl": "https://registration.srmeaswari.ac.in/",
   "meta": {
-    "shortName": "Easwari Engineering College",
-    "whyLabel": "Why SRM EEC",
+    "shortName": "SRM Easwari, Chennai",
+    "whyLabel": "Why SRM Easwari, Chennai",
     "videoTitle": "SRM Easwari Engineering College"
   },
   "hero": {
@@ -12,7 +12,7 @@
     ],
     "button": "Registration Open for 2027",
     "formHeading": "Admissions Open 2027",
-    "text": "SRM Easwari, Ramapuram is a place for learning, discovery, innovation, expression, and discourse."
+    "text": "SRM Easwari, Chennai is a place for learning, discovery, innovation, expression, and discourse."
   },
   "logo": {
     "src": "/assets/easwari/logo/eec-logo.png",
@@ -71,29 +71,25 @@
   },
   "promo": {
     "heading": "Inspiring you towards excellence and a bright future.",
-    "text": "SRM Easwari, Ramapuram is a place for learning, discovery, innovation, expression, and discourse. Pursuing the philosophy of continuous learning, the Institution prepares the students to score creditably in the Academic sessions and also encourages them to develop their interpersonal skills and attitudes to approach life with confidence.",
+    "text": "SRM Easwari, Chennai is a place for learning, discovery, innovation, expression, and discourse. Pursuing the philosophy of continuous learning, the Institution prepares the students to score creditably in the Academic sessions and also encourages them to develop their interpersonal skills and attitudes to approach life with confidence.",
     "videoUrl": "https://www.youtube.com/embed/7iD44Vk4epQ?rel=0"
   },
   "stats1": [
     {
-      "value": "30",
-      "label": "Years of Excellence"
+      "value": "98%",
+      "label": "Placement"
     },
     {
-      "value": "25K+",
-      "label": "Alumni"
+      "value": "10%",
+      "label": "Higher Education Abroad"
     },
     {
-      "value": "1424+",
-      "label": "Students Placed"
-    },
-    {
-      "value": "432",
-      "label": "Companies Visited"
-    },
-    {
-      "value": "51 LPA",
+      "value": "50 LPA",
       "label": "Highest Package"
+    },
+    {
+      "value": "20+",
+      "label": "Centre of Excellence"
     }
   ],
   "programmes": {
@@ -319,78 +315,78 @@
     ]
   },
   "why": {
-    "heading": "Why SRM EEC?",
+    "heading": "Why SRM Easwari, Chennai?",
     "items": [
       {
         "title": "Safely located within Chennai City",
         "image": {
-          "src": "/assets/easwari/campus/chennai-city.jpg",
-          "alt": "Chennai Central railway station",
-          "width": 433,
-          "height": 433
+          "src": "/assets/easwari/client/chennai-city-aerial.webp",
+          "alt": "Aerial view of the SRM Easwari campus buildings in Chennai city",
+          "width": 1400,
+          "height": 782
         }
       },
       {
         "title": "State-of-the-Art Infrastructure",
         "image": {
-          "src": "/assets/easwari/infrastructure/automobile-engineering-lab.jpg",
-          "alt": "Automobile Engineering laboratory",
-          "width": 500,
-          "height": 500
+          "src": "/assets/easwari/client/abb-robotics-welding-cell.webp",
+          "alt": "ABB Robotics spot welding cell in the campus lab",
+          "width": 1400,
+          "height": 788
         }
       },
       {
         "title": "Semester Abroad Program",
         "image": {
-          "src": "/assets/easwari/infrastructure/computer-lab.jpg",
-          "alt": "Student celebrating while working on a laptop in the computer lab",
-          "width": 500,
-          "height": 500
+          "src": "/assets/easwari/client/global-immersion-singapore.webp",
+          "alt": "Students at NUS, Singapore on the India–Singapore Global Immersion Programme 2026",
+          "width": 960,
+          "height": 1280
         }
       },
       {
         "title": "Vibrant campus life",
         "image": {
-          "src": "/assets/easwari/students/vibrant-campus-life.jpg",
-          "alt": "Students performing live music on stage at a campus event",
-          "width": 400,
-          "height": 400
+          "src": "/assets/easwari/client/campus-fest-fireworks.webp",
+          "alt": "Fireworks over the SRM Easwari stage at a campus fest",
+          "width": 1440,
+          "height": 959
         }
       },
       {
         "title": "Green & Eco Friendly Campus",
         "image": {
-          "src": "/assets/easwari/campus/city-green-campus.jpg",
-          "alt": "Galileo Block surrounded by trees on the Easwari campus",
-          "width": 500,
-          "height": 500
+          "src": "/assets/easwari/client/green-campus-entrance.webp",
+          "alt": "Tree-covered main entrance of the campus from above",
+          "width": 1400,
+          "height": 788
         }
       },
       {
         "title": "Placement in Top MNC’s",
         "image": {
-          "src": "/assets/easwari/students/placement-top-mncs.jpg",
-          "alt": "Easwari student in a suit",
-          "width": 400,
-          "height": 400
+          "src": "/assets/easwari/client/placement-day-2026.webp",
+          "alt": "Students celebrating Placement Day, Batch 2022–2026",
+          "width": 1600,
+          "height": 677
         }
       },
       {
         "title": "Student Clubs",
         "image": {
-          "src": "/assets/easwari/students/student-clubs.jpg",
-          "alt": "Large group of students celebrating in a lecture hall",
-          "width": 367,
-          "height": 367
+          "src": "/assets/easwari/client/student-clubs-fashion-show.webp",
+          "alt": "Students on stage at a campus fashion show",
+          "width": 1254,
+          "height": 1254
         }
       },
       {
         "title": "Support for Innovation & Start - ups",
         "image": {
-          "src": "/assets/easwari/infrastructure/control-and-instrumentation-lab.jpg",
-          "alt": "Control and Instrumentation laboratory",
-          "width": 500,
-          "height": 500
+          "src": "/assets/easwari/client/innovation-centre-startup-conclave.webp",
+          "alt": "Students at the SRM Easwari Innovation Centre startup conclave",
+          "width": 1600,
+          "height": 949
         }
       }
     ]
@@ -667,7 +663,7 @@
   },
   "ctaHeading": "2025 Record Setting Placements With Highest Package of 51 LPA from Top Companies",
   "campus": {
-    "heading": "Life at SRM Easwari",
+    "heading": "Life at SRM Easwari, Chennai",
     "items": [
       {
         "src": "/assets/easwari/hero/hero-bg.webp",
@@ -678,10 +674,10 @@
         "tag": "Campus"
       },
       {
-        "src": "/assets/easwari/campus/city-green-campus.jpg",
-        "alt": "Galileo Block surrounded by trees on the Easwari campus",
-        "width": 500,
-        "height": 500,
+        "src": "/assets/easwari/client/green-campus-entrance.webp",
+        "alt": "Tree-covered main entrance of the campus from above",
+        "width": 1400,
+        "height": 788,
         "title": "Green Campus",
         "tag": "Campus"
       },
@@ -694,26 +690,34 @@
         "tag": "Labs"
       },
       {
-        "src": "/assets/easwari/infrastructure/computer-lab.jpg",
-        "alt": "Student celebrating while working on a laptop in the computer lab",
-        "width": 500,
-        "height": 500,
-        "title": "Computer Lab",
+        "src": "/assets/easwari/client/robotics-lab-student.webp",
+        "alt": "Student programming a robotic arm in the Robotics lab",
+        "width": 1600,
+        "height": 1065,
+        "title": "Robotics Lab",
         "tag": "Labs"
       },
       {
-        "src": "/assets/easwari/students/vibrant-campus-life.jpg",
-        "alt": "Students performing live music on stage at a campus event",
-        "width": 400,
-        "height": 400,
-        "title": "Live Music on Campus",
+        "src": "/assets/easwari/client/robotics-lab-abb-arm.webp",
+        "alt": "Students and faculty with an ABB robot arm in the Robotics lab",
+        "width": 1600,
+        "height": 1065,
+        "title": "ABB Robotics Lab",
+        "tag": "Labs"
+      },
+      {
+        "src": "/assets/easwari/client/campus-fest-fireworks.webp",
+        "alt": "Fireworks over the SRM Easwari stage at a campus fest",
+        "width": 1440,
+        "height": 959,
+        "title": "Campus Fest",
         "tag": "Student Life"
       },
       {
-        "src": "/assets/easwari/students/student-clubs.jpg",
-        "alt": "Large group of students celebrating in a lecture hall",
-        "width": 367,
-        "height": 367,
+        "src": "/assets/easwari/client/student-clubs-fashion-show.webp",
+        "alt": "Students on stage at a campus fashion show",
+        "width": 1254,
+        "height": 1254,
         "title": "Student Clubs",
         "tag": "Student Life"
       }
@@ -854,6 +858,10 @@
     "Client corrections (Nov 2026): placements.heading gets the academic year 2024-2025 (our inference: all six profiles are \"2025 Batch\" and the record band says \"2025 Record Setting Placements\") – to be confirmed.",
     "Client feedback (Nov 2026): Years of Excellence (30) and Alumni (25K+) moved into the stats1 milestone band (first two figures); the separate Highlights (facts) section removed.",
     "Client feedback (Nov 2026): Anna University logo added to the 4th rankings card (same official logo file as the TRP page).",
-    "Client corrections (Nov 2026, 'EEC CORRECTIONS1'): Ph.D. card has no View eligibility / Enquire (hideActions); long course names use a slightly smaller font and up to 3 lines (all campuses); course box reads 'Choose a Programme'; Control & Instrumentation Lab photo removed from Life at SRM Easwari (Robotics lab photo awaited from the client – none on file); admission section eyebrow 'Admission Enquiry'. Scholarship details: awaiting client template/scope – nothing added."
+    "Client corrections (Nov 2026, 'EEC CORRECTIONS1'): Ph.D. card has no View eligibility / Enquire (hideActions); long course names use a slightly smaller font and up to 3 lines (all campuses); course box reads 'Choose a Programme'; Control & Instrumentation Lab photo removed from Life at SRM Easwari (Robotics lab photo awaited from the client – none on file); admission section eyebrow 'Admission Enquiry'. Scholarship details: awaiting client template/scope – nothing added.",
+    "Client feedback (Nov 2026): stats1 band replaced with the four figures from the client graphic – 98% Placement, 10% Higher Education Abroad, 50 LPA Highest Package, 20+ Centre of Excellence (previous 30 Years, 25K+ Alumni, 1424+ Placed, 432 Companies, 51 LPA removed). Note: the graphic says 50 LPA while the placements heading elsewhere says 51 LPA – to be confirmed.",
+    "Client feedback (Nov 2026): institution name used consistently as 'SRM Easwari, Chennai' – replaces 'SRM Easwari, Ramapuram' and 'SRM EEC' (Why heading/tab, promo text, meta.shortName, Life at… heading). Formal name 'SRM Easwari Engineering College' (video title, consent text) and the alumni tag 'SRM Easwari Alumni' unchanged.",
+    "Client photos (Nov 2026): Why tiles 01–08 now use client-supplied photos (city aerial, ABB welding cell, NUS Singapore immersion, fest fireworks, green entrance, Placement Day 2022–2026, fashion show, Innovation Centre conclave); Life at SRM Easwari: Green Campus, Campus Fest (was Live Music on Campus), Student Clubs photos replaced and two Robotics Lab photos added (the awaited Robotics lab photo). All WebP, max 1600 px; matching of photos to tiles, titles and alt texts are ours.",
+    "Life at SRM Easwari kept at 7 photos (gallery layout = 1 large + 6): old Computer Lab photo removed to make room for the two Robotics Lab photos."
   ]
 }

@@ -360,7 +360,7 @@ export function WhyShowcase({ items, interval = 4500 }: { items: { title: string
       onBlur={() => setHold(false)}
     >
       {/* reasons – always visible */}
-      <ul className="order-2 grid grid-cols-2 gap-2.5 sm:gap-3 lg:order-1" aria-label="Reasons to choose SRM Easwari">
+      <ul className="order-2 grid grid-cols-2 gap-2.5 sm:gap-3 lg:order-1" aria-label="Reasons to choose SRM Easwari, Chennai">
         {items.map((it, i) => {
           const on = i === active;
           const Icon = WHY_ICON(it.title);
